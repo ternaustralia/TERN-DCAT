@@ -2869,6 +2869,305 @@
       </div>
     </section>
 
+    <section id="entity-concept">
+      <h3 id="Concept">
+        <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip"
+          data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Concept</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> A category or a theme used to describe datasets in the catalog. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Concept.inScheme">in scheme</a></li>
+            <li><a href="#Concept.prefLabel">label</a></li>
+            <li><a href="#Concept.source">source</a></li>
+            <li><a href="#Concept.unit">unit of measurement</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Concept.inScheme" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#inScheme"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2004/02/skos/core#inScheme" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2004/02/skos/core#inScheme" data-placement="right">
+                  in scheme</a>
+              </td>
+              <td>
+                <a href="#ConceptScheme" data-placement="right">Concept Scheme</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                Used to classify concepts to link it to the concept scheme it belongs to.
+              </td>
+              <td property="skos:scopeNote">
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Concept.prefLabel" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
+                  label</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> Label of the described concept. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Concept.source" typeof="rdfs:Property" resource="http://purl.org/dc/terms/source"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/source" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/source" data-placement="right">
+                  source</a>
+              </td>
+              <td>
+                <a href="#Resource" data-placement="right">Resource</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment">
+                Link to an external resource from which this concept belongs to.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Concept.unit" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/unit"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/unit" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
+                  unit of measurement</a>
+              </td>
+              <td>
+                <a href="#Unit" data-placement="right">Unit</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                The unit of measurement of the concept, when the concept relates to Ecological parameters.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-concept-scheme">
+      <h3 id="ConceptScheme">
+        <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-toggle="tooltip"
+          data-content="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-placement="right">Concept Scheme</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> A knowledge organization system (KOS) used to represent themes/categories of datasets in the catalog. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#ConceptScheme.prefLabel">label</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Concept.prefLabel" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
+                  label</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> Label of the concept scheme. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-unit">
+      <h3 id="Unit">
+        <a href="https://qudt.org/schema/qudt/Unit" data-toggle="tooltip"
+          data-content="https://qudt.org/schema/qudt/Unit" data-placement="right">Unit</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring
+          other quantities the same kind (more generally of equivalent dimension). </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Unit.label">label</a></li>
+            <li><a href="#Unit.isDefinedBy">defined by</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Unit.label" typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#label"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" data-toggle="tooltip"
+                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" data-placement="right">
+                  label</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> Label of the unit of measurement. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Unit.isDefinedBy" typeof="rdfs:Property"
+              resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-toggle="tooltip"
+                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-placement="right">
+                  label</a>
+              </td>
+              <td>
+                <a href="#TBD" data-placement="right">TBD</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
   </section>
 
   <section id="datatypes">
