@@ -19,12 +19,22 @@ var respecConfig = {
     //	preProcess: [dfn_index],
     //    subtitle: "Version 2",
     specStatus: "unofficial",
+    noRecTrack: true,
+    latestVersion: "https://github.com/ternaustralia/TERN-DCAT",
+    logos: [{
+        src: "https://w3id.org/tern/static/tern-web/img/logo@2x.png",
+        url: "https://www.tern.org.au/",
+        alt: "SEMIC",
+        // width: 300,
+        // height: 72,
+        id: "tern-logo",
+    },],
     // errata: "https://w3c.github.io/dxwg/errata/",
     //    specStatus: "ED",
     //    specStatus: "CR",
     //    crEnd: "2023-11-28",
     //    implementationReportURI: "https://w3c.github.io/dxwg/dcat3-implementation-report/",
-    shortName: "tern-dcat",
+    // shortName: "tern-dcat",
     // prevRecShortname: "vocab-dcat-2",
     // canonicalURI: "TR",
     // prevRecURI: "https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/",
@@ -43,14 +53,32 @@ var respecConfig = {
     //     label: "JSON-LD",
     //     uri: "https://www.w3.org/ns/dcat.jsonld",
     // }],
-    editors: [{
-        name: "Javier Sanchez Gonzalez",
-        // orcid: "0000-0001-5648-2713",
-        company: "Terrestrial Ecosystem Research Network",
-        // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
-        companyURL: "https://www.tern.org.au/",
-        // w3cid: 72458
-    }],
+    editors: [
+        {
+            name: "Javier Sanchez Gonzalez",
+            // orcid: "0000-0002-3903-254X",
+            company: "Terrestrial Ecosystem Research Network",
+            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
+            companyURL: "https://www.tern.org.au/",
+            // w3cid: 72458
+        },
+        {
+            name: "Siddeswara Guru",
+            orcid: "0000-0002-3903-254X",
+            company: "Terrestrial Ecosystem Research Network",
+            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
+            companyURL: "https://www.tern.org.au/",
+            // w3cid: 72458
+        },
+        {
+            name: "Junrong Yu",
+            // orcid: "0000-0001-5648-2713",
+            company: "Terrestrial Ecosystem Research Network",
+            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
+            companyURL: "https://www.tern.org.au/",
+            // w3cid: 72458
+        }
+    ],
     // formerEditors: [{
     //     name: "TBD",
     //     company: "DERI",
@@ -91,8 +119,29 @@ var respecConfig = {
     // wgPublicList: "public-dxwg-comments",
     inlineCSS: "true",
     lint: "false",
-    // github: "https://github.com/w3c/dxwg/",
-    // localBiblio: {
+    github: "https://github.com/ternaustralia/TERN-DCAT",
+    localBiblio: {
+        "TERN": {
+            "href": "https://linkeddata.tern.org.au/information-models/tern-ontology",
+            "title": "TERN Ontology",
+            "publisher": "Terrestrial Ecosystem Research Network"
+        },
+        "OWL": {
+            "href": "TBD",
+            "title": "TBD",
+            "publisher": "TBD"
+        },
+        "SOSA": {
+            "href": "TBD",
+            "title": "TBD",
+            "publisher": "TBD"
+        },
+        "CNT": {
+            "href": "TBD",
+            "title": "TBD",
+            "publisher": "TBD"
+        },
+    }
     //     "ADMS-SKOS": {
     //         "href": "https://web.archive.org/web/20210521035614/https://joinup.ec.europa.eu/svn/adms/ADMS_v1.00/ADMS_SKOS_v1.00.html",
     //         "title": "Joinup. ADMS Controlled Vocabularies",
