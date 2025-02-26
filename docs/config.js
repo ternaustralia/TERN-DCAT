@@ -24,7 +24,7 @@ var respecConfig = {
     logos: [{
         src: "https://w3id.org/tern/static/tern-web/img/logo@2x.png",
         url: "https://www.tern.org.au/",
-        alt: "SEMIC",
+        alt: "TERN",
         // width: 300,
         // height: 72,
         id: "tern-logo",

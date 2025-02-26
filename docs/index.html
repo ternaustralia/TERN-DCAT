@@ -38,16 +38,19 @@
   <aside class="note">
     <p>This is a note</p>
   </aside>
-  <section id='abstract'>
+
+  <section id="abstract">
     <p>
       This is required.
     </p>
   </section>
-  <section id='sotd'>
+
+  <section id="sotd">
     <p>
       This is required.
     </p>
   </section>
+
   <section id="specintro">
     <h2>
       Introduction
@@ -293,38 +296,24 @@
     </div>
   </section>
 
-  <section>
+  <section id="entities">
     <h2>
-      Main Entities
+      Core Entities
     </h2>
     The main entities of the Application Profile...
 
-    <section>
+    <section id="entity-catalogue">
       <h3 id="Catalogue">
         <a href="http://www.w3.org/ns/dcat#Catalog" data-toggle="tooltip"
           data-content="http://www.w3.org/ns/dcat#Catalog" data-placement="right">Catalogue</a>
-
       </h3>
 
       <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A catalogue or repository that hosts the Datasets or Dataset Series being described.
-        </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog">dcat:Catalog</a>
-        </dd>
-
-        <dt>
-          Properties
-        </dt>
-
+        <dt> Definition </dt>
+        <dd> A catalogue or repository that hosts the Datasets or Dataset Series being described. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog">dcat:Catalog</a> </dd>
+        <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
@@ -340,9 +329,7 @@
             <li><a href="#Catalogue.title">title</a></li>
           </ul>
         </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
@@ -630,29 +617,18 @@
 
     </section>
 
-    <section>
+    <section id="entity-catalogue-record">
       <h3 id="CatalogueRecord">
         <a href="http://www.w3.org/ns/dcat#CatalogRecord" data-toggle="tooltip"
           data-content="http://www.w3.org/ns/dcat#CatalogRecord" data-placement="right">Catalogue Record</a>
-
       </h3>
 
       <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A description of a Dataset&#39;s entry in the Catalogue.
-        </dd>
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog_Record">dcat:CatalogRecord</a>
-        </dd>
-        <dt>
-          Properties
-        </dt>
+        <dt> Definition </dt>
+        <dd> A description of a Dataset&#39;s entry in the Catalogue. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog_Record">dcat:CatalogRecord</a> </dd>
+        <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
@@ -674,8 +650,6 @@
           </ul>
         </dd>
       </dl>
-
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
@@ -1057,34 +1031,20 @@
 
     </section>
 
-    <section>
+    <section id="entity-dataset">
       <h3 id="Dataset">
         <a href="http://www.w3.org/ns/dcat#Dataset" data-toggle="tooltip"
           data-content="http://www.w3.org/ns/dcat#Dataset" data-placement="right">Dataset</a>
       </h3>
 
       <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A conceptual entity that represents the information published.
-        </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a>
-        </dd>
-
-        <dt>
-          Properties
-        </dt>
-
+        <dt> Definition </dt>
+        <dd> A conceptual entity that represents the information published. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a> </dd>
+        <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
-
           <ul class="prop-list">
             <li><a href="#Dataset.abstract">abstract</a></li>
             <li><a href="#Dataset.additionalDocumentation">additional documentation</a></li>
@@ -1120,9 +1080,7 @@
             <li><a href="#Dataset.version">has version</a></li>
           </ul>
         </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
@@ -1866,22 +1824,16 @@
 
     </section>
 
-    <section>
+    <section id="entity-extent">
       <h3 id="Extent">
         <a href="https://w3id.org/tern/ontologies/tern/Extent" data-toggle="tooltip"
           data-content="https://w3id.org/tern/ontologies/tern/Extent" data-placement="right">Extent</a>
       </h3>
 
       <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A description of temporal and geographic coverage.
-        </dd>
-        <dt>
-          Properties
-        </dt>
+        <dt> Definition </dt>
+        <dd> A description of temporal and geographic coverage. </dd>
+        <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
@@ -1891,168 +1843,6 @@
             <li><a href="#Extent.verticalExtent">vertical extent</a></li>
           </ul>
         </dd>
-      </dl>
-
-      </div>
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:14%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:13%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-              <th class="data-table__header-title--sortable" style="width:4%">
-                Reuse
-              </th>
-            </tr>
-          </thead>
-
-          <tbody class="supertype">
-
-            <tr id="Extent.geographicalCoverage" typeof="rdfs:Property"
-              resource="http://www.opengis.net/ont/geosparql#hasGeometry" class="class mandatory">
-              <td>
-                <a href="http://www.opengis.net/ont/geosparql#hasGeometry" data-toggle="tooltip"
-                  data-content="http://www.opengis.net/ont/geosparql#hasGeometry" data-placement="right">
-                  geographical coverage</a>
-              </td>
-              <td>
-                <a href="#Geometry" data-placement="right">Geometry</a>
-              </td>
-              <td> 0..* </td>
-              <td property="rdfs:comment">
-                When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in
-                the collection should be part of the spatial coverage. In that case, an open ended value is recommended,
-                e.g. EU or a broad bounding box covering the expected values.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Extent.locationDescription" typeof="rdfs:Property"
-              resource="https://w3id.org/tern/ontologies/tern/locationDescription" class="class mandatory">
-              <td>
-                <a href="https://w3id.org/tern/ontologies/tern/locationDescription" data-toggle="tooltip"
-                  data-content="https://w3id.org/tern/ontologies/tern/locationDescription" data-placement="right">
-                  location description</a>
-              </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Extent.temporalCoverage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/temporal"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/temporal" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/temporal" data-placement="right">
-                  temporal coverage</a>
-              </td>
-              <td>
-                <a href="#Periodoftime" data-placement="right">Period of time</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset
-                in the collection should be part of the temporal coverage. In that case, an open ended value is
-                recommended, e.g. after 2012.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal">Link</a>
-              </td>
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal">A</a>
-              </td>
-            </tr>
-
-            <tr id="Extent.verticalExtent" typeof="rdfs:Property"
-              resource="https://w3id.org/tern/ontologies/tern/verticalExtent" class="class mandatory">
-              <td>
-                <a href="https://w3id.org/tern/ontologies/tern/verticalExtent" data-toggle="tooltip"
-                  data-content="https://w3id.org/tern/ontologies/tern/verticalExtent" data-placement="right">
-                  vertical extent</a>
-              </td>
-              <td>
-                <a href="#VerticalExtent" data-placement="right">Vertical Extent</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-    </section>
-
-    <section>
-      <h3 id="Person">
-        <a href="https://schema.org/Person" data-toggle="tooltip" data-content="https://schema.org/Person"
-          data-placement="right">Person</a>
-      </h3>
-
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Dataset Series and
-          Distributions.
-        </dd>
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Organization_Person">Link</a>
-        </dd>
-        <dt>
-          Properties
-        </dt>
-        <dd>
-          For this entity the following properties are defined:
-          <ul class="prop-list">
-            <li><a href="#Extent.geographicalCoverage">geographical coverage</a></li>
-            <li><a href="#Extent.locationDescription">location description</a></li>
-            <li><a href="#Extent.temporalCoverage">temporal coverage</a></li>
-            <li><a href="#Extent.verticalExtent">vertical extent</a></li>
-          </ul>
-        </dd>
-
       </dl>
 
       <div class="u-table-overflow">
@@ -2180,68 +1970,45 @@
 
     </section>
 
-    <section>
+    <section id="entity-person">
       <h3 id="Person">
         <a href="https://schema.org/Person" data-toggle="tooltip" data-content="https://schema.org/Person"
           data-placement="right">Person</a>
-
       </h3>
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Agent&body=Explain%20your%20issue"}}>
-                       <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-        </a>
-        -->
+
       <dl>
-        <dt>
-          Definition
-        </dt>
+        <dt> Definition </dt>
+        <dd> Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Dataset Series and
+          Distributions. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Organization_Person">Link</a> </dd>
+        <dt> Properties </dt>
         <dd>
-          Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and
-          Distributions.
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Person.affiliation">affiliation</a></li>
+            <li><a href="#Person.country">country</a></li>
+            <li><a href="#Person.email">email</a></li>
+            <li><a href="#Person.identifier">identifier</a></li>
+            <li><a href="#Person.locality">locality</a></li>
+            <li><a href="#Person.name">name</a></li>
+            <li><a href="#Person.postalCode">postal code</a></li>
+            <li><a href="#Person.region">region</a></li>
+            <li><a href="#Person.streetAddress">street address</a></li>
+            <li><a href="#Person.telephone">telephone</a></li>
+          </ul>
         </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Organization_Person">Link</a>
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          If the Agent is an organisation, the use of the <a href="https://www.w3.org/TR/vocab-org/">Organization
-            Ontology</a> is recommended.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Agent.name">name</a>
-          , <a href="#Agent.type">type</a>
-          .
-        </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
           <thead>
             <tr class="data-table__header">
-              <th class="data-table__header-title--sortable" style="width:5%">
-              </th>
               <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
+                style="width:14%">
                 Property
               </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
+              <th class="data-table__header-title--sortable" style="width:13%">
                 Range
               </th>
               <th class="data-table__header-title--sortable" style="width:6%">
@@ -2253,188 +2020,252 @@
               <th class="data-table__header-title--sortable" style="width:30%">
                 Usage
               </th>
-              <!--
-                                <th class="data-table__header-title--sortable" style="width:3%">
-                                    Codelist
-                                </th>
-              -->
               <th class="data-table__header-title--sortable" style="width:5%">
                 DCAT
               </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
             </tr>
           </thead>
+
           <tbody class="supertype">
 
-            <tr id="Agent.name" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/name"
+            <tr id="Person.affiliation" typeof="rdfs:Property" resource="https://schema.org/affiliation"
               class="class mandatory">
               <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20name%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Agent.name"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
+                <a href="https://schema.org/affiliation" data-toggle="tooltip"
+                  data-content="https://schema.org/affiliation" data-placement="right">
+                  affiliation</a>
               </td>
               <td>
-                <a href="http://xmlns.com/foaf/0.1/name" data-toggle="tooltip"
-                  data-content="http://xmlns.com/foaf/0.1/name" data-placement="right">
+                <a href="#Organization" data-placement="right">Organization</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressCountry" data-toggle="tooltip"
+                  data-content="https://schema.org/addressCountry" data-placement="right">
+                  country</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.email" typeof="rdfs:Property" resource="https://schema.org/email" class="class mandatory">
+              <td>
+                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
+                  data-placement="right">
+                  email</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/elements/1.1/identifier"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                  identifier</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td>
+                1
+              </td>
+              <td property="rdfs:comment">
+                An unambiguous reference to the resource within the given context of Person.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressLocality" data-toggle="tooltip"
+                  data-content="https://schema.org/addressLocality" data-placement="right">
+                  locality</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.name" typeof="rdfs:Property" resource="https://schema.org/name" class="class mandatory">
+              <td>
+                <a href="https://schema.org/name" data-toggle="tooltip" data-content="https://schema.org/name"
+                  data-placement="right">
                   name</a>
               </td>
               <td>
-
-
                 <a href="#Literal" data-placement="right">Literal</a>
-
-
               </td>
-              <td>
-                1..*
-              </td>
+              <td> 1 </td>
               <td property="rdfs:comment">
-                A name of the agent.
+                TBD
               </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for different versions of the name (e.g. the name in different languages).
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
-            <tr id="Agent.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type" class="class mandatory">
+            <tr id="Person.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
+              class="class mandatory">
               <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20type%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Agent.type"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
+                <a href="https://schema.org/postalCode" data-toggle="tooltip"
+                  data-content="https://schema.org/postalCode" data-placement="right">
+                  postal code</a>
               </td>
               <td>
-                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/type" data-placement="right">
-                  type</a>
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
-              <td>
-
-
-                <a href="#Concept" data-placement="right">Concept</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment">
-                A type of the agent that makes the Catalogue or Dataset available.
+                TBD
               </td>
-              <td property="skos:scopeNote">
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
+            <tr id="Person.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
+              class="class mandatory">
               <td>
-
+                <a href="https://schema.org/addressRegion" data-toggle="tooltip"
+                  data-content="https://schema.org/addressRegion" data-placement="right">
+                  region</a>
               </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/streetAddress" data-toggle="tooltip"
+                  data-content="https://schema.org/streetAddress" data-placement="right">
+                  street address</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
+                  data-placement="right">
+                  telephone</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
         </table>
       </div>
 
-      </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section>
-      <h3 id="DatasetmemberofaDatasetSeries">
-        <a href="http://www.w3.org/ns/dcat#Dataset" data-toggle="tooltip"
-          data-content="http://www.w3.org/ns/dcat#Dataset" data-placement="right">Dataset member of a Dataset Series</a>
-
+    <section id="entity-organization">
+      <h3 id="Organization">
+        <a href="https://schema.org/Organization" data-toggle="tooltip" data-content="https://schema.org/Organization"
+          data-placement="right">Organization</a>
       </h3>
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20DatasetMemberOfADatasetSeries&body=Explain%20your%20issue"}}>
-                       <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-        </a>
-        -->
+
       <dl>
-        <dt>
-          Definition
-        </dt>
+        <dt> Definition </dt>
+        <dd> Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Dataset Series and
+          Distributions. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Organization_Person">Link</a> </dd>
+        <dt> Properties </dt>
         <dd>
-
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Organization.affiliation">affiliation</a></li>
+            <li><a href="#Organization.country">country</a></li>
+            <li><a href="#Organization.email">email</a></li>
+            <li><a href="#Organization.identifier">identifier</a></li>
+            <li><a href="#Organization.locality">locality</a></li>
+            <li><a href="#Organization.name">name</a></li>
+            <li><a href="#Organization.postalCode">postal code</a></li>
+            <li><a href="#Organization.region">region</a></li>
+            <li><a href="#Organization.streetAddress">street address</a></li>
+            <li><a href="#Organization.telephone">telephone</a></li>
+          </ul>
         </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          This class is introduced to capture the case when a Dataset is a member of a Dataset Series.
-          Therefore this Dataset must be a member of a Dataset Series.
-        </dd>
-
-
-        <dt>
-          Subclass of
-        <dt>
-        <dd> <a href="#Dataset">Dataset</a>
-
-        </dd>
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a
-            href="#DatasetmemberofaDatasetSeries.description">description</a>
-          , <a href="#DatasetmemberofaDatasetSeries.frequency">frequency</a>
-          , <a href="#DatasetmemberofaDatasetSeries.inseries">in series</a>
-          , <a href="#DatasetmemberofaDatasetSeries.next">next</a>
-          , <a href="#DatasetmemberofaDatasetSeries.previous">previous</a>
-          , <a href="#DatasetmemberofaDatasetSeries.title">title</a>
-          .
-        </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
           <thead>
             <tr class="data-table__header">
-              <th class="data-table__header-title--sortable" style="width:5%">
-              </th>
               <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
+                style="width:14%">
                 Property
               </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
+              <th class="data-table__header-title--sortable" style="width:13%">
                 Range
               </th>
               <th class="data-table__header-title--sortable" style="width:6%">
@@ -2446,937 +2277,262 @@
               <th class="data-table__header-title--sortable" style="width:30%">
                 Usage
               </th>
-              <!--
-                                <th class="data-table__header-title--sortable" style="width:3%">
-                                    Codelist
-                                </th>
-              -->
               <th class="data-table__header-title--sortable" style="width:5%">
                 DCAT
               </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
             </tr>
           </thead>
+
           <tbody class="supertype">
 
-            <tr id="DatasetmemberofaDatasetSeries.description" typeof="rdfs:Property"
-              resource="http://purl.org/dc/terms/description" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.description"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/description" data-placement="right">
-                  description</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                1..n
-              </td>
-              <td property="rdfs:comment">
-                A free-text account of the Dataset.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the description.
-
-                The description may indicate the dimension values.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetmemberofaDatasetSeries.frequency" typeof="rdfs:Property"
-              resource="http://purl.org/dc/terms/accrualPeriodicity" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.frequency"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/accrualPeriodicity" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/accrualPeriodicity" data-placement="right">
-                  frequency</a>
-              </td>
-              <td>
-
-
-                <a href="#Frequency" data-placement="right">Frequency</a>
-
-
-              </td>
-              <td>
-                0..n
-              </td>
-              <td property="rdfs:comment">
-                The frequency at which the Dataset is updated.
-              </td>
-              <td property="skos:scopeNote">
-                The frequency of a dataset belonging to a dataset series  is not equal to the frequency of the dataset
-                series. 
-
-                E.g. A dataset budget 2020 with frequency yearly means that this dataset has an update in 2021, 2022,
-                2023, etc. 
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_frequency">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetmemberofaDatasetSeries.inseries" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#inSeries" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20in series%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.inseries"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#inSeries" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#inSeries" data-placement="right">
-                  in series</a>
-              </td>
-              <td>
-
-
-                <a href="#DatasetSeries" data-placement="right">Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A dataset series of which the dataset is part.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_in_series">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetmemberofaDatasetSeries.next" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#next"
+            <tr id="Organization.affiliation" typeof="rdfs:Property" resource="https://schema.org/affiliation"
               class="class mandatory">
               <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20next%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.next"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
+                <a href="https://schema.org/affiliation" data-toggle="tooltip"
+                  data-content="https://schema.org/affiliation" data-placement="right">
+                  affiliation</a>
               </td>
               <td>
-                <a href="http://www.w3.org/ns/dcat#next" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#next" data-placement="right">
-                  next</a>
+                <a href="#Organization" data-placement="right">Organization</a>
               </td>
-              <td>
-
-
-                <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
+              <td> 0..* </td>
               <td property="rdfs:comment">
-                The following resource (after the current one) in an ordered collection or series of resources.
+                TBD
               </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
-            <tr id="DatasetmemberofaDatasetSeries.previous" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#prev" class="class mandatory">
+            <tr id="Organization.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
+              class="class mandatory">
               <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20previous%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.previous"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
+                <a href="https://schema.org/addressCountry" data-toggle="tooltip"
+                  data-content="https://schema.org/addressCountry" data-placement="right">
+                  country</a>
               </td>
               <td>
-                <a href="http://www.w3.org/ns/dcat#prev" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#prev" data-placement="right">
-                  previous</a>
-              </td>
-              <td>
-
-
-                <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                The previous resource (before the current one) in an ordered collection or series of resources.
-              </td>
-              <td property="skos:scopeNote">
-                Unless the dataset is the last in the chain a dataset in a collection must have a previous one.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_previous">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetmemberofaDatasetSeries.title" typeof="rdfs:Property"
-              resource="http://purl.org/dc/terms/title" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset member of a Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetmemberofaDatasetSeries.title"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/title" data-placement="right">
-                  title</a>
-              </td>
-              <td>
-
-
                 <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
-
+            <tr id="Organization.email" typeof="rdfs:Property" resource="https://schema.org/email"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
+                  data-placement="right">
+                  email</a>
               </td>
               <td>
-                1..n
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.identifier" typeof="rdfs:Property"
+              resource="http://purl.org/dc/elements/1.1/identifier" class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                  identifier</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td>
+                1
               </td>
               <td property="rdfs:comment">
-                A name given to the Dataset.
+                An unambiguous reference to the resource within the given context of Organization.
               </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the name.
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
-                The title may indicate the dimension values.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
+            <tr id="Organization.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
+              class="class mandatory">
               <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
+                <a href="https://schema.org/addressLocality" data-toggle="tooltip"
+                  data-content="https://schema.org/addressLocality" data-placement="right">
+                  locality</a>
               </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.name" typeof="rdfs:Property" resource="https://schema.org/name"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/name" data-toggle="tooltip" data-content="https://schema.org/name"
+                  data-placement="right">
+                  name</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/postalCode" data-toggle="tooltip"
+                  data-content="https://schema.org/postalCode" data-placement="right">
+                  postal code</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressRegion" data-toggle="tooltip"
+                  data-content="https://schema.org/addressRegion" data-placement="right">
+                  region</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/streetAddress" data-toggle="tooltip"
+                  data-content="https://schema.org/streetAddress" data-placement="right">
+                  street address</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organization.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
+                  data-placement="right">
+                  telephone</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
         </table>
       </div>
 
-      </div>
     </section>
 
-    <section>
+    <section id="entity-dataset-series">
       <h3 id="DatasetSeries">
         <a href="http://www.w3.org/ns/dcat#DatasetSeries" data-toggle="tooltip"
           data-content="http://www.w3.org/ns/dcat#DatasetSeries" data-placement="right">Dataset Series</a>
-
       </h3>
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20DatasetSeries&body=Explain%20your%20issue"}}>
-                       <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-        </a>
-        -->
+
       <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A collection of datasets that are published separately, but share some characteristics that group them.
+        <dt> Definition </dt>
+        <dd> A collection of datasets that are published separately, but share some characteristics that group them.
         </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset_Series">Link</a>
-        </dd>
-
-
-
-        <dt>
-          Subclass of
-        <dt>
-        <dd> <a href="#CataloguedResource">Catalogued Resource</a>
-
-        </dd>
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#DatasetSeries.contactpoint">contact point</a>
-          , <a href="#DatasetSeries.description">description</a>
-          , <a href="#DatasetSeries.first">first</a>
-          , <a href="#DatasetSeries.frequency">frequency</a>
-          , <a href="#DatasetSeries.geographicalcoverage">geographical coverage</a>
-          , <a href="#DatasetSeries.last">last</a>
-          , <a href="#DatasetSeries.modificationdate">modification date</a>
-          , <a href="#DatasetSeries.publisher">publisher</a>
-          , <a href="#DatasetSeries.releasedate">release date</a>
-          , <a href="#DatasetSeries.seriesmember">series member</a>
-          , <a href="#DatasetSeries.temporalcoverage">temporal coverage</a>
-          , <a href="#DatasetSeries.title">title</a>
-          .
-        </dd>
-
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset_Series">Link</a> </dd>
+        <dt> Subclass of </dt>
+        <dd> <a href="#Dataset">Dataset</a> </dd>
       </dl>
-      </div>
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <th class="data-table__header-title--sortable" style="width:5%">
-              </th>
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <!--
-                                <th class="data-table__header-title--sortable" style="width:3%">
-                                    Codelist
-                                </th>
-              -->
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-            </tr>
-          </thead>
-          <tbody class="supertype">
-
-            <tr id="DatasetSeries.contactpoint" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#contactPoint"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20contact point%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.contactpoint"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#contactPoint" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#contactPoint" data-placement="right">
-                  contact point</a>
-              </td>
-              <td>
-
-
-                <a href="#Kind" data-placement="right">Kind</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                Contact information that can be used for sending comments about the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_contact_point">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.description"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/description" data-placement="right">
-                  description</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                1..*
-              </td>
-              <td property="rdfs:comment">
-                A free-text account of the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions.
-
-                It is recommended to provide an indication about the dimensions the Dataset Series evolves.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_description">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.first" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#first"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20first%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.first"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#first" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#first" data-placement="right">
-                  first</a>
-              </td>
-              <td>
-
-
-                <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The first resource in an ordered collection or series of resources, to which the current resource
-                belongs.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_first">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.frequency" typeof="rdfs:Property"
-              resource="http://purl.org/dc/terms/accrualPeriodicity" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20frequency%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.frequency"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/accrualPeriodicity" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/accrualPeriodicity" data-placement="right">
-                  frequency</a>
-              </td>
-              <td>
-
-
-                <a href="#Frequency" data-placement="right">Frequency</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The frequency at which the Dataset Series is updated.
-              </td>
-              <td property="skos:scopeNote">
-                The frequency of a dataset series is not equal to the frequency of the dataset in the collection.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_frequency">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.geographicalcoverage" typeof="rdfs:Property"
-              resource="http://purl.org/dc/terms/spatial" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geographical coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.geographicalcoverage"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/spatial" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/spatial" data-placement="right">
-                  geographical coverage</a>
-              </td>
-              <td>
-
-
-                <a href="#Location" data-placement="right">Location</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A geographic region that is covered by the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-                When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in
-                the collection should be part of the spatial coverage. In that case, an open ended value is recommended,
-                e.g. EU or a broad bounding box covering the expected values.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_spatial">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.last" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#last"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20last%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.last"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#last" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#last" data-placement="right">
-                  last</a>
-              </td>
-              <td>
-
-
-                <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The last resource in an ordered collection or series.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_last">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.modificationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/modified"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.modificationdate"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/modified" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/modified" data-placement="right">
-                  modification date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The most recent date on which the Dataset Series was changed or modified.
-              </td>
-              <td property="skos:scopeNote">
-                This is not equal to the most recent modified dataset in the collection of the dataset series.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_update_date">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.publisher" typeof="rdfs:Property" resource="http://purl.org/dc/terms/publisher"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20publisher%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.publisher"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/publisher" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/publisher" data-placement="right">
-                  publisher</a>
-              </td>
-              <td>
-
-
-                <a href="#Agent" data-placement="right">Agent</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                An entity (organisation) responsible for ensuring the coherency of the Dataset Series 
-              </td>
-              <td property="skos:scopeNote">
-                The publisher of the dataset series may not be the publisher of all datasets. 
-                E.g. a digital archive could take over the publishing of older datasets in the series. 
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_publisher">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.releasedate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.releasedate"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/issued" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/issued" data-placement="right">
-                  release date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The date of formal issuance (e.g., publication) of the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-                The moment when the dataset series was established as a managed resource.
-
-                This is not equal to the release date of the oldest dataset in the collection of the dataset series.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_release_date">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.seriesmember" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#seriesMember"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20series member%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.seriesmember"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#seriesMember" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#seriesMember" data-placement="right">
-                  series member</a>
-              </td>
-              <td>
-
-
-                <a href="#DatasetmemberofaDatasetSeries" data-placement="right">Dataset member of a Dataset Series</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A member of the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.temporalcoverage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/temporal"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal coverage%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.temporalcoverage"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/temporal" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/temporal" data-placement="right">
-                  temporal coverage</a>
-              </td>
-              <td>
-
-
-                <a href="#Periodoftime" data-placement="right">Period of time</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A temporal period that the Dataset Series covers.
-              </td>
-              <td property="skos:scopeNote">
-                When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset
-                in the collection should be part of the temporal coverage. In that case, an open ended value is
-                recommended, e.g. after 2012.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:dataset_temporal">Link</a>
-              </td>
-            </tr>
-
-            <tr id="DatasetSeries.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Dataset Series&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23DatasetSeries.title"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/title" data-placement="right">
-                  title</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                1..*
-              </td>
-              <td property="rdfs:comment">
-                A name given to the Dataset Series.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the name.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-      </div>
     </section>
 
-    <section>
+    <section id="entity-distribution">
       <h3 id="Distribution">
         <a href="http://www.w3.org/ns/dcat#Distribution" data-toggle="tooltip"
           data-content="http://www.w3.org/ns/dcat#Distribution" data-placement="right">Distribution</a>
-
       </h3>
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Distribution&body=Explain%20your%20issue"}}>
-                       <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-        </a>
-        -->
+
       <dl>
-        <dt>
-          Definition
-        </dt>
+        <dt> Definition </dt>
+        <dd> A physical embodiment of the Dataset in a particular format. </dd>
+        <dt> Reference in DCAT </dt>
+        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Distribution">Link</a> </dd>
+        <dt> Properties </dt>
         <dd>
-          A physical embodiment of the Dataset in a particular format.
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Distribution.accessURL">access URL</a></li>
+            <li><a href="#Distribution.distributor">distributor</a></li>
+          </ul>
         </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Distribution">Link</a>
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Distribution.accessservice">access service</a>
-          , <a href="#Distribution.accessURL">access URL</a>
-          , <a href="#Distribution.availability">availability</a>
-          , <a href="#Distribution.bytesize">byte size</a>
-          , <a href="#Distribution.checksum">checksum</a>
-          , <a href="#Distribution.compressionformat">compression format</a>
-          , <a href="#Distribution.description">description</a>
-          , <a href="#Distribution.documentation">documentation</a>
-          , <a href="#Distribution.downloadURL">download URL</a>
-          , <a href="#Distribution.format">format</a>
-          , <a href="#Distribution.haspolicy">has policy</a>
-          , <a href="#Distribution.language">language</a>
-          , <a href="#Distribution.licence">licence</a>
-          , <a href="#Distribution.linkedschemas">linked schemas</a>
-          , <a href="#Distribution.mediatype">media type</a>
-          , <a href="#Distribution.modificationdate">modification date</a>
-          , <a href="#Distribution.packagingformat">packaging format</a>
-          , <a href="#Distribution.releasedate">release date</a>
-          , <a href="#Distribution.rights">rights</a>
-          , <a href="#Distribution.spatialresolution">spatial resolution</a>
-          , <a href="#Distribution.status">status</a>
-          , <a href="#Distribution.temporalresolution">temporal resolution</a>
-          , <a href="#Distribution.title">title</a>
-          .
-        </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
           <thead>
             <tr class="data-table__header">
-              <th class="data-table__header-title--sortable" style="width:5%">
-              </th>
               <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
+                style="width:14%">
                 Property
               </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
+              <th class="data-table__header-title--sortable" style="width:13%">
                 Range
               </th>
               <th class="data-table__header-title--sortable" style="width:6%">
@@ -3388,988 +2544,93 @@
               <th class="data-table__header-title--sortable" style="width:30%">
                 Usage
               </th>
-              <!--
-                                <th class="data-table__header-title--sortable" style="width:3%">
-                                    Codelist
-                                </th>
-              -->
               <th class="data-table__header-title--sortable" style="width:5%">
                 DCAT
               </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
             </tr>
           </thead>
+
           <tbody class="supertype">
-
-            <tr id="Distribution.accessservice" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#accessService" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access service%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.accessservice"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#accessService" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#accessService" data-placement="right">
-                  access service</a>
-              </td>
-              <td>
-
-
-                <a href="#DataService" data-placement="right">Data Service</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A data service that gives access to the distribution of the dataset.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_access_service">Link</a>
-              </td>
-            </tr>
 
             <tr id="Distribution.accessURL" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#accessURL"
               class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20access URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.accessURL"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
               <td>
                 <a href="http://www.w3.org/ns/dcat#accessURL" data-toggle="tooltip"
                   data-content="http://www.w3.org/ns/dcat#accessURL" data-placement="right">
                   access URL</a>
               </td>
               <td>
-
-
                 <a href="#Resource" data-placement="right">Resource</a>
-
-
               </td>
-              <td>
-                1..*
+              <td> 1 </td>
+              <td property="rdfs:comment"> A URL that gives access to a Distribution of the Dataset. </td>
+              <td property="skos:scopeNote"> The resource at the access URL may contain information about how to get the
+                Dataset.
               </td>
-              <td property="rdfs:comment">
-                A URL that gives access to a Distribution of the Dataset.
-              </td>
-              <td property="skos:scopeNote">
-                The resource at the access URL may contain information about how to get the Dataset.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_access_url">Link</a>
               </td>
+              <td>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url">E</a>
+              </td>
             </tr>
 
-            <tr id="Distribution.availability" typeof="rdfs:Property" resource="http://data.europa.eu/r5r/availability"
-              class="class mandatory">
+            <tr id="Distribution.distributor" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/distributor" class="class mandatory">
               <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20availability%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.availability"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
+                <a href="https://w3id.org/tern/ontologies/tern/distributor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/distributor" data-placement="right">
+                  distributor</a>
               </td>
-              <td>
-                <a href="http://data.europa.eu/r5r/availability" data-toggle="tooltip"
-                  data-content="http://data.europa.eu/r5r/availability" data-placement="right">
-                  availability</a>
-              </td>
-              <td>
-
-
-                <a href="#Concept" data-placement="right">Concept</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> 1 </td>
               <td property="rdfs:comment">
                 An indication how long it is planned to keep the Distribution of the Dataset available.
               </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="Distribution.bytesize" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#byteSize"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20byte size%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.bytesize"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#byteSize" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#byteSize" data-placement="right">
-                  byte size</a>
-              </td>
-              <td>
-
-
-                <a href="#xsd%3AnonNegativeInteger" data-placement="right">xsd:nonNegativeInteger</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The size of a Distribution in bytes.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_size">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.checksum" typeof="rdfs:Property" resource="http://spdx.org/rdf/terms#checksum"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20checksum%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.checksum"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://spdx.org/rdf/terms#checksum" data-toggle="tooltip"
-                  data-content="http://spdx.org/rdf/terms#checksum" data-placement="right">
-                  checksum</a>
-              </td>
-              <td>
-
-
-                <a href="#Checksum" data-placement="right">Checksum</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                A mechanism that can be used to verify that the contents of a distribution have not changed.
-              </td>
-              <td property="skos:scopeNote">
-                The checksum is related to the downloadURL.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_checksum">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.compressionformat" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#compressFormat" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20compression format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.compressionformat"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#compressFormat" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#compressFormat" data-placement="right">
-                  compression format</a>
-              </td>
-              <td>
-
-
-                <a href="#Mediatype" data-placement="right">Media type</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The format of the file in which the data is contained in a compressed form, e.g. to reduce the size of
-                the downloadable file.
-              </td>
-              <td property="skos:scopeNote">
-                It SHOULD be expressed using a media type as defined in the official register of media types managed by
-                IANA.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_compression_format">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20description%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.description"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/description" data-placement="right">
-                  description</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A free-text account of the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the description.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_description">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.documentation" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/page"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20documentation%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.documentation"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://xmlns.com/foaf/0.1/page" data-toggle="tooltip"
-                  data-content="http://xmlns.com/foaf/0.1/page" data-placement="right">
-                  documentation</a>
-              </td>
-              <td>
-
-
-                <a href="#Document" data-placement="right">Document</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A page or document about this Distribution.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="Distribution.downloadURL" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#downloadURL"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20download URL%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.downloadURL"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#downloadURL" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#downloadURL" data-placement="right">
-                  download URL</a>
-              </td>
-              <td>
-
-
-                <a href="#Resource" data-placement="right">Resource</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A URL that is a direct link to a downloadable file in a given format.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_download_url">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.format" typeof="rdfs:Property" resource="http://purl.org/dc/terms/format"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.format"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/format" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/format" data-placement="right">
-                  format</a>
-              </td>
-              <td>
-
-
-                <a href="#MediaTypeorExtent" data-placement="right">Media Type or Extent</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The file format of the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_format">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.haspolicy" typeof="rdfs:Property" resource="http://www.w3.org/ns/odrl/2/hasPolicy"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20has policy%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.haspolicy"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/odrl/2/hasPolicy" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/odrl/2/hasPolicy" data-placement="right">
-                  has policy</a>
-              </td>
-              <td>
-
-
-                <a href="#Policy" data-placement="right">Policy</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The policy expressing the rights associated with the distribution if using the ODRL vocabulary.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_has_policy">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.language" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20language%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.language"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/language" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/language" data-placement="right">
-                  language</a>
-              </td>
-              <td>
-
-
-                <a href="#Linguisticsystem" data-placement="right">Linguistic system</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A language used in the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated if the metadata is provided in multiple languages.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="Distribution.licence" typeof="rdfs:Property" resource="http://purl.org/dc/terms/license"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20licence%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.licence"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/license" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/license" data-placement="right">
-                  licence</a>
-              </td>
-              <td>
-
-
-                <a href="#LicenceDocument" data-placement="right">Licence Document</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                A licence under which the Distribution is made available.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_license">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.linkedschemas" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20linked schemas%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.linkedschemas"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
-                  linked schemas</a>
-              </td>
-              <td>
-
-
-                <a href="#Standard" data-placement="right">Standard</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                An established schema to which the described Distribution conforms.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_conforms_to">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.mediatype" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#mediaType"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20media type%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.mediatype"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#mediaType" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#mediaType" data-placement="right">
-                  media type</a>
-              </td>
-              <td>
-
-
-                <a href="#MediaType" data-placement="right">Media Type</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The media type of the Distribution as defined in the official register of media types managed by IANA.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_media_type">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.modificationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/modified"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20modification date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.modificationdate"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/modified" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/modified" data-placement="right">
-                  modification date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The most recent date on which the Distribution was changed or modified.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_update_date">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.packagingformat" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#packageFormat" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20packaging format%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.packagingformat"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#packageFormat" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#packageFormat" data-placement="right">
-                  packaging format</a>
-              </td>
-              <td>
-
-
-                <a href="#MediaType" data-placement="right">Media Type</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The format of the file in which one or more data files are grouped together, e.g. to enable a set of
-                related files to be downloaded together.
-              </td>
-              <td property="skos:scopeNote">
-                It SHOULD be expressed using a media type as defined in the official register of media types managed by
-                IANA.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_packaging_format">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.releasedate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20release date%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.releasedate"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/issued" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/issued" data-placement="right">
-                  release date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The date of formal issuance (e.g., publication) of the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_release_date">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.rights" typeof="rdfs:Property" resource="http://purl.org/dc/terms/rights"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20rights%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.rights"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/rights" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/rights" data-placement="right">
-                  rights</a>
-              </td>
-              <td>
-
-
-                <a href="#Rightsstatement" data-placement="right">Rights statement</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                A statement that specifies rights associated with the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_rights">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.spatialresolution" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20spatial resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.spatialresolution"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#spatialResolutionInMeters" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#spatialResolutionInMeters" data-placement="right">
-                  spatial resolution</a>
-              </td>
-              <td>
-
-
-                <a href="#xsd%3Adecimal" data-placement="right">xsd:decimal</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                The minimum spatial separation resolvable in a dataset distribution, measured in meters.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_spatial_resolution">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.status" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#status"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20status%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.status"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/adms#status" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/adms#status" data-placement="right">
-                  status</a>
-              </td>
-              <td>
-
-
-                <a href="#Concept" data-placement="right">Concept</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The status of the distribution in the context of maturity lifecycle.
-              </td>
-              <td property="skos:scopeNote">
-                It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="Distribution.temporalresolution" typeof="rdfs:Property"
-              resource="http://www.w3.org/ns/dcat#temporalResolution" class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20temporal resolution%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.temporalresolution"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#temporalResolution" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#temporalResolution" data-placement="right">
-                  temporal resolution</a>
-              </td>
-              <td>
-
-
-                <a href="#xsd%3Aduration" data-placement="right">xsd:duration</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                The minimum time period resolvable in the dataset distribution.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_temporal_resolution">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Distribution.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Distribution&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Distribution.title"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/title" data-placement="right">
-                  title</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A name given to the Distribution.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the description.
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:distribution_title">Link</a>
-              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
         </table>
       </div>
 
-      </div>
     </section>
 
-    <section>
+    <section id="entity-licence">
       <h3 id="LicenceDocument">
         <a href="http://purl.org/dc/terms/LicenseDocument" data-toggle="tooltip"
           data-content="http://purl.org/dc/terms/LicenseDocument" data-placement="right">Licence Document</a>
-
       </h3>
 
       <dl>
-        <dt>
-          Definition
-        </dt>
+        <dt> Definition </dt>
+        <dd> A legal document giving official permission to do something with a resource. </dd>
+        <dt> Properties </dt>
         <dd>
-          A legal document giving official permission to do something with a resource.
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#LicenceDocument.description">description</a></li>
+            <li><a href="#LicenceDocument.identifier">identifier</a></li>
+            <li><a href="#LicenceDocument.title">title</a></li>
+            <li><a href="#LicenceDocument.type">type</a></li>
+          </ul>
         </dd>
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#LicenceDocument.identifier">identifier</a>
-          , <a href="#LicenceDocument.title">title</a>
-          , <a href="#LicenceDocument.type">type</a>
-          , <a href="#LicenceDocument.description">description</a>
-          .
-        </dd>
-
       </dl>
-      </div>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
           <thead>
             <tr class="data-table__header">
               <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
+                style="width:14%">
                 Property
               </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
+              <th class="data-table__header-title--sortable" style="width:13%">
                 Range
               </th>
               <th class="data-table__header-title--sortable" style="width:6%">
@@ -4384,9 +2645,33 @@
               <th class="data-table__header-title--sortable" style="width:5%">
                 DCAT
               </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
             </tr>
           </thead>
+
           <tbody class="supertype">
+
+            <tr id="LicenceDocument.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/description" data-placement="right">
+                  description</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                Description of the licence.
+              </td>
+              <td property="skos:scopeNote">
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
             <tr id="LicenceDocument.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
               class="class mandatory">
@@ -4398,960 +2683,88 @@
               <td>
                 <a href="#Literal" data-placement="right">Literal</a>
               </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                ID of license... TBD.
-              </td>
-              <td property="skos:scopeNote">
-                usage
-              </td>
-              <td>
-                test
-              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> ID of license... TBD. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
-            <tr id="LicenceDocument.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
+            <tr id="LicenceDocument.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
               class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/type" data-placement="right">
-                  type</a>
-              </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="LicenceDocument.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/type" data-placement="right">
-                  type</a>
-              </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <td>
-
-              </td>
-            </tr>
-
-            <tr id="LicenceDocument.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/type" data-placement="right">
-                  type</a>
-              </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <td>
-
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h3 id="Location">
-        <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip"
-          data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
-
-      </h3>
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                    <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Location&body=Explain%20your%20issue"}}>
-                       <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-        </a>
-        -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A spatial region or named place.
-        </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Location">Link</a>
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the
-          use of the <a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a> is
-          recommended, following the approach described in the GeoDCAT-AP specification.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Location.bbox">bbox</a>
-          , <a href="#Location.centroid">centroid</a>
-          , <a href="#Location.geometry">geometry</a>
-          .
-        </dd>
-
-      </dl>
-      </div>
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <th class="data-table__header-title--sortable" style="width:5%">
-              </th>
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <!--
-                                <th class="data-table__header-title--sortable" style="width:3%">
-                                    Codelist
-                                </th>
-              -->
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-            </tr>
-          </thead>
-          <tbody class="supertype">
-
-            <tr id="Location.bbox" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#bbox"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20bbox%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Location.bbox"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#bbox" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#bbox" data-placement="right">
-                  bbox</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The geographic bounding box of a resource.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:location_bbox">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Location.centroid" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#centroid"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20centroid%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Location.centroid"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#centroid" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#centroid" data-placement="right">
-                  centroid</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The geographic center (centroid) of a resource.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:location_centroid">Link</a>
-              </td>
-            </tr>
-
-            <tr id="Location.geometry" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geometry"
-              class="class mandatory">
-              <td>
-                <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20geometry%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io//DCAT-AP/releases/3.0.0%23Location.geometry"
-                  target="_blank" rel="noopener noreferrer">
-                  <!--                                        <i class="icon">[o]</i> -->
-                  <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100" />
-                </a>
-              </td>
-              <td>
-                <a href="http://www.w3.org/ns/locn#geometry" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/locn#geometry" data-placement="right">
-                  geometry</a>
-              </td>
-              <td>
-
-
-                <a href="#Geometry" data-placement="right">Geometry</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The corresponding geometry for a resource.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                    <td>
-                                        
-                                    </td>
-            -->
-              <td>
-                <a href="https://w3c.github.io/dxwg/dcat/#Property:location_geometry">Link</a>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-      </div>
-    </section>
-
-  </section>
-
-  <section id="supportive-entities"><!--OddPage-->
-    <div class="header-wrapper">
-      <h2 id="x8-supportive-entities"><bdi class="secno">8.<!---0.624894%--> </bdi>
-        Supportive Entities
-      </h2><a class="self-link" href="#supportive-entities" aria-label="Permalink for Section 8."></a>
-    </div>
-
-    The supportive entities are supporting the main entities in the Application Profile.
-    They are included in the Application Profile because they form the range of properties.
-
-
-
-
-
-    <section id="activity">
-      <div class="header-wrapper">
-        <h3 id="Activity"><bdi class="secno">8.1<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/prov#Activity" data-toggle="tooltip"
-            data-content="http://www.w3.org/ns/prov#Activity" data-placement="right">Activity</a>
-
-        </h3><a class="self-link" href="#Activity" aria-label="Permalink for Section 8.1"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Activity&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          An activity is something that occurs over a period of time and acts upon or with entities; it may include
-          consuming, processing, transforming, modifying, relocating, using, or generating entities.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-    <section id="attribution">
-      <div class="header-wrapper">
-        <h3 id="Attribution"><bdi class="secno">8.2<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/prov#Attribution" data-toggle="tooltip"
-            data-content="http://www.w3.org/ns/prov#Attribution" data-placement="right">Attribution</a>
-
-        </h3><a class="self-link" href="#Attribution" aria-label="Permalink for Section 8.2"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Attribution&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          Attribution is the ascribing of an entity to an agent.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="checksum-algorithm">
-      <div class="header-wrapper">
-        <h3 id="ChecksumAlgorithm"><bdi class="secno">8.3<!---0.624894%--> </bdi>
-          <a href="http://spdx.org/rdf/terms#ChecksumAlgorithm" data-toggle="tooltip"
-            data-content="http://spdx.org/rdf/terms#ChecksumAlgorithm" data-placement="right">Checksum Algorithm</a>
-
-        </h3><a class="self-link" href="#ChecksumAlgorithm" aria-label="Permalink for Section 8.3"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20ChecksumAlgorithm&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          Algorithm for Checksums.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="concept">
-      <div class="header-wrapper">
-        <h3 id="Concept"><bdi class="secno">8.4<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip"
-            data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Concept</a>
-
-        </h3><a class="self-link" href="#Concept" aria-label="Permalink for Section 8.4"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Concept&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          An idea or notion; a unit of thought.
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          In DCAT-AP, a Concept is used to denote codes within a codelist. In section <a href="#controlled-vocs"
-            data-matched-text="[[[#controlled-vocs]]]" class="sec-ref"><bdi class="secno">10. </bdi>Controlled
-            Vocabularies</a> the expectations are elaborated in more detail.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Concept.preferredlabel">preferred label</a>
-          .
-        </dd>
-
-      </dl>
-
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:5%">
-                             </th>
- --->
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:3%">
-                                 Codelist
-                             </th>
-           -->
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-              <th class="data-table__header-title--sortable" style="width:3%">
-                Reuse
-              </th>
-            </tr>
-          </thead>
-          <tbody class="supertype">
-
-            <tr id="Concept.preferredlabel" typeof="rdfs:Property"
-              resource="http://www.w3.org/2004/02/skos/core#prefLabel" class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20preferred label%20in%20Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Concept.preferredlabel" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
-              <td>
-                <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip"
-                  data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
-                  preferred label</a>
-              </td>
-              <td>
-
-
-                <a href="#Literal" data-placement="right">Literal</a>
-
-
-              </td>
-              <td>
-                1..n
-              </td>
-              <td property="rdfs:comment">
-                A preferred label of the concept.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the label.
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
-              <td>
-
-              </td>
-              <td>
-
-                P
-
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-
-    </section>
-
-
-
-
-
-
-    <section id="concept-scheme">
-      <div class="header-wrapper">
-        <h3 id="ConceptScheme"><bdi class="secno">8.5<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-toggle="tooltip"
-            data-content="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-placement="right">Concept Scheme</a>
-
-        </h3><a class="self-link" href="#ConceptScheme" aria-label="Permalink for Section 8.5"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20ConceptScheme&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          An aggregation of one or more SKOS concepts.
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          In DCAT-AP, a Concept Scheme is used to denote a codelist. In section <a href="#controlled-vocs"
-            data-matched-text="[[[#controlled-vocs]]]" class="sec-ref"><bdi class="secno">10. </bdi>Controlled
-            Vocabularies</a> the expectations are elaborated in more detail.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#ConceptScheme.title">title</a>
-          .
-        </dd>
-
-      </dl>
-
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:5%">
-                             </th>
- --->
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:3%">
-                                 Codelist
-                             </th>
-           -->
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-              <th class="data-table__header-title--sortable" style="width:3%">
-                Reuse
-              </th>
-            </tr>
-          </thead>
-          <tbody class="supertype">
-
-            <tr id="ConceptScheme.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
-              class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20title%20in%20Concept Scheme&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23ConceptScheme.title" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
               <td>
                 <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
               <td>
-
-
                 <a href="#Literal" data-placement="right">Literal</a>
-
-
               </td>
-              <td>
-                1..n
-              </td>
+              <td> 1 </td>
               <td property="rdfs:comment">
-                A name of the concept scheme.
+                A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
               </td>
-              <td property="skos:scopeNote">
-                May be repeated for different versions of the name
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="LicenceDocument.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
+              class="class mandatory">
               <td>
-
+                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/type" data-placement="right">
+                  type</a>
               </td>
               <td>
-
-                P
-
+                <a href="#Concept" data-placement="right">Concept</a>
               </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                A type of licence, e.g. indicating &#39;public domain&#39; or &#39;royalties required&#39;.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
         </table>
       </div>
 
-
+      </div>
     </section>
 
+    <section id="entity-standard">
+      <h3 id="Standard">
+        <a href="http://purl.org/dc/terms/Standard" data-toggle="tooltip"
+          data-content="http://purl.org/dc/terms/Standard" data-placement="right">Standard</a>
+      </h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="document">
-      <div class="header-wrapper">
-        <h3 id="Document"><bdi class="secno">8.6<!---0.624894%--> </bdi>
-          <a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip"
-            data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a>
-
-        </h3><a class="self-link" href="#Document" aria-label="Permalink for Section 8.6"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Document&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
       <dl>
-        <dt>
-          Definition
-        </dt>
+        <dt> Definition </dt>
+        <dd> A standard or other specification to which a resource conforms. </dd>
+        <dt> Properties </dt>
         <dd>
-          A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="frequency">
-      <div class="header-wrapper">
-        <h3 id="Frequency"><bdi class="secno">8.7<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/Frequency" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/Frequency" data-placement="right">Frequency</a>
-
-        </h3><a class="self-link" href="#Frequency" aria-label="Permalink for Section 8.7"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Frequency&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A rate at which something recurs, e.g. the publication of a Dataset.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="geometry">
-      <div class="header-wrapper">
-        <h3 id="Geometry"><bdi class="secno">8.8<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/locn#Geometry" data-toggle="tooltip"
-            data-content="http://www.w3.org/ns/locn#Geometry" data-placement="right">Geometry</a>
-
-        </h3><a class="self-link" href="#Geometry" aria-label="Permalink for Section 8.8"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Geometry&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed
-          using coordinates in some coordinate reference system.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="identifier">
-      <div class="header-wrapper">
-        <h3 id="Identifier"><bdi class="secno">8.9<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/adms#Identifier" data-toggle="tooltip"
-            data-content="http://www.w3.org/ns/adms#Identifier" data-placement="right">Identifier</a>
-
-        </h3><a class="self-link" href="#Identifier" aria-label="Permalink for Section 8.9"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Identifier&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-
-          This is based on the UN/CEFACT Identifier class.
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          An identifier in a particular context, consisting of the
-          <ul>
-            <li>content string that is the identifier;</li>
-            <li>an optional identifier for the identifier scheme;</li>
-            <li>an optional identifier for the version of the identifier scheme;</li>
-            <li>an optional identifier for the agency that manages the identifier scheme.</li>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Standard.identifier">identifier</a></li>
+            <li><a href="#Standard.publicationDate">publication date</a></li>
+            <li><a href="#Standard.title">title</a></li>
+            <li><a href="#Standard.version">type</a></li>
           </ul>
         </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Identifier.notation">notation</a>
-          .
-        </dd>
-
       </dl>
-
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
           <thead>
             <tr class="data-table__header">
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:5%">
-                             </th>
- --->
               <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
+                style="width:14%">
                 Property
               </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
+              <th class="data-table__header-title--sortable" style="width:13%">
                 Range
               </th>
               <th class="data-table__header-title--sortable" style="width:6%">
@@ -5363,938 +2776,249 @@
               <th class="data-table__header-title--sortable" style="width:30%">
                 Usage
               </th>
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:3%">
-                                 Codelist
-                             </th>
-           -->
               <th class="data-table__header-title--sortable" style="width:5%">
                 DCAT
               </th>
-              <th class="data-table__header-title--sortable" style="width:3%">
+              <th class="data-table__header-title--sortable" style="width:4%">
                 Reuse
               </th>
             </tr>
           </thead>
+
           <tbody class="supertype">
 
-            <tr id="Identifier.notation" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#notation"
+            <tr id="Standard.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
               class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20notation%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Identifier.notation" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
               <td>
-                <a href="http://www.w3.org/2004/02/skos/core#notation" data-toggle="tooltip"
-                  data-content="http://www.w3.org/2004/02/skos/core#notation" data-placement="right">
-                  notation</a>
+                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/type" data-placement="right">
+                  identifier</a>
               </td>
               <td>
-
-
                 <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Standard.</td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
-
+            <tr id="Standard.publicationDate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/issued" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/issued" data-placement="right">
+                  publication date</a>
               </td>
               <td>
-                1
+                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
               </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment">
-                A string that is an identifier in the context of the identifier scheme referenced by its datatype.
+                The date on which the Standard was first released.
               </td>
-              <td property="skos:scopeNote">
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
 
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
+            <tr id="Standard.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
+              class="class mandatory">
               <td>
-
+                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/title" data-placement="right">
+                  title</a>
               </td>
               <td>
-
-                P
-
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                A name given to the Standard.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Standard.version" typeof="rdfs:Property" resource="http://www.w3.org/2002/07/owl#versionInfo"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2002/07/owl#versionInfo" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2002/07/owl#versionInfo" data-placement="right">
+                  version</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                The version indicator (name or identifier) of the standard.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
         </table>
       </div>
 
-
+      </div>
     </section>
 
-
-
-
-
-
-
-
-    <section id="legal-resource">
-      <div class="header-wrapper">
-        <h3 id="LegalResource"><bdi class="secno">8.10<!---0.624894%--> </bdi>
-          <a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip"
-            data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Legal Resource</a>
-
-        </h3><a class="self-link" href="#LegalResource" aria-label="Permalink for Section 8.10"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20LegalResource&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          This class represents the legislation,policy or policies that lie behind the Rules that govern the service.
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          The definition and properties of the Legal Resource class are aligned with the ontology included in "Council
-          conclusions inviting the introduction of the European Legislation Identifier (<a
-            href="https://eur-lex.europa.eu/eli-register/about.html">ELI</a>)". For describing the attributes of a Legal
-          Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the (<a
-            href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) ontology.
-
-          In this data specification the use is restricted to instances of this class that follow the (<a
-            href="https://op.europa.eu/en/web/eu-vocabularies/eli">ELI</a>) URI guidelines.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-    <section id="linguistic-system">
-      <div class="header-wrapper">
-        <h3 id="Linguisticsystem"><bdi class="secno">8.11<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">Linguistic system</a>
-
-        </h3><a class="self-link" href="#Linguisticsystem" aria-label="Permalink for Section 8.11"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20LinguisticSystem&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="literal">
-      <div class="header-wrapper">
-        <h3 id="Literal"><bdi class="secno">8.12<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip"
-            data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
-
-        </h3><a class="self-link" href="#Literal" aria-label="Permalink for Section 8.12"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date.
-          Literals that contain human-readable text have an optional language tag as defined by BCP 47 [<cite><a
-              class="bibref" data-link-type="biblio" href="#bib-rfc5646"
-              title="Tags for Identifying Languages">rfc5646<!---0.624894%--></a></cite><!---0.624894%-->].
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-    <section id="media-type">
-      <div class="header-wrapper">
-        <h3 id="Mediatype"><bdi class="secno">8.13<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/MediaType" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/MediaType" data-placement="right">Media type</a>
-
-        </h3><a class="self-link" href="#Mediatype" aria-label="Permalink for Section 8.13"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A media type, e.g. the format of a computer file.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="media-type-0">
-      <div class="header-wrapper">
-        <h3 id="MediaType"><bdi class="secno">8.14<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/MediaType" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/MediaType" data-placement="right">Media Type</a>
-
-        </h3><a class="self-link" href="#MediaType" aria-label="Permalink for Section 8.14"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaType&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A file format or physical medium.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="media-type-or-extent">
-      <div class="header-wrapper">
-        <h3 id="MediaTypeorExtent"><bdi class="secno">8.15<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/MediaTypeOrExtent" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/MediaTypeOrExtent" data-placement="right">Media Type or Extent</a>
-
-        </h3><a class="self-link" href="#MediaTypeorExtent" aria-label="Permalink for Section 8.15"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20MediaTypeOrExtent&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A media type or extent.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="period-of-time">
-      <div class="header-wrapper">
-        <h3 id="Periodoftime"><bdi class="secno">8.16<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/PeriodOfTime" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/PeriodOfTime" data-placement="right">Period of time</a>
-
-        </h3><a class="self-link" href="#Periodoftime" aria-label="Permalink for Section 8.16"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20PeriodOfTime&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          An interval of time that is named or defined by its start and end dates.
-        </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Period_of_Time">Link</a>
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          For this entity the following properties are defined: <a href="#Periodoftime.beginning">beginning</a>
-          , <a href="#Periodoftime.end">end</a>
-          , <a href="#Periodoftime.enddate">end date</a>
-          , <a href="#Periodoftime.startdate">start date</a>
-          .
-        </dd>
-
-      </dl>
-
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:5%">
-                             </th>
- --->
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:12%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:12%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <!--
-                             <th class="data-table__header-title--sortable" style="width:3%">
-                                 Codelist
-                             </th>
-           -->
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-              <th class="data-table__header-title--sortable" style="width:3%">
-                Reuse
-              </th>
-            </tr>
-          </thead>
-          <tbody class="supertype">
-
-            <tr id="Periodoftime.beginning" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasBeginning"
-              class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20beginning%20in%20Period of time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Periodoftime.beginning" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
-              <td>
-                <a href="http://www.w3.org/2006/time#hasBeginning" data-toggle="tooltip"
-                  data-content="http://www.w3.org/2006/time#hasBeginning" data-placement="right">
-                  beginning</a>
-              </td>
-              <td>
-
-
-                <a href="#Timeinstant" data-placement="right">Time instant</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The beginning of a period or interval.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning">Link</a>
-              </td>
-              <td>
-
-
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning">E</a>
-
-
-              </td>
-            </tr>
-
-            <tr id="Periodoftime.end" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasEnd"
-              class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end%20in%20Period of time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Periodoftime.end" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
-              <td>
-                <a href="http://www.w3.org/2006/time#hasEnd" data-toggle="tooltip"
-                  data-content="http://www.w3.org/2006/time#hasEnd" data-placement="right">
-                  end</a>
-              </td>
-              <td>
-
-
-                <a href="#Timeinstant" data-placement="right">Time instant</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The end of a period or interval.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end">Link</a>
-              </td>
-              <td>
-
-
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end">E</a>
-
-
-              </td>
-            </tr>
-
-            <tr id="Periodoftime.enddate" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#endDate"
-              class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20end date%20in%20Period of time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Periodoftime.enddate" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
-              <td>
-                <a href="http://www.w3.org/ns/dcat#endDate" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#endDate" data-placement="right">
-                  end date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The end of the period.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date">Link</a>
-              </td>
-              <td>
-
-
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date">E</a>
-
-
-              </td>
-            </tr>
-
-            <tr id="Periodoftime.startdate" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#startDate"
-              class="class mandatory">
-              <!--
-                                 <td>
-             <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20start date%20in%20Period of time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/DCAT-AP/releases/3.0.0%23Periodoftime.startdate" target="_blank" rel="noopener noreferrer" >
-                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                     </a>
-                                 </td>
- --->
-              <td>
-                <a href="http://www.w3.org/ns/dcat#startDate" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#startDate" data-placement="right">
-                  start date</a>
-              </td>
-              <td>
-
-
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-
-
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                The start of the period.
-              </td>
-              <td property="skos:scopeNote">
-
-              </td>
-              <!--
-                                 <td>
-                                     
-                                 </td>
-         -->
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date">Link</a>
-              </td>
-              <td>
-
-
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date">E</a>
-
-
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-
-    </section>
-
-
-
-
-
-
-    <section id="policy">
-      <div class="header-wrapper">
-        <h3 id="Policy"><bdi class="secno">8.17<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/odrl/2/Policy" data-toggle="tooltip"
-            data-content="http://www.w3.org/ns/odrl/2/Policy" data-placement="right">Policy</a>
-
-        </h3><a class="self-link" href="#Policy" aria-label="Permalink for Section 8.17"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Policy&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A non-empty group of Permissions and/or Prohibitions.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="provenance-statement">
-      <div class="header-wrapper">
-        <h3 id="ProvenanceStatement"><bdi class="secno">8.18<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/ProvenanceStatement" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/ProvenanceStatement" data-placement="right">Provenance Statement</a>
-
-        </h3><a class="self-link" href="#ProvenanceStatement" aria-label="Permalink for Section 8.18"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20ProvenanceStatement&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A statement of any changes in ownership and custody of a resource since its creation that are significant for
-          its authenticity, integrity, and interpretation.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-    <section id="resource">
-      <div class="header-wrapper">
-        <h3 id="Resource"><bdi class="secno">8.19<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip"
-            data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Resource</a>
-
-        </h3><a class="self-link" href="#Resource" aria-label="Permalink for Section 8.19"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Resource&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          Anything described by RDF.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="rights-statement">
-      <div class="header-wrapper">
-        <h3 id="Rightsstatement"><bdi class="secno">8.20<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/RightsStatement" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/RightsStatement" data-placement="right">Rights statement</a>
-
-        </h3><a class="self-link" href="#Rightsstatement" aria-label="Permalink for Section 8.20"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20RightsStatement&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving
-          official permission to do something with a resource, or a statement about access rights.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="role">
-      <div class="header-wrapper">
-        <h3 id="Role"><bdi class="secno">8.21<!---0.624894%--> </bdi>
-          <a href="http://www.w3.org/ns/dcat#Role" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Role"
-            data-placement="right">Role</a>
-
-        </h3><a class="self-link" href="#Role" aria-label="Permalink for Section 8.21"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Role&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A role is the function of a resource or agent with respect to another resource, in the context of resource
-          attribution or resource relationships.
-        </dd>
-
-        <dt>
-          Reference in DCAT
-        </dt>
-        <dd>
-          <a href="https://w3c.github.io/dxwg/dcat/#Class:Role">Link</a>
-        </dd>
-
-
-        <dt>
-          Usage Note
-        </dt>
-        <dd>
-          Note it is a subclass of skos:Concept.
-        </dd>
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
-
-    <section id="standard">
-      <div class="header-wrapper">
-        <h3 id="Standard"><bdi class="secno">8.22<!---0.624894%--> </bdi>
-          <a href="http://purl.org/dc/terms/Standard" data-toggle="tooltip"
-            data-content="http://purl.org/dc/terms/Standard" data-placement="right">Standard</a>
-
-        </h3><a class="self-link" href="#Standard" aria-label="Permalink for Section 8.22"></a>
-      </div>
-
-      <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-      <!-- outcomment github feedback possibility
-                 <a href="https://github.com/SEMICeu/DCAT-AP/issues/new?title=Issue%20for%20Standard&body=Explain%20your%20issue"}}>
-                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-     </a>
-     -->
-      <dl>
-        <dt>
-          Definition
-        </dt>
-        <dd>
-          A standard or other specification to which a resource conforms.
-        </dd>
-
-
-
-        <dt>
-          Properties
-        </dt>
-
-        <dd>
-          This specification does not impose any additional requirements to properties for this entity.
-        </dd>
-
-      </dl>
-
-
-
-    </section>
-
-
-
-
-
+  </section>
+
+  <section id="datatypes">
+    <h2>
+      Datatypes
+    </h2>
+
+    The following datatypes are used within this specification.
+
+    <table class="data-table simple" id="table-mandatory-classes">
+      <thead>
+        <tr class="data-table__header">
+          <th class="data-table__header-title--sortable data-table__header-title--sortable-active">
+            Class
+          </th>
+          <th class="data-table__header-title--sortable">
+            Definition
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="supertype">
+        <tr>
+          <td>
+
+            <div id="TemporalLiteral">
+              <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip"
+                data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Temporal Literal</a>
+            </div>
+
+          </td>
+          <td>
+            rdfs:Literal encoded using the relevant [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
+                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->]
+            Date and Time compliant string and typed using the appropriate XML Schema datatype (xsd:gYear,
+            xsd:gYearMonth, xsd:date, or xsd:dateTime).
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <div id="Timeinstant">
+              <a href="http://www.w3.org/2006/time#Instant" data-toggle="tooltip"
+                data-content="http://www.w3.org/2006/time#Instant" data-placement="right">Time instant</a>
+            </div>
+
+          </td>
+          <td>
+            A temporal entity with zero extent or duration.
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <div id="xsd%3AdateTime">
+              <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+            </div>
+
+          </td>
+          <td>
+            Object with integer-valued year, month, day, hour and minute properties, a decimal-valued second property,
+            and a boolean timezoned property.
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <div id="xsd%3Adecimal">
+              <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">xsd:decimal</a>
+            </div>
+
+          </td>
+          <td>
+            Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value
+            space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive
+            power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <div id="xsd%3Aduration">
+              <a href="http://www.w3.org/2001/XMLSchema#duration" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#duration" data-placement="right">xsd:duration</a>
+            </div>
+
+          </td>
+          <td>
+            Duration represents a duration of time. The ·value space· of duration is a six-dimensional space where the
+            coordinates designate the Gregorian year, month, day, hour, minute, and second components defined in §
+            5.5.3.2 of [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
+                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->],
+            respectively.
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <div id="xsd%3AhexBinary">
+              <a href="http://www.w3.org/2001/XMLSchema#hexBinary" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#hexBinary" data-placement="right">xsd:hexBinary</a>
+            </div>
+
+          </td>
+          <td>
+            Hex-encoded binary data. The ·value space· of hexBinary is the set of finite-length sequences of binary
+            octets.
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <div id="xsd%3AnonNegativeInteger">
+              <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+                data-placement="right">xsd:nonNegativeInteger</a>
+            </div>
+
+          </td>
+          <td>
+            Number derived from integer by setting the value of minInclusive to be 0.
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section id='conformance'>
     <!-- This section is filled automatically by ReSpec. -->
   </section>
+
+  <section id='acknowledgments' class="appendix">
+    <h2>
+      Acknowledgments
+    </h2>
+  </section>
+
+  <section id='examples' class="appendix">
+    <h2>
+      Examples
+    </h2>
+  </section>
+
 </body>
 
 </html>
