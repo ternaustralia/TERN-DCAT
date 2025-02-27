@@ -53,6 +53,7 @@ var respecConfig = {
     //     label: "JSON-LD",
     //     uri: "https://www.w3.org/ns/dcat.jsonld",
     // }],
+    //publishDate: "2025-02-27",
     editors: [
         {
             name: "Javier Sanchez Gonzalez",

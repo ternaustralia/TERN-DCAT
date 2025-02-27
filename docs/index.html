@@ -25,6 +25,10 @@
     .prop-list {
       columns: 4;
     }
+
+    body {
+      max-width: 60em !important;
+    }
   </style>
 
   <p class="copyright">
@@ -3168,138 +3172,978 @@
       </div>
     </section>
 
+    <section id="entity-rights-statement">
+      <h3 id="RightsStatement">
+        <a href="http://purl.org/dc/terms/RightsStatement" data-toggle="tooltip"
+          data-content="http://purl.org/dc/terms/RightsStatement" data-placement="right">RightsStatement</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
+          giving official permission to do something with a resource, or a statement about access rights. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#RightsStatement.title">title</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="RightsStatement.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/title" data-placement="right">
+                  title</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                A name given to the RightsStatement. TDB
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-method">
+      <h3 id="Method">
+        <a href="https://w3id.org/tern/ontologies/tern/Method" data-toggle="tooltip"
+          data-content="https://w3id.org/tern/ontologies/tern/Method" data-placement="right">Method</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> TDB. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Method.additionalDocumentation">additional documentation</a></li>
+            <li><a href="#Method.description">description</a></li>
+            <li><a href="#Method.instructions">instructions</a></li>
+            <li><a href="#Method.scope">scope</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Method.additionalDocumentation" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/additionalDocumentation" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
+                  additional documentation</a>
+              </td>
+              <td>
+                <a href="#Resource" data-placement="right">Resource</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Method.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/description" data-placement="right">
+                  description</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Method.</td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Method.instructions" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/instructions" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/instructions" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/instructions" data-placement="right">
+                  instructions</a>
+              </td>
+              <td>
+                <a href="#TBD" data-placement="right">TBD</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Method.scope" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/scope"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/scope" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/scope" data-placement="right">
+                  scope</a>
+              </td>
+              <td>
+                <a href="#Concept" data-placement="right">Concept</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-vertical-extent">
+      <h3 id="VerticalExtent">
+        <a href="https://w3id.org/tern/ontologies/tern/VerticalExtent" data-toggle="tooltip"
+          data-content="https://w3id.org/tern/ontologies/tern/VerticalExtent" data-placement="right">Vertical Extent</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> TDB. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#VerticalExtent.additionalDocumentation">additional documentation</a></li>
+            <li><a href="#VerticalExtent.description">description</a></li>
+            <li><a href="#VerticalExtent.instructions">instructions</a></li>
+            <li><a href="#VerticalExtent.scope">scope</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="VerticalExtent.conformsTo" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
+                  conforms to</a>
+              </td>
+              <td>
+                <a href="#Resource" data-placement="right">Resource</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                Spatial reference system code of the vertical extent.
+              </td>
+              <td property="skos:scopeNote"> Vertical Datum represented as a code (e.g., AHD, EGM2020, EPSG:5712) or as
+                a URI
+                (http://www.opengis.net/def/crs/EPSG/0/5712).
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="VerticalExtent.maxAltitude" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/maxAltitude" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/maxAltitude" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/maxAltitude" data-placement="right">
+                  maximum altitude</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="VerticalExtent.minAltitude" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/minAltitude" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/minAltitude" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/minAltitude" data-placement="right">
+                  minimum altitude</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="VerticalExtent.unit" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/unit"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/unit" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
+                  unit of measurement</a>
+              </td>
+              <td>
+                <a href="#Unit" data-placement="right">Unit</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                The unit of measurement of the concept, when the concept relates to Ecological parameters.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-data-quality">
+      <h3 id="DataQuality">
+        <a href="https://w3id.org/tern/ontologies/tern/DataQuality" data-toggle="tooltip"
+          data-content="https://w3id.org/tern/ontologies/tern/DataQuality" data-placement="right">Data Quality</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> TDB. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#DataQuality.DQ_descriptiveResult">descriptive result</a></li>
+            <li><a href="#DataQuality.DQ_scope">scope</a></li>
+            <li><a href="#DataQuality.DQ_scopeDescription">scope description</a></li>
+            <li><a href="#DataQuality.DQ_standaloneQualityReport">standalone quality report</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="DataQuality.DQ_descriptiveResult" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/DQ_descriptiveResult" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/DQ_descriptiveResult" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/DQ_descriptiveResult" data-placement="right">
+                  descriptive result</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="DataQuality.DQ_scope" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/DQ_scope" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/DQ_scope" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/DQ_scope" data-placement="right">
+                  scope</a>
+              </td>
+              <td>
+                <a href="#Concept" data-placement="right">Concept</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="DataQuality.DQ_scopeDescription" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/DQ_scopeDescription" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/DQ_scopeDescription" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/DQ_scopeDescription" data-placement="right">
+                  scope description</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="DataQuality.DQ_standaloneQualityReport" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/DQ_standaloneQualityReport" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/DQ_standaloneQualityReport" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/DQ_standaloneQualityReport"
+                  data-placement="right">
+                  standalone quality report</a>
+              </td>
+              <td>
+                <a href="#Resource" data-placement="right">Resource</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-spatial-resolution">
+      <h3 id="QualityMeasurement">
+        <a href="http://www.w3.org/ns/dqv#QualityMeasurement" data-toggle="tooltip"
+          data-content="http://www.w3.org/ns/dqv#QualityMeasurement" data-placement="right">Spatial Resolution</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> TDB. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#QualityMeasurement.isMeasurementOf">measurement of</a></li>
+            <li><a href="#QualityMeasurement.value">value</a></li>
+            <li><a href="#QualityMeasurement.unit">unit</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="QualityMeasurement.isMeasurementOf" typeof="rdfs:Property"
+              resource="http://www.w3.org/ns/dqv#isMeasurementOf" class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/ns/dqv#isMeasurementOf" data-toggle="tooltip"
+                  data-content="http://www.w3.org/ns/dqv#isMeasurementOf" data-placement="right">
+                  measurement of</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="QualityMeasurement.value" typeof="rdfs:Property" resource="http://www.w3.org/ns/dqv#value"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/ns/dqv#value" data-toggle="tooltip"
+                  data-content="http://www.w3.org/ns/dqv#value" data-placement="right">
+                  value</a>
+              </td>
+              <td>
+                <a href="#Concept" data-placement="right">Concept</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                TBD
+              </td>
+              <td property="skos:scopeNote">
+                TBD
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="QualityMeasurement.unit" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/unit" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/unit" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
+                  unit of measurement</a>
+              </td>
+              <td>
+                <a href="#Unit" data-placement="right">Unit</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                The unit of measurement of the spatial resolution.
+              </td>
+              <td property="skos:scopeNote"> TBD. </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-period-of-time">
+      <h3 id="PeriodOfTime">
+        <a href="http://purl.org/dc/terms/PeriodOfTime" data-toggle="tooltip"
+          data-content="http://purl.org/dc/terms/PeriodOfTime" data-placement="right">Period of time</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> An interval of time that is named or defined by its start and end dates. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#PeriodOfTime.beginning">beginning</a></li>
+            <li><a href="#PeriodOfTime.end">end</a></li>
+            <li><a href="#PeriodOfTime.end_date">end date</a></li>
+            <li><a href="#PeriodOfTime.start_date">start date</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="PeriodOfTime.beginning" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasBeginning"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2006/time#hasBeginning" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2006/time#hasBeginning" data-placement="right">
+                  beginning</a>
+              </td>
+              <td>
+                <a href="#Timeinstant" data-placement="right">Time instant</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The beginning of a period or interval. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning">Link</a> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_beginning">E</a> </td>
+            </tr>
+
+            <tr id="PeriodOfTime.end" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasEnd"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/2006/time#hasEnd" data-toggle="tooltip"
+                  data-content="http://www.w3.org/2006/time#hasEnd" data-placement="right">
+                  end</a>
+              </td>
+              <td>
+                <a href="#Timeinstant" data-placement="right">Time instant</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The end of a period or interval. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end">Link</a> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_has_end">E</a> </td>
+            </tr>
+
+            <tr id="PeriodOfTime.end_date" typeof="rdfs:Property" resource="http://purl.org/dc/terms/endDate"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/endDate" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/endDate" data-placement="right">
+                  end date</a>
+              </td>
+              <td>
+                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The end of the period. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date">Link</a> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date">E</a> </td>
+            </tr>
+
+            <tr id="PeriodOfTime.start_date" typeof="rdfs:Property" resource="http://purl.org/dc/terms/startDate"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/startDate" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/startDate" data-placement="right">
+                  start date</a>
+              </td>
+              <td>
+                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The start of the period. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date">Link</a> </td>
+              <td> <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date">E</a> </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="entity-resource">
+      <h3 id="Resource">
+        <a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip"
+          data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Resource</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> TBD </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Resource.description">description</a></li>
+            <li><a href="#Resource.conformsTo">conforms to</a></li>
+            <li><a href="#Resource.format">format</a></li>
+            <li><a href="#Resource.title">title</a></li>
+            <li><a href="#Resource.type">type</a></li>
+            <li><a href="#Resource.value">value</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Resource.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/description" data-placement="right">
+                  description</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.conformsTo" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
+                  conforms to</a>
+              </td>
+              <td>
+                <a href="#Standard" data-placement="right">Standard</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.format" typeof="rdfs:Property" resource="http://purl.org/dc/terms/format"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/format" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/format" data-placement="right">
+                  format</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/title" data-placement="right">
+                  title</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/type" data-placement="right">
+                  type</a>
+              </td>
+              <td>
+                <a href="#Concept" data-placement="right">Concept</a>
+              </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.value" typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-toggle="tooltip"
+                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-placement="right">
+                  value</a>
+              </td>
+              <td>
+                <a href="#Literal" data-placement="right">Literal</a>
+              </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> TBD </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      </div>
+    </section>
+
   </section>
 
-  <section id="datatypes">
+  <section id="supportive-entities">
     <h2>
-      Datatypes
+      Supportive Entities
     </h2>
 
-    The following datatypes are used within this specification.
+    The supportive entities are supporting the main entities in the Application Profile.
+    They are included in the Application Profile because they form the range of properties.
 
-    <table class="data-table simple" id="table-mandatory-classes">
-      <thead>
-        <tr class="data-table__header">
-          <th class="data-table__header-title--sortable data-table__header-title--sortable-active">
-            Class
-          </th>
-          <th class="data-table__header-title--sortable">
-            Definition
-          </th>
-        </tr>
-      </thead>
+    <!-- <section id="document">
+      <h3 id="Document">
+        <a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip"
+          data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document?</a>
+      </h3>
 
-      <tbody class="supertype">
-        <tr>
-          <td>
+      <dl>
+        <dt> Definition </dt>
+        <dd> A textual resource intended for human consumption that contains information, e.g. a web page about a
+          Dataset. </dd>
+        <dt> Properties </dt>
+        <dd> This specification does not impose any additional requirements to properties for this entity. </dd>
+      </dl>
+    </section> -->
 
-            <div id="TemporalLiteral">
-              <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip"
-                data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Temporal Literal</a>
-            </div>
+    <!-- <section id="linguistic-system">
+      <h3 id="Linguisticsystem">
+        <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip"
+          data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">Linguistic system</a>
+      </h3>
 
-          </td>
-          <td>
-            rdfs:Literal encoded using the relevant [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
-                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->]
-            Date and Time compliant string and typed using the appropriate XML Schema datatype (xsd:gYear,
-            xsd:gYearMonth, xsd:date, or xsd:dateTime).
-          </td>
-        </tr>
-        <tr>
-          <td>
+      <dl>
+        <dt> Definition </dt>
+        <dd> A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language. </dd>
+        <dt> Properties </dt>
+        <dd> This specification does not impose any additional requirements to properties for this entity. </dd>
+      </dl>
+    </section> -->
 
-            <div id="Timeinstant">
-              <a href="http://www.w3.org/2006/time#Instant" data-toggle="tooltip"
-                data-content="http://www.w3.org/2006/time#Instant" data-placement="right">Time instant</a>
-            </div>
+    <section id="literal">
+      <h3 id="Literal">
+        <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip"
+          data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+      </h3>
 
-          </td>
-          <td>
-            A temporal entity with zero extent or duration.
-          </td>
-        </tr>
-        <tr>
+      <dl>
+        <dt> Definition </dt>
+        <dd> A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date.
+          Literals that contain human-readable text have an optional language tag as defined by BCP 47 [<cite><a
+              class="bibref" data-link-type="biblio" href="#bib-rfc5646"
+              title="Tags for Identifying Languages">rfc5646<!---0.487875%--></a></cite><!---0.487875%-->].
+        </dd>
+        <dt> Properties </dt>
+        <dd> This specification does not impose any additional requirements to properties for this entity. </dd>
+      </dl>
+    </section>
 
-          <td>
+  </section>
 
-            <div id="xsd%3AdateTime">
-              <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
-            </div>
-
-          </td>
-          <td>
-            Object with integer-valued year, month, day, hour and minute properties, a decimal-valued second property,
-            and a boolean timezoned property.
-          </td>
-        </tr>
-        <tr>
-
-          <td>
-
-            <div id="xsd%3Adecimal">
-              <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">xsd:decimal</a>
-            </div>
-
-          </td>
-          <td>
-            Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value
-            space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive
-            power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
-          </td>
-        </tr>
-        <tr>
-
-          <td>
-
-            <div id="xsd%3Aduration">
-              <a href="http://www.w3.org/2001/XMLSchema#duration" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#duration" data-placement="right">xsd:duration</a>
-            </div>
-
-          </td>
-          <td>
-            Duration represents a duration of time. The ·value space· of duration is a six-dimensional space where the
-            coordinates designate the Gregorian year, month, day, hour, minute, and second components defined in §
-            5.5.3.2 of [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
-                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->],
-            respectively.
-          </td>
-        </tr>
-        <tr>
-
-          <td>
-
-            <div id="xsd%3AhexBinary">
-              <a href="http://www.w3.org/2001/XMLSchema#hexBinary" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#hexBinary" data-placement="right">xsd:hexBinary</a>
-            </div>
-
-          </td>
-          <td>
-            Hex-encoded binary data. The ·value space· of hexBinary is the set of finite-length sequences of binary
-            octets.
-          </td>
-        </tr>
-        <tr>
-
-          <td>
-
-            <div id="xsd%3AnonNegativeInteger">
-              <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-                data-placement="right">xsd:nonNegativeInteger</a>
-            </div>
-
-          </td>
-          <td>
-            Number derived from integer by setting the value of minInclusive to be 0.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <section class="informative" id="validation-of-dcat-ap">
+    <h2>Validation of DCAT-AP</h2>
   </section>
 
   <section id='conformance'>
