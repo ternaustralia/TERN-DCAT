@@ -31,6 +31,105 @@
     }
   </style>
 
+  <style>
+    /* .CodeMirror {
+      border: 1px solid #eee;
+      height: auto;
+    }
+
+    .buttonsample {
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+      font-weight: 700;
+      border: 0 outset buttonface;
+      background: #F5F6F8;
+      background-image: linear-gradient(to bottom, #F5F6F8, #DBDCDE);
+      border-radius: 4px;
+      box-shadow: 0 1px 3px #666;
+      font-family: Arial;
+      color: grey;
+      font-size: 14px;
+      padding: 10px 5px;
+      text-decoration: none;
+      float: right
+    }
+
+    .buttonsample:hover {
+      color: #2a70d3
+    }
+
+    .tabsstyle {
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    li.ui-tabs-tab>a:hover {
+      background-color: dodgerblue;
+      color: white;
+    } */
+
+    table.simple {
+      font-size: small;
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 3px solid #005a9c
+    }
+
+    /* body.darkmode .simple th {
+      background: #005a9c94;
+      color: #ddd
+    }
+
+    body.darkmode .simple th a {
+      color: #ddd
+    }
+
+    body.darkmode .simple tr:nth-child(even) {
+      background: #f0f6ff26
+    }
+
+    body.darkmode :is(h4, h5, h6)+a.self-link::before {
+      color: var(--heading-text);
+    }
+
+    body.darkmode img {
+      background: none;
+    }
+
+    body.darkmode section#references :target {
+      background: #04162d;
+    } */
+
+    .simple th {
+      background: #005a9c;
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left
+    }
+
+    .simple th a {
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left
+    }
+
+    .simple th[scope=row] {
+      background: inherit;
+      color: inherit;
+      border-top: 1px solid #ddd
+    }
+
+    .simple td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd
+    }
+
+    .simple tr:nth-child(even) {
+      background: #f0f6ff
+    }
+  </style>
+
   <p class="copyright">
     Copyright © 2025
   </p>
@@ -213,7 +312,9 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> A catalogue or repository that hosts the Datasets or Dataset Series being described. </dd>
+        <dd> A catalogue or repository that hosts a collection of metadata resources (<a href="#Dataset">Dataset</a> or
+          <a href="#DatasetSeries">Dataset series</a>).
+        </dd>
         <dt> Reference in DCAT </dt>
         <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog">dcat:Catalog</a> </dd>
         <dt> Properties </dt>
@@ -224,7 +325,7 @@
             <li><a href="#Catalogue.haspart">has part</a></li>
             <li><a href="#Catalogue.homepage">homepage</a></li>
             <li><a href="#Catalogue.identifier">identifier</a></li>
-            <li><a href="#Catalogue.ispartof">is part of</a></li>
+            <li><a href="#Catalogue.isPartOf">is part of</a></li>
             <li><a href="#Catalogue.language">language</a></li>
             <li><a href="#Catalogue.notation">notation</a></li>
             <li><a href="#Catalogue.publisher">publisher</a></li>
@@ -273,15 +374,9 @@
                   data-content="http://www.w3.org/ns/dcat#dataset" data-placement="right">
                   dataset</a>
               </td>
-              <td>
-                <a href="#Dataset" data-placement="right">Dataset</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A Dataset that is part of the Catalogue.
-              </td>
+              <td> <a href="#Dataset" data-placement="right">Dataset</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> A Dataset that is part of the Catalogue. </td>
               <td property="skos:scopeNote"></td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_dataset">Link</a>
@@ -298,17 +393,10 @@
                   data-content="http://purl.org/dc/terms/hasPart" data-placement="right">
                   has part</a>
               </td>
-              <td>
-                <a href="#Catalogue" data-placement="right">Catalogue</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A related Catalogue that is part of the described Catalogue.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td> <a href="#Catalogue" data-placement="right">Catalogue</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> A related Catalogue that is part of the described Catalogue. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_has_part">Link</a>
               </td>
@@ -324,17 +412,10 @@
                   data-content="http://xmlns.com/foaf/0.1/homepage" data-placement="right">
                   homepage</a>
               </td>
-              <td>
-                <a href="#Document" data-placement="right">Document</a>
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                A web page that acts as the main page for the Catalogue.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> A web page that acts as the main page for the Catalogue. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:catalog_homepage">Link</a>
               </td>
@@ -343,47 +424,38 @@
               </td>
             </tr>
 
-            <tr id="Catalogue.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/elements/1.1/identifier"
+            <tr id="Catalogue.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td>
-                1
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
               <td property="rdfs:comment">
                 An unambiguous reference to the resource within the given context of Data Catalogues.
               </td>
               <td property="skos:scopeNote">
-                This identifier could come from a different Catalogue System (e.g, Geonetwork)
+                This identifier should originate from the Catalogue System being described (e.g., Geonetwork).
               </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Catalogue.ispartof" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf"
+            <tr id="Catalogue.isPartOf" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
                   is part of</a>
               </td>
-              <td>
-                <a href="#Catalogue" data-placement="right">Catalogue</a>
-              </td>
-              <td>
-                0..1
-              </td>
+              <td> <a href="#Catalogue" data-placement="right">Catalogue</a> </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment">
                 A related Catalogue in which the described Catalogue is physically or logically included.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_part">E</a>
@@ -398,7 +470,7 @@
                   language</a>
               </td>
               <td>
-                <a href="#Linguisticsystem" data-placement="right">Linguistic system</a>
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
               <td> 1..* </td>
               <td property="rdfs:comment">
@@ -406,7 +478,9 @@
                 Catalogue.
               </td>
               <td property="skos:scopeNote">
-                This property can be repeated if the metadata is provided in multiple languages.
+                This property can be repeated if the metadata is provided in multiple languages. It is recommended to
+                use a Controlled Vocabulary like <a href="http://id.loc.gov/vocabulary/iso639-2">ISO 639-2
+                  Languages</a>.
               </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_language">Link</a>
@@ -423,21 +497,14 @@
                   data-content="http://www.w3.org/2004/02/skos/core#notation" data-placement="right">
                   notation</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td>
-                0..*
-              </td>
-              <td property="rdfs:comment">
-                A free-text code/notation referencing the Catalogue.
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> A free-text code/notation referencing the Catalogue. </td>
               <td property="skos:scopeNote">
-                This property can be used to provide a code for the Catalogue that could be used by downstream
-                applications using the RDF data.
+                This property can be used to provide a code for the Catalogue in addition to the Catalogue identifier.
+                E.g., a notation code to be used by downstream applications using the resource.
               </td>
-              <td>
-              </td>
+              <td> </td>
               <td> P </td>
             </tr>
 
@@ -496,13 +563,9 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1..* </td>
-              <td property="rdfs:comment">
-                A name given to the Catalogue.
-              </td>
+              <td property="rdfs:comment"> A name given to the Catalogue. </td>
               <td property="skos:scopeNote">
                 This property can be repeated for parallel language versions of the name.
               </td>
@@ -515,7 +578,9 @@
             </tr>
 
           </tbody>
+
         </table>
+
       </div>
 
     </section>
@@ -528,7 +593,7 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> A description of a Dataset&#39;s entry in the Catalogue. </dd>
+        <dd> A record in a Catalogue; the description of a Dataset&#39;s entry in the Catalogue. </dd>
         <dt> Reference in DCAT </dt>
         <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog_Record">dcat:CatalogRecord</a> </dd>
         <dt> Properties </dt>
@@ -538,17 +603,16 @@
             <li><a href="#CatalogueRecord.characterEncoding">character encoding</a></li>
             <li><a href="#CatalogueRecord.conformsTo">conforms to</a></li>
             <li><a href="#CatalogueRecord.contactPoint">contact point</a></li>
-            <li><a href="#CatalogueRecord.creationdate">creation date</a></li>
+            <li><a href="#CatalogueRecord.creationDate">creation date</a></li>
             <li><a href="#CatalogueRecord.description">description</a></li>
             <li><a href="#CatalogueRecord.identifier">identifier</a></li>
-            <li><a href="#CatalogueRecord.ispartof">is part of</a></li>
             <li><a href="#CatalogueRecord.landingPage">landing page</a></li>
             <li><a href="#CatalogueRecord.language">language</a></li>
-            <li><a href="#CatalogueRecord.modificationdate">modification date</a></li>
+            <li><a href="#CatalogueRecord.modificationDate">modification date</a></li>
             <li><a href="#CatalogueRecord.notation">notation</a></li>
             <li><a href="#CatalogueRecord.primaryTopic">primary topic</a></li>
-            <li><a href="#CatalogueRecord.publicationdate">publication date</a></li>
-            <li><a href="#CatalogueRecord.sourcemetadata">source metadata</a></li>
+            <li><a href="#CatalogueRecord.publicationDate">publication date</a></li>
+            <li><a href="#CatalogueRecord.sourceMetadata">source metadata</a></li>
             <li><a href="#CatalogueRecord.title">title</a></li>
           </ul>
         </dd>
@@ -597,10 +661,9 @@
               </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                TBD
+                Indicates the character encoding of the Catalogue (UTF-8, UTF-16, etc.)
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -617,10 +680,9 @@
               </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                TBD
+                The metadata profile that the Catalogue Records complies with.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> TERN DCAT profile should be used. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -637,11 +699,9 @@
                   data-placement="right">Organization</a>
               </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> An entity (person or organisation) responsible for managing the Catalogue
+                Record. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">Link</a>
               </td>
@@ -650,7 +710,7 @@
               </td>
             </tr>
 
-            <tr id="CatalogueRecord.creationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/created"
+            <tr id="CatalogueRecord.creationDate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/created"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/created" data-toggle="tooltip"
@@ -661,11 +721,8 @@
                 <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
               </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The date on which the Catalogue entry was created.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The date on which the Catalogue entry was created. </td>
+              <td property="skos:scopeNote"> </td>
               <td> P </td>
             </tr>
 
@@ -681,11 +738,11 @@
               </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                A free-text account of the record. This property can be repeated for parallel language versions of the
-                description.
+                A free-text account of the record.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> Can be used to define the provenance of the Record when the Catalogue holds
+                metadata from different sources. This property can be repeated for parallel language versions of the
+                description. </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:record_description">Link</a>
               </td>
@@ -694,45 +751,20 @@
               </td>
             </tr>
 
-            <tr id="CatalogueRecord.identifier" typeof="rdfs:Property"
-              resource="http://purl.org/dc/elements/1.1/identifier" class="class mandatory">
+            <tr id="CatalogueRecord.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+              class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td>
-                1
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
               <td property="rdfs:comment">
                 An unambiguous reference to the resource within the given context of Catalogue Records.
               </td>
-              <td property="skos:scopeNote"></td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="CatalogueRecord.ispartof" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
-                  is part of</a>
-              </td>
-              <td>
-                <a href="#TBD" data-placement="right">TBD</a>
-              </td>
-              <td>
-                0..1
-              </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> This identifier should originate from the Catalogue System being described
+                (e.g., Geonetwork). </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -745,7 +777,7 @@
                   landing page</a>
               </td>
               <td>
-                <a href="#Document" data-placement="right">Document</a>
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
@@ -769,14 +801,16 @@
                   language</a>
               </td>
               <td>
-                <a href="#Linguisticsystem" data-placement="right">Linguistic system</a>
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment">
                 A language used in the textual metadata describing titles, descriptions, etc. of the Catalogue Record.
               </td>
               <td property="skos:scopeNote">
-                This property can be repeated if the metadata is provided in multiple languages.
+                This property can be repeated if the metadata is provided in multiple languages. It is recommended to
+                use a Controlled Vocabulary like <a href="http://id.loc.gov/vocabulary/iso639-2">ISO 639-2
+                  Languages</a>.
               </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language">Link</a>
@@ -786,22 +820,18 @@
               </td>
             </tr>
 
-            <tr id="CatalogueRecord.modificationdate" typeof="rdfs:Property"
+            <tr id="CatalogueRecord.modificationDate" typeof="rdfs:Property"
               resource="http://purl.org/dc/terms/modified" class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/modified" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/modified" data-placement="right">
                   modification date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The most recent date on which the Catalogue Record entry was changed or modified.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The most recent date on which the Catalogue Record entry was changed or
+                modified. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:record_update_date">Link</a>
               </td>
@@ -817,19 +847,14 @@
                   data-content="http://www.w3.org/2004/02/skos/core#notation" data-placement="right">
                   notation</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                A free-text code/notation referencing the Catalogue Record.
-              </td>
+              <td property="rdfs:comment"> A free-text code/notation referencing the Catalogue Record. </td>
               <td property="skos:scopeNote">
-                This property can be used to provide a code for the Catalogue Record that could be used by downstream
-                applications using the RDF data.
+                This property can be used to provide a code for the Catalogue Record in addition to the Catalogue
+                identifier. E.g., a notation code to be used by downstream applications using the resource.
               </td>
-              <td>
-              </td>
+              <td> </td>
               <td> P </td>
             </tr>
 
@@ -849,8 +874,8 @@
                 A link to the Dataset, Dataset Series described in the record.
               </td>
               <td property="skos:scopeNote">
-                A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Dataset
-                series.
+                A Catalogue Record will always refer to one entity in a Catalogue. This can be either a Dataset or a
+                Dataset series.
               </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:record_primary_topic">Link</a>
@@ -860,16 +885,14 @@
               </td>
             </tr>
 
-            <tr id="CatalogueRecord.publicationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued"
+            <tr id="CatalogueRecord.publicationDate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/issued" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/issued" data-placement="right">
                   publication date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
                 The date on which the Dataset was included in the Catalogue.
@@ -883,24 +906,21 @@
               </td>
             </tr>
 
-            <tr id="CatalogueRecord.sourcemetadata" typeof="rdfs:Property" resource="http://purl.org/dc/terms/source"
+            <tr id="CatalogueRecord.sourceMetadata" typeof="rdfs:Property" resource="http://purl.org/dc/terms/source"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/source" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/source" data-placement="right">
                   source metadata</a>
               </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
+              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
                 The original metadata that was used in creating metadata for the Dataset or Dataset Series.
               </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
-              <td> P
-              </td>
+              <td> P </td>
             </tr>
 
             <tr id="CatalogueRecord.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
@@ -910,15 +930,10 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                A name given to the Catalogue Record.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the name. REVIEW CARDINALITY
+              <td property="rdfs:comment"> A name given to the Catalogue Record. </td>
+              <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the name.
               </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
@@ -942,12 +957,13 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> A category or a theme used to describe datasets in the catalog. </dd>
+        <dd> A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of
+          thought is subjective, and this definition is meant to be suggestive, rather than restrictive. </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Concept.inScheme">in scheme</a></li>
+            <li><a href="#Concept.inScheme">concept scheme</a></li>
             <li><a href="#Concept.prefLabel">label</a></li>
             <li><a href="#Concept.source">source</a></li>
             <li><a href="#Concept.unit">unit of measurement</a></li>
@@ -991,17 +1007,14 @@
               <td>
                 <a href="http://www.w3.org/2004/02/skos/core#inScheme" data-toggle="tooltip"
                   data-content="http://www.w3.org/2004/02/skos/core#inScheme" data-placement="right">
-                  in scheme</a>
+                  concept scheme</a>
               </td>
-              <td>
-                <a href="#ConceptScheme" data-placement="right">Concept Scheme</a>
-              </td>
+              <td> <a href="#ConceptScheme" data-placement="right">Concept Scheme</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                Used to classify concepts to link it to the concept scheme it belongs to.
+                Relates a Concept to a Concept Scheme in which it is included.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1013,12 +1026,11 @@
                   data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
                   label</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> Label of the described concept. </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> A preferred label of the Concept. </td>
+              <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the label.
+              </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1030,14 +1042,12 @@
                   data-content="http://purl.org/dc/terms/source" data-placement="right">
                   source</a>
               </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
+              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                Link to an external resource from which this concept belongs to.
-              </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Link to an external resource from which this Concept belongs to. </td>
+              <td property="skos:scopeNote"> For non-normative Concepts which do not belong to any proper Scheme, but
+                pertain to some category. Useful to create ad-hoc Concepts from a list of terms, e.g., a list from an
+                ISO metadata standard. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1049,12 +1059,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
                   unit of measurement</a>
               </td>
-              <td>
-                <a href="#Unit" data-placement="right">Unit</a>
-              </td>
-              <td> 1 </td>
+              <td> <a href="#Unit" data-placement="right">Unit</a> </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment">
-                The unit of measurement of the concept, when the concept relates to Ecological parameters.
+                The unit of measurement of the Concept, when the Concept relates to any measurable property.
               </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
@@ -1063,9 +1071,9 @@
 
           </tbody>
         </table>
-      </div>
 
       </div>
+
     </section>
 
     <section id="entity-concept-scheme">
@@ -1076,12 +1084,13 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> A knowledge organization system (KOS) used to represent themes/categories of datasets in the catalog. </dd>
+        <dd> A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships
+          (links) between those concepts may also be viewed as part of a concept scheme. </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#ConceptScheme.prefLabel">label</a></li>
+            <li><a href="#ConceptScheme.title">title</a></li>
           </ul>
         </dd>
       </dl>
@@ -1117,28 +1126,26 @@
 
           <tbody class="supertype">
 
-            <tr id="Concept.prefLabel" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+            <tr id="ConceptScheme.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
               class="class mandatory">
               <td>
-                <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip"
-                  data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
+                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/title" data-placement="right">
                   label</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> Label of the concept scheme. </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> A name of the concept scheme. </td>
+              <td property="skos:scopeNote"> May be repeated for different versions of the name. </td>
               <td> </td>
               <td> P </td>
             </tr>
 
           </tbody>
         </table>
-      </div>
 
       </div>
+
     </section>
 
     <section id="entity-data-quality">
@@ -1649,11 +1656,11 @@
               </td>
             </tr>
 
-            <tr id="Dataset.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/elements/1.1/identifier"
+            <tr id="Dataset.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
               <td>
@@ -2748,11 +2755,11 @@
               <td> P </td>
             </tr>
 
-            <tr id="Organization.identifier" typeof="rdfs:Property"
-              resource="http://purl.org/dc/elements/1.1/identifier" class="class mandatory">
+            <tr id="Organization.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+              class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
               <td>
@@ -3133,11 +3140,11 @@
               <td> P </td>
             </tr>
 
-            <tr id="Person.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/elements/1.1/identifier"
+            <tr id="Person.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/elements/1.1/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/elements/1.1/identifier" data-placement="right">
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
               <td>
@@ -4113,7 +4120,201 @@
         </tr>
       </tbody>
     </table>
+  </section>
 
+  <section id="controlled-vocs" class="informative">
+    <h2 id="x10-controlled-vocabularies">Controlled Vocabularies</h2>
+
+    <section id="requirements-for-controlled-vocabularies">
+      <div class="header-wrapper">
+        <h3 id="x10-1-requirements-for-controlled-vocabularies"><bdi class="secno">10.1<!---0.487875%-->
+          </bdi>Requirements for controlled vocabularies</h3><a class="self-link"
+          href="#requirements-for-controlled-vocabularies" aria-label="Permalink for Section 10.1"></a>
+      </div>
+      The following is a list of requirements that were identified for the controlled vocabularies to be recommended in
+      this Application Profile.
+      Controlled vocabularies <em class="rfc2119">SHOULD<!---0.487875%--></em>:
+      <ul>
+        <li>Be published under an open licence.</li>
+        <li>Be operated and/or maintained by an institution of the European Union, by a recognised standards
+          organisation or another trusted organisation.</li>
+        <li>Be properly documented.</li>
+        <li>Have labels in multiple languages, ideally in all official languages of the European Union.</li>
+        <li>Contain a relatively small number of terms (e.g. 10-25) that are general enough to enable a wide range of
+          resources to be classified.</li>
+        <li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
+        <li>Have associated persistence and versioning policies.</li>
+      </ul>
+      These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only
+      intended to be used for the selection of the controlled vocabularies that are proposed for this Application
+      Profile.
+
+    </section>
+
+    <section id="controlled-vocabularies-to-be-used">
+      <div class="header-wrapper">
+        <h3 id="x10-2-controlled-vocabularies-to-be-used"><bdi class="secno">10.2<!---0.487875%--> </bdi>Controlled
+          vocabularies to be used</h3><a class="self-link" href="#controlled-vocabularies-to-be-used"
+          aria-label="Permalink for Section 10.2"></a>
+      </div>
+      <p>In the table below, a number of properties are listed with controlled vocabularies that <em
+          class="rfc2119">MUST<!---0.487875%--></em> be used for the listed properties. The declaration of the following
+        controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
+
+      <table id="table-cv" class="simple">
+        <thead>
+          <tr>
+            <th>Property URI</th>
+            <th>Used for Class</th>
+            <th>Vocabulary name</th>
+            <th>Usage note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>dcat:mediaType</td>
+            <td><a href="#Distribution">Distribution</a></td>
+            <td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dcat:theme</td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a
+                href="#Catalogue">Catalogue</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td>
+            <td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td>
+          </tr>
+          <tr>
+            <td>dct:accrualPeriodicity</td>
+            <td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named
+                Authority List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dct:format</td>
+            <td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named
+                Authority List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dct:language</td>
+            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue
+                Records</a>, <a href="#Distribution">Distribution</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named
+                Authority List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dct:publisher</td>
+            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset
+                Series</a>,<a href="#DataService">Data Service</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate
+                bodies Named Authority List</a></td>
+            <td>The Corporate bodies NAL must be used for European institutions and a small set of international
+              organisations. In case of other types of organisations, national, regional or local vocabularies should be
+              used.</td>
+          </tr>
+          <tr>
+            <td>dct:spatial</td>
+            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset
+                Series</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/continent/">EU Vocabularies Continents Named
+                Authority List</a>, <a href="http://publications.europa.eu/resource/authority/country">EU Vocabularies
+                Countries Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/place/">EU
+                Vocabularies Places Named Authority List</a>, <a href="http://sws.geonames.org/">Geonames</a></td>
+            <td> The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in
+              those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs
+              must be used.</td>
+          </tr>
+          <tr>
+            <td>adms:status</td>
+            <td><a href="#Distribution">Distribution</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies
+                Distribution Status</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dct:type</td>
+            <td><a href="#Agent">Agent</a></td>
+            <td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td>
+            <td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td>
+          </tr>
+          <tr>
+            <td>dct:type</td>
+            <td><a href="#LicenceDocument">Licence Document</a></td>
+            <td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td>
+            <td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td>
+          </tr>
+          <tr>
+            <td>dcatap:availability</td>
+            <td><a href="#Distribution">Distribution</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution
+                availability vocabulary</a></td>
+            <td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP specification.
+            </td>
+          </tr>
+          <tr>
+            <td>spdx:algorithm</td>
+            <td><a href="#Checksum">Checksum</a></td>
+            <td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td>
+            <td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td>
+          </tr>
+          <tr>
+            <td>dct:accessRights</td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority
+                List</a></td>
+            <td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>In the table below, a number of properties are listed with controlled vocabularies that <em
+          class="rfc2119">MAY<!---0.487875%--></em> be used for the listed properties. The declaration of the following
+        controlled vocabularies as recommended stimulates interoperability.</p>
+
+      <table id="table-cv" class="simple">
+        <thead>
+          <tr>
+            <th>Property URI</th>
+            <th>Used for Class</th>
+            <th>Vocabulary name</th>
+            <th>Usage note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>dct:type</td>
+            <td><a href="#Dataset">Dataset</a></td>
+            <td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a>
+            </td>
+            <td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the
+              EU Open Data Portal.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <section id="other-controlled-vocabularies">
+      <div class="header-wrapper">
+        <h3 id="x10-3-other-controlled-vocabularies"><bdi class="secno">10.3<!---0.487875%--> </bdi>Other controlled
+          vocabularies</h3><a class="self-link" href="#other-controlled-vocabularies"
+          aria-label="Permalink for Section 10.3"></a>
+      </div>
+      In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal
+      interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies
+      that are available online. While those may not be recognised by general implementations of the Application
+      Profile, they may serve to increase interoperability across applications in the same region or domain. Examples
+      are the full set of concepts in <a
+        href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc">EuroVoc</a>,
+      <a href="https://dspacecris.eurocris.org/">the CERIF standard vocabularies</a>, <a
+        href="http://www.oclc.org/content/dam/oclc/dewey/versions/print/intro.pdf">the Dewey Decimal Classification</a>
+      and numerous other schemes.
+
+    </section>
 
   </section>
 
