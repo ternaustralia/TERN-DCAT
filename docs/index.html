@@ -68,9 +68,7 @@
 
     <h3>Scope of the Application Profile</h3>
     <p>
-      The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary
-      (DCAT) [[vocab-dcat-3]] developed under the responsibility of the Dataset Exchange Working Group (DXWG) at W3C
-      [[[DXWG]]]...
+      The Application Profile specified in this document is based on the specification...
     </p>
 
   </section>
@@ -93,7 +91,8 @@
     <h2>Namespaces</h2>
 
     <p>TERN DCAT makes extensive use of terms from other vocabularies, in particular Dublin Core [[?DCTERMS]].
-      TERN DCAT defines a minimal set of classes and properties of its own.</p>
+      TERN DCAT defines some classes and properties of its own in order to cover some metadata sections from ISO
+      19115-3 not already addressed by DCAT [[?vocab-dcat-3]] or DCAT-AP [[?DCAT-AP]].</p>
 
     <table id="table-namespaces" class="simple">
       <thead>
@@ -105,15 +104,15 @@
       </thead>
       <tbody>
         <tr>
-          <td><code>tern</code></td>
-          <td><code>https://w3id.org/tern/ontologies/tern/</code></td>
-          <td>[[?TERN]]</td>
-        </tr>
-        <tr>
           <td><code>adms</code></td>
           <td><code>http://www.w3.org/ns/adms#</code></td>
           <td>[[?VOCAB-ADMS]]</td>
         </tr>
+        <tr>
+          <td><code>cnt</code></td>
+          <td><code>http://www.w3.org/2011/content#/code></td>
+          <td>[[CNT]]</td>
+        </tr> 
         <tr>
           <td><code>dc</code></td>
           <td><code>http://purl.org/dc/elements/1.1/</code></td>
@@ -135,39 +134,14 @@
           <td>[[DCTERMS]]</td>
         </tr>
         <tr>
-          <td><code>foaf</code></td>
-          <td><code>http://xmlns.com/foaf/0.1/</code></td>
-          <td>[[FOAF]]</td>
-        </tr>
-        <tr>
-          <td><code>skos</code></td>
-          <td><code>http://www.w3.org/2004/02/skos/core#</code></td>
-          <td>[[SKOS-REFERENCE]]</td>
-        </tr>
-        <tr>
-          <td><code>xsd</code></td>
-          <td><code>http://www.w3.org/2001/XMLSchema#</code></td>
-          <td>[[XMLSCHEMA11-2]]</td>
-        </tr>
-        <tr>
-          <td><code>owl</code></td>
-          <td><code>http://www.w3.org/2002/07/owl#</code></td>
-          <td>[[OWL]]</td>
-        </tr>
-        <tr>
-          <td><code>sosa</code></td>
-          <td><code>http://www.w3.org/ns/sosa/</code></td>
-          <td>[[SOSA]]</td>
-        </tr>
-        <tr>
-          <td><code>cnt</code></td>
-          <td><code>http://www.w3.org/2011/content#/code></td>
-          <td>[[CNT]]</td>
-        </tr>  
-        <tr>
           <td><code>dqv</code></td>
           <td><code>http://www.w3.org/ns/dqv#</code></td>
           <td>[[?VOCAB-DQV]]</td>
+        </tr>
+        <tr>
+          <td><code>foaf</code></td>
+          <td><code>http://xmlns.com/foaf/0.1/</code></td>
+          <td>[[FOAF]]</td>
         </tr>
         <tr>
           <td><code>geosparql</code></td>
@@ -175,124 +149,49 @@
           <td>[[?GeoSPARQL]]</td>
         </tr>
         <tr>
-          <td><code>oa</code></td>
-          <td><code>http://www.w3.org/ns/oa#</code></td>
-          <td>[[?ANNOTATION-VOCAB]]</td>
+          <td><code>owl</code></td>
+          <td><code>http://www.w3.org/2002/07/owl#</code></td>
+          <td>[[OWL]]</td>
         </tr>
         <tr>
           <td><code>sdo</code></td>
           <td><code>https://schema.org/</code></td>
           <td>[[?SCHEMA-ORG]]</td>
         </tr>
+        <tr>
+          <td><code>skos</code></td>
+          <td><code>http://www.w3.org/2004/02/skos/core#</code></td>
+          <td>[[SKOS-REFERENCE]]</td>
+        </tr>
+        <tr>
+          <td><code>sosa</code></td>
+          <td><code>http://www.w3.org/ns/sosa/</code></td>
+          <td>[[SOSA]]</td>
+        </tr>
+        <tr>
+          <td><code>tern</code></td>
+          <td><code>https://w3id.org/tern/ontologies/tern/</code></td>
+          <td>[[?TERN]]</td>
+        </tr>
+        <tr>
+          <td><code>xsd</code></td>
+          <td><code>http://www.w3.org/2001/XMLSchema#</code></td>
+          <td>[[XMLSCHEMA11-2]]</td>
+        </tr>
       </tbody>
     </table>
 
   </section>
+
   <section id="specoverview">
     <h2>Overview</h2>
 
     <p>
-      DCAT-AP is a DCAT profile for sharing information about Catalogues containing Datasets and Data Services
-      descriptions in Europe. The core classes of the Application Profile are thus the classes Catalogue, Dataset,
-      Distribution and Data Service. DCAT-AP allows Catalogues of only Datasets, but also Catalogues of only Data
-      Services, but usually it will be a mixture of both. Dataset Series are introduced to further organise the Datasets
-      within a Catalogue. Datasets that are a member of a Dataset Series have additional constraints beyond those
-      applicable for Dataset.
-      These constraints are expressed in the class Dataset member of Dataset Series.
-    </p>
-    <p>
-      The properties of the core classes may enforce the existence of other classes. One such important class is the
-      class Agent. However in contrast to the core classes, DCAT-AP leaves a lot of freedom to the implementors to shape
-      them to their needs. Only minimal expectations are expressed by DCAT-AP.
-    </p>
-    <p>
-      Elaborated statements about the expectations are found in section [[[#conformance]]] describing DCAT-AP
-      conformance.
-    </p>
-    <p>
-      To improve the coherency between shared Dataset, Distribution and Data Service, section
-      [[[#usage-guide-on-datasets-distributions-and-data-services]]] provides additional guidelines.
-
-    </p>
-    <p>
-      The list of included properties contain a selection of the properties from the W3C DCAT 3 specification
-      [[vocab-dcat-3]] on which DCAT-AP expresses additional constraints or on which DCAT-AP wants to emphasise their
-      usage. Any property that is mentioned in DCAT applicable to a class but not explicitly is listed DCAT-AP is
-      considered an optional field for DCAT-AP for that class. It means that for these properties DCAT-AP has no use
-      cases that require additional usage considerations beyond ‘use the property as DCAT specifies’.
+      ...
     </p>
 
     <h3>Application profile diagram</h3>
 
-    An overview of DCAT-AP is shown by the UML diagram below. The UML diagram illustrates the specification described in
-    this document. For readability purposes, the representation has been condensed as follows:
-    <ul>
-      <li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
-      <li> The figure contain the key classes with some important supporting classes. Other object properties
-        (relationships) are listed as properties on the UML class with their target range.</li>
-      <li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. DCAT-AP treats it as
-        an abstract notion. </li>
-    </ul>
-    The cardinalities and qualifications are included in the figure.
-
-    <div id="overview">
-
-      <p>
-        This document describes the usage of the following main entities for a correct usage of the Application Profile:
-        <br />
-        |
-        <a href="#Person">Person</a> |
-        <a href="#Catalogue">Catalogue</a> |
-        <a href="#CatalogueRecord">Catalogue Record</a> |
-        <a href="#CataloguedResource">Catalogued Resource</a> |
-        <a href="#Checksum">Checksum</a> |
-        <a href="#DataService">Data Service</a> |
-        <a href="#Dataset">Dataset</a> |
-        <a href="#DatasetmemberofaDatasetSeries">Dataset member of a Dataset Series</a> |
-        <a href="#DatasetSeries">Dataset Series</a> |
-        <a href="#Distribution">Distribution</a> |
-        <a href="#Kind">Kind</a> |
-        <a href="#LicenceDocument">Licence Document</a> |
-        <a href="#Location">Location</a> |
-        <a href="#Relationship">Relationship</a> |
-      </p>
-      <p>
-        The main entities are supported by:
-        <br />
-        |
-        <a href="#Activity">Activity</a> |
-        <a href="#Attribution">Attribution</a> |
-        <a href="#ChecksumAlgorithm">Checksum Algorithm</a> |
-        <a href="#Concept">Concept</a> |
-        <a href="#ConceptScheme">Concept Scheme</a> |
-        <a href="#Document">Document</a> |
-        <a href="#Frequency">Frequency</a> |
-        <a href="#Geometry">Geometry</a> |
-        <a href="#Identifier">Identifier</a> |
-        <a href="#Linguisticsystem">Linguistic system</a> |
-        <a href="#Literal">Literal</a> |
-        <a href="#Mediatype">Media type</a> |
-        <a href="#Periodoftime">Period of time</a> |
-        <a href="#Policy">Policy</a> |
-        <a href="#ProvenanceStatement">Provenance Statement</a> |
-        <a href="#Resource">Resource</a> |
-        <a href="#Rightsstatement">Rights statement</a> |
-        <a href="#Role">Role</a> |
-        <a href="#Standard">Standard</a> |
-      </p>
-
-
-      <p>
-        And supported by these datatypes:
-        <br />
-        | <a href="#MediaType">Media Type</a> | <a href="#MediaTypeorExtent">Media Type or Extent</a> | <a
-          href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a
-          href="#xsd%3AdateTime">xsd:dateTime</a> | <a href="#xsd%3Adecimal">xsd:decimal</a> | <a
-          href="#xsd%3Aduration">xsd:duration</a> | <a href="#xsd%3AhexBinary">xsd:hexBinary</a> | <a
-          href="#xsd%3AnonNegativeInteger">xsd:nonNegativeInteger</a> |
-      </p>
-
-    </div>
     <div>
       <a href="images/TERN-DCAT-Class-diagram.png" target="_blank">
         <img src="images/TERN-DCAT-Class-diagram.png" />
