@@ -581,6 +581,26 @@
 
         </table>
 
+        <aside class="example" id="ex-catalogue" title="Catalogue">
+          <pre class="turtle">
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+            &lt;ex_catalog&gt; a dcat:Catalog ;
+                dcterms:identifier &quot;daf929f6-04fe-461c-acab-2be1f7001589&quot; ;
+                dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-2/eng&gt; ;
+                dcterms:publisher &lt;ex_publisher&gt; ;
+                dcterms:title &quot;TERN Geospatial Catalogue&quot; ;
+                dcat:dataset &lt;ex_dataset_1&gt; ;
+                dcat:dataset &lt;ex_dataset_N&gt; ;
+                dcat:record &lt;ex_record_1&gt; ;
+                dcat:record &lt;ex_record_N&gt; ;
+                foaf:homepage &quot;https://geonetwork.tern.org.au&quot;^^xsd:anyURI .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -945,6 +965,31 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-catalogue-record" title="Catalogue Record">
+          <pre class="turtle">
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+            &lt;ex_record_1&gt; a dcat:CatalogRecord ;
+                dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; ;
+                dcterms:created &quot;2024-08-02T00:00:00&quot;^^xsd:dateTime ;
+                dcterms:description &quot;Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/&quot; ;
+                dcterms:identifier &quot;9210c331-ba96-4e0c-9554-f029d61534be&quot; ;
+                dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-2/eng&gt; ;
+                dcterms:modified &quot;2024-12-11T00:00:00&quot;^^xsd:dateTime ;
+                dcterms:source &quot;https://geonetwork.tern.org.au/geonetwork/srv/api/records/9210c331-ba96-4e0c-9554-f029d61534be/formatters/xml&quot;^^xsd:anyURI ;
+                skos:notation &quot;TERN&quot; ;
+                cnt:characterEncoding &quot;utf8&quot; ;
+                dcat:contactPoint &lt;ex_contact_point&gt; ;
+                dcat:landingPage &quot;https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/9210c331-ba96-4e0c-9554-f029d61534be&quot;^^xsd:anyURI ;
+                foaf:primaryTopic &lt;ex_dataset_1&gt; .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -1027,7 +1072,7 @@
                   label</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 1..* </td>
               <td property="rdfs:comment"> A preferred label of the Concept. </td>
               <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the label.
               </td>
@@ -1042,7 +1087,7 @@
                   data-content="http://purl.org/dc/terms/source" data-placement="right">
                   source</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> Link to an external resource from which this Concept belongs to. </td>
               <td property="skos:scopeNote"> For non-normative Concepts which do not belong to any proper Scheme, but
@@ -1071,6 +1116,33 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-concept-1" title="Concept (normative)">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; ;
+                skos:prefLabel &quot;abundance of coarse fragments&quot; ;
+                tern:unit &lt;http://qudt.org/vocab/unit/AttoJ-SEC&gt; .
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-concept-2" title="Concept (non-normative)">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;topSecret&quot; .
+          </pre>
+        </aside>
 
       </div>
 
@@ -1143,6 +1215,17 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-concept-scheme" title="Concept Scheme">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            
+            &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; a skos:ConceptScheme ;
+                dcterms:source &quot;TERN (2020). TERN Parameter Vocabulary. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&quot; ;
+                skos:prefLabel &quot;parameter&quot; .
+          </pre>
+        </aside>
 
       </div>
 
