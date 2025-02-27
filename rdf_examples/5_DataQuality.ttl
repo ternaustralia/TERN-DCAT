@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex_data_quality> a tern:DataQuality ;
+    tern:DQ_descriptionResult "data quality outcome" ;
+    tern:DQ_scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> ;
+    tern:DQ_scopeDescription "data quality assesment scope" ;
+    tern:DQ_standaloneQualityReport <urn:resource:ex_data_quality> .
+
+<urn:resource:ex_data_quality> a rdfs:Resource ;
+    dcterms:title "data quality report" ;
+    rdf:value "https://report-example-url.tern.org.au"^^xsd:anyURI .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"^^xsd:anyURI ;
+    skos:prefLabel "dataset" .

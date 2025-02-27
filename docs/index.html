@@ -1239,7 +1239,9 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> TDB. </dd>
+        <dd> Represents information relative to the quality of the data listed in the Dataset. </dd>
+        <dt> Usage Note </dt>
+        <dd> TODO: explain and link to ISO 19115 </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -1290,16 +1292,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/DQ_descriptiveResult" data-placement="right">
                   descriptive result</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Provides a statement regarding the Data Quality Assessment outcome. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1311,16 +1307,12 @@
                   data-content="https://w3id.org/tern/ontologies/tern/DQ_scope" data-placement="right">
                   scope</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment">
-                TBD
+                The level of scope for which data quality information is reported.
               </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="skos:scopeNote"> The data quality must refer to the dataset. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1332,16 +1324,12 @@
                   data-content="https://w3id.org/tern/ontologies/tern/DQ_scopeDescription" data-placement="right">
                   scope description</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                TBD
+                Provides a summary of the scope of the Data Quality Assessment.
               </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1354,25 +1342,42 @@
                   data-placement="right">
                   standalone quality report</a>
               </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
+              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Online data quality report. </td>
+              <td property="skos:scopeNote"> Links to the data quality reports available online. </td>
               <td> </td>
               <td> P </td>
             </tr>
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-data-quality" title="Data Quality">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;ex_data_quality&gt; a tern:DataQuality ;
+                tern:DQ_descriptionResult &quot;data quality outcome&quot; ;
+                tern:DQ_scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; ;
+                tern:DQ_scopeDescription &quot;data quality assesment scope&quot; ;
+                tern:DQ_standaloneQualityReport &lt;urn:resource:ex_data_quality&gt; .
+            
+            &lt;urn:resource:ex_data_quality&gt; a rdfs:Resource ;
+                dcterms:title &quot;data quality report&quot; ;
+                rdf:value &quot;https://report-example-url.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;dataset&quot; .            
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-dataset">
