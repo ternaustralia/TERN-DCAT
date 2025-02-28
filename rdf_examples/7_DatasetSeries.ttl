@@ -1,0 +1,25 @@
+@prefix adms: <https://www.w3.org/TR/vocab-adms> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex_dataset_series_1> a dcat:DatasetSeries ;
+    dcterms:created "2024-08-01"^^xsd:date ;
+    dcterms:creator [ a rdf:Seq ;
+            rdf:_1 <ex_creator_1> ] ;
+    dcterms:identifier "81f6c556-fef7-42fe-a675-7938b8417f5c" ;
+    dcterms:issued "2024-07-03"^^xsd:date ;
+    dcterms:language <http://www.loc.gov/standards/iso639-2/eng> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2024-12-11"^^xsd:date ;
+    dcterms:publisher <ex_publisher_1> ;
+    dcterms:subject "OzFlux" ;
+    dcterms:title "Tumbarumba Flux Data Collection" ;
+    schema:abstract "This collection..." ;
+    schema:creditText "We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment" ;
+    dcat:contactPoint <ex_contact_point_1> ;    
+    tern:securityConstraints <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret> ;
+    adms:status <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment> .

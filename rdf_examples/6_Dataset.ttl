@@ -1,0 +1,68 @@
+@prefix adms: <https://www.w3.org/TR/vocab-adms> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex_dataset_1> a dcat:Dataset ;
+    dcterms:accrualPeriodicity <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly> ;
+    dcterms:created "2024-08-01"^^xsd:date ;
+    dcterms:creator [ a rdf:Seq ;
+            rdf:_1 <ex_creator_1> ] ;
+    dcterms:identifier "81f6c556-fef7-42fe-a675-7938b8417f5d" ;
+    dcterms:issued "2024-07-03"^^xsd:date ;
+    dcterms:language <http://www.loc.gov/standards/iso639-2/eng> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2024-12-11"^^xsd:date ;
+    dcterms:publisher <ex_publisher_1> ;
+    dcterms:subject "OzFlux" ;
+    dcterms:title "Tumbarumba Flux Data 2025_v1" ;
+    schema:abstract "This dataset consists of measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer in wet sclerophyll forest using eddy covariance techniques." ;
+    schema:creditText "We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment" ;
+    dcat:contactPoint <ex_contact_point_1> ;
+    dcat:distribution <urn:distribution:ex_distribution_1>;
+    dcat:inSeries <ex_dataset_series_1> ;
+    dcat:keyword "Lithology" ;
+    dcat:theme <http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a>,
+        <https://biodiversity.org.au/afd/taxa/%27Ochlerotatus%27_%28%27Finlaya%27%29_biocellatus>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/3b36beea-9637-4213-bdbe-42e878ca14df>,
+        <https://linked.data.gov.au/def/anzsrc-for/2020/450501>,
+        <https://vocab.met.no/mmd/ISO_Topic_Category/biota> ;
+    dcat:version "5.0.60" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf <http://data.europa.eu/930/spatialResolutionAsAngularDistance> ;
+            dqv:value 20.0 ;
+            tern:unit <http://qudt.org/vocab/unit/DEG> ] ;
+    sosa:usedProcedure [ a tern:Method ;
+            dcterms:description "procedure details" ;
+            tern:additionalDocumentation <urn:resource:ex_additional_documentation_1> ;
+            tern:instructions [ a rdf:Seq ;
+                    rdf:_1 "step1" ;
+                    rdf:_2 "step2" ] ;
+            tern:scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> ] ;
+    tern:additionalDocumentation <urn:resource:ex_additional_documentation_2>;
+    tern:coAuthor [ a rdf:Seq ;
+            rdf:_1 <ex_coauthor_1> ;
+            rdf:_2 <ex_coauthor_2> ] ;
+    tern:dataQuality <ex_data_quality_1> ;
+    tern:environmentDescription "Data was processed using the UQ HPC..." ;
+    tern:funder <ex_funder_1> ;
+    tern:hasExtent <ex_extent_1> ;
+    tern:otherConstraints [ a dcterms:RightsStatement ;
+            dcterms:title "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ],
+        [ a dcterms:RightsStatement ;
+            dcterms:title """TERN services are provided on an "as-is" and "as available" basis. Users use any TERN services at their discretion and risk.
+            They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+            <br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
+            <br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting"""],
+        [ a dcterms:RightsStatement ;
+            dcterms:title "Another constraint" ];
+    tern:purpose "The purpose of the Tumbarumba flux station is to..." ;
+    tern:resourceSpecificUsage "Data can be be easily processed using Python Pandas..." ;
+    tern:securityConstraints <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret> ;
+    tern:supplementalInformation "Additional information" ;
+    adms:status <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment> .

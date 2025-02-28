@@ -316,7 +316,7 @@
           <a href="#DatasetSeries">Dataset series</a>).
         </dd>
         <dt> Reference in DCAT </dt>
-        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog">dcat:Catalog</a> </dd>
+        <dd> <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">dcat:Catalog</a> </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -615,7 +615,7 @@
         <dt> Definition </dt>
         <dd> A record in a Catalogue; the description of a Dataset&#39;s entry in the Catalogue. </dd>
         <dt> Reference in DCAT </dt>
-        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Catalog_Record">dcat:CatalogRecord</a> </dd>
+        <dd> <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record">dcat:CatalogRecord</a> </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -1390,7 +1390,7 @@
         <dt> Definition </dt>
         <dd> A conceptual entity that represents the information published. </dd>
         <dt> Reference in DCAT </dt>
-        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset">dcat:Dataset</a> </dd>
+        <dd> <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">dcat:Dataset</a> </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -1399,7 +1399,7 @@
             <li><a href="#Dataset.additionalDocumentation">additional documentation</a></li>
             <li><a href="#Dataset.conformsTo">conforms to</a></li>
             <li><a href="#Dataset.contactPoint">contact point</a></li>
-            <li><a href="#Dataset.creationdate">creation date</a></li>
+            <li><a href="#Dataset.creationDate">creation date</a></li>
             <li><a href="#Dataset.creator">creator</a></li>
             <li><a href="#Dataset.creditText">credit text</a></li>
             <li><a href="#Dataset.dataQuality">data quality</a></li>
@@ -1413,7 +1413,7 @@
             <li><a href="#Dataset.keyword">keyword</a></li>
             <li><a href="#Dataset.language">language</a></li>
             <li><a href="#Dataset.license">licence</a></li>
-            <li><a href="#Dataset.modificationdate">modified</a></li>
+            <li><a href="#Dataset.modificationDate">modified</a></li>
             <li><a href="#Dataset.otherConstraints">other constraints</a></li>
             <li><a href="#Dataset.publicationDate">publication date</a></li>
             <li><a href="#Dataset.publisher">publisher</a></li>
@@ -1468,15 +1468,14 @@
                   data-placement="right">
                   abstract</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment">
-                TBD
+                Describes the content of the resource (Dataset or Dataset Series).
               </td>
               <td property="skos:scopeNote">
-                TBD
+                The abstract should include a brief summary of the following: what data were collected, where, when and
+                how. Keep in mind that the abstract is about the Dataset, not the projects or the results.
               </td>
               <td> </td>
               <td> P </td>
@@ -1489,16 +1488,13 @@
                   data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
                   additional documentation</a>
               </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
+              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment">
-                TBD
+                Citation of other documentation associated with the resource, e.g., related articles, publications, user
+                guides, data dictionaries
               </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1510,17 +1506,14 @@
                   data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
                   conforms to</a>
               </td>
-              <td>
-                <a href="#Standard" data-placement="right">Standard</a>
-              </td>
+              <td> <a href="#Standard" data-placement="right">Standard</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                TBD
+                TODO: review usage - in class diagram but not in use...
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
-              <td> P </td>
+              <td> A </td>
             </tr>
 
             <tr id="Dataset.contactPoint" typeof="rdfs:Property" resource="https://www.w3.org/ns/dcat#contactPoint"
@@ -1535,11 +1528,9 @@
                   data-placement="right">Organization</a>
               </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> An entity (person or organisation) responsible for managing the Dataset.
+                Contact information that can be used for sending comments about the Dataset. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">Link</a>
               </td>
@@ -1548,22 +1539,17 @@
               </td>
             </tr>
 
-            <tr id="Dataset.creationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/created"
+            <tr id="Dataset.creationDate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/created"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/created" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/created" data-placement="right">
                   creation date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The date on which the Dataset entry was created.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The date on which the Dataset has been first created. </td>
+              <td property="skos:scopeNote"> </td>
               <td> P </td>
             </tr>
 
@@ -1579,11 +1565,8 @@
                   data-placement="right">Organization</a>
               </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                An entity responsible for producing the dataset.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The entity primarily responsible for producing the Dataset. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator">Link</a>
               </td>
@@ -1599,16 +1582,13 @@
                   data-content="https://schema.org/creditText" data-placement="right">
                   credit text</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Other citation details. </td>
+              <td property="skos:scopeNote"> Notice that all the information needed for generating a data citation
+                following the DataCite Metadata Schema are already recorded as part of the model (e.g., creator,
+                publication year, title, publisher, identifier, etc.). Further information can be specified here if
+                needed. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1620,16 +1600,11 @@
                   data-content="https://w3id.org/tern/ontologies/tern/dataQuality" data-placement="right">
                   data quality</a>
               </td>
-              <td>
-                <a href="#DataQuality" data-placement="right">Data Quality</a>
-              </td>
+              <td> <a href="#DataQuality" data-placement="right">Data Quality</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Provides details about the scope of the data quality assessment, reports on
+                data quality and any data quality assessment outcome. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1641,15 +1616,14 @@
                   data-content="http://www.w3.org/ns/adms#status" data-placement="right">
                   dataset status</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> Indicates the status of the dataset. </td>
+              <td property="skos:scopeNote"> The status of the dataset is 'ongoing' if more data points will be added in
+                the future. The status of the dataset is 'completed' if no further data will be added. Other options are
+                available for this field based on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode"> ISO
+                  19115 Progres code list</a>. </td>
               <td> </td>
               <td>P </td>
             </tr>
@@ -1661,15 +1635,10 @@
                   data-content="https://www.w3.org/ns/dcat#distribution" data-placement="right">
                   dataset distribution</a>
               </td>
-              <td>
-                <a href="#Distribution" data-placement="right">Distribution</a>
-              </td>
+              <td> <a href="#Distribution" data-placement="right">Distribution</a> </td>
               <td> 1..* </td>
-              <td property="rdfs:comment">
-                An available Distribution for the Dataset.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> An available Distribution for the Dataset. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution">Link</a>
               </td>
@@ -1685,16 +1654,12 @@
                   data-content="https://w3id.org/tern/ontologies/tern/environmentDescription" data-placement="right">
                   environment description</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Information about the source and software to process the resource. </td>
+              <td property="skos:scopeNote"> This field allows to specify the environment used to curate/process the
+                data. Details about the data processing enviroment, e.g., software, computer operating system, etc. can
+                be provided here. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1706,16 +1671,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/hasExtent" data-placement="right">
                   extent</a>
               </td>
-              <td>
-                <a href="#Extent" data-placement="right">Extent</a>
-              </td>
+              <td> <a href="#Extent" data-placement="right">Extent</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Spatial representation and properties related to the dataset. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1727,15 +1686,13 @@
                   data-content="http://purl.org/dc/terms/accrualPeriodicity" data-placement="right">
                   frequency</a>
               </td>
-              <td>
-                <a href="#Standard" data-placement="right">Standard</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The frequency at which the Dataset is updated.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The frequency at which the Dataset is updated. </td>
+              <td property="skos:scopeNote"> Recommended frequency options are available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode">
+                  ISO 19115 Maintenance Frequency code list</a>. Please note that for completed datasets the maintenance
+                frequency is usually 'notPlanned'. </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">Link</a>
               </td>
@@ -1751,14 +1708,12 @@
                   data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of Dataset.
               </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                An unambiguous reference to the resource within the given context of Dataset.
-              </td>
-              <td property="skos:scopeNote"></td>
+              <td property="skos:scopeNote"> The main identifier for the Dataset, e.g. the URI or other unique
+                identifier in the context of the Catalogue. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1770,15 +1725,12 @@
                   data-content="https://www.w3.org/ns/dcat#inSeries" data-placement="right">
                   in series</a>
               </td>
-              <td>
-                <a href="#DatasetSeries" data-placement="right">Dataset Series</a>
-              </td>
+              <td> <a href="#DatasetSeries" data-placement="right">Dataset Series</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment">
                 A dataset series of which the dataset is part.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series">Link</a>
               </td>
@@ -1794,15 +1746,12 @@
                   data-content="https://www.w3.org/ns/dcat#keyword" data-placement="right">
                   keyword</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> A keyword or tag describing the Dataset. </td>
+              <td property="skos:scopeNote"> Any free-text keyword that may help users searching for the Dataset. This
+                field should not include any keyword that can be represented as Concept from any available Controlled
+                Vocabulary. TODO: add link to common vocabs. </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword">Link</a>
               </td>
@@ -1818,15 +1767,13 @@
                   data-content="http://purl.org/dc/terms/language" data-placement="right">
                   language</a>
               </td>
-              <td>
-                <a href="#Linguisticsystem" data-placement="right">Linguistic system</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                A language used in the textual metadata describing titles, descriptions, etc. of the Dataset.
-              </td>
+              <td property="rdfs:comment"> A language of the Dataset. </td>
               <td property="skos:scopeNote">
-                This property can be repeated if the metadata is provided in multiple languages.
+                This property can be repeated if the metadata is provided in multiple languages. It is recommended to
+                use a Controlled Vocabulary like <a href="http://id.loc.gov/vocabulary/iso639-2">ISO 639-2
+                  Languages TODO: link to CV section. </a>.
               </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_language">Link</a>
@@ -1843,34 +1790,26 @@
                   data-content="http://purl.org/dc/terms/license" data-placement="right">
                   licence</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> A licence under which the Dataset can be used or reused. </td>
+              <td property="skos:scopeNote"> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Dataset.modificationdate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/modified"
+            <tr id="Dataset.modificationDate" typeof="rdfs:Property" resource="http://purl.org/dc/terms/modified"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/modified" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/modified" data-placement="right">
                   modification date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
                 The most recent date on which the Dataset was changed or modified.
               </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:record_update_date">Link</a>
               </td>
@@ -1886,16 +1825,11 @@
                   data-content="https://w3id.org/tern/ontologies/tern/otherConstraints" data-placement="right">
                   other constraints</a>
               </td>
-              <td>
-                <a href="#RightsStatement" data-placement="right">Rights Statement</a>
-              </td>
+              <td> <a href="#RightsStatement" data-placement="right">Rights Statement</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Additional constraints that apply to the Dataset. </td>
+              <td property="skos:scopeNote"> Defines any additional usage constraints not already reflected by the
+                dataset licence. These usually specify what the data are not suitable for. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1907,19 +1841,15 @@
                   data-content="http://purl.org/dc/terms/issued" data-placement="right">
                   publication date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                Date of formal issuance (e.g., publication) of the Dataset.
-              </td>
+              <td property="rdfs:comment"> Date of formal issuance (e.g., publication) of the Dataset. </td>
               <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">Link</a>
               </td>
               <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">E</a>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">A</a>
               </td>
             </tr>
 
@@ -1935,11 +1865,9 @@
                   data-placement="right">Organization</a>
               </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                An entity (person or organisation) responsible for making the Dataset available.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> An entity (person or organisation) responsible for making the Dataset
+                available. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">Link</a>
               </td>
@@ -1955,16 +1883,11 @@
                   data-content="https://w3id.org/tern/ontologies/tern/purpose" data-placement="right">
                   purpose</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Describes why the data from the Dataset were collected. </td>
+              <td property="skos:scopeNote"> E.g., Brief summary of the purpose of collecting the data including the
+                potential usage. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1976,16 +1899,11 @@
                   data-content="http://www.w3.org/ns/sosa/usedProcedure" data-placement="right">
                   resource lineage</a>
               </td>
-              <td>
-                <a href="#Method" data-placement="right">Method</a>
-              </td>
+              <td> <a href="#Method" data-placement="right">Method</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Lineage of a Dataset. </td>
+              <td property="skos:scopeNote"> Information about the provenance, source(s), and/or the production
+                process(es) applied to the resource. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1997,16 +1915,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/resourceSpecificUsage" data-placement="right">
                   resource specific usage</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Information about the use of the dataset in specific applications. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -2018,16 +1930,15 @@
                   data-content="https://w3id.org/tern/ontologies/tern/securityConstraints" data-placement="right">
                   security constraints</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Concerns about security that apply to the use of the Dataset. </td>
+              <td property="skos:scopeNote"> Defines handling restrictions imposed on the resource for national security
+                or similar concerns e.g., commercial sensitivity, privacy considerations. Recommended security options
+                are available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">
+                  ISO 19115 Classification code list</a>. For a general usage, 'unclassified' should be suitable for
+                most datasets. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -2039,18 +1950,19 @@
                   data-content="http://www.w3.org/ns/dqv#hasQualityMeasurement" data-placement="right">
                   spatial resolution</a>
               </td>
-              <td>
-                <a href="#QualityMeasurement" data-placement="right">Quality Measurement</a>
-              </td>
+              <td> <a href="#QualityMeasurement" data-placement="right">Quality Measurement</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
+              <td property="rdfs:comment"> The performed quality measurements describing the spatial resolution of the
+                Dataset. </td>
+              <td property="skos:scopeNote"> In GeoDCAT-AP, this property is used to specify "spatial resolution", as
+                defined in [[?INSPIRE-MD-REG]], [[?ISO-19115]], and [[?ISO-19115-1]]. Describes the spatial resolution
+                of the original data in the dataset, i.e. regardless of how it is distributed using distributions. </td>
+              <td>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">Link</a>
               </td>
-              <td property="skos:scopeNote">
-                TBD
+              <td>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">A</a>
               </td>
-              <td> </td>
-              <td> P </td>
             </tr>
 
             <tr id="Dataset.subject" typeof="rdfs:Property" resource="http://purl.org/dc/terms/subject"
@@ -2060,15 +1972,13 @@
                   data-content="http://purl.org/dc/terms/subject" data-placement="right">
                   subject</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> Subjects or categories assigned to the Dataset, but not represented
+                explicitely in the dataset metadata. </td>
+              <td property="skos:scopeNote"> Categories can be used to separate Datasets into groups, without changing
+                the actual content of the Dataset (similar to Geonetwork categories). These Categories can be used to,
+                for instance, filter a search result. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -2080,16 +1990,11 @@
                   data-content="https://w3id.org/tern/ontologies/tern/supplementalInformation" data-placement="right">
                   supplemental information</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Any supplemental information needed to interpret the resource. Information
+                about the Dataset that has not already been captured elsewhere. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -2101,15 +2006,12 @@
                   data-content="https://www.w3.org/ns/dcat#theme" data-placement="right">
                   theme</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> Vocabulary terms the describe the Dataset. </td>
+              <td property="skos:scopeNote"> These terms refers to a knowledge organization system used to describe the
+                Dataset. E.g., Science categories, Field of research, Instruments, Resolutions or Species information.
+                TODO: Link to CVs.</td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme">Link</a>
               </td>
@@ -2125,15 +2027,10 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                A name given to the Dataset.
-              </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the name. REVIEW CARDINALITY
+              <td property="rdfs:comment"> A name given to the Dataset. </td>
+              <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the name.
               </td>
               <td>
                 <a href="https://w3c.github.io/dxwg/dcat/#Property:resource_title">Link</a>
@@ -2150,15 +2047,10 @@
                   data-content="https://www.w3.org/ns/dcat#version" data-placement="right">
                   version</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The version indicator (name or identifier) of a resource.
-              </td>
-              <td property="skos:scopeNote">
-              </td>
+              <td property="rdfs:comment"> The version indicator (name or identifier) of a resource. </td>
+              <td property="skos:scopeNote"> </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version">Link</a>
               </td>
@@ -2169,6 +2061,80 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-dataset" title="Dataset">
+          <pre class="turtle">
+            @prefix adms: &lt;https://www.w3.org/TR/vocab-adms&gt; .
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+            @prefix schema: &lt;http://schema.org/&gt; .
+            @prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;ex_dataset_1&gt; a dcat:Dataset ;
+                dcterms:accrualPeriodicity &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly&gt; ;
+                dcterms:created &quot;2024-08-01&quot;^^xsd:date ;
+                dcterms:creator [ a rdf:Seq ;
+                        rdf:_1 &lt;ex_creator_1&gt; ] ;
+                dcterms:identifier &quot;81f6c556-fef7-42fe-a675-7938b8417f5d&quot; ;
+                dcterms:issued &quot;2024-07-03&quot;^^xsd:date ;
+                dcterms:language &lt;http://www.loc.gov/standards/iso639-2/eng&gt; ;
+                dcterms:license &lt;https://creativecommons.org/licenses/by/4.0/&gt; ;
+                dcterms:modified &quot;2024-12-11&quot;^^xsd:date ;
+                dcterms:publisher &lt;ex_publisher_1&gt; ;
+                dcterms:subject &quot;OzFlux&quot; ;
+                dcterms:title &quot;Tumbarumba Flux Data 2025_v1&quot; ;
+                schema:abstract &quot;This dataset consists of measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer in wet sclerophyll forest using eddy covariance techniques.&quot; ;
+                schema:creditText &quot;We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment&quot; ;
+                dcat:contactPoint &lt;ex_contact_point_1&gt; ;
+                dcat:distribution &lt;urn:distribution:ex_distribution_1&gt;;
+                dcat:inSeries &lt;ex_dataset_series_1&gt; ;
+                dcat:keyword &quot;Lithology&quot; ;
+                dcat:theme &lt;http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a&gt;,
+                    &lt;https://biodiversity.org.au/afd/taxa/%27Ochlerotatus%27_%28%27Finlaya%27%29_biocellatus&gt;,
+                    &lt;https://gcmd.earthdata.nasa.gov/kms/concept/3b36beea-9637-4213-bdbe-42e878ca14df&gt;,
+                    &lt;https://linked.data.gov.au/def/anzsrc-for/2020/450501&gt;,
+                    &lt;https://vocab.met.no/mmd/ISO_Topic_Category/biota&gt; ;
+                dcat:version &quot;5.0.60&quot; ;
+                dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+                        dqv:isMeasurementOf &lt;http://data.europa.eu/930/spatialResolutionAsAngularDistance&gt; ;
+                        dqv:value 20.0 ;
+                        tern:unit &lt;http://qudt.org/vocab/unit/DEG&gt; ] ;
+                sosa:usedProcedure [ a tern:Method ;
+                        dcterms:description &quot;procedure details&quot; ;
+                        tern:additionalDocumentation &lt;urn:resource:ex_additional_documentation_1&gt; ;
+                        tern:instructions [ a rdf:Seq ;
+                                rdf:_1 &quot;step1&quot; ;
+                                rdf:_2 &quot;step2&quot; ] ;
+                        tern:scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; ] ;
+                tern:additionalDocumentation &lt;urn:resource:ex_additional_documentation_2&gt;;
+                tern:coAuthor [ a rdf:Seq ;
+                        rdf:_1 &lt;ex_coauthor_1&gt; ;
+                        rdf:_2 &lt;ex_coauthor_2&gt; ] ;
+                tern:dataQuality &lt;ex_data_quality_1&gt; ;
+                tern:environmentDescription &quot;Data was processed using the UQ HPC...&quot; ;
+                tern:funder &lt;ex_funder_1&gt; ;
+                tern:hasExtent &lt;ex_extent_1&gt; ;
+                tern:otherConstraints [ a dcterms:RightsStatement ;
+                        dcterms:title &quot;Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}.&quot; ],
+                    [ a dcterms:RightsStatement ;
+                        dcterms:title &quot;&quot;&quot;TERN services are provided on an &quot;as-is&quot; and &quot;as available&quot; basis. Users use any TERN services at their discretion and risk.
+                        They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+                        &lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
+                        &lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&quot;&quot;&quot;],
+                    [ a dcterms:RightsStatement ;
+                        dcterms:title &quot;Another constraint&quot; ];
+                tern:purpose &quot;The purpose of the Tumbarumba flux station is to...&quot; ;
+                tern:resourceSpecificUsage &quot;Data can be be easily processed using Python Pandas...&quot; ;
+                tern:securityConstraints &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret&gt; ;
+                tern:supplementalInformation &quot;Additional information&quot; ;
+                adms:status &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment&gt; .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -2184,10 +2150,50 @@
         <dd> A collection of datasets that are published separately, but share some characteristics that group them.
         </dd>
         <dt> Reference in DCAT </dt>
-        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Dataset_Series">Link</a> </dd>
+        <dd> <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Link</a> </dd>
+        <dt> Usage Note </dt>
+        <dd>
+          <ul>
+            <li>Dataset Series with a single dataset in the collection should be avoided.</li>
+            <li>Dataset Series without a dataset in the collection should be avoided.</li>
+            <li>Complex nesting should be avoided.</li>
+          </ul>
+          Please refer to the [[?DCAT-AP]] <a
+            href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#UsageGuidelines">General usage guidelines</a>.
+        </dd>
         <dt> Subclass of </dt>
         <dd> <a href="#Dataset">Dataset</a> </dd>
       </dl>
+
+      <aside class="example" id="ex-dataset" title="Dataset">
+        <pre class="turtle">
+          @prefix adms: &lt;https://www.w3.org/TR/vocab-adms&gt; .
+          @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+          @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+          @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+          @prefix schema: &lt;http://schema.org/&gt; .
+          @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+          @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+          
+          &lt;ex_dataset_series_1&gt; a dcat:DatasetSeries ;
+              dcterms:created &quot;2024-08-01&quot;^^xsd:date ;
+              dcterms:creator [ a rdf:Seq ;
+                      rdf:_1 &lt;ex_creator_1&gt; ] ;
+              dcterms:identifier &quot;81f6c556-fef7-42fe-a675-7938b8417f5c&quot; ;
+              dcterms:issued &quot;2024-07-03&quot;^^xsd:date ;
+              dcterms:language &lt;http://www.loc.gov/standards/iso639-2/eng&gt; ;
+              dcterms:license &lt;https://creativecommons.org/licenses/by/4.0/&gt; ;
+              dcterms:modified &quot;2024-12-11&quot;^^xsd:date ;
+              dcterms:publisher &lt;ex_publisher_1&gt; ;
+              dcterms:subject &quot;OzFlux&quot; ;
+              dcterms:title &quot;Tumbarumba Flux Data Collection&quot; ;
+              schema:abstract &quot;This collection...&quot; ;
+              schema:creditText &quot;We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment&quot; ;
+              dcat:contactPoint &lt;ex_contact_point_1&gt; ;    
+              tern:securityConstraints &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret&gt; ;
+              adms:status &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment&gt; .
+        </pre>
+      </aside>
     </section>
 
     <section id="entity-distribution">
@@ -2200,7 +2206,7 @@
         <dt> Definition </dt>
         <dd> A physical embodiment of the Dataset in a particular format. </dd>
         <dt> Reference in DCAT </dt>
-        <dd> <a href="https://w3c.github.io/dxwg/dcat/#Class:Distribution">Link</a> </dd>
+        <dd> <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">Link</a> </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:

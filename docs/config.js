@@ -142,6 +142,12 @@ var respecConfig = {
             "title": "TBD",
             "publisher": "TBD"
         },
+        "INSPIRE-MD-REG": {
+            "href": "http://data.europa.eu/eli/reg/2008/1205",
+            "title": "Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata",
+            "publisher": "OJ L 326",
+            "date": "4 December 2008"
+        },
     }
     //     "ADMS-SKOS": {
     //         "href": "https://web.archive.org/web/20210521035614/https://joinup.ec.europa.eu/svn/adms/ADMS_v1.00/ADMS_SKOS_v1.00.html",
