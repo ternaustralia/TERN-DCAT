@@ -1,0 +1,8 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://creativecommons.org/licenses/by/4.0/> a dcterms:LicenseDocument ;
+    dcterms:description "The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:identifier "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:title "Creative Commons Attribution 4.0 International Licence" ;
+    dcterms:type <http://purl.org/adms/licencetype/Attribution> .

@@ -1,0 +1,4 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+<ex_geometry_1> a geo:Geometry ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON((100 -10, 100 -45, 155 -45, 155 -10, 100 -10))"^^geo:wktLiteral .

@@ -1,0 +1,16 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:distribution:ex_distribution_1> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:ex_distribution_resource_1> ;
+    tern:distributor <https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812> .
+
+<urn:resource:ex_distribution_resource_1> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/tern/OGC:WMS-1.3.0-http-get-map> ;
+    dcterms:description "Distribution desciption / title" ;
+    dcterms:title "Additional information" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
+    rdf:value "https://example-wms.tern.org.au"^^xsd:anyURI .
