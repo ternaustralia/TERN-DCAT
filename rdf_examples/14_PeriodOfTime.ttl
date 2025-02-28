@@ -1,0 +1,8 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex_period_of_time_1> a dcterms:PeriodOfTime ;
+        dcat:endDate "2025-12-31"^^xsd:date ;
+        dcat:startDate "2024-08-01"^^xsd:date .

@@ -1,0 +1,17 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix org: <https://w3id.org/tern/ontologies/org/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex_person_1> a schema:Person ;
+    dcterms:identifier "https://w3id.org/tern/resources/person_uuid"^^xsd:anyURI ;
+    schema:affiliation <ex_organisation_1> ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Indooroopilly" ;
+    schema:addressRegion "QLD" ;
+    schema:email "email@email.org.au" ;
+    schema:name "John Doe" ;
+    schema:postalCode "4000" ;
+    schema:streetAddress "Adelaide Street, 1" ;
+    schema:telephone "+61 0426 300 250" .
+    org:orcID <https://orcid.org/0000-0000-0000-0000> .

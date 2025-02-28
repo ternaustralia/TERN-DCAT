@@ -517,8 +517,8 @@
                   publisher</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 1 </td>
               <td property="rdfs:comment">
@@ -716,8 +716,8 @@
                   contact point</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> An entity (person or organisation) responsible for managing the Catalogue
@@ -1313,7 +1313,10 @@
               <td property="rdfs:comment">
                 The level of scope for which data quality information is reported.
               </td>
-              <td property="skos:scopeNote"> The data quality must refer to the dataset. </td>
+              <td property="skos:scopeNote"> The data quality must refer to the dataset. Recommended scope codes are
+                available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode">
+                  ISO 19115 Scope code list</a> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1525,8 +1528,8 @@
                   contact point</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> An entity (person or organisation) responsible for managing the Dataset.
@@ -1562,8 +1565,8 @@
                   creator</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> The entity primarily responsible for producing the Dataset. </td>
@@ -1862,8 +1865,8 @@
                   publisher</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> An entity (person or organisation) responsible for making the Dataset
@@ -1900,7 +1903,7 @@
                   data-content="http://www.w3.org/ns/sosa/usedProcedure" data-placement="right">
                   resource lineage</a>
               </td>
-              <td> <a href="#Method" data-placement="right">Method</a> </td>
+              <td> <a href="#Lineage" data-placement="right">Lineage</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> Lineage of a Dataset. </td>
               <td property="skos:scopeNote"> Information about the provenance, source(s), and/or the production
@@ -2010,7 +2013,7 @@
               <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> Vocabulary terms the describe the Dataset. </td>
-              <td property="skos:scopeNote"> These terms refers to a knowledge organization system used to describe the
+              <td property="skos:scopeNote"> These terms refers to a knowledge organisation system used to describe the
                 Dataset. E.g., Science categories, Field of research, Instruments, Resolutions or Species information.
                 TODO: Link to CVs.</td>
               <td>
@@ -2276,8 +2279,8 @@
                   distributor</a>
               </td>
               <td>
-                <a href="#Person" data-placement="right">Person</a> | <a href="#Organization"
-                  data-placement="right">Organization</a>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
               </td>
               <td> 1 </td>
               <td property="rdfs:comment"> An entity (person or organisation) who distributes the resource (data
@@ -2702,23 +2705,24 @@
       </dl>
     </section>
 
-    <section id="entity-method">
-      <h3 id="Method">
+    <section id="entity-lineage">
+      <h3 id="Lineage">
         <a href="https://w3id.org/tern/ontologies/tern/Method" data-toggle="tooltip"
-          data-content="https://w3id.org/tern/ontologies/tern/Method" data-placement="right">Method</a>
+          data-content="https://w3id.org/tern/ontologies/tern/Method" data-placement="right">Lineage</a>
       </h3>
 
       <dl>
         <dt> Definition </dt>
-        <dd> TDB. </dd>
+        <dd> Information about the provenance, source(s), and/or the production process(es) applied to the resource.
+        </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Method.additionalDocumentation">additional documentation</a></li>
-            <li><a href="#Method.description">description</a></li>
-            <li><a href="#Method.instructions">instructions</a></li>
-            <li><a href="#Method.scope">scope</a></li>
+            <li><a href="#Lineage.description">description</a></li>
+            <li><a href="#Lineage.instructions">instructions</a></li>
+            <li><a href="#Lineage.additionalDocumentation">lineage documentation</a></li>
+            <li><a href="#Lineage.scope">scope</a></li>
           </ul>
         </dd>
       </dl>
@@ -2754,98 +2758,96 @@
 
           <tbody class="supertype">
 
-            <tr id="Method.additionalDocumentation" typeof="rdfs:Property"
-              resource="https://w3id.org/tern/ontologies/tern/additionalDocumentation" class="class mandatory">
-              <td>
-                <a href="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-toggle="tooltip"
-                  data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
-                  additional documentation</a>
-              </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Method.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+            <tr id="Lineage.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/description" data-placement="right">
                   description</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
-                Method.</td>
+              <td property="rdfs:comment"> Detailed description of how the data were collected and/or processed. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Method.instructions" typeof="rdfs:Property"
+            <tr id="Lineage.instructions" typeof="rdfs:Property"
               resource="https://w3id.org/tern/ontologies/tern/instructions" class="class mandatory">
               <td>
                 <a href="https://w3id.org/tern/ontologies/tern/instructions" data-toggle="tooltip"
                   data-content="https://w3id.org/tern/ontologies/tern/instructions" data-placement="right">
                   instructions</a>
               </td>
-              <td>
-                <a href="#TBD" data-placement="right">TBD</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> This field describes the data collection and/or processing procedure. </td>
+              <td property="skos:scopeNote"> It is recommended to describe the procedure as step by step. </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Method.scope" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/scope"
+            <tr id="Lineage.additionalDocumentation" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/additionalDocumentation" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
+                  lineage documentation</a>
+              </td>
+              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Online documentation describing how the data was collected and/or processed.
+              </td>
+              <td property="skos:scopeNote"> TODO: resource example </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Lineage.scope" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/scope"
               class="class mandatory">
               <td>
                 <a href="https://w3id.org/tern/ontologies/tern/scope" data-toggle="tooltip"
                   data-content="https://w3id.org/tern/ontologies/tern/scope" data-placement="right">
                   scope</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> The level of scope for which data lineage is described. </td>
+              <td property="skos:scopeNote"> The lineage must refer to the dataset. Recommended scope codes are
+                available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode">
+                  ISO 19115 Scope code list</a> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-lineage" title="Lineage">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            
+            &lt;ex_lineage_1&gt; a tern:Method ;
+                dcterms:description &quot;procedure details&quot; ;
+                tern:additionalDocumentation &lt;urn:resource:ex_lineage_documentation_1&gt; ;
+                tern:instructions [ a rdf:Seq ;
+                        rdf:_1 &quot;step 1&quot; ;
+                        rdf:_2 &quot;step 2&quot; ] ;
+                tern:scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; .
+          </pre>
+        </aside>
 
       </div>
     </section>
 
-    <section id="entity-organization">
-      <h3 id="Organization">
+    <section id="entity-organisation">
+      <h3 id="Organisation">
         <a href="https://schema.org/Organization" data-toggle="tooltip" data-content="https://schema.org/Organization"
-          data-placement="right">Organization</a>
+          data-placement="right">Organisation</a>
       </h3>
 
       <dl>
@@ -2858,16 +2860,15 @@
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Organization.affiliation">affiliation</a></li>
-            <li><a href="#Organization.country">country</a></li>
-            <li><a href="#Organization.email">email</a></li>
-            <li><a href="#Organization.identifier">identifier</a></li>
-            <li><a href="#Organization.locality">locality</a></li>
-            <li><a href="#Organization.name">name</a></li>
-            <li><a href="#Organization.postalCode">postal code</a></li>
-            <li><a href="#Organization.region">region</a></li>
-            <li><a href="#Organization.streetAddress">street address</a></li>
-            <li><a href="#Organization.telephone">telephone</a></li>
+            <li><a href="#Organisation.country">country</a></li>
+            <li><a href="#Organisation.email">email</a></li>
+            <li><a href="#Organisation.identifier">identifier</a></li>
+            <li><a href="#Organisation.locality">locality</a></li>
+            <li><a href="#Organisation.name">name</a></li>
+            <li><a href="#Organisation.postalCode">postal code</a></li>
+            <li><a href="#Organisation.region">region</a></li>
+            <li><a href="#Organisation.streetAddress">street address</a></li>
+            <li><a href="#Organisation.telephone">telephone</a></li>
           </ul>
         </dd>
       </dl>
@@ -2903,193 +2904,139 @@
 
           <tbody class="supertype">
 
-            <tr id="Organization.affiliation" typeof="rdfs:Property" resource="https://schema.org/affiliation"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/affiliation" data-toggle="tooltip"
-                  data-content="https://schema.org/affiliation" data-placement="right">
-                  affiliation</a>
-              </td>
-              <td>
-                <a href="#Organization" data-placement="right">Organization</a>
-              </td>
-              <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Organization.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
+            <tr id="Organisation.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/addressCountry" data-toggle="tooltip"
                   data-content="https://schema.org/addressCountry" data-placement="right">
                   country</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The country of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.email" typeof="rdfs:Property" resource="https://schema.org/email"
+            <tr id="Organisation.email" typeof="rdfs:Property" resource="https://schema.org/email"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
                   data-placement="right">
                   email</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
+                scheme [[?RFC6068]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+            <tr id="Organisation.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
               <td>
                 <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td>
-                1
-              </td>
-              <td property="rdfs:comment">
-                An unambiguous reference to the resource within the given context of Organization.
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Organisation. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
+            <tr id="Organisation.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/addressLocality" data-toggle="tooltip"
                   data-content="https://schema.org/addressLocality" data-placement="right">
                   locality</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The locality of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.name" typeof="rdfs:Property" resource="https://schema.org/name"
+            <tr id="Organisation.name" typeof="rdfs:Property" resource="https://schema.org/name"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/name" data-toggle="tooltip" data-content="https://schema.org/name"
                   data-placement="right">
                   name</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> A name of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
+            <tr id="Organisation.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/postalCode" data-toggle="tooltip"
                   data-content="https://schema.org/postalCode" data-placement="right">
                   postal code</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The postal code of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
+            <tr id="Organisation.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/addressRegion" data-toggle="tooltip"
                   data-content="https://schema.org/addressRegion" data-placement="right">
                   region</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The region of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
+            <tr id="Organisation.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/streetAddress" data-toggle="tooltip"
                   data-content="https://schema.org/streetAddress" data-placement="right">
                   street address</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The postal address of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
 
-            <tr id="Organization.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
+            <tr id="Organisation.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
               class="class mandatory">
               <td>
                 <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
                   data-placement="right">
                   telephone</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
+                scheme [[?RFC3966]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3097,6 +3044,26 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-organisation" title="Organisation">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix schema: &lt;http://schema.org/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;ex_organisation_1&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -3160,9 +3127,7 @@
                   data-content="http://www.w3.org/2006/time#hasBeginning" data-placement="right">
                   beginning</a>
               </td>
-              <td>
-                <a href="#Timeinstant" data-placement="right">Time instant</a>
-              </td>
+              <td> <a href="#Timeinstant" data-placement="right">Time instant</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> The beginning of a period or interval. </td>
               <td property="skos:scopeNote"> </td>
@@ -3177,9 +3142,7 @@
                   data-content="http://www.w3.org/2006/time#hasEnd" data-placement="right">
                   end</a>
               </td>
-              <td>
-                <a href="#Timeinstant" data-placement="right">Time instant</a>
-              </td>
+              <td> <a href="#Timeinstant" data-placement="right">Time instant</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> The end of a period or interval. </td>
               <td property="skos:scopeNote"> </td>
@@ -3194,9 +3157,7 @@
                   data-content="http://purl.org/dc/terms/endDate" data-placement="right">
                   end date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> The end of the period. </td>
               <td property="skos:scopeNote"> </td>
@@ -3211,9 +3172,7 @@
                   data-content="http://purl.org/dc/terms/startDate" data-placement="right">
                   start date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> The start of the period. </td>
               <td property="skos:scopeNote"> </td>
@@ -3223,9 +3182,39 @@
 
           </tbody>
         </table>
-      </div>
+
+        <aside id="ex-period-of-time" class="example" title="Period of Time">
+          <pre class="turtle">
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+            @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            [] a dct:PeriodOfTime ;
+              dcat:endDate "2016-12-31"^^xsd:date ;
+              dcat:startDate "2016-01-01"^^xsd:date .
+          </pre>
+        </aside>
+
+        <a href="#ex-period-of-time-with-owl-time"></a> is equivalent to <a href="#ex-period-of-time"></a>, but it uses
+        the [[?OWL-TIME]] properties.
+
+        <aside id="ex-period-of-time-with-owl-time" class="example"
+          title="Period of Time using properties time:hasBeginning and time:hasEnd">
+          <pre class="turtle">
+            @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix time: &lt;http://www.w3.org/2006/time#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            [] a dct:PeriodOfTime ;
+              time:hasBeginning [ a time:Instant ;
+                  time:inXSDDate "2016-01-01"^^xsd:date ] ;
+              time:hasEnd [ a time:Instant ;
+                  time:inXSDDate "2016-12-31"^^xsd:date ] .
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-person">
@@ -3250,6 +3239,7 @@
             <li><a href="#Person.identifier">identifier</a></li>
             <li><a href="#Person.locality">locality</a></li>
             <li><a href="#Person.name">name</a></li>
+            <li><a href="#Person.orcID">orcid</a></li>
             <li><a href="#Person.postalCode">postal code</a></li>
             <li><a href="#Person.region">region</a></li>
             <li><a href="#Person.streetAddress">street address</a></li>
@@ -3296,13 +3286,9 @@
                   data-content="https://schema.org/affiliation" data-placement="right">
                   affiliation</a>
               </td>
-              <td>
-                <a href="#Organization" data-placement="right">Organization</a>
-              </td>
+              <td> <a href="#Organisation" data-placement="right">Organisation</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The affiliation of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3315,13 +3301,9 @@
                   data-content="https://schema.org/addressCountry" data-placement="right">
                   country</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The country of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3333,13 +3315,10 @@
                   data-placement="right">
                   email</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
+                scheme [[?RFC6068]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3352,15 +3331,10 @@
                   data-content="http://purl.org/dc/terms/identifier" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td>
-                1
-              </td>
-              <td property="rdfs:comment">
-                An unambiguous reference to the resource within the given context of Person.
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Person. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3373,13 +3347,9 @@
                   data-content="https://schema.org/addressLocality" data-placement="right">
                   locality</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The locality of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3391,12 +3361,24 @@
                   data-placement="right">
                   name</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
+              <td property="rdfs:comment"> A name of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Person.orcID" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/org/orcID"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/org/orcID" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/org/orcID" data-placement="right">
+                  orcid</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The unique, persistent identifier (PID) for the individual provided by Orcid.
               </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
@@ -3410,13 +3392,9 @@
                   data-content="https://schema.org/postalCode" data-placement="right">
                   postal code</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The postal code of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3429,13 +3407,9 @@
                   data-content="https://schema.org/addressRegion" data-placement="right">
                   region</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The region of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3448,13 +3422,9 @@
                   data-content="https://schema.org/streetAddress" data-placement="right">
                   street address</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The postal address of the entity. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3467,13 +3437,10 @@
                   data-placement="right">
                   telephone</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
+              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
+                scheme [[?RFC3966]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3481,6 +3448,29 @@
 
           </tbody>
         </table>
+
+        <aside class="example" id="ex-person" title="Person">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix org: &lt;https://w3id.org/tern/ontologies/org/&gt; .
+            @prefix schema: &lt;http://schema.org/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;ex_person_1&gt; a schema:Person ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/person_uuid&quot;^^xsd:anyURI ;
+                schema:affiliation &lt;ex_organisation_1&gt; ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;email@email.org.au&quot; ;
+                schema:name &quot;John Doe&quot; ;
+                schema:postalCode &quot;4000&quot; ;
+                schema:streetAddress &quot;Adelaide Street, 1&quot; ;
+                schema:telephone &quot;+61 0426 300 250&quot; .
+                org:orcID &lt;https://orcid.org/0000-0000-0000-0000&gt; .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -3493,7 +3483,11 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> TBD </dd>
+        <dd> Anything described by RDF. </dd>
+        <dt> Usage Notes </dt>
+        <dd> TERN DCAT leverages the usage of rdfs:Resource class in order to discribe more complex types
+          of resources widely used across the profile. See the examples to see how to describe each type of resource.
+        </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -4053,7 +4047,7 @@
                   label</a>
               </td>
               <td>
-                <a href="#TBD" data-placement="right">TBD</a>
+                <a href="#Literal" data-placement="right">Literal</a>
               </td>
               <td> 1 </td>
               <td property="rdfs:comment"> TBD </td>
@@ -4240,8 +4234,7 @@
             </div>
           </td>
           <td>
-            rdfs:Literal encoded using the relevant [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
-                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->]
+            rdfs:Literal encoded using the relevant [[?ISO8601]]
             Date and Time compliant string and typed using the appropriate XML Schema datatype (xsd:gYear,
             xsd:gYearMonth, xsd:date, or xsd:dateTime).
           </td>
@@ -4292,8 +4285,7 @@
           <td>
             Duration represents a duration of time. The ·value space· of duration is a six-dimensional space where the
             coordinates designate the Gregorian year, month, day, hour, minute, and second components defined in §
-            5.5.3.2 of [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso8601"
-                title="Representation of dates and times. ISO 8601:2004.">ISO8601<!---0.487875%--></a></cite><!---0.487875%-->],
+            5.5.3.2 of [[?ISO8601]],
             respectively.
           </td>
         </tr>

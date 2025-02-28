@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+
+<ex_lineage_1> a tern:Method ;
+    dcterms:description "procedure details" ;
+    tern:additionalDocumentation <urn:resource:ex_lineage_documentation_1> ;
+    tern:instructions [ a rdf:Seq ;
+            rdf:_1 "step 1" ;
+            rdf:_2 "step 2" ] ;
+    tern:scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> .
