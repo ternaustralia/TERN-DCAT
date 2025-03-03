@@ -17,7 +17,7 @@
 var respecConfig = {
     doJsonLd: true,
     //	preProcess: [dfn_index],
-    //    subtitle: "Version 2",
+    subtitle: "Version 1.0",
     specStatus: "unofficial",
     noRecTrack: true,
     latestVersion: "https://github.com/ternaustralia/TERN-DCAT",
@@ -119,20 +119,30 @@ var respecConfig = {
             "title": "TERN Ontology",
             "publisher": "Terrestrial Ecosystem Research Network"
         },
+        "TERN-ORG": {
+            "href": "https://linkeddata.tern.org.au/viewers/tern-org-ontology",
+            "title": "TERN Organisations Ontology",
+            "publisher": "Terrestrial Ecosystem Research Network"
+        },
         "OWL": {
-            "href": "TBD",
-            "title": "TBD",
-            "publisher": "TBD"
+            "href": "https://www.w3.org/2004/OWL/",
+            "title": "Web Ontology Language (OWL) Overview",
+            "publisher": ""
         },
         "SOSA": {
-            "href": "TBD",
-            "title": "TBD",
+            "href": "https://www.w3.org/TR/vocab-ssn/",
+            "title": "Semantic Sensor Network Ontology",
             "publisher": "TBD"
         },
         "CNT": {
-            "href": "TBD",
-            "title": "TBD",
-            "publisher": "TBD"
+            "href": "http://www.w3.org/TR/Content-in-RDF/",
+            "title": "Representing Content in RDF",
+            "publisher": ""
+        },
+        "QUDT": {
+            "href": "http://www.qudt.org/",
+            "title": "QUDT - Quantities, Units, Dimensions and Data Types Ontologies",
+            "publisher": "Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak.18 March 2014"
         },
         "QUDT-UNITS": {
             "href": "http://www.qudt.org/vocab/unit",
@@ -144,6 +154,21 @@ var respecConfig = {
             "title": "Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata",
             "publisher": "OJ L 326",
             "date": "4 December 2008"
+        },
+        "RDF": {
+            "href": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "title": "The RDF Concepts Vocabulary (RDF)",
+            "publisher": "W3C"
+        },
+        "RDFS": {
+            "href": "http://www.w3.org/2000/01/rdf-schema#",
+            "title": "The RDF Schema vocabulary (RDFS)",
+            "publisher": "W3C"
+        },
+        "DXWG": {
+            "href": "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+            "title": "Dataset Exchange Working Group",
+            "publisher": "W3C"
         },
     }
     //     "ADMS-SKOS": {

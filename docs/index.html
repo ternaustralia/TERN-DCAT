@@ -214,11 +214,6 @@
           <td>[[CNT]]</td>
         </tr> 
         <tr>
-          <td><code>dc</code></td>
-          <td><code>http://purl.org/dc/elements/1.1/</code></td>
-          <td>[[DCTERMS]]</td>
-        </tr>
-        <tr>
           <td><code>dcat</code></td>
           <td><code>http://www.w3.org/ns/dcat#</code></td>
           <td>[[VOCAB-DCAT]]</td>
@@ -244,9 +239,14 @@
           <td>[[FOAF]]</td>
         </tr>
         <tr>
-          <td><code>geosparql</code></td>
+          <td><code>geosparql (geo)</code></td>
           <td><code>http://www.opengis.net/ont/geosparql#</code></td>
           <td>[[?GeoSPARQL]]</td>
+        </tr>
+        <tr>
+          <td><code>org</code></td>
+          <td><code>https://w3id.org/tern/ontologies/org/</code></td>
+          <td>[[TERN-ORG]]</td>
         </tr>
         <tr>
           <td><code>owl</code></td>
@@ -254,7 +254,22 @@
           <td>[[OWL]]</td>
         </tr>
         <tr>
-          <td><code>sdo</code></td>
+          <td><code>qudt</code></td>
+          <td><code>http://qudt.org/schema/qudt#</code></td>
+          <td>[[QUDT]]</td>
+        </tr>
+        <tr>
+          <td><code>rdf</code></td>
+          <td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
+          <td>[[RDF]]</td>
+        </tr>
+        <tr>
+          <td><code>rdfs</code></td>
+          <td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
+          <td>[[RDFS]]</td>
+        </tr>
+        <tr>
+          <td><code>sdo (schema)</code></td>
           <td><code>https://schema.org/</code></td>
           <td>[[?SCHEMA-ORG]]</td>
         </tr>
@@ -4434,6 +4449,12 @@
             <td><a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a></td>
             <td> </td>
           </tr>
+          <tr>
+            <td>dcterms:conformsTo, geo:asWKT </td>
+            <td><a href="#VerticalExtent">VerticalExtent</a>, <a href="#Geometry">Geometry</a></td>
+            <td><a href="https://www.opengis.net/def/crs/EPSG/0/">OGC CRS list</a></td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
 
@@ -4508,6 +4529,8 @@
     <h2>
       Acknowledgments
     </h2>
+    The Editors recognize the major contribution of the members of the original [[?DXWG]],
+    [[?VOCAB-DCAT]] and [[?DCAT-AP]].
   </section>
 
   <section id='examples' class="appendix">
