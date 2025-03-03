@@ -1590,7 +1590,7 @@
               <td> 0..* </td>
               <td property="rdfs:comment"> Other citation details. </td>
               <td property="skos:scopeNote"> Notice that all the information needed for generating a data citation
-                following the DataCite Metadata Schema are already recorded as part of the model (e.g., creator,
+                following the [[?DataCite]] Metadata Schema are already recorded as part of the model (e.g., creator,
                 publication year, title, publisher, identifier, etc.). Further information can be specified here if
                 needed. </td>
               <td> </td>
@@ -3818,13 +3818,14 @@
                   data-content="http://www.w3.org/ns/dqv#isMeasurementOf" data-placement="right">
                   measurement of</a>
               </td>
-              <td> <a href="#Metric" data-placement="right">Metric</a> </td>
+              <td> <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#instances-of-metric"
+                  data-placement="right">Metric</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> The Metric being observed. </td>
               <td property="skos:scopeNote"> This property is used to specify the type of spatial resolution being
                 described, by taking as object one of the instances of dqv:Metric documented in <a
                   href="https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0/#instances-of-metric">Instances
-                  of Metric</a> by GeoDCAT-AP.
+                  of Metric</a> by [[?GeoDCAT-AP]].
               </td>
               <td> </td>
               <td> P </td>
@@ -4342,87 +4343,17 @@
             power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
           </td>
         </tr>
-        <tr>
-          <td>
-            <div id="xsd%3Aduration">
-              <a href="http://www.w3.org/2001/XMLSchema#duration" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#duration" data-placement="right">xsd:duration</a>
-            </div>
-          </td>
-          <td>
-            Duration represents a duration of time. The ·value space· of duration is a six-dimensional space where the
-            coordinates designate the Gregorian year, month, day, hour, minute, and second components defined in §
-            5.5.3.2 of [[?ISO8601]],
-            respectively.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div id="xsd%3AhexBinary">
-              <a href="http://www.w3.org/2001/XMLSchema#hexBinary" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#hexBinary" data-placement="right">xsd:hexBinary</a>
-            </div>
-
-          </td>
-          <td>
-            Hex-encoded binary data. The ·value space· of hexBinary is the set of finite-length sequences of binary
-            octets.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div id="xsd%3AnonNegativeInteger">
-              <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-                data-placement="right">xsd:nonNegativeInteger</a>
-            </div>
-
-          </td>
-          <td>
-            Number derived from integer by setting the value of minInclusive to be 0.
-          </td>
-        </tr>
       </tbody>
     </table>
   </section>
 
-  <section id="controlled-vocs" class="informative">
-    <h2 id="x10-controlled-vocabularies">Controlled Vocabularies</h2>
-
-    <section id="requirements-for-controlled-vocabularies">
-      <div class="header-wrapper">
-        <h3 id="x10-1-requirements-for-controlled-vocabularies"><bdi class="secno">10.1<!---0.487875%-->
-          </bdi>Requirements for controlled vocabularies</h3><a class="self-link"
-          href="#requirements-for-controlled-vocabularies" aria-label="Permalink for Section 10.1"></a>
-      </div>
-      The following is a list of requirements that were identified for the controlled vocabularies to be recommended in
-      this Application Profile.
-      Controlled vocabularies <em class="rfc2119">SHOULD<!---0.487875%--></em>:
-      <ul>
-        <li>Be published under an open licence.</li>
-        <li>Be operated and/or maintained by an institution of the European Union, by a recognised standards
-          organisation or another trusted organisation.</li>
-        <li>Be properly documented.</li>
-        <li>Have labels in multiple languages, ideally in all official languages of the European Union.</li>
-        <li>Contain a relatively small number of terms (e.g. 10-25) that are general enough to enable a wide range of
-          resources to be classified.</li>
-        <li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
-        <li>Have associated persistence and versioning policies.</li>
-      </ul>
-      These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only
-      intended to be used for the selection of the controlled vocabularies that are proposed for this Application
-      Profile.
-
-    </section>
+  <section id="controlled-vocabs" class="informative">
+    <h2>Controlled Vocabularies</h2>
 
     <section id="controlled-vocabularies-to-be-used">
-      <div class="header-wrapper">
-        <h3 id="x10-2-controlled-vocabularies-to-be-used"><bdi class="secno">10.2<!---0.487875%--> </bdi>Controlled
-          vocabularies to be used</h3><a class="self-link" href="#controlled-vocabularies-to-be-used"
-          aria-label="Permalink for Section 10.2"></a>
-      </div>
-      <p>In the table below, a number of properties are listed with controlled vocabularies that <em
-          class="rfc2119">MUST<!---0.487875%--></em> be used for the listed properties. The declaration of the following
+      <h3>Controlled vocabularies to be used</h3>
+      <p>In the table below, a number of properties are listed with controlled vocabularies that <em>MUST</em> be used
+        for the listed properties. The declaration of the following
         controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
       <table id="table-cv" class="simple">
@@ -4436,74 +4367,60 @@
         </thead>
         <tbody>
           <tr>
-            <td>dcat:mediaType</td>
-            <td><a href="#Distribution">Distribution</a></td>
-            <td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>dcat:theme</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a>, <a
-                href="#Catalogue">Catalogue</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td>
-            <td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td>
-          </tr>
-          <tr>
             <td>dct:accrualPeriodicity</td>
-            <td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/frequency">EU Vocabularies Frequency Named
-                Authority List</a></td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td><a
+                href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode">ISO
+                19115-3
+                Maintenance Frequency Code List</a></td>
             <td></td>
           </tr>
           <tr>
-            <td>dct:format</td>
-            <td><a href="#Distribution">Distribution</a>,<a href="#DataService">Data Service </a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named
-                Authority List</a></td>
+            <td>tern:securityConstraints</td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td><a
+                href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">ISO
+                19115-3
+                Classification Code List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>adms:status</td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td><a href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode">ISO
+                19115-3
+                Progress Code List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tern:scope</td>
+            <td><a href="#Lineage">Lineage</a></td>
+            <td><a href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode">ISO
+                19115-3
+                Scope Code List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dcterms:type</td>
+            <td><a href="#Resource">Resource</a></td>
+            <td><a
+                href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">ISO
+                19115-3
+                Online Function Code List</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dcterms:conformsTo</td>
+            <td><a href="#Resource">Resource</a></td>
+            <td><a href="TBD">Protocol list</a></td>
             <td></td>
           </tr>
           <tr>
             <td>dct:language</td>
-            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue
-                Records</a>, <a href="#Distribution">Distribution</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named
-                Authority List</a></td>
+            <td><a href="#Catalogue">Catalogue</a>, <a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue
+                Records</a></td>
+            <td><a href="http://id.loc.gov/vocabulary/iso639-2/">US Library of Congress ISO639-2 Languages</a></td>
             <td></td>
-          </tr>
-          <tr>
-            <td>dct:publisher</td>
-            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset
-                Series</a>,<a href="#DataService">Data Service</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate
-                bodies Named Authority List</a></td>
-            <td>The Corporate bodies NAL must be used for European institutions and a small set of international
-              organisations. In case of other types of organisations, national, regional or local vocabularies should be
-              used.</td>
-          </tr>
-          <tr>
-            <td>dct:spatial</td>
-            <td><a href="#Catalogue">Catalogue</a>,<a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset
-                Series</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/continent/">EU Vocabularies Continents Named
-                Authority List</a>, <a href="http://publications.europa.eu/resource/authority/country">EU Vocabularies
-                Countries Named Authority List</a>, <a href="http://publications.europa.eu/resource/authority/place/">EU
-                Vocabularies Places Named Authority List</a>, <a href="http://sws.geonames.org/">Geonames</a></td>
-            <td> The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in
-              those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs
-              must be used.</td>
-          </tr>
-          <tr>
-            <td>adms:status</td>
-            <td><a href="#Distribution">Distribution</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/distribution-status">EU Vocabularies
-                Distribution Status</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>dct:type</td>
-            <td><a href="#Agent">Agent</a></td>
-            <td><a href="http://purl.org/adms/publishertype/1.0">ADMS publisher type</a> vocabulary</td>
-            <td> The list of terms in the ADMS publisher type vocabulary is included in the ADMS specification</td>
           </tr>
           <tr>
             <td>dct:type</td>
@@ -4512,31 +4429,16 @@
             <td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td>
           </tr>
           <tr>
-            <td>dcatap:availability</td>
-            <td><a href="#Distribution">Distribution</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/planned-availability">Distribution
-                availability vocabulary</a></td>
-            <td>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP specification.
-            </td>
-          </tr>
-          <tr>
-            <td>spdx:algorithm</td>
-            <td><a href="#Checksum">Checksum</a></td>
-            <td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td>
-            <td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td>
-          </tr>
-          <tr>
-            <td>dct:accessRights</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DataService">Data Service</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority
-                List</a></td>
-            <td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td>
+            <td>tern:unit</td>
+            <td><a href="#Unit">Unit of Measurement</a></td>
+            <td><a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a></td>
+            <td> </td>
           </tr>
         </tbody>
       </table>
 
-      <p>In the table below, a number of properties are listed with controlled vocabularies that <em
-          class="rfc2119">MAY<!---0.487875%--></em> be used for the listed properties. The declaration of the following
+      <p>In the table below, a number of properties are listed with controlled vocabularies that <em>MAY</em> be used
+        for the listed properties. The declaration of the following
         controlled vocabularies as recommended stimulates interoperability.</p>
 
       <table id="table-cv" class="simple">
@@ -4550,12 +4452,34 @@
         </thead>
         <tbody>
           <tr>
-            <td>dct:type</td>
-            <td><a href="#Dataset">Dataset</a></td>
-            <td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a>
+            <td>dcat:theme</td>
+            <td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td>
+            <td>
+              <ul>
+                <li><a href="https://vocab.met.no/mmd/ISO_Topic_Category/">Topic Category</a></li>
+                <li><a href="https://linked.data.gov.au/def/anzsrc-for/2020">ANZSRC
+                    - Socio-Economic Objectives (SEO)</a></li>
+                <li><a href="https://linked.data.gov.au/def/anzsrc-for/2020">ANZSRC
+                    - Fields of Research (FoR)</a></li>
+                <li><a href="https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords">GCMD Science
+                    keywords</a></li>
+                <li><a
+                    href="https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/horizontalresolutionrange/?format=xml">GCMD
+                    Horizontal Resolution</a></li>
+                <li><a
+                    href="https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/temporalresolutionrange/?format=xml">GCMD
+                    Temporal Resolution</a></li>
+                <li><a
+                    href="https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/verticalresolutionrange/?format=xml">GCMD
+                    Vertical Resolution</a></li>
+                <li><a href="http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e">Ecological
+                    parameters</a></li>
+                <li><a href="https://biodiversity.org.au/afd/home">Australian Faunal Directory</a></li>
+                <li><a href="http://www.cpbr.gov.au/cgi-bin/apni">Australian Plant Name Index - APNI</a></li>
+              </ul>
             </td>
-            <td>This list of terms provide types of datasets. Its main scope is to support dataset categorisation of the
-              EU Open Data Portal.</td>
+            <td>The values to be used for this property are the URIs of the concepts in the vocabulary. Any other CV can
+              be used as themes.</td>
           </tr>
         </tbody>
       </table>
@@ -4563,21 +4487,11 @@
     </section>
 
     <section id="other-controlled-vocabularies">
-      <div class="header-wrapper">
-        <h3 id="x10-3-other-controlled-vocabularies"><bdi class="secno">10.3<!---0.487875%--> </bdi>Other controlled
-          vocabularies</h3><a class="self-link" href="#other-controlled-vocabularies"
-          aria-label="Permalink for Section 10.3"></a>
-      </div>
+      <h3>Other controlled vocabularies</h3>
       In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal
       interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies
       that are available online. While those may not be recognised by general implementations of the Application
-      Profile, they may serve to increase interoperability across applications in the same region or domain. Examples
-      are the full set of concepts in <a
-        href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc">EuroVoc</a>,
-      <a href="https://dspacecris.eurocris.org/">the CERIF standard vocabularies</a>, <a
-        href="http://www.oclc.org/content/dam/oclc/dewey/versions/print/intro.pdf">the Dewey Decimal Classification</a>
-      and numerous other schemes.
-
+      Profile, they may serve to increase interoperability across applications in the same region or domain.
     </section>
 
   </section>
