@@ -3540,12 +3540,11 @@
                   data-content="http://purl.org/dc/terms/description" data-placement="right">
                   description</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment"> TBD </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Description of the resource. </td>
+              <td property="skos:scopeNote"> Provides additional information about the resource. E.g., 'layer name' of a
+                WMS resource. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3557,12 +3556,11 @@
                   data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
                   conforms to</a>
               </td>
-              <td>
-                <a href="#Standard" data-placement="right">Standard</a>
-              </td>
+              <td> <a href="#Standard" data-placement="right">Standard</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment"> TBD </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Transfer protocol of the resource. </td>
+              <td property="skos:scopeNote"> When the resource represents a Distribution, this property should indicate
+                the data transfer protocol. E.g., 'web address' or 'OGC Web Map Service' TODO: link to CV</td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3574,12 +3572,11 @@
                   data-content="http://purl.org/dc/terms/format" data-placement="right">
                   format</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment"> TBD </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Format of the resource. </td>
+              <td property="skos:scopeNote"> Free-text indicating the format of the data distribution, e.g., Microsoft
+                Excel </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3591,12 +3588,12 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> TBD </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> A name given to the resource. </td>
+              <td property="skos:scopeNote">
+                This property can be repeated for parallel language versions of the name.
+              </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3608,12 +3605,13 @@
                   data-content="http://purl.org/dc/terms/type" data-placement="right">
                   type</a>
               </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment"> TBD </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Function performed by the resource. </td>
+              <td property="skos:scopeNote"> Recommended function codes are
+                available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">
+                  ISO 19115 Online Function code list </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3625,11 +3623,9 @@
                   data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-placement="right">
                   value</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> TBD </td>
+              <td property="rdfs:comment"> Link to the resource. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3637,9 +3633,41 @@
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-resource-1" title="Resource">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+            @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;urn:resource:ex_resource_1&gt; a rdfs:Resource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern/FTP&gt; ;
+                dcterms:title &quot;FTP distribution resource example&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
+                rdf:value &quot;https://ftp.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_2&gt; a rdfs:Resource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern/WWW:LINK-1.0-http--link&gt; ;
+                dcterms:title &quot;Method documentation&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_3&gt; a rdfs:Resource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/OGC:WMS-1.3.0-http-get-map&gt; ;
+                dcterms:description &quot;WMS service&quot; ;
+                dcterms:title &quot;WMS layer_name&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
+                rdf:value &quot;https://wms.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_4&gt; a rdfs:Resource ;
+                dcterms:title &quot;data quality report&quot; ;
+                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-rights-statement">
@@ -3699,13 +3727,9 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                A name given to the RightsStatement. TDB
-              </td>
+              <td property="rdfs:comment"> A name given to the RightsStatement. TDB </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3713,9 +3737,24 @@
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-rights-statement" title="Rights Statement">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+
+            &lt;ex_rights_statement_1&gt; a dcterms:RightsStatement ;
+                dcterms:title &quot;Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}.&quot; .
+            
+            &lt;ex_rights_statement_2&gt; a dcterms:RightsStatement ;
+                dcterms:title &quot;&quot;&quot;TERN services are provided on an &quot;as-is&quot; and &quot;as available&quot; basis. Users use any TERN services at their discretion and risk.
+                    They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+                    &lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
+                    &lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&quot;&quot;&quot; .
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-spatial-resolution">
@@ -3726,14 +3765,17 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> TDB. </dd>
+        <dd> Represents the evaluation of a given resource (as a Dataset, or Distribution) against a specific quality
+          metric. </dd>
+        <dt> Usage Note </dt>
+        <dd> Used to represent the Spatial resolution of the dataset as for the Resource metadata in ISO 19115. </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
             <li><a href="#QualityMeasurement.isMeasurementOf">measurement of</a></li>
-            <li><a href="#QualityMeasurement.value">value</a></li>
             <li><a href="#QualityMeasurement.unit">unit</a></li>
+            <li><a href="#QualityMeasurement.value">value</a></li>
           </ul>
         </dd>
       </dl>
@@ -3776,36 +3818,13 @@
                   data-content="http://www.w3.org/ns/dqv#isMeasurementOf" data-placement="right">
                   measurement of</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Metric" data-placement="right">Metric</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="QualityMeasurement.value" typeof="rdfs:Property" resource="http://www.w3.org/ns/dqv#value"
-              class="class mandatory">
-              <td>
-                <a href="http://www.w3.org/ns/dqv#value" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dqv#value" data-placement="right">
-                  value</a>
-              </td>
-              <td>
-                <a href="#Concept" data-placement="right">Concept</a>
-              </td>
-              <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
+              <td property="rdfs:comment"> The Metric being observed. </td>
+              <td property="skos:scopeNote"> This property is used to specify the type of spatial resolution being
+                described, by taking as object one of the instances of dqv:Metric documented in <a
+                  href="https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0/#instances-of-metric">Instances
+                  of Metric</a> by GeoDCAT-AP.
               </td>
               <td> </td>
               <td> P </td>
@@ -3818,23 +3837,65 @@
                   data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
                   unit of measurement</a>
               </td>
+              <td> <a href="#Unit" data-placement="right">Unit</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The unit in which the data values are measured. </td>
+              <td property="skos:scopeNote"> This property is used to specify, when relevant, the unit of measure of the
+                spatial resolution being described, by taking as object the relevant term from the QUDT Units Vocabulary
+                [[?QUDT-UNITS]] </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="QualityMeasurement.value" typeof="rdfs:Property" resource="http://www.w3.org/ns/dqv#value"
+              class="class mandatory">
               <td>
-                <a href="#Unit" data-placement="right">Unit</a>
+                <a href="http://www.w3.org/ns/dqv#value" data-toggle="tooltip"
+                  data-content="http://www.w3.org/ns/dqv#value" data-placement="right">
+                  value</a>
               </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                The unit of measurement of the spatial resolution.
-              </td>
-              <td property="skos:scopeNote"> TBD. </td>
+              <td property="rdfs:comment"> Value computed by the relevant Metric. </td>
+              <td property="skos:scopeNote"> This property is used to specify the value of the spatial resolution being
+                described via a typed literal. The datatype MUST correspond to the one specified via property
+                dqv:expectedDataType in the definition of the corresponding instance of dqv:Metric. </td>
               <td> </td>
               <td> P </td>
             </tr>
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-spatial-resolution" title="Spatial Resolution">
+          <pre class="turtle">
+            @prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+            @prefix geodcatap: &lt;http://data.europa.eu/930/&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            
+            &lt;ex_quality_measurement_scale&gt; a dqv:QualityMeasurement ;
+                dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+                dqv:value 0.000001 .
+            
+            &lt;ex_quality_measurement_distance&gt; a dqv:QualityMeasurement ;
+                tern:unit &lt;http://www.qudt.org/vocab/unit/M&gt; ;
+                dqv:isMeasurementOf geodcatap:spatialResolutionAsDistance ;
+                dqv:value 100.0 .
+            
+            &lt;ex_quality_measurement_angular&gt; a dqv:QualityMeasurement ;
+                tern:unit &lt;http://www.qudt.org/vocab/unit/DEG&gt; ;
+                dqv:isMeasurementOf geodcatap:spatialResolutionAsAngularDistance ;
+                dqv:value 20.0 .
+            
+            &lt;ex_quality_measurement_vertical&gt; a dqv:QualityMeasurement ;
+                tern:unit &lt;http://www.qudt.org/vocab/unit/M&gt; ;
+                dqv:isMeasurementOf geodcatap:spatialResolutionAsVerticalDistance ;
+                dqv:value 10.0 .
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-standard">
@@ -3896,9 +3957,7 @@
                   data-content="http://purl.org/dc/terms/type" data-placement="right">
                   identifier</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
                 Standard.</td>
@@ -3914,13 +3973,9 @@
                   data-content="http://purl.org/dc/terms/issued" data-placement="right">
                   publication date</a>
               </td>
-              <td>
-                <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a>
-              </td>
+              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment">
-                The date on which the Standard was first released.
-              </td>
+              <td property="rdfs:comment"> The date on which the Standard was first released. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3933,13 +3988,9 @@
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
                   title</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                A name given to the Standard.
-              </td>
+              <td property="rdfs:comment"> A name given to the Standard. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3952,13 +4003,9 @@
                   data-content="http://www.w3.org/2002/07/owl#versionInfo" data-placement="right">
                   version</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                The version indicator (name or identifier) of the standard.
-              </td>
+              <td property="rdfs:comment"> The version indicator (name or identifier) of the standard. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3966,7 +4013,23 @@
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-standard" title="Standard">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;http://linked.data.gov.au/def/tern/OGC:WMS-1.3.0-http-get-map&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;OGC:WMS-1.3.0-http-get-map&quot; .
+            
+            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
+                dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
+                dcterms:title &quot;TERN DCAT metadata profile&quot; ;
+                owl:versionInfo &quot;1.0&quot; .
+          </pre>
+        </aside>
 
       </div>
     </section>
@@ -3985,8 +4048,8 @@
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Unit.label">label</a></li>
             <li><a href="#Unit.isDefinedBy">defined by</a></li>
+            <li><a href="#Unit.label">label</a></li>
           </ul>
         </dd>
       </dl>
@@ -4022,6 +4085,23 @@
 
           <tbody class="supertype">
 
+            <tr id="Unit.isDefinedBy" typeof="rdfs:Property"
+              resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-toggle="tooltip"
+                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-placement="right">
+                  defined by</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> Vocabulary defining the unit of measurement. </td>
+              <td property="skos:scopeNote"> Units should be defined in the QUDT Unit CV
+                TODO:http://qudt.org/3.0.0/vocab/unit</http:>
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
             <tr id="Unit.label" typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#label"
               class="class mandatory">
               <td>
@@ -4029,28 +4109,9 @@
                   data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" data-placement="right">
                   label</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> Label of the unit of measurement. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Unit.isDefinedBy" typeof="rdfs:Property"
-              resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" class="class mandatory">
-              <td>
-                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-toggle="tooltip"
-                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#isDefinedBy" data-placement="right">
-                  label</a>
-              </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td> 1 </td>
-              <td property="rdfs:comment"> TBD </td>
+              <td property="rdfs:comment"> A given name of the unit of measurement. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -4058,9 +4119,24 @@
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-unit" title="Unit of Measurement">
+          <pre class="turtle">
+            @prefix qudt: &lt;http://qudt.org/schema/qudt#&gt; .
+            @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+            
+            &lt;http://qudt.org/vocab/unit/DEG&gt; a qudt:Unit ;
+                rdfs:label &quot;Degree&quot; ;
+                rdfs:isDefinedBy &lt;http://qudt.org/vocab/unit&gt; .
+            
+            &lt;http://qudt.org/vocab/unit/M&gt; a qudt:Unit ;
+                rdfs:label &quot;Meter&quot; ;
+                rdfs:isDefinedBy &lt;http://qudt.org/vocab/unit&gt; .
+          </pre>
+        </aside>
 
       </div>
+
     </section>
 
     <section id="entity-vertical-extent">
@@ -4071,7 +4147,7 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> TDB. </dd>
+        <dd> Provides vertical component of the extent of the resource. </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -4122,16 +4198,11 @@
                   data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
                   conforms to</a>
               </td>
-              <td>
-                <a href="#Resource" data-placement="right">Resource</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                Spatial reference system code of the vertical extent.
-              </td>
+              <td property="rdfs:comment"> Vertical Spatial reference system code of the vertical extent. </td>
               <td property="skos:scopeNote"> Vertical Datum represented as a code (e.g., AHD, EGM2020, EPSG:5712) or as
-                a URI
-                (http://www.opengis.net/def/crs/EPSG/0/5712).
+                a URI (http://www.opengis.net/def/crs/EPSG/0/5712).
               </td>
               <td> </td>
               <td> P </td>
@@ -4144,16 +4215,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/maxAltitude" data-placement="right">
                   maximum altitude</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Maximun altitude of the resource. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4165,16 +4230,10 @@
                   data-content="https://w3id.org/tern/ontologies/tern/minAltitude" data-placement="right">
                   minimum altitude</a>
               </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                TBD
-              </td>
-              <td property="skos:scopeNote">
-                TBD
-              </td>
+              <td property="rdfs:comment"> Minimum altitude of the resource. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4186,21 +4245,29 @@
                   data-content="https://w3id.org/tern/ontologies/tern/unit" data-placement="right">
                   unit of measurement</a>
               </td>
-              <td>
-                <a href="#Unit" data-placement="right">Unit</a>
-              </td>
+              <td> <a href="#Unit" data-placement="right">Unit</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment">
-                The unit of measurement of the concept, when the concept relates to Ecological parameters.
-              </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> The unit of measurement of the vertical extent. </td>
+              <td property="skos:scopeNote"> TODO: uses QUDT CV. </td>
               <td> </td>
               <td> P </td>
             </tr>
 
           </tbody>
         </table>
-      </div>
+
+        <aside class="example" id="ex-vertical-extent" title="Vertical Extent">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            
+            &lt;ex_vertical_extent_1&gt; a tern:VerticalExtent ;
+                dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
+                tern:maxAltitude 1000.0 ;
+                tern:minAltitude 100.0 ;
+                tern:unit &lt;http://qudt.org/vocab/unit/M&gt; .
+          </pre>
+        </aside>
 
       </div>
     </section>

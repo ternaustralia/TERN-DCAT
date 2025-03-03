@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<ex_rights_statement_1> a dcterms:RightsStatement ;
+    dcterms:title "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." .
+
+<ex_rights_statement_2> a dcterms:RightsStatement ;
+    dcterms:title """TERN services are provided on an "as-is" and "as available" basis. Users use any TERN services at their discretion and risk.
+        They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+        <br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
+        <br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting""" .

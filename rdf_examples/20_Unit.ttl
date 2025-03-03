@@ -1,0 +1,10 @@
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://qudt.org/vocab/unit/DEG> a qudt:Unit ;
+    rdfs:label "Degree" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit> .
+
+<http://qudt.org/vocab/unit/M> a qudt:Unit ;
+    rdfs:label "Meter" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit> .

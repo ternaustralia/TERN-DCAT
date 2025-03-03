@@ -57,27 +57,19 @@ var respecConfig = {
     editors: [
         {
             name: "Javier Sanchez Gonzalez",
-            // orcid: "0000-0002-3903-254X",
             company: "Terrestrial Ecosystem Research Network",
-            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
             companyURL: "https://www.tern.org.au/",
-            // w3cid: 72458
         },
         {
             name: "Siddeswara Guru",
             orcid: "0000-0002-3903-254X",
             company: "Terrestrial Ecosystem Research Network",
-            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
             companyURL: "https://www.tern.org.au/",
-            // w3cid: 72458
         },
         {
             name: "Junrong Yu",
-            // orcid: "0000-0001-5648-2713",
             company: "Terrestrial Ecosystem Research Network",
-            // url: "https://imati.cnr.it/mypage.php?idk=PG-62",
             companyURL: "https://www.tern.org.au/",
-            // w3cid: 72458
         }
     ],
     // formerEditors: [{
@@ -141,6 +133,11 @@ var respecConfig = {
             "href": "TBD",
             "title": "TBD",
             "publisher": "TBD"
+        },
+        "QUDT-UNITS": {
+            "href": "http://www.qudt.org/vocab/unit",
+            "title": "QUDT Units Vocabulary",
+            "publisher": "QUDT.org"
         },
         "INSPIRE-MD-REG": {
             "href": "http://data.europa.eu/eli/reg/2008/1205",

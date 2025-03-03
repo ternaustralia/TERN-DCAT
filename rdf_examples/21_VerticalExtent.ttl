@@ -1,0 +1,8 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+
+<ex_vertical_extent_1> a tern:VerticalExtent ;
+    dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/5712> ;
+    tern:maxAltitude 1000.0 ;
+    tern:minAltitude 100.0 ;
+    tern:unit <http://qudt.org/vocab/unit/M> .

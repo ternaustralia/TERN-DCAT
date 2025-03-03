@@ -1,0 +1,22 @@
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+
+<ex_quality_measurement_scale> a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+    dqv:value 0.000001 .
+
+<ex_quality_measurement_distance> a dqv:QualityMeasurement ;
+    tern:unit <http://www.qudt.org/vocab/unit/M> ;
+    dqv:isMeasurementOf geodcatap:spatialResolutionAsDistance ;
+    dqv:value 100.0 .
+
+<ex_quality_measurement_angular> a dqv:QualityMeasurement ;
+    tern:unit <http://www.qudt.org/vocab/unit/DEG> ;
+    dqv:isMeasurementOf geodcatap:spatialResolutionAsAngularDistance ;
+    dqv:value 20.0 .
+
+<ex_quality_measurement_vertical> a dqv:QualityMeasurement ;
+    tern:unit <http://www.qudt.org/vocab/unit/M> ;
+    dqv:isMeasurementOf geodcatap:spatialResolutionAsVerticalDistance ;
+    dqv:value 10.0 .
