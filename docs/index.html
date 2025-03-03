@@ -1448,6 +1448,30 @@
             <li><a href="#Dataset.version">has version</a></li>
           </ul>
         </dd>
+        <dt> Roles </dt>
+        <dd>
+          Additional properties can used to express role-responsabilities between the Dataset and any entity:
+          <ul class="prop-list">
+            <li><a href="#Dataset.coAuthor">coAuthor</a></li>
+            <li><a href="#Dataset.collaborator">collaborator</a></li>
+            <li><a href="#Dataset.contributor">contributor</a></li>
+            <li><a href="#Dataset.custodian">custodian</a></li>
+            <li><a href="#Dataset.distributor">distributor</a></li>
+            <li><a href="#Dataset.editor">editor</a></li>
+            <li><a href="#Dataset.funder">funder</a></li>
+            <li><a href="#Dataset.mediator">mediator</a></li>
+            <li><a href="#Dataset.originator">originator</a></li>
+            <li><a href="#Dataset.owner">owner</a></li>
+            <li><a href="#Dataset.principalInvestigator">principalInvestigator</a></li>
+            <li><a href="#Dataset.processor">processor</a></li>
+            <li><a href="#Dataset.resourceProvider">resourceProvider</a></li>
+            <li><a href="#Dataset.rightsHolder">rightsHolder</a></li>
+            <li><a href="#Dataset.sponsor">sponsor</a></li>
+            <li><a href="#Dataset.stakeholder">stakeholder</a></li>
+            <li><a href="#Dataset.user">user</a></li>
+          </ul>
+        </dd>
+
       </dl>
 
       <div class="u-table-overflow">
@@ -1569,6 +1593,7 @@
               <td> 0..1 </td>
               <td property="rdfs:comment"> The date on which the Dataset has been first created. </td>
               <td property="skos:scopeNote"> </td>
+              <td> </td>
               <td> P </td>
             </tr>
 
@@ -1585,7 +1610,9 @@
               </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> The entity primarily responsible for producing the Dataset. </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="skos:scopeNote"> The order of importance of the entities can be expressed via <a
+                  href="https://www.w3.org/TR/rdf-schema/#ch_seq" data-placement="right">RDF Sequence</a> when needed.
+                See example.</td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_creator">Link</a>
               </td>
@@ -1809,10 +1836,11 @@
                   data-content="http://purl.org/dc/terms/license" data-placement="right">
                   licence</a>
               </td>
-              <td> <a href="#TemporalLiteral" data-placement="right">Temporal Literal</a> </td>
+              <td> <a href="#LicenceDocument" data-placement="right">Licence Document</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> A licence under which the Dataset can be used or reused. </td>
               <td property="skos:scopeNote"> </td>
+              <td> </td>
               <td> P </td>
             </tr>
 
@@ -2076,6 +2104,353 @@
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version">A</a>
               </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <hr />
+
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+          <tbody class="supertype">
+
+            <tr id="Dataset.coAuthor" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/coAuthor"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/coAuthor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/coAuthor" data-placement="right">
+                  coauthor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who jointly authors the resource. </td>
+              <td property="skos:scopeNote"> The order of importance of the entities can be expressed via <a
+                  href="https://www.w3.org/TR/rdf-schema/#ch_seq" data-placement="right">RDF Sequence</a> when needed.
+                See example.</td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.collaborator" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/collaborator" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/collaborator" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/collaborator" data-placement="right">
+                  collaborator</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who assists with the generation of the resource other than the
+                principal investigator. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.contributor" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/contributor" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/contributor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/contributor" data-placement="right">
+                  contributor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party contributing to the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.custodian" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/custodian"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/custodian" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/custodian" data-placement="right">
+                  custodian</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party that accepts accountability and responsibility for the resource and
+                ensures appropriate care and maintenance of the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.distributor" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/distributor" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/distributor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/distributor" data-placement="right">
+                  distributor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who distributes the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.editor" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/editor"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/editor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/editor" data-placement="right">
+                  editor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who reviewed or modified the resource to improve the content. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.funder" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/funder"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/funder" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/funder" data-placement="right">
+                  funder</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party providing monetary support for the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.mediator" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/mediator"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/mediator" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/mediator" data-placement="right">
+                  mediator</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> A class of entity that mediates access to the resource and for whom the
+                resource is intended or useful. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.originator" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/originator" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/originator" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/originator" data-placement="right">
+                  originator</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who created the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.owner" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/owner"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/owner" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/owner" data-placement="right">
+                  owner</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party that owns the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.principalInvestigator" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/principalInvestigator" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/principalInvestigator" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/principalInvestigator" data-placement="right">
+                  principal investigator</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Key party responsible for gathering information and conducting research.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.processor" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/processor"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/processor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/processor" data-placement="right">
+                  processor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who has processed the data in a manner such that the resource has been
+                modified. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.resourceProvider" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/resourceProvider" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/resourceProvider" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/resourceProvider" data-placement="right">
+                  resource provider</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party that supplies the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.rightsHolder" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/rightsHolder" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/rightsHolder" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/rightsHolder" data-placement="right">
+                  rights holder</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party owning or managing rights over the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.sponsor" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/sponsor"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/sponsor" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/sponsor" data-placement="right">
+                  sponsor</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who speaks for the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.stakeholder" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/stakeholder" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/stakeholder" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/stakeholder" data-placement="right">
+                  stakeholder</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who has an interest in the resource or the use of the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Dataset.user" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/user"
+              class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/user" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/user" data-placement="right">
+                  user</a>
+              </td>
+              <td>
+                <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
+                  data-placement="right">Organisation</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Party who uses the resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
           </tbody>
