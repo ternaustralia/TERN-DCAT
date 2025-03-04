@@ -124,15 +124,15 @@ var respecConfig = {
             "title": "TERN Organisations Ontology",
             "publisher": "Terrestrial Ecosystem Research Network"
         },
-        "OWL": {
-            "href": "https://www.w3.org/2004/OWL/",
-            "title": "Web Ontology Language (OWL) Overview",
-            "publisher": ""
+        "OWL2-SYNTAX": {
+            "href": "https://www.w3.org/TR/owl2-overview/",
+            "title": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
+            "publisher": "W3C OWL Working Group. W3C. 11 December 2012. W3C Recommendation"
         },
         "SOSA": {
             "href": "https://www.w3.org/TR/vocab-ssn/",
             "title": "Semantic Sensor Network Ontology",
-            "publisher": "TBD"
+            "publisher": ""
         },
         "CNT": {
             "href": "http://www.w3.org/TR/Content-in-RDF/",
@@ -155,15 +155,15 @@ var respecConfig = {
             "publisher": "OJ L 326",
             "date": "4 December 2008"
         },
-        "RDF": {
-            "href": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-            "title": "The RDF Concepts Vocabulary (RDF)",
-            "publisher": "W3C"
+        "RDF-SYNTAX-GRAMMAR": {
+            "href": "https://www.w3.org/TR/rdf-syntax-grammar/",
+            "title": "RDF 1.1 XML Syntax",
+            "publisher": "Fabien Gandon; Guus Schreiber. W3C. 25 February 2014"
         },
-        "RDFS": {
-            "href": "http://www.w3.org/2000/01/rdf-schema#",
-            "title": "The RDF Schema vocabulary (RDFS)",
-            "publisher": "W3C"
+        "RDF-SCHEMA": {
+            "href": "https://www.w3.org/TR/rdf-schema/",
+            "title": "RDF Schema 1.1",
+            "publisher": "Dan Brickley; Ramanathan Guha. W3C. 25 February 2014. W3C Recommendation"
         },
         "DXWG": {
             "href": "https://www.w3.org/2017/dxwg/wiki/Main_Page",

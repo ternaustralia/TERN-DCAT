@@ -206,7 +206,7 @@
         <tr>
           <td><code>adms</code></td>
           <td><code>http://www.w3.org/ns/adms#</code></td>
-          <td>[[?VOCAB-ADMS]]</td>
+          <td>[[VOCAB-ADMS]]</td>
         </tr>
         <tr>
           <td><code>cnt</code></td>
@@ -231,7 +231,7 @@
         <tr>
           <td><code>dqv</code></td>
           <td><code>http://www.w3.org/ns/dqv#</code></td>
-          <td>[[?VOCAB-DQV]]</td>
+          <td>[[VOCAB-DQV]]</td>
         </tr>
         <tr>
           <td><code>foaf</code></td>
@@ -241,7 +241,7 @@
         <tr>
           <td><code>geosparql (geo)</code></td>
           <td><code>http://www.opengis.net/ont/geosparql#</code></td>
-          <td>[[?GeoSPARQL]]</td>
+          <td>[[GeoSPARQL]]</td>
         </tr>
         <tr>
           <td><code>org</code></td>
@@ -251,7 +251,7 @@
         <tr>
           <td><code>owl</code></td>
           <td><code>http://www.w3.org/2002/07/owl#</code></td>
-          <td>[[OWL]]</td>
+          <td>[[OWL2-SYNTAX]]</td>
         </tr>
         <tr>
           <td><code>qudt</code></td>
@@ -261,17 +261,17 @@
         <tr>
           <td><code>rdf</code></td>
           <td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
-          <td>[[RDF]]</td>
+          <td>[[RDF-SYNTAX-GRAMMAR]]</td>
         </tr>
         <tr>
           <td><code>rdfs</code></td>
           <td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
-          <td>[[RDFS]]</td>
+          <td>[[RDF-SCHEMA]]</td>
         </tr>
         <tr>
           <td><code>sdo (schema)</code></td>
           <td><code>https://schema.org/</code></td>
-          <td>[[?SCHEMA-ORG]]</td>
+          <td>[[SCHEMA-ORG]]</td>
         </tr>
         <tr>
           <td><code>skos</code></td>
@@ -307,11 +307,16 @@
 
     <h3>Application profile diagram</h3>
 
-    <div>
-      <a href="images/TERN-DCAT-Class-diagram.png" target="_blank">
-        <img src="images/TERN-DCAT-Class-diagram.png" />
-      </a>
-    </div>
+    <figure id="fig-tern-dcat">
+      <img alt="UML model of TERN DCAT classes and properties" src="images/TERN-DCAT-Class-diagram.png">
+      <figcaption>
+        <span class="fig-title">
+          Overview of TERN DCAT model, showing the classes of resources that can be members of a Catalog, and the
+          relationships between them. Except where specifically indicated.
+        </span>
+      </figcaption>
+    </figure>
+
   </section>
 
   <section id="entities">
@@ -4827,7 +4832,8 @@
           <tr>
             <td>dcterms:conformsTo, geo:asWKT </td>
             <td><a href="#VerticalExtent">VerticalExtent</a>, <a href="#Geometry">Geometry</a></td>
-            <td><a href="https://www.opengis.net/def/crs/EPSG/0/">OGC CRS list</a></td>
+            <td><a href="https://www.opengis.net/def/crs/EPSG/0/">OGC EPSG Coordinate Reference Systems Register
+                [[OGC-EPSG]]</a></td>
             <td></td>
           </tr>
         </tbody>
@@ -4837,7 +4843,7 @@
         for the listed properties. The declaration of the following
         controlled vocabularies as recommended stimulates interoperability.</p>
 
-      <table id="table-cv" class="simple">
+      <table id="table-cv2" class="simple">
         <thead>
           <tr>
             <th>Property URI</th>
@@ -4849,7 +4855,7 @@
         <tbody>
           <tr>
             <td>dcat:theme</td>
-            <td><a href="#Dataset">Dataset</a>,<a href="#DatasetSeries">Dataset Series</a></td>
+            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
             <td>
               <ul>
                 <li><a href="https://vocab.met.no/mmd/ISO_Topic_Category/">Topic Category</a></li>
