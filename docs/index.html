@@ -4951,7 +4951,7 @@
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
             <td> <code>rdfs:Literal</code> </td>
-            <td>See <a href="#resource-title---dataset-title" class="sec-ref">Resource identifier</a> </td>
+            <td>See <a href="#resource-id-desc">Resource identifier</a> </td>
           </tr>
 
           <tr>
@@ -4968,7 +4968,7 @@
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
             <td> <code>rdfs:Literal</code> </td>
-            <td>See <a href="#resource-title---dataset-title" class="sec-ref">Resource decription</a> </td>
+            <td>See <a href="#resource-id-desc">Resource decription</a> </td>
           </tr>
 
           <tr>
@@ -4988,7 +4988,9 @@
               <p> <code>rdfs:Resource</code> </p>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-locale" class="sec-ref">Resource locale</a> </td>
+            <td>Metadata in TERN_DCAT are always in UTF-8. See <a href="#resource-locale">Resource
+                locale</a>
+            </td>
           </tr>
 
           <tr>
@@ -5003,12 +5005,12 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-locale" class="sec-ref">Resource locale</a> </td>
+            <td>See <a href="#resource-locale">Resource locale</a> </td>
           </tr>
 
           <tr>
             <td>
-              <p>Parent metadata identifier (<abbr title="mandatory">O</abbr>)</p>
+              <p>Parent metadata identifier (<abbr title="optional">O</abbr>)</p>
               <p> <code>MD_Metadata.parentMetadata > CI_Citation.identifier.code</code> </p>
             </td>
             <td> <code>dcterms:identifier</code> </td>
@@ -5018,12 +5020,12 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-parent" class="sec-ref">Parent Metadata</a> </td>
+            <td>See <a href="#resource-parent">Parent Metadata</a> </td>
           </tr>
 
           <tr>
             <td>
-              <p>Parent metadata title (<abbr title="mandatory">O</abbr>)</p>
+              <p>Parent metadata title (<abbr title="optional">O</abbr>)</p>
               <p> <code>MD_Metadata.parentMetadata > CI_Citation.title</code> </p>
             </td>
             <td> <code>dcterms:title</code> </td>
@@ -5033,7 +5035,7 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-parent" class="sec-ref">Parent Metadata</a> </td>
+            <td>See <a href="#resource-parent">Parent Metadata</a> </td>
           </tr>
 
           <tr>
@@ -5053,7 +5055,7 @@
 
           <tr>
             <td>
-              <p>Metadata record dates (<abbr title="mandatory">R</abbr>)</p>
+              <p>Metadata record dates (<abbr title="recommended">R</abbr>)</p>
               <p> <code>MD_Metadata.dateInfo > CI_Date.date [dateType="creation" or dateType="revision"]</code> </p>
             </td>
             <td>
@@ -5069,6 +5071,98 @@
             <td>See <a href="#resource-catalogue-record-dates" class="sec-ref">Catalogue Record Dates</a> </td>
           </tr>
 
+          <tr>
+            <td>
+              <p>Metadata standard and profile (ISO) (<abbr title="mandatory">M</abbr>)</p>
+              <p> <code>MD_Metadata.metadataStandard / MD_Metadata.metadataProfile </code> </p>
+            </td>
+            <td>
+              <p>N/A</p>
+            </td>
+            <td>
+              <p>N/A</p>
+            </td>
+            <td>
+              <p>N/A</p>
+            </td>
+            <td> These sections in the ISO metadata are not mapped to DCAT as they exclusively talk about the ISO
+              standard versions in the source file. </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata standard (RDF) (<abbr title="mandatory">M</abbr>)</p>
+              <p> <i> implicit element </i> </p>
+            </td>
+            <td>
+              <p><code>dcterms:conformsTo</code></p>
+            </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+            </td>
+            <td>
+              <p> <code>dcterms:Standard</code> </p>
+            </td>
+            <td>See <a href="#resource-metadata-standard">Metadata Standard</a>. This element, not existing in ISO
+              19115, is just meant to provide the context for the specification of the metadata standard name and
+              version. </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata linkage (<abbr title="mandatory">M</abbr>)</p>
+              <p> <code>MD_Metadata.metadataLinkage > linkage</code> </p>
+            </td>
+            <td>
+              <p><code>dcterms:source</code></p>
+            </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Literal (xsd:anyURI)</code> </p>
+            </td>
+            <td>See <a href="#resource-catalogue-record-source">Catalogue Record source</a>. </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata point of contact (<abbr title="mandatory">M</abbr>)</p>
+              <p> <code>MD_Metadata.contact</code> </p>
+            </td>
+            <td>
+              <p><code>dcterms:source</code></p>
+            </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+            </td>
+            <td>
+              <p> <code>schema:Person / schema:Organization</code> </p>
+            </td>
+            <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
+                contact</a> and the following <a href="#ex-mapping-metadata-record-contact">Example</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Reference System (<abbr title="mandatory">M</abbr>) (spatial component)</p>
+              <p> <code>MD_Metadata.referenceSystemInfo</code> </p>
+            </td>
+            <td>
+              <p><code>dcterms:conforms</code></p>
+              <p><code>geo:asWKT</code></p>
+            </td>
+            <td>
+              <p> <code>tern:VerticalExtent</code> </p>
+              <p> <code>geo:Geometry</code> </p>
+            </td>
+            <td>
+              <p> <code>skos:Concept</code> </p>
+            </td>
+            <td>See <a href="#resource-metadata-crs">Coordinate reference systems</a> and the following <a
+                href="#ex-mapping-crs-geodetic">Example</a></td>
+          </tr>
+
         </tbody>
       </table>
     </section>
@@ -5077,9 +5171,10 @@
       <h3 id="detailed-usage-notes-and-examples">Detailed usage notes and examples</h3>
 
       <p>This annex contains further usage notes and examples on the mappings summarised in <a
-          href="#detailed-mappings">RDF syntax bindings for ISO&nbsp;19115 metadata elements</a>.</p>
+          href="#detailed-mappings">RDF syntax bindings for ISO&nbsp;19115 metadata elements</a>.
+      </p>
 
-      <section id="resource-title---dataset-title">
+      <section id="resource-id-desc">
         <h4>Resource identifier and description</h4>
 
         <p>The content of the element 'resource identifier' and 'resource description' can be represented in RDF as a
@@ -5105,7 +5200,7 @@
               ...
           </pre>
 
-          <p>Resource metadata in ISO 15119-3:</p>
+          <p>Resource metadata in ISO 19115-3:</p>
           <pre class="turtle">
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5156,7 +5251,7 @@
               ...
           </pre>
 
-          <p>Resource metadata in ISO 15119-3:</p>
+          <p>Resource metadata in ISO 19115-3:</p>
           <pre class="turtle">
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5196,7 +5291,7 @@
               ...
           </pre>
 
-          <p>Resource metadata in ISO 15119-3:</p>
+          <p>Resource metadata in ISO 19115-3:</p>
           <pre class="turtle">
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5240,7 +5335,7 @@
               ...
           </pre>
 
-          <p>Resource metadata in ISO 15119-3:</p>
+          <p>Resource metadata in ISO 19115-3:</p>
           <pre class="turtle">
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5270,6 +5365,673 @@
         </aside>
 
       </section>
+
+      <section id="resource-metadata-standard">
+        <h4>Metadata Standard</h4>
+
+        <p>TERN-DCAT uses <code>dcterms:conformsTo</code> to specify the metadata standard. This pattern is illustrated
+          in the following table.</p>
+
+        <table id="table-mapping-metadata-standard" class="simple">
+          <thead>
+            <tr>
+              <th colspan="2">Metadata element</th>
+              <th colspan="2">Proposed mapping</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td rowspan="4"><strong>Metadata standard</strong></td>
+              <td>Metadata standard name</td>
+              <td rowspan="4"><code>dcterms:conformsTo</code> (range <code>dcterms:Standard</code>)</td>
+              <td><code>dcterms:title</code></td>
+            </tr>
+
+            <tr>
+              <td>Metadata standard identifier</td>
+              <td><code>dcterms:identifier</code></td>
+            </tr>
+
+            <tr>
+              <td>Metadata standard publication date</td>
+              <td><code>dcterms:issued</code></td>
+            </tr>
+
+            <tr>
+              <td>Metadata standard version</td>
+              <td><code>owl:versionInfo</code></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-mapping-metadata-standard" title="Metadata Standard">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalog-record_1&gt; a dcat:CatalogRecord ;
+              dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; ;
+              ...
+
+            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
+              dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
+              dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
+              dcterms:title &quot;TERN DCAT metadata profile&quot; ;
+              owl:versionInfo &quot;1.0&quot; .
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-catalogue-record-source">
+        <h4>Catalogue Record source</h4>
+
+        <p>The content of the element 'metadata linkage' can be represented in RDF as a plain
+          literal, and by using property <code>dcterms:source</code>.</p>
+
+        <aside class="example" id="ex-mapping-catalogue-record-source" title="Catalogue Record source">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalogue-record_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:CatalogRecord ;
+              dcterms:source "https://geonetwork.tern.org.au/geonetwork/srv/api/records/92073887-28cb-4591-ab45-1f85224a1e5d/formatters/xml"^^xsd:anyURI ;
+              ...
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:metadataLinkage&gt;
+                    &lt;cit:CI_OnlineResource&gt;
+                        &lt;cit:linkage&gt;
+                            &lt;gco:CharacterString&gt;https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/92073887-28cb-4591-ab45-1f85224a1e5d&lt;/gco:CharacterString&gt;
+                        &lt;/cit:linkage&gt;
+                        &lt;cit:protocol&gt;
+                            &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                        &lt;/cit:protocol&gt;
+                        &lt;cit:description&gt;
+                            &lt;gco:CharacterString&gt;Point-of-truth metadata URL&lt;/gco:CharacterString&gt;
+                        &lt;/cit:description&gt;
+                        &lt;cit:function&gt;
+                            &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;completeMetadata&quot;/&gt;
+                        &lt;/cit:function&gt;
+                    &lt;/cit:CI_OnlineResource&gt;
+                &lt;/mdb:metadataLinkage&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-metadata-parties">
+        <h4>Responsible party and metadata point of contact</h4>
+
+        <p>[[?vocab-dcat-3]] supports properties to denote the publisher, the creator, and the contact point for a
+          dataset.</p>
+
+        <p>By contrast, [[ISO-19115]] supports 20 possible relationships between a resource (a dataset, a dataset
+          series, a service) and an agent (organisation), plus one for metadata. However, for only some of them suitable
+          candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]).
+        </p>
+
+        <p>In order to fill this gap, specific properties have been defined in the [[TERN]] namespace to complement
+          those available in [[?vocab-dcat-3]] and [[DCTERMS]].</p>
+
+        <p>The following table lists the mappings between responsible party roles and the corresponding properties used
+          in TERN-DCAT.</p>
+
+        <table id="table-responsible-party-roles" class="simple">
+          <thead>
+            <tr>
+              <th>[[ISO-19115]] </th>
+              <th>Description</th>
+              <th>Proposed RDF mapping</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Author</td>
+              <td>Party who authored the resource.</td>
+              <td><code>dcterms:creator</code></td>
+            </tr>
+
+            <tr>
+              <td>Co Author</td>
+              <td>Party who jointly authors the resource.</td>
+              <td><code>tern:coAuthor</code></td>
+            </tr>
+
+            <tr>
+              <td>Collaborator</td>
+              <td>Party who assists with the generation of the resource other than the principal investigator.</td>
+              <td><code>tern:collaborator</code></td>
+            </tr>
+
+            <tr>
+              <td>Contributor</td>
+              <td>Party contributing to the resource.</td>
+              <td><code>tern:contributor</code></td>
+            </tr>
+
+            <tr>
+              <td>Custodian</td>
+              <td>Party that accepts accountability and responsibility for the data and ensures appropriate care and
+                maintenance of the resource.</td>
+              <td><code>tern:custodian</code></td>
+            </tr>
+
+            <tr>
+              <td>Distributor</td>
+              <td>Party who distributes the resource</td>
+              <td><code>tern:distributor</code></td>
+            </tr>
+
+            <tr>
+              <td>Editor</td>
+              <td>Party who reviewed or modified the resource to improve the content.</td>
+              <td><code>tern:editor</code></td>
+            </tr>
+
+            <tr>
+              <td>Funder</td>
+              <td>Party providing monetary support for the resource.</td>
+              <td><code>tern:funder</code></td>
+            </tr>
+
+            <tr>
+              <td>Mediator</td>
+              <td>A class of entity that mediates access to the resource and for whom the resource is intended or
+                useful.</td>
+              <td><code>tern:mediator</code></td>
+            </tr>
+
+            <tr>
+              <td>Originator</td>
+              <td>Party who created the resource.</td>
+              <td><code>tern:originator</code></td>
+            </tr>
+
+            <tr>
+              <td>Owner</td>
+              <td>Party that owns the resource.</td>
+              <td><code>tern:owner</code></td>
+            </tr>
+
+            <tr>
+              <td>Point of contact</td>
+              <td>Party who can be contacted for acquiring knowledge about or acquisition of the resource.</td>
+              <td><code>dcat:contactPoint</code></td>
+            </tr>
+
+            <tr>
+              <td>Principal investigator</td>
+              <td>Key party responsible for gathering information and conducting research</td>
+              <td><code>tern:principalInvestigator</code></td>
+            </tr>
+
+            <tr>
+              <td>Processor</td>
+              <td>Party who has processed the data in a manner such that the resource has been modified.</td>
+              <td><code>tern:processor</code></td>
+            </tr>
+
+            <tr>
+              <td>Publisher</td>
+              <td>Party who published the resource</td>
+              <td><code>dcterms:publisher</code></td>
+            </tr>
+
+            <tr>
+              <td>Resource provider</td>
+              <td>Party that supplies the resource.</td>
+              <td><code>tern:resourceProvider</code></td>
+            </tr>
+
+            <tr>
+              <td>Rights holder</td>
+              <td>Party owning or managing rights over the resource.</td>
+              <td><code>tern:rightsHolder</code></td>
+            </tr>
+
+            <tr>
+              <td>Sponsor</td>
+              <td>Party who speaks for the resource.</td>
+              <td><code>tern:sponsor</code></td>
+            </tr>
+
+            <tr>
+              <td>Stakeholder</td>
+              <td>Party who has an interest in the resource or the use of the resource.</td>
+              <td><code>tern:stakeholder</code></td>
+            </tr>
+
+            <tr>
+              <td>User</td>
+              <td>Party who uses the resource.</td>
+              <td><code>tern:user</code></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-mapping-metadata-record-contact" title="Metadata record point of contact">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalogue-record_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:CatalogRecord ;
+                dcat:contactPoint &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; ;
+            
+            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;!-- Metadata record contactPoint in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:contact&gt;
+                    &lt;cit:CI_Responsibility&gt;
+                        &lt;cit:role&gt;
+                            &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;pointOfContact&quot;/&gt;
+                        &lt;/cit:role&gt;
+                        &lt;cit:party&gt;
+                            &lt;cit:CI_Organisation&gt;
+                                &lt;cit:name&gt;
+                                    &lt;gco:CharacterString&gt;Terrestrial Ecosystem Research Network&lt;/gco:CharacterString&gt;
+                                &lt;/cit:name&gt;
+                                &lt;cit:contactInfo&gt;
+                                    &lt;cit:CI_Contact&gt;
+                                        &lt;cit:phone&gt;
+                                            &lt;cit:CI_Telephone&gt;
+                                                &lt;cit:number&gt;
+                                                    &lt;gco:CharacterString&gt;+61 7 3365 9097&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:number&gt;
+                                                &lt;cit:numberType&gt;
+                                                    &lt;cit:CI_TelephoneTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_TelephoneTypeCode&quot; codeListValue=&quot;voice&quot;/&gt;
+                                                &lt;/cit:numberType&gt;
+                                            &lt;/cit:CI_Telephone&gt;
+                                        &lt;/cit:phone&gt;
+                                        &lt;cit:address&gt;
+                                            &lt;cit:CI_Address&gt;
+                                                &lt;cit:deliveryPoint&gt;
+                                                    &lt;gco:CharacterString&gt;Building 1019, 80 Meiers Rd&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:deliveryPoint&gt;
+                                                &lt;cit:city&gt;
+                                                    &lt;gco:CharacterString&gt;Indooroopilly&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:city&gt;
+                                                &lt;cit:administrativeArea&gt;
+                                                    &lt;gco:CharacterString&gt;QLD&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:administrativeArea&gt;
+                                                &lt;cit:postalCode&gt;
+                                                    &lt;gco:CharacterString&gt;4068&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:postalCode&gt;
+                                                &lt;cit:country&gt;
+                                                    &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:country&gt;
+                                                &lt;cit:electronicMailAddress&gt;
+                                                    &lt;gco:CharacterString&gt;esupport@tern.org.au&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:electronicMailAddress&gt;
+                                            &lt;/cit:CI_Address&gt;
+                                        &lt;/cit:address&gt;
+                                    &lt;/cit:CI_Contact&gt;
+                                &lt;/cit:contactInfo&gt;
+                                &lt;cit:partyIdentifier&gt;
+                                    &lt;mcc:MD_Identifier&gt;
+                                        &lt;mcc:code&gt;
+                                            &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&lt;/gcx:Anchor&gt;
+                                        &lt;/mcc:code&gt;
+                                        &lt;mcc:codeSpace&gt;
+                                            &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                        &lt;/mcc:codeSpace&gt;
+                                    &lt;/mcc:MD_Identifier&gt;
+                                &lt;/cit:partyIdentifier&gt;
+                            &lt;/cit:CI_Organisation&gt;
+                        &lt;/cit:party&gt;
+                    &lt;/cit:CI_Responsibility&gt;
+                &lt;/mdb:contact&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-metadata-contact" title="Metadata point of contact">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcat:contactPoint &lt;ex_person_2&gt; ;
+              ...
+        
+            &lt;ex_person_2&gt; a schema:Person ;
+                dcterms:identifier &quot;http://ex_person_2&quot;^^xsd:anyURI ;
+                schema:affiliation &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; ;
+                schema:email &quot;email@uq.edu.au&quot; ;
+                schema:name &quot;Doe, John&quot; .
+
+            &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Casuarina&quot; ;
+                schema:addressRegion &quot;Northern Territory&quot; ;
+                schema:email &quot;study@cdu.edu.au&quot; ;
+                schema:name &quot;Charles Darwin University&quot; ;
+                schema:postalCode &quot;0810&quot; ;
+                schema:streetAddress &quot;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;!-- Metadata contact point in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        &lt;mri:pointOfContact&gt;
+                            &lt;cit:CI_Responsibility&gt;
+                                &lt;cit:role&gt;
+                                    &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;pointOfContact&quot;/&gt;
+                                &lt;/cit:role&gt;
+                                &lt;cit:party&gt;
+                                    &lt;cit:CI_Organisation&gt;
+                                        &lt;cit:name&gt;
+                                            &lt;gco:CharacterString&gt;Charles Darwin University&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:name&gt;
+                                        &lt;cit:contactInfo&gt;
+                                            &lt;cit:CI_Contact&gt;
+                                                &lt;cit:address&gt;
+                                                    &lt;cit:CI_Address&gt;
+                                                        &lt;cit:deliveryPoint&gt;
+                                                            &lt;gco:CharacterString&gt;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:deliveryPoint&gt;
+                                                        &lt;cit:deliveryPoint&gt;
+                                                            &lt;gco:CharacterString&gt;Ellengowan Drive&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:deliveryPoint&gt;
+                                                        &lt;cit:city&gt;
+                                                            &lt;gco:CharacterString&gt;Casuarina&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:city&gt;
+                                                        &lt;cit:administrativeArea&gt;
+                                                            &lt;gco:CharacterString&gt;Northern Territory&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:administrativeArea&gt;
+                                                        &lt;cit:postalCode&gt;
+                                                            &lt;gco:CharacterString&gt;0810&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:postalCode&gt;
+                                                        &lt;cit:country&gt;
+                                                            &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:country&gt;
+                                                        &lt;cit:electronicMailAddress&gt;
+                                                            &lt;gco:CharacterString&gt;study@cdu.edu.au&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:electronicMailAddress&gt;
+                                                    &lt;/cit:CI_Address&gt;
+                                                &lt;/cit:address&gt;
+                                            &lt;/cit:CI_Contact&gt;
+                                        &lt;/cit:contactInfo&gt;
+                                        &lt;cit:partyIdentifier&gt;
+                                            &lt;mcc:MD_Identifier&gt;
+                                                &lt;mcc:code&gt;
+                                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&lt;/gcx:Anchor&gt;
+                                                &lt;/mcc:code&gt;
+                                                &lt;mcc:codeSpace&gt;
+                                                    &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                &lt;/mcc:codeSpace&gt;
+                                            &lt;/mcc:MD_Identifier&gt;
+                                        &lt;/cit:partyIdentifier&gt;
+                                        &lt;cit:individual&gt;
+                                            &lt;cit:CI_Individual&gt;
+                                                &lt;cit:name&gt;
+                                                    &lt;gco:CharacterString&gt;Sanchez Gonzalez, Javier&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:name&gt;
+                                                &lt;cit:contactInfo&gt;
+                                                    &lt;cit:CI_Contact&gt;
+                                                        &lt;cit:address&gt;
+                                                            &lt;cit:CI_Address&gt;
+                                                                &lt;cit:electronicMailAddress&gt;
+                                                                    &lt;gco:CharacterString&gt;email@uq.edu.es&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:electronicMailAddress&gt;
+                                                            &lt;/cit:CI_Address&gt;
+                                                        &lt;/cit:address&gt;
+                                                    &lt;/cit:CI_Contact&gt;
+                                                &lt;/cit:contactInfo&gt;
+                                                &lt;cit:partyIdentifier&gt;
+                                                    &lt;mcc:MD_Identifier&gt;
+                                                        &lt;mcc:code&gt;
+                                                            &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/abc&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/abc&lt;/gcx:Anchor&gt;
+                                                        &lt;/mcc:code&gt;
+                                                        &lt;mcc:codeSpace&gt;
+                                                            &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:codeSpace&gt;
+                                                    &lt;/mcc:MD_Identifier&gt;
+                                                &lt;/cit:partyIdentifier&gt;
+                                                &lt;cit:positionName&gt;
+                                                    &lt;gco:CharacterString&gt;Senior Software Engineer&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:positionName&gt;
+                                            &lt;/cit:CI_Individual&gt;
+                                        &lt;/cit:individual&gt;
+                                    &lt;/cit:CI_Organisation&gt;
+                                &lt;/cit:party&gt;
+                            &lt;/cit:CI_Responsibility&gt;
+                        &lt;/mri:pointOfContact&gt;
+                        ...
+                    &lt;/mdb:identificationInfo&gt;
+                    ...
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-metadata-responsible-party" title="Metadata Responsible party">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcterms:publisher &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; ;
+              ...
+            
+            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
+              dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+              schema:addressCountry &quot;Australia&quot; ;
+              schema:addressLocality &quot;Indooroopilly&quot; ;
+              schema:addressRegion &quot;QLD&quot; ;
+              schema:email &quot;esupport@tern.org.au&quot; ;
+              schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+              schema:postalCode &quot;4068&quot; ;
+              schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+              schema:telephone &quot;+61 7 3365 9097&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;!-- ResponsibleParty in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+              ...
+              &lt;mdb:identificationInfo&gt;
+                  &lt;mri:MD_DataIdentification&gt;
+                      &lt;mri:citation&gt;
+                          &lt;cit:citedResponsibleParty&gt;
+                              &lt;cit:CI_Responsibility&gt;
+                                  &lt;cit:role&gt;
+                                      &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;publisher&quot;/&gt;
+                                  &lt;/cit:role&gt;
+                                  &lt;cit:party&gt;
+                                      &lt;cit:CI_Organisation&gt;
+                                          &lt;cit:name&gt;
+                                              &lt;gco:CharacterString&gt;Terrestrial Ecosystem Research Network&lt;/gco:CharacterString&gt;
+                                          &lt;/cit:name&gt;
+                                          &lt;cit:contactInfo&gt;
+                                              &lt;cit:CI_Contact&gt;
+                                                  &lt;cit:phone&gt;
+                                                      &lt;cit:CI_Telephone&gt;
+                                                          &lt;cit:number&gt;
+                                                              &lt;gco:CharacterString&gt;+61 7 3365 9097&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:number&gt;
+                                                          &lt;cit:numberType&gt;
+                                                              &lt;cit:CI_TelephoneTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_TelephoneTypeCode&quot; codeListValue=&quot;voice&quot;/&gt;
+                                                          &lt;/cit:numberType&gt;
+                                                      &lt;/cit:CI_Telephone&gt;
+                                                  &lt;/cit:phone&gt;
+                                                  &lt;cit:address&gt;
+                                                      &lt;cit:CI_Address&gt;
+                                                          &lt;cit:deliveryPoint&gt;
+                                                              &lt;gco:CharacterString&gt;Building 1019, 80 Meiers Rd&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:deliveryPoint&gt;
+                                                          &lt;cit:city&gt;
+                                                              &lt;gco:CharacterString&gt;Indooroopilly&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:city&gt;
+                                                          &lt;cit:administrativeArea&gt;
+                                                              &lt;gco:CharacterString&gt;QLD&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:administrativeArea&gt;
+                                                          &lt;cit:postalCode&gt;
+                                                              &lt;gco:CharacterString&gt;4068&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:postalCode&gt;
+                                                          &lt;cit:country&gt;
+                                                              &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:country&gt;
+                                                          &lt;cit:electronicMailAddress&gt;
+                                                              &lt;gco:CharacterString&gt;esupport@tern.org.au&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:electronicMailAddress&gt;
+                                                      &lt;/cit:CI_Address&gt;
+                                                  &lt;/cit:address&gt;
+                                              &lt;/cit:CI_Contact&gt;
+                                          &lt;/cit:contactInfo&gt;
+                                          &lt;cit:partyIdentifier&gt;
+                                              &lt;mcc:MD_Identifier&gt;
+                                                  &lt;mcc:code&gt;
+                                                      &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&lt;/gcx:Anchor&gt;
+                                                  &lt;/mcc:code&gt;
+                                                  &lt;mcc:codeSpace&gt;
+                                                      &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                  &lt;/mcc:codeSpace&gt;
+                                              &lt;/mcc:MD_Identifier&gt;
+                                          &lt;/cit:partyIdentifier&gt;
+                                      &lt;/cit:CI_Organisation&gt;
+                                  &lt;/cit:party&gt;
+                              &lt;/cit:CI_Responsibility&gt;
+                          &lt;/cit:citedResponsibleParty&gt;
+                          ...
+                      &lt;/mri:citation&gt;
+                      ...
+                  &lt;/mri:MD_DataIdentification&gt;
+                  ...
+              &lt;/mdb:identificationInfo&gt;
+            ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-metadata-crs">
+        <h4>Coordinate reference system</h4>
+
+        <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the TBD vocabs.</p>
+
+        <aside class="example" id="ex-mapping-crs-geodetic" title="Geodetic CRS">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_extent_1&gt; a tern:Extent ;
+                geo:hasGeometry [ a geo:Geometry ;
+                    geo:asWKT &quot;&lt;http://www.opengis.net/def/crs/EPSG/0/4326&gt; POINT(131.3181 -14.0633)&quot;^^geo:wktLiteral ] ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+              ...
+              &lt;mdb:referenceSystemInfo&gt;
+                  &lt;mrs:MD_ReferenceSystem&gt;
+                      &lt;mrs:referenceSystemIdentifier&gt;
+                          &lt;mcc:MD_Identifier&gt;
+                              &lt;mcc:code&gt;
+                                  &lt;gco:CharacterString&gt;EPSG:4326&lt;/gco:CharacterString&gt;
+                              &lt;/mcc:code&gt;
+                              &lt;mcc:codeSpace&gt;
+                                  &lt;gco:CharacterString&gt;EPSG&lt;/gco:CharacterString&gt;
+                              &lt;/mcc:codeSpace&gt;
+                              &lt;mcc:version&gt;
+                                  &lt;gco:CharacterString&gt;2007.08&lt;/gco:CharacterString&gt;
+                              &lt;/mcc:version&gt;
+                              &lt;mcc:description&gt;
+                                  &lt;gco:CharacterString&gt;WGS 84&lt;/gco:CharacterString&gt;
+                              &lt;/mcc:description&gt;
+                          &lt;/mcc:MD_Identifier&gt;
+                      &lt;/mrs:referenceSystemIdentifier&gt;
+                      &lt;mrs:referenceSystemType&gt;
+                          &lt;mrs:MD_ReferenceSystemTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode&quot; codeListValue=&quot;geodeticGeographic2D&quot;/&gt;
+                      &lt;/mrs:referenceSystemType&gt;
+                  &lt;/mrs:MD_ReferenceSystem&gt;
+              &lt;/mdb:referenceSystemInfo&gt;
+              ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-crs-vertical" title="Vertical CRS">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_extent_1&gt; a tern:Extent ;
+                tern:verticalExtent [ a tern:VerticalExtent ;
+                    dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
+                    ...
+                ];
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:extent&gt;
+                            &lt;gex:EX_Extent&gt;                  
+                                &lt;gex:verticalElement&gt;
+                                    &lt;gex:EX_VerticalExtent&gt;
+                                        &lt;gex:minimumValue&gt;
+                                            &lt;gco:Real&gt;100&lt;/gco:Real&gt;
+                                        &lt;/gex:minimumValue&gt;
+                                        &lt;gex:maximumValue&gt;
+                                            &lt;gco:Real&gt;1000&lt;/gco:Real&gt;
+                                        &lt;/gex:maximumValue&gt;
+                                        &lt;gex:verticalCRSId&gt;
+                                            &lt;mrs:MD_ReferenceSystem&gt;
+                                                &lt;mrs:referenceSystemIdentifier&gt;
+                                                    &lt;mcc:MD_Identifier&gt;
+                                                        &lt;mcc:code&gt;
+                                                            &lt;gco:CharacterString&gt;EPSG:5712&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:code&gt;
+                                                        &lt;mcc:codeSpace&gt;
+                                                            &lt;gco:CharacterString&gt;EPSG&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:codeSpace&gt;
+                                                        &lt;mcc:description&gt;
+                                                            &lt;gco:CharacterString&gt;WGS-84&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:description&gt;
+                                                    &lt;/mcc:MD_Identifier&gt;
+                                                &lt;/mrs:referenceSystemIdentifier&gt;
+                                                &lt;mrs:referenceSystemType&gt;
+                                                    &lt;mrs:MD_ReferenceSystemTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode&quot; codeListValue=&quot;geodeticGeographic3D&quot;/&gt;
+                                                &lt;/mrs:referenceSystemType&gt;
+                                            &lt;/mrs:MD_ReferenceSystem&gt;
+                                        &lt;/gex:verticalCRSId&gt;
+                                    &lt;/gex:EX_VerticalExtent&gt;
+                                &lt;/gex:verticalElement&gt;
+                            &lt;/gex:EX_Extent&gt;
+                        &lt;/mri:extent&gt;            
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
     </section>
 
   </section>

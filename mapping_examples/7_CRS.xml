@@ -1,0 +1,70 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:referenceSystemInfo>
+        <mrs:MD_ReferenceSystem>
+            <mrs:referenceSystemIdentifier>
+                <mcc:MD_Identifier>
+                    <mcc:code>
+                        <gco:CharacterString>EPSG:4326</gco:CharacterString>
+                    </mcc:code>
+                    <mcc:codeSpace>
+                        <gco:CharacterString>EPSG</gco:CharacterString>
+                    </mcc:codeSpace>
+                    <mcc:version>
+                        <gco:CharacterString>2007.08</gco:CharacterString>
+                    </mcc:version>
+                    <mcc:description>
+                        <gco:CharacterString>WGS 84</gco:CharacterString>
+                    </mcc:description>
+                </mcc:MD_Identifier>
+            </mrs:referenceSystemIdentifier>
+            <mrs:referenceSystemType>
+                <mrs:MD_ReferenceSystemTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic2D"/>
+            </mrs:referenceSystemType>
+        </mrs:MD_ReferenceSystem>
+    </mdb:referenceSystemInfo>
+    ...
+</gmd:MD_Metadata>
+
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>          
+            <mri:extent>
+                <gex:EX_Extent>                  
+                    <gex:verticalElement>
+                        <gex:EX_VerticalExtent>
+                            <gex:minimumValue>
+                                <gco:Real>100</gco:Real>
+                            </gex:minimumValue>
+                            <gex:maximumValue>
+                                <gco:Real>1000</gco:Real>
+                            </gex:maximumValue>
+                            <gex:verticalCRSId>
+                                <mrs:MD_ReferenceSystem>
+                                    <mrs:referenceSystemIdentifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gco:CharacterString>EPSG:5712</gco:CharacterString>
+                                            </mcc:code>
+                                            <mcc:codeSpace>
+                                                <gco:CharacterString>EPSG</gco:CharacterString>
+                                            </mcc:codeSpace>
+                                            <mcc:description>
+                                                <gco:CharacterString>WGS-84</gco:CharacterString>
+                                            </mcc:description>
+                                        </mcc:MD_Identifier>
+                                    </mrs:referenceSystemIdentifier>
+                                    <mrs:referenceSystemType>
+                                        <mrs:MD_ReferenceSystemTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic3D"/>
+                                    </mrs:referenceSystemType>
+                                </mrs:MD_ReferenceSystem>
+                            </gex:verticalCRSId>
+                        </gex:EX_VerticalExtent>
+                    </gex:verticalElement>
+                </gex:EX_Extent>
+            </mri:extent>            
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>

@@ -1,0 +1,9 @@
+<ex_extent_1> a tern:Extent ;
+    geo:hasGeometry [ a geo:Geometry ;
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(131.3181 -14.0633)"^^geo:wktLiteral ] ;
+
+<ex_extent_1> a tern:Extent ;
+    tern:verticalExtent [ a tern:VerticalExtent ;
+        dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/5712> ;
+        ...
+    ];
