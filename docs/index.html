@@ -4906,6 +4906,374 @@
     <!-- This section is filled automatically by ReSpec. -->
   </section>
 
+  <section id='iso19115-mapping' class="appendix">
+    <h2> ISO 19115 Mappings </h2>
+
+    <section id='iso19115-mapping-objectives'>
+      <h3> Overview </h3>
+      The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of spatial
+      datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of ISO
+      19115:2003 [[ISO-19115]], ISO 19115-3 [[ISO-191115-3]] and [[TERN_ISO]] and the TERN DCAT metadata profile is
+      documented in this page.
+    </section>
+
+    <section id='iso19115-mapping-mappings'>
+      <h3 id="detailed-mappings">Mappings</h3>
+
+      <table id="table-overview-of-bindings-for-geodcat-ap-core" class="simple">
+
+        <thead>
+          <tr>
+            <th>
+              <p>ISO&nbsp;19115 resource</p>
+              <p>ISO&nbsp;19115 path</p>
+            </th>
+            <th>TERN-DCAT Property</th>
+            <th>Domain</th>
+            <th>Range</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>
+              <p>Metadata identifier (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.metadataIdentifier > code</code>
+              </p>
+            </td>
+            <td> <code>dcterms:identifier</code> </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-title---dataset-title" class="sec-ref">Resource identifier</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata record description (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.metadataIdentifier > description</code>
+              </p>
+            </td>
+            <td> <code>dcterms:description</code> </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-title---dataset-title" class="sec-ref">Resource decription</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata language (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.defaultLocale > PT_Locale.language</code>
+              </p>
+            </td>
+            <td> <code>dcterms:lenguage</code> </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Resource</code> </p>
+              <p> <code>rdfs:Literal</code> </p>
+            </td>
+            <td>See <a href="#resource-locale" class="sec-ref">Resource locale</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata encoding (<abbr title="mandatory">M</abbr>)</p>
+              <p> <code>MD_Metadata.defaultLocale > PT_Locale.characterEncoding</code> </p>
+            </td>
+            <td> <code>cnt:characterEncoding</code> </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Literal</code> </p>
+            </td>
+            <td>See <a href="#resource-locale" class="sec-ref">Resource locale</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Parent metadata identifier (<abbr title="mandatory">O</abbr>)</p>
+              <p> <code>MD_Metadata.parentMetadata > CI_Citation.identifier.code</code> </p>
+            </td>
+            <td> <code>dcterms:identifier</code> </td>
+            <td>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Literal</code> </p>
+            </td>
+            <td>See <a href="#resource-parent" class="sec-ref">Parent Metadata</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Parent metadata title (<abbr title="mandatory">O</abbr>)</p>
+              <p> <code>MD_Metadata.parentMetadata > CI_Citation.title</code> </p>
+            </td>
+            <td> <code>dcterms:title</code> </td>
+            <td>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Literal</code> </p>
+            </td>
+            <td>See <a href="#resource-parent" class="sec-ref">Parent Metadata</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata scope (<abbr title="mandatory">M</abbr>)</p>
+              <p> <code>MD_Metadata.metadataScope > MD_MetadataScope.resourceScope</code> </p>
+            </td>
+            <td> N/A </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+            </td>
+            <td>
+              <p> N/A </p>
+            </td>
+            <td> All resources are under the "dataset" scope. </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata record dates (<abbr title="mandatory">R</abbr>)</p>
+              <p> <code>MD_Metadata.dateInfo > CI_Date.date [dateType="creation" or dateType="revision"]</code> </p>
+            </td>
+            <td>
+              <p><code>dcterms:created</code></p>
+              <p><code>dcterms:modified</code></p>
+            </td>
+            <td>
+              <p> <code>dcat:CatalogRecord</code> </p>
+            </td>
+            <td>
+              <p> <code>rdfs:Literal (xsd:date / xsd:dateTime)</code> </p>
+            </td>
+            <td>See <a href="#resource-catalogue-record-dates" class="sec-ref">Catalogue Record Dates</a> </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section id="detailed-usage-notes-and-examples" class="appendix">
+      <h3 id="detailed-usage-notes-and-examples">Detailed usage notes and examples</h3>
+
+      <p>This annex contains further usage notes and examples on the mappings summarised in <a
+          href="#detailed-mappings">RDF syntax bindings for ISO&nbsp;19115 metadata elements</a>.</p>
+
+      <section id="resource-title---dataset-title">
+        <h4>Resource identifier and description</h4>
+
+        <p>The content of the element 'resource identifier' and 'resource description' can be represented in RDF as a
+          plain literal, and by using properties <code>dcterms:identifier</code> and <code>dcterms:description</code>,
+          respectively.</p>
+
+        <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code>
+          [[?XML]]. The language to be specified is the one indicated by element metadata language, mapped to the
+          language identifiers defined by IETF BCP 47 [[?BCP47]].</p>
+
+        <aside class="note">The ID is intensively used to generate the URI of multiple resources. </aside>
+
+        <aside class="example" id="ex-mapping-resource-title" title="Resource identifier and description">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalog-record_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:CatalogRecord ;
+              dcterms:description "Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/" ;
+              dcterms:identifier "92073887-28cb-4591-ab45-1f85224a1e5d" ;
+              ...
+
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcterms:identifier "92073887-28cb-4591-ab45-1f85224a1e5d" ;
+              ...
+          </pre>
+
+          <p>Resource metadata in ISO 15119-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:metadataIdentifier&gt;
+                    &lt;mcc:MD_Identifier&gt;
+                        &lt;mcc:authority&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:title&gt;
+                                    &lt;gco:CharacterString&gt;TERN GeoNetwork UUID&lt;/gco:CharacterString&gt;
+                                &lt;/cit:title&gt;
+                            &lt;/cit:CI_Citation&gt;
+                        &lt;/mcc:authority&gt;
+                        &lt;mcc:code&gt;
+                            &lt;gco:CharacterString&gt;92073887-28cb-4591-ab45-1f85224a1e5d&lt;/gco:CharacterString&gt;
+                        &lt;/mcc:code&gt;
+                        &lt;mcc:codeSpace&gt;
+                            &lt;gco:CharacterString&gt;urn:uuid&lt;/gco:CharacterString&gt;
+                        &lt;/mcc:codeSpace&gt;
+                        &lt;mcc:description&gt;
+                            &lt;gco:CharacterString&gt;Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/&lt;/gco:CharacterString&gt;
+                        &lt;/mcc:description&gt;
+                    &lt;/mcc:MD_Identifier&gt;
+                &lt;/mdb:metadataIdentifier&gt; 
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-locale">
+        <h4>Resource locale</h4>
+
+        <p>The content of the element 'resource language' and 'resource encoding' can be represented in RDF as a plain
+          literal, and by using properties <code>dcterms:lenguage</code> and <code>cnt:characterEncoding</code>,
+          respectively.</p>
+
+        <aside class="example" id="ex-mapping-resource-locale" title="Resource locale">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalog-record_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:CatalogRecord ;
+              cnt:characterEncoding "utf8" ;
+              dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-2/eng&gt; ;
+              ...
+
+            &lt;ex_catalogue-1&gt; a dcat:Catalog ;
+              dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-2/eng&gt; ;
+              ...
+          </pre>
+
+          <p>Resource metadata in ISO 15119-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:defaultLocale&gt;
+                    &lt;lan:PT_Locale id=&quot;EN&quot;&gt;
+                        &lt;lan:language&gt;
+                            &lt;lan:LanguageCode codeList=&quot;http://www.loc.gov/standards/iso639-2/&quot; codeListValue=&quot;eng&quot;/&gt;
+                        &lt;/lan:language&gt;
+                        &lt;lan:characterEncoding&gt;
+                            &lt;lan:MD_CharacterSetCode codeList=&quot;http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode&quot; codeListValue=&quot;utf8&quot;/&gt;
+                        &lt;/lan:characterEncoding&gt;
+                    &lt;/lan:PT_Locale&gt;
+                &lt;/mdb:defaultLocale&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-parent">
+        <h4>Parent Metadata</h4>
+
+        <p>The content of the element 'parent metadata' can be represented in RDF as a plain
+          literals, and by using properties <code>dcterms:identifier</code> and <code>dcterms:title</code></p>
+
+        <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code>
+          [[?XML]]. The language to be specified is the one indicated by element metadata language, mapped to the
+          language identifiers defined by IETF BCP 47 [[?BCP47]].</p>
+
+        <aside class="example" id="ex-mapping-resource-parent" title="Parent Metadata">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset-series_9da7ad97-de99-47b0-b131-9d2fa7f0aabb&gt; a dcat:DatasetSeries ;
+              dcterms:identifier "9da7ad97-de99-47b0-b131-9d2fa7f0aabb" ;
+              dcterms:title "Daly Pasture Flux Data Collection" ;
+              ...
+          </pre>
+
+          <p>Resource metadata in ISO 15119-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:parentMetadata&gt;
+                    &lt;cit:CI_Citation&gt;
+                        &lt;cit:title&gt;
+                            &lt;gco:CharacterString&gt;Daly Pasture Flux Data Collection&lt;/gco:CharacterString&gt;
+                        &lt;/cit:title&gt;
+                        &lt;cit:identifier&gt;
+                            &lt;mcc:MD_Identifier&gt;
+                                &lt;mcc:code&gt;9da7ad97-de99-47b0-b131-9d2fa7f0aabb&lt;/mcc:code&gt;
+                                &lt;mcc:codeSpace&gt;
+                                    &lt;gco:CharacterString&gt;https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/&lt;/gco:CharacterString&gt;
+                                &lt;/mcc:codeSpace&gt;
+                                &lt;mcc:description&gt;
+                                    &lt;gco:CharacterString&gt;Parent Metadata Record&lt;/gco:CharacterString&gt;
+                                &lt;/mcc:description&gt;
+                            &lt;/mcc:MD_Identifier&gt;
+                        &lt;/cit:identifier&gt;
+                    &lt;/cit:CI_Citation&gt;
+                &lt;/mdb:parentMetadata&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-catalogue-record-dates">
+        <h4>Catalogue Record dates</h4>
+
+        <p>The content of the element 'metadata dateInfo' can be represented in RDF as plain
+          literals, and by using properties <code>dcterms:created</code> and <code>dcterms:modified</code>.</p>
+
+        <aside class="example" id="ex-mapping-catalogue-record-dates" title="Catalogue Record dates">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_catalogue-record_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:CatalogRecord ;
+              dcterms:created "2022-03-17T00:00:00"^^xsd:dateTime ;
+              dcterms:modified "2025-01-28T00:00:00"^^xsd:dateTime ;
+              ...
+          </pre>
+
+          <p>Resource metadata in ISO 15119-3:</p>
+          <pre class="turtle">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:dateInfo&gt;
+                    &lt;cit:CI_Date&gt;
+                        &lt;cit:date&gt;
+                            &lt;gco:DateTime&gt;2022-03-17T00:00:00&lt;/gco:DateTime&gt;
+                        &lt;/cit:date&gt;
+                        &lt;cit:dateType&gt;
+                            &lt;cit:CI_DateTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode&quot; codeListValue=&quot;creation&quot;/&gt;
+                        &lt;/cit:dateType&gt;
+                    &lt;/cit:CI_Date&gt;
+                &lt;/mdb:dateInfo&gt;
+                &lt;mdb:dateInfo&gt;
+                    &lt;cit:CI_Date&gt;
+                        &lt;cit:date&gt;
+                            &lt;gco:DateTime&gt;2025-01-28T00:00:00&lt;/gco:DateTime&gt;
+                        &lt;/cit:date&gt;
+                        &lt;cit:dateType&gt;
+                            &lt;cit:CI_DateTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode&quot; codeListValue=&quot;revision&quot;/&gt;
+                        &lt;/cit:dateType&gt;
+                    &lt;/cit:CI_Date&gt;
+                &lt;/mdb:dateInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+    </section>
+
+  </section>
+
   <section id='acknowledgments' class="appendix">
     <h2>
       Acknowledgments

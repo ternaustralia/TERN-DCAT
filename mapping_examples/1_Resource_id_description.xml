@@ -1,0 +1,24 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:metadataIdentifier>
+        <mcc:MD_Identifier>
+            <mcc:authority>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>TERN GeoNetwork UUID</gco:CharacterString>
+                    </cit:title>
+                </cit:CI_Citation>
+            </mcc:authority>
+            <mcc:code>
+                <gco:CharacterString>92073887-28cb-4591-ab45-1f85224a1e5d</gco:CharacterString>
+            </mcc:code>
+            <mcc:codeSpace>
+                <gco:CharacterString>urn:uuid</gco:CharacterString>
+            </mcc:codeSpace>
+            <mcc:description>
+                <gco:CharacterString>Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/</gco:CharacterString>
+            </mcc:description>
+        </mcc:MD_Identifier>
+    </mdb:metadataIdentifier> 
+    ...
+</gmd:MD_Metadata>
