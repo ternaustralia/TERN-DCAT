@@ -5140,7 +5140,8 @@
               <p> <code>schema:Person / schema:Organization</code> </p>
             </td>
             <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
-                contact</a> and the following <a href="#ex-mapping-metadata-record-contact">Example</a></td>
+                contact</a> and the following example: <a href="#ex-mapping-metadata-record-contact">Record contact</a>
+            </td>
           </tr>
 
           <tr>
@@ -5161,6 +5162,177 @@
             </td>
             <td>See <a href="#resource-metadata-crs">Coordinate reference systems</a> and the following <a
                 href="#ex-mapping-crs-geodetic">Example</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset identifier (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo &gt; citation.identifier</code>
+              </p>
+            </td>
+            <td> <code>adms:identifier</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a href="#ex-mapping-dataset-uri">Unique
+                Resource Identifier</a> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Metadata title (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo &gt; citation.title</code>
+              </p>
+            </td>
+            <td> <code>dcterms:title</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-title">Title</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - publication</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > citation.date (datetype = 'publication')</code>
+              </p>
+            </td>
+            <td> <code>dcterms:issued</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-dates">Dates</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - revision</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > citation.date (datetype = 'revision')</code>
+              </p>
+            </td>
+            <td> <code>dcterms:modified</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-dates">Dates</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - creation</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > citation.date (datetype = 'creation')</code>
+              </p>
+            </td>
+            <td> <code>dcterms:created</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-dates">Dates</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset version (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > citation.edition</code>
+              </p>
+            </td>
+            <td> <code>dcat:version</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-version">Version</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Responsible party (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > citation.citedResponsibleParty</code>
+              </p>
+            </td>
+            <td>
+              <p><code>dcterms:creator</code> </p>
+              <p><code>dcterms:publisher</code> </p>
+              <p><code>tern:coAuthor</code> </p>
+              ...
+              <p><code>tern:user</code> </p>
+            </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td>
+              <p><code>schema:Person</code></p>
+              <p><code>schema:Organization</code></p>
+            </td>
+            <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
+                contact</a> and the following example: <a href="#ex-mapping-metadata-responsible-party">Responsible
+                parties</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset abstract (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > abstract</code>
+              </p>
+            </td>
+            <td> <code>schema:abstract</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-abstract">Abstract</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset purpose (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > purpose</code>
+              </p>
+            </td>
+            <td> <code>dcat:version</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>rdfs:Literal</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-purpose">Purpose</a>
+            </td>
           </tr>
 
         </tbody>
@@ -5201,7 +5373,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:metadataIdentifier&gt;
@@ -5252,7 +5424,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:defaultLocale&gt;
@@ -5292,7 +5464,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:parentMetadata&gt;
@@ -5336,7 +5508,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:dateInfo&gt;
@@ -5438,7 +5610,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:metadataLinkage&gt;
@@ -5635,7 +5807,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;!-- Metadata record contactPoint in ISO 19115 --&gt;
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5729,7 +5901,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;!-- Metadata contact point in ISO 19115 --&gt;
             &lt;gmd:MD_Metadata&gt;
                 ...
@@ -5848,7 +6020,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;!-- ResponsibleParty in ISO 19115 --&gt;
             &lt;gmd:MD_Metadata&gt;
               ...
@@ -5942,7 +6114,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
               ...
               &lt;mdb:referenceSystemInfo&gt;
@@ -5984,7 +6156,7 @@
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="turtle">
+          <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:identificationInfo&gt;
@@ -6023,6 +6195,210 @@
                                 &lt;/gex:verticalElement&gt;
                             &lt;/gex:EX_Extent&gt;
                         &lt;/mri:extent&gt;            
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-dataset-resource">
+        <h4>Dataset resource</h4>
+
+        <p>This section describes the Dataset (or DatasetSeries) resource.</p>
+
+        <aside class="example" id="ex-mapping-dataset-uri" title="Dataset unique identifier">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                adms:identifier &quot;https://dx.doi.org/10.25901/rfhj-0593&quot;^^xsd:anyURI ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:citation&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:identifier&gt;
+                                    &lt;mcc:MD_Identifier&gt;
+                                        &lt;mcc:authority&gt;
+                                            &lt;cit:CI_Citation&gt;
+                                                &lt;cit:title&gt;
+                                                    &lt;gco:CharacterString&gt;DataCite&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:title&gt;
+                                            &lt;/cit:CI_Citation&gt;
+                                        &lt;/mcc:authority&gt;
+                                        &lt;mcc:code&gt;
+                                            &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://dx.doi.org/10.25901/rfhj-0593&quot; xlink:show=&quot;new&quot;&gt;doi:10.25901/rfhj-0593&lt;/gcx:Anchor&gt;
+                                        &lt;/mcc:code&gt;
+                                        &lt;mcc:codeSpace&gt;
+                                            &lt;gco:CharacterString&gt;http://dx.doi.org&lt;/gco:CharacterString&gt;
+                                        &lt;/mcc:codeSpace&gt;
+                                    &lt;/mcc:MD_Identifier&gt;
+                                &lt;/cit:identifier&gt;                     
+                            &lt;/cit:CI_Citation&gt;         
+                        &lt;/mri:citation&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-title" title="Dataset title">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcterms:title &quot;Daly Pasture Flux Data Release 2022_v1&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:citation&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:title&gt;
+                                    &lt;gco:CharacterString&gt;Daly Pasture Flux Data Release 2022_v1&lt;/gco:CharacterString&gt;
+                                &lt;/cit:title&gt;                            
+                            &lt;/cit:CI_Citation&gt;         
+                        &lt;/mri:citation&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-dates" title="Dataset dates">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcterms:created &quot;2022-03-17&quot;^^xsd:date ;
+              dcterms:issued &quot;2022-03-27&quot;^^xsd:date ;
+              dcterms:modified &quot;2025-01-28&quot;^^xsd:date ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:citation&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:date&gt;
+                                    &lt;cit:CI_Date&gt;
+                                        &lt;cit:date&gt;
+                                            &lt;gco:Date&gt;2022-03-17&lt;/gco:Date&gt;
+                                        &lt;/cit:date&gt;
+                                        &lt;cit:dateType&gt;
+                                            &lt;cit:CI_DateTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode&quot; codeListValue=&quot;creation&quot;/&gt;
+                                        &lt;/cit:dateType&gt;
+                                    &lt;/cit:CI_Date&gt;
+                                &lt;/cit:date&gt;
+                                &lt;cit:date&gt;
+                                    &lt;cit:CI_Date&gt;
+                                        &lt;cit:date&gt;
+                                            &lt;gco:Date&gt;2022-03-27&lt;/gco:Date&gt;
+                                        &lt;/cit:date&gt;
+                                        &lt;cit:dateType&gt;
+                                            &lt;cit:CI_DateTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode&quot; codeListValue=&quot;publication&quot;/&gt;
+                                        &lt;/cit:dateType&gt;
+                                    &lt;/cit:CI_Date&gt;
+                                &lt;/cit:date&gt;
+                                &lt;cit:date&gt;
+                                    &lt;cit:CI_Date&gt;
+                                        &lt;cit:date&gt;
+                                            &lt;gco:Date&gt;2025-01-28&lt;/gco:Date&gt;
+                                        &lt;/cit:date&gt;
+                                        &lt;cit:dateType&gt;
+                                            &lt;cit:CI_DateTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode&quot; codeListValue=&quot;revision&quot;/&gt;
+                                        &lt;/cit:dateType&gt;
+                                    &lt;/cit:CI_Date&gt;
+                                &lt;/cit:date&gt;                         
+                            &lt;/cit:CI_Citation&gt;         
+                        &lt;/mri:citation&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-version" title="Dataset version">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcat:version &quot;1.0&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:citation&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:edition&gt;
+                                    &lt;gco:CharacterString&gt;1.0&lt;/gco:CharacterString&gt;
+                                &lt;/cit:edition&gt;                      
+                            &lt;/cit:CI_Citation&gt;         
+                        &lt;/mri:citation&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-abstract" title="Dataset abstract">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              schema:abstract &quot;This data release consists of flux tower measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer ...&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:abstract&gt;
+                            &lt;gco:CharacterString&gt;This data release consists of flux tower measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer ...&lt;/gco:CharacterString&gt;
+                        &lt;/mri:abstract&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-purpose" title="Dataset purpose">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              tern:purpose &quot;The purpose of the Daly River Pasture Flux station was to: &lt;br /&gt; Provide information as part of a larger network of flux stations established...&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:purpose&gt;
+                            &lt;gco:CharacterString&gt;The purpose of the Daly River Pasture Flux station was to: &lt;br /&gt; Provide information as part of a larger network of flux stations established...&lt;/gco:CharacterString&gt;
+                        &lt;/mri:purpose&gt;
                     &lt;/mri:MD_DataIdentification&gt;
                 &lt;/mdb:identificationInfo&gt;
                 ...

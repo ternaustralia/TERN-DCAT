@@ -1,0 +1,20 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcterms:title "Daly Pasture Flux Data Release 2022_v1" ;
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcterms:created "2022-03-17"^^xsd:date ;
+    dcterms:issued "2022-03-27"^^xsd:date ;
+    dcterms:modified "2025-01-28"^^xsd:date ;
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcat:version "1.0" ;
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    adms:identifier "https://dx.doi.org/10.25901/rfhj-0593"^^xsd:anyURI ;
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    tern:purpose "The purpose of the Daly River Pasture Flux station was to: <br /> Provide information as part of a larger network of flux stations established along the North Australian Tropical Transect (NATT) gradient, which extends ~1000km south from Darwin 12.5°S. <br /> Examine spatial patterns and processes of land-surface-atmosphere exchanges (radiation, heat, moisture, CO2 and other trace gasses) across scales from leaf to landscape scales within Australian savannas. <br /> Determine the climate and ecosystem characteristics (physical structure, species composition, physiological function) that drive spatial and temporal variations of carbon, water and energy fluxes from north Australian savanna. <br /> Quantify fluxes over land use which includes grazing, introduced pastures and low stock density." ;
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    schema:abstract "This data release consists of flux tower measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer in semi-arid eucalypt woodland using eddy covariance techniques. It been processed using PyFluxPro (v3.3.3) as described in Isaac et al. (2017), <a href=\"https://doi.org/10.5194/bg-14-2903-2017\">https://doi.org/10.5194/bg-14-2903-2017</a>. PyFluxPro takes data recorded at the flux tower and process this data to a final, gap-filled product with Net Ecosystem Exchange (NEE) partitioned into Gross Primary Productivity (GPP) and Ecosystem Respiration (ER). For more information about the processing levels, see <a href=\"https://github.com/OzFlux/PyFluxPro/wiki\">https://github.com/OzFlux/PyFluxPro/wiki</a>. <br /> <br /> The site was identified as tropical pasture dominated by species <em>Chamaecrista rotundifolia</em> (Round-leaf cassia cv. Wynn), <em>Digitaria milijiana</em> (Jarra grass) and <em>Aristida sp.</em> standing at approximately 0.3m tall. The soil at the site was a mixture of red kandosol and deep sand. Elevation of the site was close to 70m and mean annual precipitation at a nearby Bureau of Meteorology site was 1250mm. Maximum temperatures ranged from 37.5°C (in October) to 31.2°C (in June), while minimum temperatures ranged from 12.6°C (in July) to 23.8°C (in January). Maximum temperatures varied on a seasonal basis between 6.3°C while minimum temperatures varied by 11.2°C. <br /> <br /> The instrument mast was 15 meters tall. Heat, water vapour and carbon dioxide measurements were taken using the open-path eddy flux technique. Temperature, humidity, wind speed, wind direction, rainfall, incoming and reflected shortwave radiation and net radiation were measured. <br />Ancillary measurements taken at the site included LAI, leaf-scale physiological properties (gas exchange, leaf isotope ratios, N and chlorophyll concentrations), vegetation optical properties and soil physical properties. Airborne based remote sensing (Lidar and hyperspectral measurements) was carried out across the transect in September 2008. <br /> The site was destroyed by fire in September 2013. <br />" ;
+
