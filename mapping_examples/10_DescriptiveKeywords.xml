@@ -1,0 +1,56 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+            ...       
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gcx:Anchor xlink:role="uri" xlink:href="https://gcmd.earthdata.nasa.gov/kms/concept/b472632f-8e67-4892-9896-1c14c5089682" xlink:show="new">BIOGEOCHEMICAL PROCESSES</gcx:Anchor>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                    <mri:thesaurusName>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>GCMD Science Keywords</gco:CharacterString>
+                            </cit:title>
+                            <cit:otherCitationDetails>
+                                <gco:CharacterString>Global Change Master Directory (2021): GCMD Keywords. Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum</gco:CharacterString>
+                            </cit:otherCitationDetails>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:function>
+                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                                    </cit:function>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mri:thesaurusName>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords id="local">
+                    <mri:keyword>
+                        <gco:CharacterString>Eddy Covariance</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:keyword>
+                        <gco:CharacterString>tropical pasture</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="discipline"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            ...
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>

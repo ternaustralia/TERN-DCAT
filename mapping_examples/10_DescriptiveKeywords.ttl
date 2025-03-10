@@ -1,0 +1,12 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcat:keyword "Eddy Covariance",
+        "tropical pasture" ;
+    dcat:theme <https://gcmd.earthdata.nasa.gov/kms/concept/b472632f-8e67-4892-9896-1c14c5089682> ;
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/b472632f-8e67-4892-9896-1c14c5089682> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords> ;
+    skos:prefLabel "BIOGEOCHEMICAL PROCESSES" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords> a skos:ConceptScheme ;
+    dcterms:source "Global Change Master Directory (2021): GCMD Keywords. Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum" ;
+    dcterms:title "gcmd" .

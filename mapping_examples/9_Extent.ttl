@@ -1,0 +1,21 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    tern:hasExtent <ex_extent_1> ;
+
+<ex_extent_1> a tern:Extent ;
+    tern:locationDescription "Approximately 62 km South West of Pine Creek, Northern Territory." ;
+
+<ex_extent_1> a tern:Extent ;
+    geo:hasGeometry [ a geo:Geometry ;
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(131.3181 -14.0633)"^^geo:wktLiteral ] ;
+
+<ex_extent_1> a tern:Extent ;
+    dcterms:temporal [ a dcterms:PeriodOfTime ;
+        dcat:endDate "2013-09-08"^^xsd:date ;
+        dcat:startDate "2008-01-01"^^xsd:date ] ;
+        
+<ex_extent_1> a tern:Extent ;
+    tern:verticalExtent [ a tern:VerticalExtent ;
+            dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/5712> ;
+            tern:maxAltitude 1000.0 ;
+            tern:minAltitude 100.0 ;
+            tern:unit <http://qudt.org/vocab/unit/M> ] .
