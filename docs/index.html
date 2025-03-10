@@ -4912,9 +4912,8 @@
     <section id='iso19115-mapping-objectives'>
       <h3> Overview </h3>
       The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of spatial
-      datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of ISO
-      19115:2003 [[ISO-19115]], ISO 19115-3 [[ISO-191115-3]] and [[TERN_ISO]] and the TERN DCAT metadata profile is
-      documented in this page.
+      datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of
+      [[ISO-19115]], [[ISO-19115-3]] and [[TERN-ISO]] and the TERN DCAT metadata profile is documented in this page.
     </section>
 
     <section id='iso19115-mapping-mappings'>
@@ -5515,7 +5514,7 @@
 
           <tr>
             <td>
-              <p>Dataset descriptive keywords(<abbr title="optional">O</abbr>)</p>
+              <p>Dataset descriptive keywords (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > descriptiveKeywords</code>
               </p>
@@ -5528,6 +5527,94 @@
             <td> <code>skos:Concept / rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
                 href="#ex-mapping-dataset-themes">Themes</a> or <a href="#ex-mapping-dataset-keywords">Keywords</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset access constraints (<abbr title="mandatory">M</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints</code>
+              </p>
+            </td>
+            <td> <code>dcterms:license</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>dcterms:LicenseDocument</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-licence">Licence</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset security constraints (<abbr title="recommended">R</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_SecurityConstraints</code>
+              </p>
+            </td>
+            <td> <code>tern:securityConstraints</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>skos:Concept</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-security">Security constraints</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset other constraints (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.otherConstraints</code>
+              </p>
+            </td>
+            <td> <code>tern:securityConstraints</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>dcterms:RightsStatement</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-otherConstraints">Other constraints</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Resource transfer options (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.distributionInfo > transferOptions.MD_DigitalTransferOptions</code>
+              </p>
+            </td>
+            <td> <code>dcat:distribution</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>dcat:Distribution</code> </td>
+            <td>See <a href="#resource-dataset-distribution">Distribution</a>. </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Resource distributor (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.distributionInfo > distributor</code>
+              </p>
+            </td>
+            <td> <code>tern:distributor</code> </td>
+            <td> <code>dcat:Distribution</code> </td>
+            <td>
+              <p> <code>schema:Person</code> </p>
+              <p> <code>schema:Organization</code> </p>
+            </td>
+            <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
+                contact</a> and the following example: <a href="#ex-mapping-metadata-distributor">Distributor</a>
             </td>
           </tr>
 
@@ -6189,8 +6276,6 @@
                         &lt;/mri:pointOfContact&gt;
                         ...
                     &lt;/mdb:identificationInfo&gt;
-                    ...
-                &lt;/mdb:identificationInfo&gt;
                 ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>
@@ -6290,6 +6375,99 @@
                   ...
               &lt;/mdb:identificationInfo&gt;
             ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-metadata-distributor" title="Dataset distributor">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcat:distribution &lt;urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt;
+                ...
+            
+            &lt;urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; a dcat:Distribution ;
+                dcat:accessURL &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; ;
+                tern:distributor &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; .
+            
+            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
+              dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+              schema:addressCountry &quot;Australia&quot; ;
+              schema:addressLocality &quot;Indooroopilly&quot; ;
+              schema:addressRegion &quot;QLD&quot; ;
+              schema:email &quot;esupport@tern.org.au&quot; ;
+              schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+              schema:postalCode &quot;4068&quot; ;
+              schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+              schema:telephone &quot;+61 7 3365 9097&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;!-- Metadata transferOption distributor in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:distributionInfo&gt;
+                    &lt;mrd:MD_Distribution&gt;
+                        ...
+                        &lt;mrd:distributor&gt;
+                            &lt;mrd:MD_Distributor&gt;
+                                &lt;mrd:distributorContact&gt;
+                                    &lt;cit:CI_Responsibility&gt;
+                                        &lt;cit:role&gt;
+                                            &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;distributor&quot;/&gt;
+                                        &lt;/cit:role&gt;
+                                        &lt;cit:party&gt;
+                                            &lt;cit:CI_Organisation&gt;
+                                                &lt;cit:name&gt;
+                                                    &lt;gco:CharacterString&gt;Terrestrial Ecosystem Research Network&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:name&gt;
+                                                &lt;cit:contactInfo&gt;
+                                                    &lt;cit:CI_Contact&gt;                                                        
+                                                        &lt;cit:address&gt;
+                                                            &lt;cit:CI_Address&gt;
+                                                                &lt;cit:deliveryPoint&gt;
+                                                                    &lt;gco:CharacterString&gt;80 Meiers Road, Indooroopilly, Queensland, 4068, Australia&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:deliveryPoint&gt;
+                                                                &lt;cit:city&gt;
+                                                                    &lt;gco:CharacterString&gt;Indooroopilly&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:city&gt;
+                                                                &lt;cit:administrativeArea&gt;
+                                                                    &lt;gco:CharacterString&gt;Queensland&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:administrativeArea&gt;
+                                                                &lt;cit:postalCode&gt;
+                                                                    &lt;gco:CharacterString&gt;4068&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:postalCode&gt;
+                                                                &lt;cit:country&gt;
+                                                                    &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:country&gt;
+                                                                &lt;cit:electronicMailAddress&gt;
+                                                                    &lt;gco:CharacterString&gt;esupport@tern.org.au&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:electronicMailAddress&gt;
+                                                            &lt;/cit:CI_Address&gt;
+                                                        &lt;/cit:address&gt;
+                                                    &lt;/cit:CI_Contact&gt;
+                                                &lt;/cit:contactInfo&gt;
+                                                &lt;cit:partyIdentifier&gt;
+                                                    &lt;mcc:MD_Identifier&gt;
+                                                        &lt;mcc:code&gt;
+                                                            &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&lt;/gcx:Anchor&gt;
+                                                        &lt;/mcc:code&gt;
+                                                        &lt;mcc:codeSpace&gt;
+                                                            &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:codeSpace&gt;
+                                                    &lt;/mcc:MD_Identifier&gt;
+                                                &lt;/cit:partyIdentifier&gt;
+                                            &lt;/cit:CI_Organisation&gt;
+                                        &lt;/cit:party&gt;
+                                    &lt;/cit:CI_Responsibility&gt;
+                                &lt;/mrd:distributorContact&gt;
+                            &lt;/mrd:MD_Distributor&gt;
+                        &lt;/mrd:distributor&gt;
+                        ...
+                    &lt;/mrd:MD_Distribution&gt;
+                &lt;/mdb:distributionInfo&gt;
+                ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>
         </aside>
@@ -6877,6 +7055,137 @@
           </pre>
         </aside>
 
+        <aside class="example" id="ex-mapping-dataset-licence" title="Dataset licence">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcterms:license &lt;https://creativecommons.org/licenses/by/4.0/&gt; ;
+            
+            &lt;https://creativecommons.org/licenses/by/4.0/&gt; a dcterms:LicenseDocument ;
+                dcterms:description &quot;The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/&quot; ;
+                dcterms:identifier &quot;https://creativecommons.org/licenses/by/4.0/&quot;^^xsd:anyURI ;
+                dcterms:title &quot;Creative Commons Attribution 4.0 International Licence&quot; ;
+                dcterms:type &lt;http://purl.org/adms/licencetype/Attribution&gt; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;
+                                &lt;mco:useLimitation&gt;
+                                    &lt;gco:CharacterString&gt;The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/&lt;/gco:CharacterString&gt;
+                                &lt;/mco:useLimitation&gt;
+                                &lt;mco:reference&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;Creative Commons Attribution 4.0 International Licence&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:alternateTitle&gt;
+                                            &lt;gco:CharacterString&gt;CC-BY&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:alternateTitle&gt;
+                                        &lt;cit:edition&gt;
+                                            &lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:edition&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;https://creativecommons.org/licenses/by/4.0/&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                                &lt;cit:protocol&gt;
+                                                    &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:protocol&gt;
+                                                &lt;cit:function&gt;
+                                                    &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                                &lt;/cit:function&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mco:reference&gt;
+                                &lt;mco:accessConstraints&gt;
+                                    &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;license&quot;/&gt;
+                                &lt;/mco:accessConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-security" title="Dataset security classification">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                tern:securityConstraints &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified&gt; ;
+            
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;unclassified&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_SecurityConstraints&gt;
+                                &lt;mco:classification&gt;
+                                    &lt;mco:MD_ClassificationCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot; codeListValue=&quot;unclassified&quot;/&gt;
+                                &lt;/mco:classification&gt;
+                            &lt;/mco:MD_SecurityConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-otherConstraints" title="Dataset other constraints">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                tern:otherConstraints [ a dcterms:RightsStatement ;
+                        dcterms:title &quot;&quot;&quot;TERN services are provided on an “as-is” and “as available” basis. Users use any TERN services at their discretion and risk. They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+                            &lt;br /&gt;&lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.&lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&quot;&quot;&quot; ] ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;                    
+                                &lt;mco:useConstraints&gt;
+                                    &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;otherRestrictions&quot;/&gt;
+                                &lt;/mco:useConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                    &lt;gco:CharacterString&gt;TERN services are provided on an “as-is” and “as available” basis. Users use any TERN services at their discretion and risk. They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure. &lt;br /&gt;&lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.&lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&lt;/gco:CharacterString&gt;
+                                &lt;/mco:otherConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
       </section>
 
       <section id="resource-dataset-extent">
@@ -7061,6 +7370,74 @@
                         ...
                     &lt;/mri:MD_DataIdentification&gt;
                 &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="resource-dataset-distribution">
+        <h4>Distribution</h4>
+
+        <!-- <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the TBD vocabs.</p> -->
+
+        <aside class="example" id="ex-mapping-distribution" title="Dataset distribution">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcat:distribution &lt;urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt;;
+            
+            &lt;urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; a dcat:Distribution ;
+                dcat:accessURL &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; ;
+                tern:distributor &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; .
+            
+            &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; a rdfs:Resource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download&gt; ;
+                dcterms:title &quot;NetCDF files (2022_v1)&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
+                rdf:value &quot;https://dap-test.tern.org.au/thredds/catalog/ecosystem_process/ozflux/DalyPasture/2022_v1/catalog.html&quot;^^xsd:anyURI .
+            
+            &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;WWW:DOWNLOAD-1.0-http--download&quot; .
+            
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;fileAccess&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:distributionInfo&gt;
+                    
+                    &lt;mrd:MD_Distribution&gt;
+                        ...
+                        &lt;mrd:transferOptions&gt;
+                            &lt;mrd:MD_DigitalTransferOptions&gt;
+                                &lt;mrd:onLine&gt;
+                                    &lt;cit:CI_OnlineResource&gt;
+                                        &lt;cit:linkage&gt;
+                                            &lt;gco:CharacterString&gt;https://dap.tern.org.au/thredds/catalog/ecosystem_process/ozflux/DalyPasture/2022_v1/catalog.html&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:linkage&gt;
+                                        &lt;cit:protocol&gt;
+                                            &lt;gco:CharacterString&gt;WWW:DOWNLOAD-1.0-http--download&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:protocol&gt;
+                                        &lt;cit:name&gt;
+                                            &lt;gco:CharacterString&gt;NetCDF files (2022_v1)&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:name&gt;
+                                        &lt;cit:description/&gt;
+                                        &lt;cit:function&gt;
+                                            &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;fileAccess&quot;/&gt;
+                                        &lt;/cit:function&gt;
+                                    &lt;/cit:CI_OnlineResource&gt;
+                                &lt;/mrd:onLine&gt;
+                            &lt;/mrd:MD_DigitalTransferOptions&gt;
+                        &lt;/mrd:transferOptions&gt;
+                        ...         
+                    &lt;/mrd:MD_Distribution&gt;
+                &lt;/mdb:distributionInfo&gt;
                 ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>

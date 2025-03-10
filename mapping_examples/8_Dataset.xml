@@ -230,3 +230,76 @@
     </mdb:identificationInfo>
     ...
 </gmd:MD_Metadata>
+
+
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+            ...       
+            <mri:resourceConstraints>
+                <mco:MD_SecurityConstraints>
+                    <mco:classification>
+                        <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode" codeListValue="unclassified"/>
+                    </mco:classification>
+                </mco:MD_SecurityConstraints>
+            </mri:resourceConstraints>
+            ...
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>
+
+
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+            ...       
+            <mri:resourceConstraints>
+                <mco:MD_LegalConstraints>
+                    <mco:useLimitation>
+                        <gco:CharacterString>The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/</gco:CharacterString>
+                    </mco:useLimitation>
+                    <mco:reference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>Creative Commons Attribution 4.0 International Licence</gco:CharacterString>
+                            </cit:title>
+                            <cit:alternateTitle>
+                                <gco:CharacterString>CC-BY</gco:CharacterString>
+                            </cit:alternateTitle>
+                            <cit:edition>
+                                <gco:CharacterString>4.0</gco:CharacterString>
+                            </cit:edition>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://creativecommons.org/licenses/by/4.0/</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:function>
+                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                                    </cit:function>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mco:reference>
+                    <mco:accessConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode" codeListValue="license"/>
+                    </mco:accessConstraints>
+                    <mco:useConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+                    </mco:useConstraints>
+                    <mco:otherConstraints>
+                        <gco:CharacterString>TERN services are provided on an “as-is” and “as available” basis. Users use any TERN services at their discretion and risk. They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure. <br /><br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.<br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting</gco:CharacterString>
+                    </mco:otherConstraints>
+                </mco:MD_LegalConstraints>
+            </mri:resourceConstraints>
+            ...
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>

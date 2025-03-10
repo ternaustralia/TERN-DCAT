@@ -44,3 +44,10 @@
     schema:affiliation <https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571> ;
     schema:email "email@uq.edu.au" ;
     schema:name "Doe, John" .
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcat:distribution <urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html>,
+
+<urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html> ;
+    tern:distributor <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .

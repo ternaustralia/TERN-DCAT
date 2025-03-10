@@ -1,0 +1,32 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:distributionInfo>
+        
+        <mrd:MD_Distribution>
+            ...
+            <mrd:transferOptions>
+                <mrd:MD_DigitalTransferOptions>
+                    <mrd:onLine>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://dap.tern.org.au/thredds/catalog/ecosystem_process/ozflux/DalyPasture/2022_v1/catalog.html</gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol>
+                                <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:name>
+                                <gco:CharacterString>NetCDF files (2022_v1)</gco:CharacterString>
+                            </cit:name>
+                            <cit:description/>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="fileAccess"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </mrd:onLine>
+                </mrd:MD_DigitalTransferOptions>
+            </mrd:transferOptions>
+            ...         
+        </mrd:MD_Distribution>
+    </mdb:distributionInfo>
+    ...
+</gmd:MD_Metadata>

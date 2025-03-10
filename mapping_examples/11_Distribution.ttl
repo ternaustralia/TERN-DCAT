@@ -1,0 +1,19 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcat:distribution <urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html>;
+
+<urn:distribution:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html> ;
+    tern:distributor <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+
+<urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download> ;
+    dcterms:title "NetCDF files (2022_v1)" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
+    rdf:value "https://dap-test.tern.org.au/thredds/catalog/ecosystem_process/ozflux/DalyPasture/2022_v1/catalog.html"^^xsd:anyURI .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download> a dcterms:Standard ;
+    dcterms:identifier "WWW:DOWNLOAD-1.0-http--download" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode"^^xsd:anyURI ;
+    skos:prefLabel "fileAccess" .

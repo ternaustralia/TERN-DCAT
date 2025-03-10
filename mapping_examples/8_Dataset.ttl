@@ -51,3 +51,20 @@
 <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_notPlanned> a skos:Concept ;
     dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode"^^xsd:anyURI ;
     skos:prefLabel "notPlanned" .
+
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    tern:otherConstraints [ a dcterms:RightsStatement ;
+            dcterms:title """TERN services are provided on an “as-is” and “as available” basis. Users use any TERN services at their discretion and risk. They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+                <br /><br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.<br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting""" ] ;
+    tern:securityConstraints <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode"^^xsd:anyURI ;
+    skos:prefLabel "unclassified" .
+
+<https://creativecommons.org/licenses/by/4.0/> a dcterms:LicenseDocument ;
+    dcterms:description "The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:identifier "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:title "Creative Commons Attribution 4.0 International Licence" ;
+    dcterms:type <http://purl.org/adms/licencetype/Attribution> .

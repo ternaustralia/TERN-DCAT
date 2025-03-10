@@ -170,6 +170,16 @@ var respecConfig = {
             "title": "Dataset Exchange Working Group",
             "publisher": "W3C"
         },
+        "OGC-EPSG": {
+            "href": "http://www.opengis.net/def/crs/EPSG/",
+            "title": "EPSG CRS Register",
+            "publisher": "OGC"
+        },
+        "TERN-ISO": {
+            "href": "https://doi.org/10.5281/zenodo.5652221",
+            "title": "Terrestrial Ecosystem Research Network (TERN) Metadata Profile of ISO 19115-3:2016 and ISO 19157-2:2016",
+            "publisher": "Terrestrial Ecosystem Research Network"
+        },
     }
     //     "ADMS-SKOS": {
     //         "href": "https://web.archive.org/web/20210521035614/https://joinup.ec.europa.eu/svn/adms/ADMS_v1.00/ADMS_SKOS_v1.00.html",

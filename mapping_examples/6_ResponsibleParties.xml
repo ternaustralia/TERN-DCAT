@@ -234,3 +234,70 @@
     </mdb:identificationInfo>
     ...
 </gmd:MD_Metadata>
+
+
+<!-- Metadata transferOption distributor in ISO 19115 -->
+<gmd:MD_Metadata>
+    ...
+    <mdb:distributionInfo>
+        <mrd:MD_Distribution>
+            ...
+            <mrd:distributor>
+                <mrd:MD_Distributor>
+                    <mrd:distributorContact>
+                        <cit:CI_Responsibility>
+                            <cit:role>
+                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode" codeListValue="distributor"/>
+                            </cit:role>
+                            <cit:party>
+                                <cit:CI_Organisation>
+                                    <cit:name>
+                                        <gco:CharacterString>Terrestrial Ecosystem Research Network</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:contactInfo>
+                                        <cit:CI_Contact>
+                                            <cit:address>
+                                                <cit:CI_Address>
+                                                    <cit:deliveryPoint>
+                                                        <gco:CharacterString>80 Meiers Road, Indooroopilly, Queensland, 4068, Australia</gco:CharacterString>
+                                                    </cit:deliveryPoint>
+                                                    <cit:city>
+                                                        <gco:CharacterString>Indooroopilly</gco:CharacterString>
+                                                    </cit:city>
+                                                    <cit:administrativeArea>
+                                                        <gco:CharacterString>Queensland</gco:CharacterString>
+                                                    </cit:administrativeArea>
+                                                    <cit:postalCode>
+                                                        <gco:CharacterString>4068</gco:CharacterString>
+                                                    </cit:postalCode>
+                                                    <cit:country>
+                                                        <gco:CharacterString>Australia</gco:CharacterString>
+                                                    </cit:country>
+                                                    <cit:electronicMailAddress>
+                                                        <gco:CharacterString>esupport@tern.org.au</gco:CharacterString>
+                                                    </cit:electronicMailAddress>
+                                                </cit:CI_Address>
+                                            </cit:address>
+                                        </cit:CI_Contact>
+                                    </cit:contactInfo>
+                                    <cit:partyIdentifier>
+                                        <mcc:MD_Identifier>
+                                            <mcc:code>
+                                                <gcx:Anchor xlink:role="uri" xlink:href="https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66" xlink:show="new">https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66</gcx:Anchor>
+                                            </mcc:code>
+                                            <mcc:codeSpace>
+                                                <gco:CharacterString>https://w3id.org/tern/resources</gco:CharacterString>
+                                            </mcc:codeSpace>
+                                        </mcc:MD_Identifier>
+                                    </cit:partyIdentifier>
+                                </cit:CI_Organisation>
+                            </cit:party>
+                        </cit:CI_Responsibility>
+                    </mrd:distributorContact>
+                </mrd:MD_Distributor>
+            </mrd:distributor>
+            ...
+        </mrd:MD_Distribution>
+    </mdb:distributionInfo>
+    ...
+</gmd:MD_Metadata>
