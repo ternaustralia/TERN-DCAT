@@ -5618,6 +5618,42 @@
             </td>
           </tr>
 
+          <tr>
+            <td>
+              <p>Dataset data quality (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.dataQualityInfo</code>
+              </p>
+            </td>
+            <td> <code>tern:dataQuality</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>tern:DataQuality</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-dataquality">Data Quality</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p>Dataset data lineage (<abbr title="optional">O</abbr>)</p>
+              <p>
+                <code>MD_Metadata.resourceLineage</code>
+              </p>
+            </td>
+            <td> <code>sosa:usedProcedure</code> </td>
+            <td>
+              <p> <code>dcat:Dataset</code> </p>
+              <p> <code>dcat:DatasetSeries</code> </p>
+            </td>
+            <td> <code>tern:MEthod</code> </td>
+            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
+                href="#ex-mapping-dataset-lineage">Lineage</a>
+            </td>
+          </tr>
+
         </tbody>
       </table>
     </section>
@@ -7181,6 +7217,174 @@
                         ...
                     &lt;/mri:MD_DataIdentification&gt;
                 &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-dataquality" title="Dataset data quality">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                tern:dataQuality &lt;ex_dataquality_1&gt; ;
+            
+            &lt;ex_dataquality_1&gt; a tern:DataQuality ;
+                tern:DQ_descriptionResult &quot;DQ outcome&quot; ;
+                tern:DQ_scopeDescription &quot;data Quality assesment scope&quot; ;
+                tern:DQ_standaloneQualityReport &lt;urn:resource:dataquality_report_1&gt; .
+            
+            &lt;urn:resource:dataquality_report_1&gt; a rdfs:Resource ;
+                dcterms:title &quot;data quality report&quot; ;
+                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:dataQualityInfo&gt;
+                    &lt;mdq:DQ_DataQuality&gt;
+                        &lt;mdq:scope&gt;
+                            &lt;mcc:MD_Scope&gt;
+                                &lt;mcc:level&gt;
+                                    &lt;mcc:MD_ScopeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot; codeListValue=&quot;dataset&quot;/&gt;
+                                &lt;/mcc:level&gt;
+                                &lt;mcc:levelDescription&gt;
+                                    &lt;mcc:MD_ScopeDescription&gt;
+                                        &lt;mcc:other&gt;
+                                            &lt;gco:CharacterString&gt;data Quality assesment scope&lt;/gco:CharacterString&gt;
+                                        &lt;/mcc:other&gt;
+                                    &lt;/mcc:MD_ScopeDescription&gt;
+                                &lt;/mcc:levelDescription&gt;
+                            &lt;/mcc:MD_Scope&gt;
+                        &lt;/mdq:scope&gt;
+                        &lt;mdq:standaloneQualityReport&gt;
+                            &lt;mdq:DQ_StandaloneQualityReportInformation&gt;
+                                &lt;mdq:reportReference&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;data quality report&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;https://report.tern.org.au&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mdq:reportReference&gt;
+                                &lt;mdq:abstract&gt;
+                                    &lt;gco:CharacterString&gt;data quality report&lt;/gco:CharacterString&gt;
+                                &lt;/mdq:abstract&gt;
+                            &lt;/mdq:DQ_StandaloneQualityReportInformation&gt;
+                        &lt;/mdq:standaloneQualityReport&gt;
+                        &lt;mdq:report&gt;
+                            &lt;mdq:DQ_QuantitativeAttributeAccuracy&gt;
+                                &lt;mdq:result&gt;
+                                    &lt;mdq:DQ_DescriptiveResult&gt;
+                                        &lt;mdq:statement&gt;
+                                            &lt;gco:CharacterString&gt;DQ outcome&lt;/gco:CharacterString&gt;
+                                        &lt;/mdq:statement&gt;
+                                    &lt;/mdq:DQ_DescriptiveResult&gt;
+                                &lt;/mdq:result&gt;
+                            &lt;/mdq:DQ_QuantitativeAttributeAccuracy&gt;
+                        &lt;/mdq:report&gt;
+                    &lt;/mdq:DQ_DataQuality&gt;
+                &lt;/mdb:dataQualityInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-mapping-dataset-lineage" title="Dataset lineage">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                sosa:usedProcedure  &lt;ex_lineage_1&gt; ;
+
+            &lt;ex_lineage_1&gt; a tern:Method ;
+                dcterms:description &quot;procedure details&quot; ;
+                tern:additionalDocumentation &lt;urn:resource:method_documentation_1&gt; ;
+                tern:instructions [ a rdf:Seq ;
+                        rdf:_1 &quot;step1&quot; ;
+                        rdf:_2 &quot;step2&quot; ] ;
+                tern:scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; ;
+
+            &lt;urn:resource:method_documentation_1&gt; a rdfs:Resource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; ;
+                dcterms:title &quot;Method documentation&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;dataset&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;information&quot; .
+
+            &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;WWW:LINK-1.0-http--link&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:resourceLineage&gt;
+                    &lt;mrl:LI_Lineage&gt;
+                        &lt;mrl:statement&gt;
+                            &lt;gco:CharacterString&gt;procedure details&lt;/gco:CharacterString&gt;
+                        &lt;/mrl:statement&gt;
+                        &lt;mrl:scope&gt;
+                            &lt;mcc:MD_Scope&gt;
+                                &lt;mcc:level&gt;
+                                    &lt;mcc:MD_ScopeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot; codeListValue=&quot;dataset&quot;/&gt;
+                                &lt;/mcc:level&gt;
+                            &lt;/mcc:MD_Scope&gt;
+                        &lt;/mrl:scope&gt;
+                        &lt;mrl:additionalDocumentation&gt;
+                            &lt;cit:CI_Citation&gt;
+                                &lt;cit:title&gt;
+                                    &lt;gco:CharacterString&gt;procedure method&lt;/gco:CharacterString&gt;
+                                &lt;/cit:title&gt;
+                                &lt;cit:onlineResource&gt;
+                                    &lt;cit:CI_OnlineResource&gt;
+                                        &lt;cit:linkage&gt;
+                                            &lt;gco:CharacterString&gt;https://method.tern.org.au&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:linkage&gt;
+                                        &lt;!--  default values apply  --&gt;
+                                        &lt;cit:protocol&gt;
+                                            &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:protocol&gt;
+                                        &lt;cit:description&gt;
+                                            &lt;gco:CharacterString&gt;Method documentation&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:description&gt;
+                                        &lt;cit:function&gt;
+                                            &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                        &lt;/cit:function&gt;
+                                    &lt;/cit:CI_OnlineResource&gt;
+                                &lt;/cit:onlineResource&gt;
+                            &lt;/cit:CI_Citation&gt;
+                        &lt;/mrl:additionalDocumentation&gt;
+                        &lt;mrl:processStep&gt;
+                            &lt;mrl:LI_ProcessStep&gt;
+                                &lt;mrl:description&gt;
+                                    &lt;gco:CharacterString&gt;step1&lt;/gco:CharacterString&gt;
+                                &lt;/mrl:description&gt;
+                            &lt;/mrl:LI_ProcessStep&gt;
+                        &lt;/mrl:processStep&gt;
+                        &lt;mrl:processStep&gt;
+                            &lt;mrl:LI_ProcessStep&gt;
+                                &lt;mrl:description&gt;
+                                    &lt;gco:CharacterString&gt;step2&lt;/gco:CharacterString&gt;
+                                &lt;/mrl:description&gt;
+                            &lt;/mrl:LI_ProcessStep&gt;
+                        &lt;/mrl:processStep&gt;
+                    &lt;/mrl:LI_Lineage&gt;
+                &lt;/mdb:resourceLineage&gt;
                 ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>

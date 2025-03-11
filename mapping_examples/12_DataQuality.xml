@@ -1,0 +1,54 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:dataQualityInfo>
+        <mdq:DQ_DataQuality>
+            <mdq:scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+                    </mcc:level>
+                    <mcc:levelDescription>
+                        <mcc:MD_ScopeDescription>
+                            <mcc:other>
+                                <gco:CharacterString>data Quality assesment scope</gco:CharacterString>
+                            </mcc:other>
+                        </mcc:MD_ScopeDescription>
+                    </mcc:levelDescription>
+                </mcc:MD_Scope>
+            </mdq:scope>
+            <mdq:standaloneQualityReport>
+                <mdq:DQ_StandaloneQualityReportInformation>
+                    <mdq:reportReference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>data quality report</gco:CharacterString>
+                            </cit:title>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://report.tern.org.au</gco:CharacterString>
+                                    </cit:linkage>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mdq:reportReference>
+                    <mdq:abstract>
+                        <gco:CharacterString>data quality report</gco:CharacterString>
+                    </mdq:abstract>
+                </mdq:DQ_StandaloneQualityReportInformation>
+            </mdq:standaloneQualityReport>
+            <mdq:report>
+                <mdq:DQ_QuantitativeAttributeAccuracy>
+                    <mdq:result>
+                        <mdq:DQ_DescriptiveResult>
+                            <mdq:statement>
+                                <gco:CharacterString>DQ outcome</gco:CharacterString>
+                            </mdq:statement>
+                        </mdq:DQ_DescriptiveResult>
+                    </mdq:result>
+                </mdq:DQ_QuantitativeAttributeAccuracy>
+            </mdq:report>
+        </mdq:DQ_DataQuality>
+    </mdb:dataQualityInfo>
+    ...
+</gmd:MD_Metadata>

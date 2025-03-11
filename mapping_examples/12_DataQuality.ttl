@@ -1,0 +1,11 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    tern:dataQuality <ex_dataquality_1> ;
+
+<ex_dataquality_1> a tern:DataQuality ;
+    tern:DQ_descriptionResult "DQ outcome" ;
+    tern:DQ_scopeDescription "data Quality assesment scope" ;
+    tern:DQ_standaloneQualityReport <urn:resource:dataquality_report_1> .
+
+<urn:resource:dataquality_report_1> a rdfs:Resource ;
+    dcterms:title "data quality report" ;
+    rdf:value "https://report.tern.org.au"^^xsd:anyURI .

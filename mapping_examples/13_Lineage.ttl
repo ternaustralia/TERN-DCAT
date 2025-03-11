@@ -1,0 +1,27 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    sosa:usedProcedure  <ex_lineage_1> ;
+
+<ex_lineage_1> a tern:Method ;
+    dcterms:description "procedure details" ;
+    tern:additionalDocumentation <urn:resource:method_documentation_1> ;
+    tern:instructions [ a rdf:Seq ;
+            rdf:_1 "step1" ;
+            rdf:_2 "step2" ] ;
+    tern:scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> ;
+
+<urn:resource:method_documentation_1> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
+    dcterms:title "Method documentation" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
+    rdf:value "https://method.tern.org.au"^^xsd:anyURI .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"^^xsd:anyURI ;
+    skos:prefLabel "dataset" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode"^^xsd:anyURI ;
+    skos:prefLabel "information" .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> a dcterms:Standard ;
+    dcterms:identifier "WWW:LINK-1.0-http--link" .

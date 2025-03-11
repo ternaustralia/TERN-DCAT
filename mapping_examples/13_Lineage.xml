@@ -1,0 +1,56 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:resourceLineage>
+        <mrl:LI_Lineage>
+            <mrl:statement>
+                <gco:CharacterString>procedure details</gco:CharacterString>
+            </mrl:statement>
+            <mrl:scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+                    </mcc:level>
+                </mcc:MD_Scope>
+            </mrl:scope>
+            <mrl:additionalDocumentation>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>procedure method</gco:CharacterString>
+                    </cit:title>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>https://method.tern.org.au</gco:CharacterString>
+                            </cit:linkage>
+                            <!--  default values apply  -->
+                            <cit:protocol>
+                                <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                            </cit:protocol>
+                            <cit:description>
+                                <gco:CharacterString>Method documentation</gco:CharacterString>
+                            </cit:description>
+                            <cit:function>
+                                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                            </cit:function>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </mrl:additionalDocumentation>
+            <mrl:processStep>
+                <mrl:LI_ProcessStep>
+                    <mrl:description>
+                        <gco:CharacterString>step1</gco:CharacterString>
+                    </mrl:description>
+                </mrl:LI_ProcessStep>
+            </mrl:processStep>
+            <mrl:processStep>
+                <mrl:LI_ProcessStep>
+                    <mrl:description>
+                        <gco:CharacterString>step2</gco:CharacterString>
+                    </mrl:description>
+                </mrl:LI_ProcessStep>
+            </mrl:processStep>
+        </mrl:LI_Lineage>
+    </mdb:resourceLineage>
+    ...
+</gmd:MD_Metadata>
