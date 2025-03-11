@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>TERN DCAT metadata profile</title>
+  <title>TERN-DCAT application profile</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <meta content="text/html; charset=utf-8" http-equiv="content-type" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -138,7 +138,7 @@
 </head>
 
 <body>
-  <h1 id="title">TERN DCAT metadata profile</h1>
+  <h1 id="title">TERN-DCAT application profile</h1>
 
   <aside class="note">
     <p>This is a note</p>
@@ -190,8 +190,8 @@
 
     <h2>Namespaces</h2>
 
-    <p>TERN DCAT makes extensive use of terms from other vocabularies, in particular Dublin Core [[?DCTERMS]].
-      TERN DCAT defines some classes and properties of its own in order to cover some metadata sections from ISO
+    <p>TERN-DCAT makes extensive use of terms from other vocabularies, in particular Dublin Core [[?DCTERMS]].
+      TERN-DCAT defines some classes and properties of its own in order to cover some metadata sections from ISO
       19115-3 not already addressed by DCAT [[?vocab-dcat-3]] or DCAT-AP [[?DCAT-AP]].</p>
 
     <table id="table-namespaces" class="simple">
@@ -308,11 +308,11 @@
     <h3>Application profile diagram</h3>
 
     <figure id="fig-tern-dcat">
-      <img alt="UML model of TERN DCAT classes and properties" src="images/TERN-DCAT-Class-diagram.png">
+      <img alt="UML model of TERN-DCAT classes and properties" src="images/TERN-DCAT-Class-diagram.png">
       <figcaption>
         <span class="fig-title">
-          Overview of TERN DCAT model, showing the classes of resources that can be members of a Catalog, and the
-          relationships between them. Except where specifically indicated.
+          Overview of TERN-DCAT application profile model, showing the classes of resources that can be members of a
+          Catalog, and the relationships between them. Except where specifically indicated.
         </span>
       </figcaption>
     </figure>
@@ -723,7 +723,7 @@
               <td property="rdfs:comment">
                 The metadata profile that the Catalogue Records complies with.
               </td>
-              <td property="skos:scopeNote"> TERN DCAT profile should be used. </td>
+              <td property="skos:scopeNote"> TERN-DCAT application profile should be used. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -3880,7 +3880,7 @@
         <dt> Definition </dt>
         <dd> Anything described by RDF. </dd>
         <dt> Usage Notes </dt>
-        <dd> TERN DCAT leverages the usage of rdfs:Resource class in order to discribe more complex types
+        <dd> TERN-DCAT leverages the usage of rdfs:Resource class in order to discribe more complex types
           of resources widely used across the profile. See the examples to see how to describe each type of resource.
         </dd>
         <dt> Properties </dt>
@@ -4422,7 +4422,7 @@
             &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
                 dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
                 dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
-                dcterms:title &quot;TERN DCAT metadata profile&quot; ;
+                dcterms:title &quot;TERN-DCAT application profile&quot; ;
                 owl:versionInfo &quot;1.0&quot; .
           </pre>
         </aside>
@@ -4899,7 +4899,22 @@
   </section>
 
   <section id="validation">
-    <h2>Validation of TERN DCAT</h2>
+    <h2>Validation of TERN-DCAT</h2>
+    <p>To support the check whether or not a catalogue satisfies the expressed constraints in this Application Profile,
+      the constraints in this specification are expressed using SHACL [[shacl]]. Each constraint in this specification
+      that could be converted into a SHACL expression has been included. As such this collection of SHACL expressions
+      that can be used to build a validation check for a data exchange between two systems. A typical use case is the
+      harvesting of one catalogue into another.</p>
+
+    <p>Validation of a catalogue according to TERN-DCAT specification should be consider as a standalone specification
+      and validate all constraints at once. Take into account that TERN-DCAT is an extension of [[vocab-dcat-3]], very
+      highly influence by [[DCAT-AP]] and [[GeoDCAT-AP]], but with some considerable differences to fit the specific
+      [[TERN]]'s use case and [[TERN-ISO]] metadata profile.</p>
+    <ul>
+      <li><a
+          href="https://github.com/ternaustralia/ontology_tern/blob/master/docs/dcat-shapes.ttl">shapes_recommended.ttl</a>:
+        constraints concerning existence of recommended properties.</li>
+    </ul>
   </section>
 
   <section id='conformance'>
@@ -4913,7 +4928,7 @@
       <h3> Overview </h3>
       The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of spatial
       datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of
-      [[ISO-19115]], [[ISO-19115-3]] and [[TERN-ISO]] and the TERN DCAT metadata profile is documented in this page.
+      [[ISO-19115]], [[ISO-19115-3]] and [[TERN-ISO]] and the TERN-DCAT application profile is documented in this page.
     </section>
 
     <section id='iso19115-mapping-mappings'>
@@ -5907,7 +5922,7 @@
             &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
               dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
               dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
-              dcterms:title &quot;TERN DCAT metadata profile&quot; ;
+              dcterms:title &quot;TERN-DCAT application profile&quot; ;
               owl:versionInfo &quot;1.0&quot; .
           </pre>
         </aside>
