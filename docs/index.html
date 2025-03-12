@@ -190,9 +190,9 @@
 
     <h2>Namespaces</h2>
 
-    <p>TERN-DCAT makes extensive use of terms from other vocabularies, in particular Dublin Core [[?DCTERMS]].
-      TERN-DCAT defines some classes and properties of its own in order to cover some metadata sections from ISO
-      19115-3 not already addressed by DCAT [[?vocab-dcat-3]] or DCAT-AP [[?DCAT-AP]].</p>
+    <p>TERN-DCAT makes extensive use of terms from other vocabularies, in particular DCAT [[?vocab-dcat-3]] and Dublin
+      Core [[?DCTERMS]]. TERN-DCAT defines some classes and properties of its own in order to cover some metadata
+      sections from [[ISO-19115-3]] not already addressed by DCAT [[?vocab-dcat-3]] or DCAT-AP [[?DCAT-AP]].</p>
 
     <table id="table-namespaces" class="simple">
       <thead>
@@ -237,6 +237,11 @@
           <td><code>foaf</code></td>
           <td><code>http://xmlns.com/foaf/0.1/</code></td>
           <td>[[FOAF]]</td>
+        </tr>
+        <tr>
+          <td><code>geodcatap</code></td>
+          <td><code>http://data.europa.eu/930/</code></td>
+          <td>[[GeoDCAT-AP]]</td>
         </tr>
         <tr>
           <td><code>geosparql (geo)</code></td>
@@ -300,19 +305,40 @@
 
   <section id="specoverview">
     <h2>Overview</h2>
-
     <p>
-      ...
+      TERN-DCAT is a DCAT profile for sharing information about Catalogues containing Datasets descriptions holded by
+      [[TERN]]. The core classes of the Application Profile are <a href="#Catalogue">Catalogue</a>, <a
+        href="#Dataset">Dataset</a> and <a href="#Distribution">Distribution</a>. TERN-DCAT exclusively defines
+      Catalogues of only Datasets (and Dataset Series), leaving the use of Data Services open to the user following
+      other implementations defined by DCAT or DCAT-AP.
+    </p>
+    <p>
+      TERN-DCAT uses most of the core properties of the main classes from the [[vocab-dcat-3]] specification including
+      some additional ones (defined by [[TERN]] or by other specifications as [[DCAT-AP]]). This additional properties
+      or classes have been added or created in order to best fit the usage of the TERN-DCAT profile, which is the
+      faithful representation of the TERN Metadata Catalogue which follows the [[ISO-19115-3]] standard profiled as
+      [[TERN-ISO]].
+    </p>
+    <p>
+      These are some of the main differences of TERN-DCAT compared to [[vocab-dcat-3]] or [[DCAT-AP]]:
+    <ul>
+      <li>Usage of <a href="#Organisation">schema:Organization</a> or <a href="#Person">schema:Person</a> instead of <a
+          href="https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person">foaf:Agent</a>.</li>
+      <li>Spatial and temporal extent is grouped under a new class <a href="#Extent">Extent</a>, which also includes a
+        location definition and the vertical extent.</li>
+      <li>Spatial representation uses [[GeoSPARQL]] instead of [[LOCN]].</li>
+      <li><a href="#Distribution">Distribution</a> has been redesigned using <a href="#Resource">rdfs:Resource</a> to
+        express all the relevant information.</li>
+    </ul>
     </p>
 
     <h3>Application profile diagram</h3>
-
     <figure id="fig-tern-dcat">
       <img alt="UML model of TERN-DCAT classes and properties" src="images/TERN-DCAT-Class-diagram.png">
       <figcaption>
         <span class="fig-title">
           Overview of TERN-DCAT application profile model, showing the classes of resources that can be members of a
-          Catalog, and the relationships between them. Except where specifically indicated.
+          Catalogue, and the relationships between them. Open the image in a new tab to see a higher resolution image.
         </span>
       </figcaption>
     </figure>
@@ -323,7 +349,14 @@
     <h2>
       Entities
     </h2>
-    The main entities of the Application Profile...
+    <p>The main entities are those that form the core of the Application Profile. The properties and their associated
+      constraints that apply in the context of this profile are listed in a tabular form.</p>
+    <p>The following abbreviations are used to indicate in short the difference with DCAT:</p>
+    <ul>
+      <li>A: reused as-is defined and expressed in DCAT</li>
+      <li>E: reused with additional usage notes or additional restrictions compared to DCAT</li>
+      <li>P: TERN-DCAT profile specific extension where DCAT had no requirements earlier on specified</li>
+    </ul>
 
     <section id="entity-catalogue">
       <h3 id="Catalogue">
@@ -4154,8 +4187,7 @@
 
     <section id="entity-spatial-resolution">
       <h3 id="QualityMeasurement">
-        <a href="http://www.w3.org/ns/dqv#QualityMeasurement" data-toggle="tooltip"
-          data-content="http://www.w3.org/ns/dqv#QualityMeasurement" data-placement="right">Spatial Resolution</a>
+        <a href="http://www.w3.org/ns/dqv#QualityMeasurement">Spatial Resolution</a>
       </h3>
 
       <dl>
@@ -4763,7 +4795,12 @@
         <tbody>
           <tr>
             <td>dct:accrualPeriodicity</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td>
+              <ul>
+                <li><a href="#Dataset">Dataset</a></li>
+                <li><a href="#DatasetSeries">Dataset Series</a></li>
+              </ul>
+            </td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode">ISO
                 19115-3
@@ -4772,7 +4809,12 @@
           </tr>
           <tr>
             <td>tern:securityConstraints</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td>
+              <ul>
+                <li><a href="#Dataset">Dataset</a></li>
+                <li><a href="#DatasetSeries">Dataset Series</a></li>
+              </ul>
+            </td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">ISO
                 19115-3
@@ -4781,7 +4823,12 @@
           </tr>
           <tr>
             <td>adms:status</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td>
+              <ul>
+                <li><a href="#Dataset">Dataset</a></li>
+                <li><a href="#DatasetSeries">Dataset Series</a></li>
+              </ul>
+            </td>
             <td><a href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode">ISO
                 19115-3
                 Progress Code List</a></td>
@@ -4812,8 +4859,13 @@
           </tr>
           <tr>
             <td>dct:language</td>
-            <td><a href="#Catalogue">Catalogue</a>, <a href="#Dataset">Dataset</a>, <a href="#CatalogueRecord">Catalogue
-                Records</a></td>
+            <td>
+
+              <ul>
+                <li><a href="#Catalogue">Catalogue</a></li>
+                <li><a href="#CatalogueRecord">Catalogue Records</a></li>
+                <li><a href="#Dataset">Dataset</a></li>
+              </ul>
             <td><a href="http://id.loc.gov/vocabulary/iso639-2/">US Library of Congress ISO639-2 Languages</a></td>
             <td></td>
           </tr>
@@ -4825,13 +4877,24 @@
           </tr>
           <tr>
             <td>tern:unit</td>
-            <td><a href="#Unit">Unit of Measurement</a></td>
+            <td>
+              <ul>
+                <li><a href="#Concept">Concept</a></li>
+                <li><a href="#QualityMeasurement">Spatial Resolution</a></li>
+                <li><a href="#VerticalExtent">Vertical Extent</a></li>
+              </ul>
+            </td>
             <td><a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a></td>
             <td> </td>
           </tr>
           <tr>
             <td>dcterms:conformsTo, geo:asWKT </td>
-            <td><a href="#VerticalExtent">VerticalExtent</a>, <a href="#Geometry">Geometry</a></td>
+            <td>
+              <ul>
+                <li><a href="#VerticalExtent">VerticalExtent</a></li>
+                <li><a href="#Geometry">Geometry</a></li>
+              </ul>
+            </td>
             <td><a href="https://www.opengis.net/def/crs/EPSG/0/">OGC EPSG Coordinate Reference Systems Register
                 [[OGC-EPSG]]</a></td>
             <td></td>
@@ -4855,7 +4918,12 @@
         <tbody>
           <tr>
             <td>dcat:theme</td>
-            <td><a href="#Dataset">Dataset</a>, <a href="#DatasetSeries">Dataset Series</a></td>
+            <td>
+              <ul>
+                <li><a href="#Dataset">Dataset</a></li>
+                <li><a href="#DatasetSeries">Dataset Series</a></li>
+              </ul>
+            </td>
             <td>
               <ul>
                 <li><a href="https://vocab.met.no/mmd/ISO_Topic_Category/">Topic Category</a></li>
@@ -7676,11 +7744,11 @@
     [[?VOCAB-DCAT]] and [[?DCAT-AP]].
   </section>
 
-  <section id='examples' class="appendix">
+  <!-- <section id='examples' class="appendix">
     <h2>
       Examples
     </h2>
-  </section>
+  </section> -->
 
 </body>
 

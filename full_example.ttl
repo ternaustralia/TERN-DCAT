@@ -1,0 +1,425 @@
+@prefix adms: <https://www.w3.org/TR/vocab-adms> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix org: <https://w3id.org/tern/ontologies/org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt1: <http://qudt.org/schema/qudt#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geonetwork-test.tern.org.au/geonetwork/srv/resources/catalogs/daf929f6-04fe-461c-acab-2be1f7001589> a dcat:Catalog ;
+    dcterms:identifier "daf929f6-04fe-461c-acab-2be1f7001589" ;
+    dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    dcterms:title "TERN Geospatial Catalogue" ;
+    dcat:dataset <https://geonetwork-test.tern.org.au/geonetwork/dataset/81f6c556-fef7-42fe-a675-7938b8417f5d> ;
+    dcat:record <https://geonetwork-test.tern.org.au/geonetwork/srv/resources/records/81f6c556-fef7-42fe-a675-7938b8417f5d> ;
+    foaf:homepage "https://geonetwork-test.tern.org.au"^^xsd:anyURI .
+
+<http://linked.data.gov.au/dataset/ausplots/site-ntabrt0001> a skos:Concept ;
+    skos:inScheme <urn:conceptScheme:platform> ;
+    skos:prefLabel "Alice Mulga, NTABRT0001" .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/FTP> a dcterms:Standard ;
+    dcterms:identifier "FTP" .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/OGC:WMS-1.3.0-http-get-map> a dcterms:Standard ;
+    dcterms:identifier "OGC:WMS-1.3.0-http-get-map" .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download> a dcterms:Standard ;
+    dcterms:identifier "WWW:DOWNLOAD-1.0-http--download" .
+
+<http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
+    skos:prefLabel "abundance of coarse fragments" ;
+    tern:unit <http://qudt.org/vocab/unit/AttoJ-SEC> .
+
+<http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> a skos:ConceptScheme ;
+    dcterms:source "TERN (2020). TERN Parameter Vocabulary. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e" ;
+    skos:prefLabel "parameter" .
+
+<http://linked.data.gov.au/def/tern-cv/a3088b5c-622d-4e25-8a75-4c4961b0dfe8> a skos:ConceptScheme ;
+    dcterms:source "TERN (2020): TERN Instrument Vocabulary. Terrestrial Ecosystem Research Network (TERN). https://linkeddata.tern.org.au/" ;
+    skos:prefLabel "instrument" .
+
+<http://qudt.org/vocab/unit/AttoJ-SEC> a qudt1:Unit ;
+    rdfs:label "Attojoule Second" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit> .
+
+<http://qudt.org/vocab/unit/DEG> a qudt1:Unit ;
+    rdfs:label "Degree" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit> .
+
+<http://qudt.org/vocab/unit/M> a qudt1:Unit ;
+    rdfs:label "Meter" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit> .
+
+<https://biodiversity.org.au/afd/home> a skos:ConceptScheme ;
+    dcterms:source "ABRS (2020): Australian Faunal Directory. Australian Biological Resources Study, Canberra. https://biodiversity.org.au/afd/home" ;
+    skos:prefLabel "afd" .
+
+<https://biodiversity.org.au/afd/taxa/%27Ochlerotatus%27_%28%27Finlaya%27%29_biocellatus> a skos:Concept ;
+    skos:inScheme <https://biodiversity.org.au/afd/home> ;
+    skos:prefLabel "'Ochlerotatus' ('Finlaya') biocellatus (Taylor, 1914)" .
+
+<https://creativecommons.org/licenses/by/4.0/> a dcterms:LicenseDocument ;
+    dcterms:description "The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:identifier "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:title "Creative Commons Attribution 4.0 International Licence" ;
+    dcterms:type <http://purl.org/adms/licencetype/Attribution> .
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/3b36beea-9637-4213-bdbe-42e878ca14df> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/horizontalresolutionrange/?format=xml> ;
+    skos:prefLabel "10 km - < 50 km or approximately .09 degree - < .5 degree" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/40e09855-fb48-4a7d-9851-d6e809e6c309> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/temporalresolutionrange/?format=xml> ;
+    skos:prefLabel "Annual" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/cf1f085e-4948-4874-9640-e236fff7bc8d> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/verticalresolutionrange/?format=xml> ;
+    skos:prefLabel "< 1 meter" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/fd29bf77-df38-4b80-8148-8184fa41d843> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords> ;
+    skos:prefLabel "ABRASION" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concept/feef8827-92a6-4d1d-b6a5-ecda38a32656> a skos:Concept ;
+    skos:inScheme <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords> ;
+    skos:prefLabel "12 HOUR PRECIPITATION AMOUNT" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/horizontalresolutionrange/?format=xml> a skos:ConceptScheme ;
+    dcterms:source "Global Change Master Directory (2021): GCMD Keywords. Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum" ;
+    skos:prefLabel "horizontal-resolution" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/temporalresolutionrange/?format=xml> a skos:ConceptScheme ;
+    dcterms:source "Global Change Master Directory (2021): GCMD Keywords, Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum" ;
+    skos:prefLabel "temporal-resolution" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/verticalresolutionrange/?format=xml> a skos:ConceptScheme ;
+    dcterms:source "Global Change Master Directory (2021): GCMD Keywords, Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum" ;
+    skos:prefLabel "vertical-resolution" .
+
+<https://geonetwork-test.tern.org.au/geonetwork/dataset/80309ff9-81e2-4854-9378-828564385d09> a dcat:DatasetSeries ;
+    dcterms:title "A dataset on spatial distribution and association patterns of three species from moist semi deciduous forest" .
+
+<https://geonetwork-test.tern.org.au/geonetwork/dataset/81f6c556-fef7-42fe-a675-7938b8417f5d/dataquality> a tern:DataQuality ;
+    tern:DQ_descriptionResult "DQ outcome" ;
+    tern:DQ_scopeDescription "data Quality assesment scope" ;
+    tern:DQ_standaloneQualityReport <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Freport.tern.org.au_dq> .
+
+<https://geonetwork-test.tern.org.au/geonetwork/srv/resources/records/81f6c556-fef7-42fe-a675-7938b8417f5d> a dcat:CatalogRecord ;
+    dcterms:conformsTo <https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0> ;
+    dcterms:created "2024-08-02T00:00:00"^^xsd:dateTime ;
+    dcterms:description "Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/" ;
+    dcterms:identifier "81f6c556-fef7-42fe-a675-7938b8417f5d" ;
+    dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    dcterms:modified "2024-12-11T00:00:00"^^xsd:dateTime ;
+    dcterms:source "https://geonetwork-test.tern.org.au/geonetwork/srv/api/records/81f6c556-fef7-42fe-a675-7938b8417f5d/formatters/xml"^^xsd:anyURI ;
+    skos:notation "TERN" ;
+    cnt:characterEncoding "utf8" ;
+    dcat:contactPoint <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    dcat:landingPage "https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/81f6c556-fef7-42fe-a675-7938b8417f5d"^^xsd:anyURI ;
+    foaf:primaryTopic <https://geonetwork-test.tern.org.au/geonetwork/dataset/81f6c556-fef7-42fe-a675-7938b8417f5d> .
+
+<https://geonetwork-test.tern.org.au/geonetwork/srv/resources/records/81f6c556-fef7-42fe-a675-7938b8417f5d/extent> a tern:Extent ;
+    dcterms:temporal [ a dcterms:PeriodOfTime ;
+            dcat:startDate "2024-08-01"^^xsd:date ] ;
+    geo:hasGeometry [ a geo:Geometry ;
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7856> POLYGON((100 -10, 100 -45, 155 -45, 155 -10, 100 -10))"^^geo:wktLiteral ],
+        [ a geo:Geometry ;
+            geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7856> POINT(138 -20)"^^geo:wktLiteral ] ;
+    tern:locationDescription "site description" ;
+    tern:verticalExtent [ a tern:VerticalExtent ;
+            dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/5712> ;
+            tern:maxAltitude 1000.0 ;
+            tern:minAltitude 100.0 ;
+            tern:unit <http://qudt.org/vocab/unit/M> ] .
+
+<https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0> a dcterms:Standard ;
+    dcterms:identifier "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0"^^xsd:anyURI ;
+    dcterms:issued "2010-11-23"^^xsd:date ;
+    dcterms:title "TERN DCAT profile" ;
+    owl:versionInfo "1.0" .
+
+<https://id.biodiversity.org.au/name/apni/51342601> a skos:Concept ;
+    skos:inScheme <http://www.cpbr.gov.au/cgi-bin/apni> ;
+    skos:prefLabel "(Dendrobium pugioniforme A.Cunn. x Dendrobium striolatum Rchb.f.) x Dendrobium pugioniforme A.Cunn." .
+
+<https://id.biodiversity.org.au/name/apni/55784> a skos:Concept ;
+    skos:inScheme <http://www.cpbr.gov.au/cgi-bin/apni> ;
+    skos:prefLabel "Abacopteris Fée" .
+
+<https://linked.data.gov.au/def/anzsrc-for/2020/450501> a skos:Concept ;
+    skos:inScheme <https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc/2020> ;
+    skos:prefLabel "Aboriginal and Torres Strait Islander accounting" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode"^^xsd:anyURI ;
+    skos:prefLabel "topSecret" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode"^^xsd:anyURI ;
+    skos:prefLabel "semimonthly" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode"^^xsd:anyURI ;
+    skos:prefLabel "underDevelopment" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode"^^xsd:anyURI ;
+    skos:prefLabel "dataset" .
+
+<https://vocab.met.no/mmd/ISO_Topic_Category/biota> a skos:Concept ;
+    skos:inScheme <https://vocab.met.no/mmd/ISO_Topic_Category/> ;
+    skos:prefLabel "biota" .
+
+<https://vocab.met.no/mmd/ISO_Topic_Category/elevation> a skos:Concept ;
+    skos:inScheme <https://vocab.met.no/mmd/ISO_Topic_Category/> ;
+    skos:prefLabel "elevation" .
+
+<https://vocab.met.no/mmd/ISO_Topic_Category/society> a skos:Concept ;
+    skos:inScheme <https://vocab.met.no/mmd/ISO_Topic_Category/> ;
+    skos:prefLabel "society" .
+
+<https://w3id.org/tern/resources/0e303039-8346-4ac0-9c43-1bf3de9ba957> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/0e303039-8346-4ac0-9c43-1bf3de9ba957"^^xsd:anyURI ;
+    schema:addressCountry "Denmark" ;
+    schema:addressLocality "Aarhus" ;
+    schema:addressRegion "Central Denmark Region" ;
+    schema:name "Aarhus University" ;
+    schema:postalCode "8000" ;
+    schema:streetAddress "1 Nordre Ringgade, Aarhus, 8000, Central Denmark Region, Denmark" .
+
+<https://w3id.org/tern/resources/18a232f6-233a-4edb-9535-a3f4c2a65ec5> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/a3088b5c-622d-4e25-8a75-4c4961b0dfe8> ;
+    skos:prefLabel "AU-ASM_understorey_oblique-ccfc-1787" .
+
+<https://w3id.org/tern/resources/28bd48c2-f14d-49f4-bda2-e1650f9d6b1a> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/28bd48c2-f14d-49f4-bda2-e1650f9d6b1a"^^xsd:anyURI ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Acton" ;
+    schema:addressRegion "Australian Capital Territory" ;
+    schema:email "help@nci.org.au" ;
+    schema:name "National Computational Infrastructure, Australian National University" ;
+    schema:postalCode "2601" ;
+    schema:streetAddress "10 East Road, Acton, 2601, Australian Capital Territory, Australia" .
+
+<https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812"^^xsd:anyURI ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Varsity Lakes" ;
+    schema:addressRegion "Queensland" ;
+    schema:email "support@3ctech.com.au" ;
+    schema:name "3 Crowns Technologies" ;
+    schema:postalCode "4227" ;
+    schema:streetAddress "Level 2 4218, 194 Varsity Parade, Varsity Lakes, Queensland, 4227, Australia" .
+
+<https://w3id.org/tern/resources/5052465f-9b19-4aa6-94cf-b7cbfa9f9d2d> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/5052465f-9b19-4aa6-94cf-b7cbfa9f9d2d"^^xsd:anyURI ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Black Mountain" ;
+    schema:addressRegion "Australian Capital Territory" ;
+    schema:name "CSIRO Environment" ;
+    schema:postalCode "2601" ;
+    schema:streetAddress "Building 101, Clunies Ross Street, Black Mountain, 2601, Australian Capital Territory, Australia" .
+
+<https://w3id.org/tern/resources/51f26474-b342-49ad-b5b0-155319a3beff> a schema:Person ;
+    dcterms:identifier "https://w3id.org/tern/resources/51f26474-b342-49ad-b5b0-155319a3beff"^^xsd:anyURI ;
+    schema:affiliation <https://w3id.org/tern/resources/0e303039-8346-4ac0-9c43-1bf3de9ba957> ;
+    schema:email "aaron.greenville@sydney.edu.au" ;
+    schema:name "Greenville, Aaron" .
+
+<https://w3id.org/tern/resources/db64f163-2079-4835-80a0-4781731b5fdf> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/db64f163-2079-4835-80a0-4781731b5fdf"^^xsd:anyURI ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Macquarie Park" ;
+    schema:addressRegion "New South Wales" ;
+    schema:name "Canon" ;
+    schema:postalCode "2113" ;
+    schema:streetAddress "5 Talavera Road, Macquarie Park, New South Wales, 2113, Australia" .
+
+<https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc/2020> a skos:ConceptScheme ;
+    dcterms:source "Australian Bureau of Statistics (2020): Australian and New Zealand Standard Research Classification (ANZSRC). https://www.abs.gov.au" ;
+    skos:prefLabel "anzsrc-for" .
+
+<urn:conceptScheme:platform> a tern:ConceptScheme ;
+    skos:prefLabel "platform" .
+
+<urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fdist1.tern.org.au> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fdist1.tern.org.au> ;
+    tern:distributor <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+
+<urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fshared-test.tern.org.au%2Frocrate%2F81f6c556-fef7-42fe-a675-7938b8417f5d%2Fdownload> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fshared-test.tern.org.au%2Frocrate%2F81f6c556-fef7-42fe-a675-7938b8417f5d%2Fdownload> ;
+    tern:distributor <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+
+<urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fwms.tern.org.au> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fwms.tern.org.au> ;
+    tern:distributor <https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812> .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fdist1.tern.org.au> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/FTP> ;
+    dcterms:title "dist1" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess>;
+    rdf:value "https://dist1.tern.org.au"^^xsd:anyURI .
+ 
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fmethod.tern.org.au> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
+    dcterms:title "Method documentation" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
+    rdf:value "https://method.tern.org.au"^^xsd:anyURI .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
+    dcterms:title "online publication" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
+    rdf:value "https://publication1.tern.org.au"^^xsd:anyURI .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication2.tern.org.au> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
+    dcterms:title "online pub 2" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
+    rdf:value "https://publication2.tern.org.au"^^xsd:anyURI .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Freport.tern.org.au_dq> a rdfs:Resource ;
+    dcterms:title "data quality report" ;
+    rdf:value "https://report.tern.org.au"^^xsd:anyURI .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fshared-test.tern.org.au%2Frocrate%2F81f6c556-fef7-42fe-a675-7938b8417f5d%2Fdownload> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download> ;
+    dcterms:title "ro-crate-metadata.json" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
+    rdf:value "https://shared-test.tern.org.au/rocrate/81f6c556-fef7-42fe-a675-7938b8417f5d/download"^^xsd:anyURI .
+
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fwms.tern.org.au> a rdfs:Resource ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/OGC:WMS-1.3.0-http-get-map> ;
+    dcterms:description "dist2" ;
+    dcterms:title "layer_name" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
+    rdf:value "https://wms.tern.org.au"^^xsd:anyURI .
+
+<http://www.cpbr.gov.au/cgi-bin/apni> a skos:ConceptScheme ;
+    dcterms:source "Australian Plant Name Index. IBIS database. Centre for Australian National Biodiversity Research, Australian Government, Canberra. http://www.cpbr.gov.au/cgi-bin/apni" ;
+    skos:prefLabel "apni" .
+
+<https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords> a skos:ConceptScheme ;
+    dcterms:source "Global Change Master Directory (2021): GCMD Keywords. Version 11.3. Greenbelt, MD: Earth Science Data and Information System, Earth Science Projects Division, Goddard Space Flight Center (GSFC) National Aeronautics and Space Administration (NASA). URL (GCMD Keyword Forum Page): https://earthdata.nasa.gov/gcmd-forum" ;
+    skos:prefLabel "gcmd" .
+
+<https://geonetwork-test.tern.org.au/geonetwork/dataset/81f6c556-fef7-42fe-a675-7938b8417f5d> a dcat:Dataset ;
+    dcterms:accrualPeriodicity <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly> ;
+    dcterms:created "2024-08-01"^^xsd:date ;
+    dcterms:creator [ a rdf:Seq ;
+            rdf:_1 <https://w3id.org/tern/resources/51f26474-b342-49ad-b5b0-155319a3beff> ] ;
+    dcterms:identifier "81f6c556-fef7-42fe-a675-7938b8417f5d" ;
+    dcterms:issued "2024-07-03"^^xsd:date ;
+    dcterms:language <http://www.loc.gov/standards/iso639-2/eng> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2024-12-11"^^xsd:date ;
+    dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    dcterms:subject "maps" ;
+    dcterms:title "TEST DCAT 32" ;
+    schema:abstract "abstract" ;
+    schema:creditText "We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment",
+        "specificCitation" ;
+    dcat:contactPoint <https://w3id.org/tern/resources/5052465f-9b19-4aa6-94cf-b7cbfa9f9d2d> ;
+    dcat:distribution <urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fdist1.tern.org.au>,
+        <urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fshared-test.tern.org.au%2Frocrate%2F81f6c556-fef7-42fe-a675-7938b8417f5d%2Fdownload>,
+        <urn:distribution:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fwms.tern.org.au> ;
+    dcat:inSeries <https://geonetwork-test.tern.org.au/geonetwork/dataset/80309ff9-81e2-4854-9378-828564385d09> ;
+    dcat:keyword "additionalKeyword1",
+        "dditionalKeyword2" ;
+    dcat:theme <http://linked.data.gov.au/dataset/ausplots/site-ntabrt0001>,
+        <http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a>,
+        <https://biodiversity.org.au/afd/taxa/%27Ochlerotatus%27_%28%27Finlaya%27%29_biocellatus>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/3b36beea-9637-4213-bdbe-42e878ca14df>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/40e09855-fb48-4a7d-9851-d6e809e6c309>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/cf1f085e-4948-4874-9640-e236fff7bc8d>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/fd29bf77-df38-4b80-8148-8184fa41d843>,
+        <https://gcmd.earthdata.nasa.gov/kms/concept/feef8827-92a6-4d1d-b6a5-ecda38a32656>,
+        <https://id.biodiversity.org.au/name/apni/51342601>,
+        <https://id.biodiversity.org.au/name/apni/55784>,
+        <https://linked.data.gov.au/def/anzsrc-for/2020/450501>,
+        <https://vocab.met.no/mmd/ISO_Topic_Category/biota>,
+        <https://vocab.met.no/mmd/ISO_Topic_Category/elevation>,
+        <https://vocab.met.no/mmd/ISO_Topic_Category/society>,
+        <https://w3id.org/tern/resources/18a232f6-233a-4edb-9535-a3f4c2a65ec5> ;
+    dcat:version "5.0.60" ;
+    dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+            dqv:isMeasurementOf <http://data.europa.eu/930/spatialResolutionAsAngularDistance> ;
+            dqv:value 20.0 ;
+            tern:unit <http://qudt.org/vocab/unit/DEG> ] ;
+    sosa:usedProcedure [ a tern:Method ;
+            dcterms:description "procedure details" ;
+            tern:additionalDocumentation <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fmethod.tern.org.au> ;
+            tern:instructions [ a rdf:Seq ;
+                    rdf:_1 "step1" ;
+                    rdf:_2 "step2" ] ;
+            tern:scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> ] ;
+    tern:additionalDocumentation <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au>,
+        <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication2.tern.org.au> ;
+    tern:coAuthor [ a rdf:Seq ;
+            rdf:_1 <https://orcid.org/0000-0002-0962-5117> ;
+            rdf:_2 <https://w3id.org/tern/resources/28bd48c2-f14d-49f4-bda2-e1650f9d6b1a> ] ;
+    tern:dataQuality <https://geonetwork-test.tern.org.au/geonetwork/dataset/81f6c556-fef7-42fe-a675-7938b8417f5d/dataquality> ;
+    tern:environmentDescription "envDescription" ;
+    tern:funder <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    tern:hasExtent <https://geonetwork-test.tern.org.au/geonetwork/srv/resources/records/81f6c556-fef7-42fe-a675-7938b8417f5d/extent> ;
+    tern:otherConstraints [ a dcterms:RightsStatement ;
+            dcterms:title "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ],
+        [ a dcterms:RightsStatement ;
+            dcterms:title """TERN services are provided on an "as-is" and "as available" basis. Users use any TERN services at their discretion and risk.
+            They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
+            <br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
+            <br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting"""],
+        [ a dcterms:RightsStatement ;
+            dcterms:title "another constraint 1" ],
+        [ a dcterms:RightsStatement ;
+            dcterms:title "another constraint 2" ] ;
+    tern:purpose "purpose" ;
+    tern:resourceSpecificUsage "resource specific" ;
+    tern:securityConstraints <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret> ;
+    tern:supplementalInformation "supplemental info" ;
+    adms:status <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode_underDevelopment> .
+
+<https://orcid.org/0000-0002-0962-5117> a schema:Person ;
+    dcterms:identifier "https://orcid.org/0000-0002-0962-5117"^^xsd:anyURI ;
+    schema:affiliation <https://w3id.org/tern/resources/db64f163-2079-4835-80a0-4781731b5fdf> ;
+    schema:email "carl.gosper@csiro.au" ;
+    schema:name "Gosper, Carl" ;
+    org:orcID <https://orcid.org/0000-0002-0962-5117> .
+
+<http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> a dcterms:Standard ;
+    dcterms:identifier "WWW:LINK-1.0-http--link" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode"^^xsd:anyURI ;
+    skos:prefLabel "fileAccess" .
+
+<https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> a skos:Concept ;
+    dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode"^^xsd:anyURI ;
+    skos:prefLabel "information" .
+
+<https://vocab.met.no/mmd/ISO_Topic_Category/> a skos:ConceptScheme ;
+    skos:prefLabel "topicCategory" .
+
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> a schema:Organization ;
+    dcterms:identifier "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"^^xsd:anyURI ;
+    schema:addressCountry "Australia" ;
+    schema:addressLocality "Indooroopilly" ;
+    schema:addressRegion "QLD" ;
+    schema:email "esupport@tern.org.au" ;
+    schema:name "Terrestrial Ecosystem Research Network" ;
+    schema:postalCode "4068" ;
+    schema:streetAddress "Building 1019, 80 Meiers Rd" ;
+    schema:telephone "+61 7 3365 9097" .
