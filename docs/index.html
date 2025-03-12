@@ -4523,8 +4523,7 @@
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> Vocabulary defining the unit of measurement. </td>
-              <td property="skos:scopeNote"> Units should be defined in the QUDT Unit CV
-                TODO:http://qudt.org/3.0.0/vocab/unit</http:>
+              <td property="skos:scopeNote"> Defined by <a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a>.
               </td>
               <td> </td>
               <td> P </td>
@@ -4676,7 +4675,8 @@
               <td> <a href="#Unit" data-placement="right">Unit</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> The unit of measurement of the vertical extent. </td>
-              <td property="skos:scopeNote"> TODO: uses QUDT CV. </td>
+              <td property="skos:scopeNote"> <a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a> to be used.
+                Preferably represented in <a href="http://qudt.org/vocab/unit/M">Metres</a>. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4803,8 +4803,7 @@
             </td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode">ISO
-                19115-3
-                Maintenance Frequency Code List</a></td>
+                19115-3 Maintenance Frequency Code List</a></td>
             <td></td>
           </tr>
           <tr>
@@ -4817,8 +4816,7 @@
             </td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">ISO
-                19115-3
-                Classification Code List</a></td>
+                19115-3 Classification Code List</a></td>
             <td></td>
           </tr>
           <tr>
@@ -4830,16 +4828,14 @@
               </ul>
             </td>
             <td><a href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ProgressCode">ISO
-                19115-3
-                Progress Code List</a></td>
+                19115-3 Progress Code List</a></td>
             <td></td>
           </tr>
           <tr>
             <td>tern:scope</td>
             <td><a href="#Lineage">Lineage</a></td>
             <td><a href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode">ISO
-                19115-3
-                Scope Code List</a></td>
+                19115-3 Scope Code List</a></td>
             <td></td>
           </tr>
           <tr>
@@ -4847,8 +4843,7 @@
             <td><a href="#Resource">Resource</a></td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">ISO
-                19115-3
-                Online Function Code List</a></td>
+                19115-3 Online Function Code List</a></td>
             <td></td>
           </tr>
           <tr>
@@ -4903,8 +4898,8 @@
       </table>
 
       <p>In the table below, a number of properties are listed with controlled vocabularies that <em>MAY</em> be used
-        for the listed properties. The declaration of the following
-        controlled vocabularies as recommended stimulates interoperability.</p>
+        for the listed properties. Notice that the following vocabularies may be only useful in regards to Ecological
+        Datasets holded by [[TERN]]. </p>
 
       <table id="table-cv2" class="simple">
         <thead>
@@ -5033,7 +5028,7 @@
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
             <td> <code>rdfs:Literal</code> </td>
-            <td>See <a href="#resource-id-desc">Resource identifier</a> </td>
+            <td>See <a href="#resource-id-desc">Resource identifier</a>. </td>
           </tr>
 
           <tr>
@@ -5050,7 +5045,7 @@
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
             <td> <code>rdfs:Literal</code> </td>
-            <td>See <a href="#resource-id-desc">Resource decription</a> </td>
+            <td>See <a href="#resource-id-desc">Resource decription</a>. </td>
           </tr>
 
           <tr>
@@ -5070,9 +5065,7 @@
               <p> <code>rdfs:Resource</code> </p>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>Metadata in TERN_DCAT are always in UTF-8. See <a href="#resource-locale">Resource
-                locale</a>
-            </td>
+            <td>See <a href="#resource-locale">Resource locale</a>. </td>
           </tr>
 
           <tr>
@@ -5087,7 +5080,8 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-locale">Resource locale</a> </td>
+            <td>See <a href="#resource-locale">Resource locale</a>. Metadata in TERN-DCAT should be always in UTF-8.
+            </td>
           </tr>
 
           <tr>
@@ -5102,7 +5096,7 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-parent">Parent Metadata</a> </td>
+            <td>See <a href="#resource-parent">Parent metadata</a>. </td>
           </tr>
 
           <tr>
@@ -5117,7 +5111,7 @@
             <td>
               <p> <code>rdfs:Literal</code> </p>
             </td>
-            <td>See <a href="#resource-parent">Parent Metadata</a> </td>
+            <td>See <a href="#resource-parent">Parent metadata</a>. </td>
           </tr>
 
           <tr>
@@ -5126,13 +5120,9 @@
               <p> <code>MD_Metadata.metadataScope > MD_MetadataScope.resourceScope</code> </p>
             </td>
             <td> N/A </td>
-            <td>
-              <p> <code>dcat:Dataset</code> </p>
-            </td>
-            <td>
-              <p> N/A </p>
-            </td>
-            <td> All resources are under the "dataset" scope. </td>
+            <td> N/A </td>
+            <td> N/A </td>
+            <td> All metadata resources are "dataset". </td>
           </tr>
 
           <tr>
@@ -5150,7 +5140,7 @@
             <td>
               <p> <code>rdfs:Literal (xsd:date / xsd:dateTime)</code> </p>
             </td>
-            <td>See <a href="#resource-catalogue-record-dates" class="sec-ref">Catalogue Record Dates</a> </td>
+            <td>See <a href="#resource-catalogue-record-dates" class="sec-ref">Metadata dates</a>. </td>
           </tr>
 
           <tr>
@@ -5204,7 +5194,7 @@
             <td>
               <p> <code>rdfs:Literal (xsd:anyURI)</code> </p>
             </td>
-            <td>See <a href="#resource-catalogue-record-source">Catalogue Record source</a>. </td>
+            <td>See <a href="#resource-catalogue-record-source">Metadata linkage</a>. </td>
           </tr>
 
           <tr>
@@ -5222,7 +5212,7 @@
               <p> <code>schema:Person / schema:Organization</code> </p>
             </td>
             <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
-                contact</a> and the following example: <a href="#ex-mapping-metadata-record-contact">Record contact</a>
+                contact</a>. Example <a href="#ex-mapping-metadata-record-contact">Record contact</a>.
             </td>
           </tr>
 
@@ -5242,13 +5232,13 @@
             <td>
               <p> <code>skos:Concept</code> </p>
             </td>
-            <td>See <a href="#resource-metadata-crs">Coordinate reference systems</a> and the following <a
-                href="#ex-mapping-crs-geodetic">Example</a></td>
+            <td>See <a href="#resource-metadata-crs">Reference system info</a>. Example <a
+                href="#ex-mapping-crs-geodetic">Geodetic</a>.</td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset identifier (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) identifier (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo &gt; citation.identifier</code>
               </p>
@@ -5260,12 +5250,12 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a href="#ex-mapping-dataset-uri">Unique
-                Resource Identifier</a> </td>
+                Resource identifier</a>. </td>
           </tr>
 
           <tr>
             <td>
-              <p>Metadata title (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) title (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo &gt; citation.title</code>
               </p>
@@ -5277,13 +5267,13 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-title">Title</a>
+                href="#ex-mapping-dataset-title">Title</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - publication</p>
+              <p>Resource (Dataset) reference date (<abbr title="mandatory">M</abbr>) - publication</p>
               <p>
                 <code>MD_Metadata.identificationInfo > citation.date (datetype = 'publication')</code>
               </p>
@@ -5295,13 +5285,13 @@
             </td>
             <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-dates">Dates</a>
+                href="#ex-mapping-dataset-dates">Dates</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - revision</p>
+              <p>Resource (Dataset) reference date (<abbr title="mandatory">M</abbr>) - revision</p>
               <p>
                 <code>MD_Metadata.identificationInfo > citation.date (datetype = 'revision')</code>
               </p>
@@ -5313,13 +5303,13 @@
             </td>
             <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-dates">Dates</a>
+                href="#ex-mapping-dataset-dates">Dates</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset reference date (<abbr title="mandatory">M</abbr>) - creation</p>
+              <p>Resource (Dataset) reference date (<abbr title="mandatory">M</abbr>) - creation</p>
               <p>
                 <code>MD_Metadata.identificationInfo > citation.date (datetype = 'creation')</code>
               </p>
@@ -5331,13 +5321,13 @@
             </td>
             <td> <a href="#TemporalLiteral">Temporal Literal</a> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-dates">Dates</a>
+                href="#ex-mapping-dataset-dates">Dates</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset version (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) version (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > citation.edition</code>
               </p>
@@ -5349,7 +5339,7 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-version">Version</a>
+                href="#ex-mapping-dataset-version">Version</a>.
             </td>
           </tr>
 
@@ -5376,14 +5366,14 @@
               <p><code>schema:Organization</code></p>
             </td>
             <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
-                contact</a> and the following example: <a href="#ex-mapping-metadata-responsible-party">Responsible
-                parties</a>
+                contact</a>. Example <a href="#ex-mapping-metadata-responsible-party">Responsible
+                parties</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset abstract (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) abstract (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > abstract</code>
               </p>
@@ -5395,13 +5385,13 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-abstract">Abstract</a>
+                href="#ex-mapping-dataset-abstract">Abstract</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset purpose (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) purpose (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > purpose</code>
               </p>
@@ -5413,13 +5403,13 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-purpose">Purpose</a>
+                href="#ex-mapping-dataset-purpose">Purpose</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset credit text (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) credit text (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > credit</code>
               </p>
@@ -5431,13 +5421,13 @@
             </td>
             <td> <code>rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-credit">CreditText</a>
+                href="#ex-mapping-dataset-credit">Credit text</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset status (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) status (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > status</code>
               </p>
@@ -5449,13 +5439,13 @@
             </td>
             <td> <code>skos:Concept</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-status">Status</a>
+                href="#ex-mapping-dataset-status">Status</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset point of contact (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) point of contact (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > pointOfContact</code>
               </p>
@@ -5470,13 +5460,13 @@
               <p><code>schema:Organization</code></p>
             </td>
             <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
-                contact</a> and the following example: <a href="#ex-mapping-metadata-contact">Contact Point</a>
+                contact</a>. Example <a href="#ex-mapping-metadata-contact">Contact point</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset topic category (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) topic category (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > topicCategory</code>
               </p>
@@ -5488,13 +5478,13 @@
             </td>
             <td> <code>skos:Concept</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-themes-topicCategory">Topic category</a>
+                href="#ex-mapping-dataset-themes-topicCategory">Topic category</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset geographic description (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) geographic description (<abbr title="mandatory">M</abbr>)</p>
               <p> <code>MD_Metadata.identificationInfo > extent.description</code> </p>
             </td>
             <td> <code>tern:locationDescription</code> </td>
@@ -5502,14 +5492,14 @@
               <p> <code>tern:Extent</code> </p>
             </td>
             <td> <code>rdfs:Literal</code> </td>
-            <td>See <a href="#resource-dataset-extent">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-extent-description">Location description</a>
+            <td>See <a href="#resource-dataset-resource-extent">Extent</a>. Example <a
+                href="#ex-mapping-dataset-extent-description">Location description</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset geographic coverage (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) geographic coverage (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > extent.geographicElement.westBoundLongitude</code>
               </p>
@@ -5528,14 +5518,14 @@
               <p> <code>tern:Extent > geo:Geometry</code> </p>
             </td>
             <td> <code>rdfs:Literal (geo:wktLiteral)</code> </td>
-            <td>See <a href="#resource-dataset-extent">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-extent-location">Geographical coverage</a>
+            <td>See <a href="#resource-dataset-resource-extent">Extent</a>. Example <a
+                href="#ex-mapping-dataset-extent-location">Geographical coverage</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset temporal coverage (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) temporal coverage (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > extent.temporalElement.extent.beginPosition</code>
               </p>
@@ -5548,14 +5538,14 @@
               <p> <code>tern:Extent > dcterms:PeriodOfTime</code> </p>
             </td>
             <td> <code>rdfs:Literal (xsd:date / xsd:dateTime)</code> </td>
-            <td>See <a href="#resource-dataset-extent">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-extent-temporal">Temporal coverage</a>
+            <td>See <a href="#resource-dataset-resource-extent">Extent</a>. Example <a
+                href="#ex-mapping-dataset-extent-temporal">Temporal coverage</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset vertical extent (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) vertical extent (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > extent.verticalElement.minimumValue</code>
               </p>
@@ -5571,15 +5561,15 @@
               <p> <code>tern:Extent</code> </p>
             </td>
             <td> <code>tern:VerticalExtent</code> </td>
-            <td>See <a href="#resource-dataset-extent">Dataset</a>. Example <a
+            <td>See <a href="#resource-dataset-resource-extent">Extent</a>. Example <a
                 href="#ex-mapping-dataset-extent-vertical">Vertical extent</a> and <a
-                href="#ex-mapping-crs-vertical">Vertical CRS</a>
+                href="#ex-mapping-crs-vertical">Vertical CRS</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset maintenance and update frequency (<abbr title="recommended">R</abbr>)</p>
+              <p>Resource (Dataset) maintenance and update frequency (<abbr title="recommended">R</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > resourceMaintenance.maintenanceAndUpdateFrequency</code>
               </p>
@@ -5591,13 +5581,13 @@
             </td>
             <td> <code>skos:Concept</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-maintenance-freq">Maitenance frequency</a>
+                href="#ex-mapping-dataset-maintenance-freq">Maitenance frequency</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset descriptive keywords (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) descriptive keywords (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > descriptiveKeywords</code>
               </p>
@@ -5609,13 +5599,13 @@
             </td>
             <td> <code>skos:Concept / rdfs:Literal</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-themes">Themes</a> or <a href="#ex-mapping-dataset-keywords">Keywords</a>
+                href="#ex-mapping-dataset-themes">Themes</a> or <a href="#ex-mapping-dataset-keywords">Keywords</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset access constraints (<abbr title="mandatory">M</abbr>)</p>
+              <p>Resource (Dataset) access constraints (<abbr title="mandatory">M</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints</code>
               </p>
@@ -5627,13 +5617,13 @@
             </td>
             <td> <code>dcterms:LicenseDocument</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-licence">Licence</a>
+                href="#ex-mapping-dataset-licence">Licence</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset security constraints (<abbr title="recommended">R</abbr>)</p>
+              <p>Resource (Dataset) security constraints (<abbr title="recommended">R</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > resourceConstraints.MD_SecurityConstraints</code>
               </p>
@@ -5645,13 +5635,13 @@
             </td>
             <td> <code>skos:Concept</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-security">Security constraints</a>
+                href="#ex-mapping-dataset-security">Security constraints</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset other constraints (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) other constraints (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.otherConstraints</code>
               </p>
@@ -5663,13 +5653,13 @@
             </td>
             <td> <code>dcterms:RightsStatement</code> </td>
             <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-otherConstraints">Other constraints</a>
+                href="#ex-mapping-dataset-otherConstraints">Other constraints</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Resource transfer options (<abbr title="optional">O</abbr>)</p>
+              <p>Distribution transfer options (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.distributionInfo > transferOptions.MD_DigitalTransferOptions</code>
               </p>
@@ -5697,13 +5687,13 @@
               <p> <code>schema:Organization</code> </p>
             </td>
             <td>See <a href="#resource-metadata-parties">Responsible party and metadata point of
-                contact</a> and the following example: <a href="#ex-mapping-metadata-distributor">Distributor</a>
+                contact</a>. Example <a href="#ex-mapping-metadata-distributor">Distributor</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset data quality (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) data quality (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.dataQualityInfo</code>
               </p>
@@ -5714,14 +5704,13 @@
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
             <td> <code>tern:DataQuality</code> </td>
-            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-dataquality">Data Quality</a>
+            <td>See <a href="#resource-dataset-resource-quality">Data quality</a>.
             </td>
           </tr>
 
           <tr>
             <td>
-              <p>Dataset data lineage (<abbr title="optional">O</abbr>)</p>
+              <p>Resource (Dataset) data lineage (<abbr title="optional">O</abbr>)</p>
               <p>
                 <code>MD_Metadata.resourceLineage</code>
               </p>
@@ -5731,9 +5720,8 @@
               <p> <code>dcat:Dataset</code> </p>
               <p> <code>dcat:DatasetSeries</code> </p>
             </td>
-            <td> <code>tern:MEthod</code> </td>
-            <td>See <a href="#resource-dataset-resource">Dataset</a>. Example <a
-                href="#ex-mapping-dataset-lineage">Lineage</a>
+            <td> <code>tern:Method</code> </td>
+            <td> See <a href="#resource-dataset-resource-lineage">Lineage</a>.
             </td>
           </tr>
 
@@ -5750,7 +5738,7 @@
 
       <section id="resource-id-desc">
         <h4>Resource identifier and description</h4>
-
+        <p>Unique identifier for this metadata file.</p>
         <p>The content of the element 'resource identifier' and 'resource description' can be represented in RDF as a
           plain literal, and by using properties <code>dcterms:identifier</code> and <code>dcterms:description</code>,
           respectively.</p>
@@ -5808,6 +5796,7 @@
       <section id="resource-locale">
         <h4>Resource locale</h4>
 
+        <p>Language and character set used for documenting metadata.</p>
         <p>The content of the element 'resource language' and 'resource encoding' can be represented in RDF as a plain
           literal, and by using properties <code>dcterms:lenguage</code> and <code>cnt:characterEncoding</code>,
           respectively.</p>
@@ -5847,8 +5836,8 @@
       </section>
 
       <section id="resource-parent">
-        <h4>Parent Metadata</h4>
-
+        <h4>Parent metadata</h4>
+        <p>Identification of the parent metadata record.</p>
         <p>The content of the element 'parent metadata' can be represented in RDF as a plain
           literals, and by using properties <code>dcterms:identifier</code> and <code>dcterms:title</code></p>
 
@@ -5895,8 +5884,9 @@
       </section>
 
       <section id="resource-catalogue-record-dates">
-        <h4>Catalogue Record dates</h4>
-
+        <h4>Metadata dates</h4>
+        <p>Date(s) associated with the metadata. NOTE Creation” date should always be provided, others can also be
+          provided.</p>
         <p>The content of the element 'metadata dateInfo' can be represented in RDF as plain
           literals, and by using properties <code>dcterms:created</code> and <code>dcterms:modified</code>.</p>
 
@@ -5941,10 +5931,12 @@
       </section>
 
       <section id="resource-metadata-standard">
-        <h4>Metadata Standard</h4>
+        <h4>Metadata standard</h4>
 
+        <p>Citation for the standard to which the metadata conforms. NOTE Metadata standard citations should include an
+          identifier.</p>
         <p>TERN-DCAT uses <code>dcterms:conformsTo</code> to specify the metadata standard. This pattern is illustrated
-          in the following table.</p>
+          in the following table:</p>
 
         <table id="table-mapping-metadata-standard" class="simple">
           <thead>
@@ -5998,8 +5990,9 @@
       </section>
 
       <section id="resource-catalogue-record-source">
-        <h4>Catalogue Record source</h4>
+        <h4>Metadata linkage</h4>
 
+        <p>Online location where the metadata is available.</p>
         <p>The content of the element 'metadata linkage' can be represented in RDF as a plain
           literal, and by using property <code>dcterms:source</code>.</p>
 
@@ -6594,9 +6587,11 @@
       </section>
 
       <section id="resource-metadata-crs">
-        <h4>Coordinate reference system</h4>
+        <h4>Reference system info</h4>
 
-        <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the TBD vocabs.</p>
+        <p>Description of the spatial and temporal reference systems used in the dataset.</p>
+        <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the [[OGC-EPSG]] controlled
+          vocabulary.</p>
 
         <aside class="example" id="ex-mapping-crs-geodetic" title="Geodetic CRS">
           <p>Resource metadata in TERN-DCAT:</p>
@@ -6700,7 +6695,7 @@
       <section id="resource-dataset-resource">
         <h4>Dataset resource</h4>
 
-        <p>This section describes the Dataset (or DatasetSeries) resource.</p>
+        <p>Basic information about the resource(s) (Dataset / DatasetSeries) to which the metadata applies.</p>
 
         <aside class="example" id="ex-mapping-dataset-uri" title="Dataset unique identifier">
           <p>Resource metadata in TERN-DCAT:</p>
@@ -7305,9 +7300,13 @@
           </pre>
         </aside>
 
-        <aside class="example" id="ex-mapping-dataset-dataquality" title="Dataset data quality">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
+        <section id="resource-dataset-resource-quality">
+          <h4>Data quality info</h4>
+
+          <p>Provides overall assessment of quality of a resource(s).</p>
+          <aside class="example" id="ex-mapping-dataset-dataquality" title="Dataset data quality">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
                 tern:dataQuality &lt;ex_dataquality_1&gt; ;
             
@@ -7321,8 +7320,8 @@
                 rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
           </pre>
 
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:dataQualityInfo&gt;
@@ -7378,11 +7377,16 @@
                 ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>
-        </aside>
+          </aside>
+        </section>
 
-        <aside class="example" id="ex-mapping-dataset-lineage" title="Dataset lineage">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
+        <section id="resource-dataset-resource-lineage">
+          <h4>Resource lineage</h4>
+
+          <p>Information about the provenance, source(s), and/or the production process(es) applied to the resource.</p>
+          <aside class="example" id="ex-mapping-dataset-lineage" title="Dataset lineage">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
                 sosa:usedProcedure  &lt;ex_lineage_1&gt; ;
 
@@ -7412,8 +7416,8 @@
                 dcterms:identifier &quot;WWW:LINK-1.0-http--link&quot; .
           </pre>
 
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
             &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:resourceLineage&gt;
@@ -7471,203 +7475,203 @@
                 ...
             &lt;/gmd:MD_Metadata&gt;
           </pre>
-        </aside>
+          </aside>
+        </section>
 
-      </section>
+        <section id="resource-dataset-resource-extent">
+          <h4>Geographic and temporal coverage</h4>
+          <p>Digital representation of spatial information in the dataset.</p>
 
-      <section id="resource-dataset-extent">
-        <h4>Geographic and temporal coverage</h4>
+          <aside class="example" id="ex-mapping-dataset-extent-description" title="Location description">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:hasExtent &lt;ex_extent_1&gt; ;
+              
+              &lt;ex_extent_1&gt; a tern:Extent ;
+                  tern:locationDescription &quot;Approximately 62 km South West of Pine Creek, Northern Territory.&quot; ;
+            </pre>
 
-        <!-- <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the TBD vocabs.</p> -->
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
+              &lt;gmd:MD_Metadata&gt;
+                  ...
+                  &lt;mdb:identificationInfo&gt;
+                      &lt;mri:MD_DataIdentification&gt;
+                          ...       
+                          &lt;mri:extent&gt;
+                              &lt;gex:EX_Extent&gt;
+                                  &lt;gex:description&gt;
+                                      &lt;gco:CharacterString&gt;Approximately 62 km South West of Pine Creek, Northern Territory.&lt;/gco:CharacterString&gt;
+                                  &lt;/gex:description&gt;                    
+                              &lt;/gex:EX_Extent&gt;
+                          &lt;/mri:extent&gt;
+                          ...
+                      &lt;/mri:MD_DataIdentification&gt;
+                  &lt;/mdb:identificationInfo&gt;
+                  ...
+              &lt;/gmd:MD_Metadata&gt;
+            </pre>
+          </aside>
 
-        <aside class="example" id="ex-mapping-dataset-extent-description" title="Location description">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                tern:hasExtent &lt;ex_extent_1&gt; ;
-            
-            &lt;ex_extent_1&gt; a tern:Extent ;
-                tern:locationDescription &quot;Approximately 62 km South West of Pine Creek, Northern Territory.&quot; ;
-          </pre>
+          <aside class="example" id="ex-mapping-dataset-extent-location" title="Geographic coverage">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:hasExtent &lt;ex_extent_1&gt; ;
+  
+              &lt;ex_extent_1&gt; a tern:Extent ;
+                  geo:hasGeometry [ a geo:Geometry ;
+                      geo:asWKT &quot;&lt;http://www.opengis.net/def/crs/EPSG/0/4326&gt; POINT(131.3181 -14.0633)&quot;^^geo:wktLiteral ] ;
+            </pre>
 
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
-                ...
-                &lt;mdb:identificationInfo&gt;
-                    &lt;mri:MD_DataIdentification&gt;
-                        ...       
-                        &lt;mri:extent&gt;
-                            &lt;gex:EX_Extent&gt;
-                                &lt;gex:description&gt;
-                                    &lt;gco:CharacterString&gt;Approximately 62 km South West of Pine Creek, Northern Territory.&lt;/gco:CharacterString&gt;
-                                &lt;/gex:description&gt;                    
-                            &lt;/gex:EX_Extent&gt;
-                        &lt;/mri:extent&gt;
-                        ...
-                    &lt;/mri:MD_DataIdentification&gt;
-                &lt;/mdb:identificationInfo&gt;
-                ...
-            &lt;/gmd:MD_Metadata&gt;
-          </pre>
-        </aside>
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
+              &lt;gmd:MD_Metadata&gt;
+                  ...
+                  &lt;mdb:identificationInfo&gt;
+                      &lt;mri:MD_DataIdentification&gt;
+                          ...       
+                          &lt;mri:extent&gt;
+                              &lt;gex:EX_Extent&gt;
+                                  &lt;gex:geographicElement&gt;
+                                      &lt;gex:EX_GeographicBoundingBox&gt;
+                                          &lt;gex:westBoundLongitude&gt;
+                                              &lt;gco:Decimal&gt;131.3181&lt;/gco:Decimal&gt;
+                                          &lt;/gex:westBoundLongitude&gt;
+                                          &lt;gex:eastBoundLongitude&gt;
+                                              &lt;gco:Decimal&gt;131.3181&lt;/gco:Decimal&gt;
+                                          &lt;/gex:eastBoundLongitude&gt;
+                                          &lt;gex:southBoundLatitude&gt;
+                                              &lt;gco:Decimal&gt;-14.0633&lt;/gco:Decimal&gt;
+                                          &lt;/gex:southBoundLatitude&gt;
+                                          &lt;gex:northBoundLatitude&gt;
+                                              &lt;gco:Decimal&gt;-14.0633&lt;/gco:Decimal&gt;
+                                          &lt;/gex:northBoundLatitude&gt;
+                                      &lt;/gex:EX_GeographicBoundingBox&gt;
+                                  &lt;/gex:geographicElement&gt;                    
+                              &lt;/gex:EX_Extent&gt;
+                          &lt;/mri:extent&gt;
+                          ...
+                      &lt;/mri:MD_DataIdentification&gt;
+                  &lt;/mdb:identificationInfo&gt;
+                  ...
+              &lt;/gmd:MD_Metadata&gt;
+            </pre>
+          </aside>
 
-        <aside class="example" id="ex-mapping-dataset-extent-location" title="Geographic coverage">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                tern:hasExtent &lt;ex_extent_1&gt; ;
+          <aside class="example" id="ex-mapping-dataset-extent-temporal" title="Temporal coverage">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:hasExtent &lt;ex_extent_1&gt; ;
+  
+              &lt;ex_extent_1&gt; a tern:Extent ;
+                  dcterms:temporal [ a dcterms:PeriodOfTime ;
+                      dcat:endDate &quot;2013-09-08&quot;^^xsd:date ;
+                      dcat:startDate &quot;2008-01-01&quot;^^xsd:date ] ;
+            </pre>
 
-            &lt;ex_extent_1&gt; a tern:Extent ;
-                geo:hasGeometry [ a geo:Geometry ;
-                    geo:asWKT &quot;&lt;http://www.opengis.net/def/crs/EPSG/0/4326&gt; POINT(131.3181 -14.0633)&quot;^^geo:wktLiteral ] ;
-          </pre>
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
+              &lt;gmd:MD_Metadata&gt;
+                  ...
+                  &lt;mdb:identificationInfo&gt;
+                      &lt;mri:MD_DataIdentification&gt;
+                          ...       
+                          &lt;mri:extent&gt;
+                              &lt;gex:EX_Extent&gt;
+                                  &lt;gex:temporalElement&gt;
+                                      &lt;gex:EX_TemporalExtent&gt;
+                                          &lt;gex:extent&gt;
+                                              &lt;gml:TimePeriod&gt;
+                                                  &lt;gml:beginPosition&gt;2008-01-01&lt;/gml:beginPosition&gt;
+                                                  &lt;gml:endPosition&gt;2013-09-08&lt;/gml:endPosition&gt;
+                                              &lt;/gml:TimePeriod&gt;
+                                          &lt;/gex:extent&gt;
+                                      &lt;/gex:EX_TemporalExtent&gt;
+                                  &lt;/gex:temporalElement&gt;
+                              &lt;/gex:EX_Extent&gt;
+                          &lt;/mri:extent&gt;
+                          ...
+                      &lt;/mri:MD_DataIdentification&gt;
+                  &lt;/mdb:identificationInfo&gt;
+                  ...
+              &lt;/gmd:MD_Metadata&gt;
+            </pre>
+          </aside>
 
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
-                ...
-                &lt;mdb:identificationInfo&gt;
-                    &lt;mri:MD_DataIdentification&gt;
-                        ...       
-                        &lt;mri:extent&gt;
-                            &lt;gex:EX_Extent&gt;
-                                &lt;gex:geographicElement&gt;
-                                    &lt;gex:EX_GeographicBoundingBox&gt;
-                                        &lt;gex:westBoundLongitude&gt;
-                                            &lt;gco:Decimal&gt;131.3181&lt;/gco:Decimal&gt;
-                                        &lt;/gex:westBoundLongitude&gt;
-                                        &lt;gex:eastBoundLongitude&gt;
-                                            &lt;gco:Decimal&gt;131.3181&lt;/gco:Decimal&gt;
-                                        &lt;/gex:eastBoundLongitude&gt;
-                                        &lt;gex:southBoundLatitude&gt;
-                                            &lt;gco:Decimal&gt;-14.0633&lt;/gco:Decimal&gt;
-                                        &lt;/gex:southBoundLatitude&gt;
-                                        &lt;gex:northBoundLatitude&gt;
-                                            &lt;gco:Decimal&gt;-14.0633&lt;/gco:Decimal&gt;
-                                        &lt;/gex:northBoundLatitude&gt;
-                                    &lt;/gex:EX_GeographicBoundingBox&gt;
-                                &lt;/gex:geographicElement&gt;                    
-                            &lt;/gex:EX_Extent&gt;
-                        &lt;/mri:extent&gt;
-                        ...
-                    &lt;/mri:MD_DataIdentification&gt;
-                &lt;/mdb:identificationInfo&gt;
-                ...
-            &lt;/gmd:MD_Metadata&gt;
-          </pre>
-        </aside>
+          <aside class="example" id="ex-mapping-dataset-extent-vertical" title="Vertical extent">
+            <p>Resource metadata in TERN-DCAT:</p>
+            <pre class="turtle">
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:hasExtent &lt;ex_extent_1&gt; ;
+  
+              &lt;ex_extent_1&gt; a tern:Extent ;
+                  tern:verticalExtent [ a tern:VerticalExtent ;
+                          dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
+                          tern:maxAltitude 1000.0 ;
+                          tern:minAltitude 100.0 ;
+                          tern:unit &lt;http://qudt.org/vocab/unit/M&gt; ] .
+            </pre>
 
-        <aside class="example" id="ex-mapping-dataset-extent-temporal" title="Temporal coverage">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                tern:hasExtent &lt;ex_extent_1&gt; ;
+            <p>Resource metadata in ISO 19115-3:</p>
+            <pre class="xml">
+              &lt;gmd:MD_Metadata&gt;
+                  ...
+                  &lt;mdb:identificationInfo&gt;
+                      &lt;mri:MD_DataIdentification&gt;
+                          ...       
+                          &lt;mri:extent&gt;
+                              &lt;gex:EX_Extent&gt;
+                                  &lt;gex:verticalElement&gt;
+                                      &lt;gex:EX_VerticalExtent&gt;
+                                          &lt;gex:minimumValue&gt;
+                                              &lt;gco:Real&gt;100&lt;/gco:Real&gt;
+                                          &lt;/gex:minimumValue&gt;
+                                          &lt;gex:maximumValue&gt;
+                                              &lt;gco:Real&gt;1000&lt;/gco:Real&gt;
+                                          &lt;/gex:maximumValue&gt;
+                                          &lt;gex:verticalCRSId&gt;
+                                              &lt;mrs:MD_ReferenceSystem&gt;
+                                                  &lt;mrs:referenceSystemIdentifier&gt;
+                                                      &lt;mcc:MD_Identifier&gt;
+                                                          &lt;mcc:code&gt;
+                                                              &lt;gco:CharacterString&gt;EPSG:5712&lt;/gco:CharacterString&gt;
+                                                          &lt;/mcc:code&gt;
+                                                          &lt;mcc:codeSpace&gt;
+                                                              &lt;gco:CharacterString&gt;EPSG&lt;/gco:CharacterString&gt;
+                                                          &lt;/mcc:codeSpace&gt;
+                                                          &lt;mcc:description&gt;
+                                                              &lt;gco:CharacterString&gt;WGS-84&lt;/gco:CharacterString&gt;
+                                                          &lt;/mcc:description&gt;
+                                                      &lt;/mcc:MD_Identifier&gt;
+                                                  &lt;/mrs:referenceSystemIdentifier&gt;
+                                                  &lt;mrs:referenceSystemType&gt;
+                                                      &lt;mrs:MD_ReferenceSystemTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode&quot; codeListValue=&quot;geodeticGeographic3D&quot;/&gt;
+                                                  &lt;/mrs:referenceSystemType&gt;
+                                              &lt;/mrs:MD_ReferenceSystem&gt;
+                                          &lt;/gex:verticalCRSId&gt;
+                                      &lt;/gex:EX_VerticalExtent&gt;
+                                  &lt;/gex:verticalElement&gt;
+                              &lt;/gex:EX_Extent&gt;
+                          &lt;/mri:extent&gt;
+                          ...
+                      &lt;/mri:MD_DataIdentification&gt;
+                  &lt;/mdb:identificationInfo&gt;
+                  ...
+              &lt;/gmd:MD_Metadata&gt;
+            </pre>
+          </aside>
 
-            &lt;ex_extent_1&gt; a tern:Extent ;
-                dcterms:temporal [ a dcterms:PeriodOfTime ;
-                    dcat:endDate &quot;2013-09-08&quot;^^xsd:date ;
-                    dcat:startDate &quot;2008-01-01&quot;^^xsd:date ] ;
-          </pre>
-
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
-                ...
-                &lt;mdb:identificationInfo&gt;
-                    &lt;mri:MD_DataIdentification&gt;
-                        ...       
-                        &lt;mri:extent&gt;
-                            &lt;gex:EX_Extent&gt;
-                                &lt;gex:temporalElement&gt;
-                                    &lt;gex:EX_TemporalExtent&gt;
-                                        &lt;gex:extent&gt;
-                                            &lt;gml:TimePeriod&gt;
-                                                &lt;gml:beginPosition&gt;2008-01-01&lt;/gml:beginPosition&gt;
-                                                &lt;gml:endPosition&gt;2013-09-08&lt;/gml:endPosition&gt;
-                                            &lt;/gml:TimePeriod&gt;
-                                        &lt;/gex:extent&gt;
-                                    &lt;/gex:EX_TemporalExtent&gt;
-                                &lt;/gex:temporalElement&gt;
-                            &lt;/gex:EX_Extent&gt;
-                        &lt;/mri:extent&gt;
-                        ...
-                    &lt;/mri:MD_DataIdentification&gt;
-                &lt;/mdb:identificationInfo&gt;
-                ...
-            &lt;/gmd:MD_Metadata&gt;
-          </pre>
-        </aside>
-
-        <aside class="example" id="ex-mapping-dataset-extent-vertical" title="Vertical extent">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                tern:hasExtent &lt;ex_extent_1&gt; ;
-
-            &lt;ex_extent_1&gt; a tern:Extent ;
-                tern:verticalExtent [ a tern:VerticalExtent ;
-                        dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
-                        tern:maxAltitude 1000.0 ;
-                        tern:minAltitude 100.0 ;
-                        tern:unit &lt;http://qudt.org/vocab/unit/M&gt; ] .
-          </pre>
-
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
-                ...
-                &lt;mdb:identificationInfo&gt;
-                    &lt;mri:MD_DataIdentification&gt;
-                        ...       
-                        &lt;mri:extent&gt;
-                            &lt;gex:EX_Extent&gt;
-                                &lt;gex:verticalElement&gt;
-                                    &lt;gex:EX_VerticalExtent&gt;
-                                        &lt;gex:minimumValue&gt;
-                                            &lt;gco:Real&gt;100&lt;/gco:Real&gt;
-                                        &lt;/gex:minimumValue&gt;
-                                        &lt;gex:maximumValue&gt;
-                                            &lt;gco:Real&gt;1000&lt;/gco:Real&gt;
-                                        &lt;/gex:maximumValue&gt;
-                                        &lt;gex:verticalCRSId&gt;
-                                            &lt;mrs:MD_ReferenceSystem&gt;
-                                                &lt;mrs:referenceSystemIdentifier&gt;
-                                                    &lt;mcc:MD_Identifier&gt;
-                                                        &lt;mcc:code&gt;
-                                                            &lt;gco:CharacterString&gt;EPSG:5712&lt;/gco:CharacterString&gt;
-                                                        &lt;/mcc:code&gt;
-                                                        &lt;mcc:codeSpace&gt;
-                                                            &lt;gco:CharacterString&gt;EPSG&lt;/gco:CharacterString&gt;
-                                                        &lt;/mcc:codeSpace&gt;
-                                                        &lt;mcc:description&gt;
-                                                            &lt;gco:CharacterString&gt;WGS-84&lt;/gco:CharacterString&gt;
-                                                        &lt;/mcc:description&gt;
-                                                    &lt;/mcc:MD_Identifier&gt;
-                                                &lt;/mrs:referenceSystemIdentifier&gt;
-                                                &lt;mrs:referenceSystemType&gt;
-                                                    &lt;mrs:MD_ReferenceSystemTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ReferenceSystemTypeCode&quot; codeListValue=&quot;geodeticGeographic3D&quot;/&gt;
-                                                &lt;/mrs:referenceSystemType&gt;
-                                            &lt;/mrs:MD_ReferenceSystem&gt;
-                                        &lt;/gex:verticalCRSId&gt;
-                                    &lt;/gex:EX_VerticalExtent&gt;
-                                &lt;/gex:verticalElement&gt;
-                            &lt;/gex:EX_Extent&gt;
-                        &lt;/mri:extent&gt;
-                        ...
-                    &lt;/mri:MD_DataIdentification&gt;
-                &lt;/mdb:identificationInfo&gt;
-                ...
-            &lt;/gmd:MD_Metadata&gt;
-          </pre>
-        </aside>
+        </section>
 
       </section>
 
       <section id="resource-dataset-distribution">
         <h4>Distribution</h4>
 
-        <!-- <p>Both geodetic and vertical CRS can be expressed as <code>Concept</code> from the TBD vocabs.</p> -->
+        <p>Provides information about the distributor of and options for obtaining the resource(s).</p>
 
         <aside class="example" id="ex-mapping-distribution" title="Dataset distribution">
           <p>Resource metadata in TERN-DCAT:</p>
@@ -7740,8 +7744,8 @@
     <h2>
       Acknowledgments
     </h2>
-    The Editors recognize the major contribution of the members of the original [[?DXWG]],
-    [[?VOCAB-DCAT]] and [[?DCAT-AP]].
+    <p> The Editors recognize the major contribution of the members of the original [[?DXWG]],
+      [[?VOCAB-DCAT]] and [[?DCAT-AP]].</p>
   </section>
 
   <!-- <section id='examples' class="appendix">
