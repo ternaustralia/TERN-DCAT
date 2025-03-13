@@ -2734,7 +2734,7 @@
                 tern:distributor &lt;https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812&gt; .
             
             &lt;urn:resource:ex_distribution_resource_1&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern/OGC:WMS-1.3.0-http-get-map&gt; ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
                 dcterms:description &quot;Distribution desciption / title&quot; ;
                 dcterms:title &quot;Additional information&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
@@ -3986,9 +3986,11 @@
               </td>
               <td> <a href="#Standard" data-placement="right">Standard</a> </td>
               <td> 0..1 </td>
-              <td property="rdfs:comment"> Transfer protocol of the resource. </td>
+              <td property="rdfs:comment"> Service protocol of the resource. </td>
               <td property="skos:scopeNote"> When the resource represents a Distribution, this property should indicate
-                the data transfer protocol. E.g., 'web address' or 'OGC Web Map Service' TODO: link to CV</td>
+                the data transfer protocol. E.g., 'web address' or 'OGC Web Map Service'. <a
+                  href="http://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for service
+                  protocols</a>.</td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4070,19 +4072,19 @@
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
             
             &lt;urn:resource:ex_resource_1&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern/FTP&gt; ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/FTP&gt; ;
                 dcterms:title &quot;FTP distribution resource example&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
                 rdf:value &quot;https://ftp.tern.org.au&quot;^^xsd:anyURI .
             
             &lt;urn:resource:ex_resource_2&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern/WWW:LINK-1.0-http--link&gt; ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
                 dcterms:title &quot;Method documentation&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
                 rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
             
             &lt;urn:resource:ex_resource_3&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/OGC:WMS-1.3.0-http-get-map&gt; ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
                 dcterms:description &quot;WMS service&quot; ;
                 dcterms:title &quot;WMS layer_name&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
@@ -4448,7 +4450,7 @@
             @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
             
-            &lt;http://linked.data.gov.au/def/tern/OGC:WMS-1.3.0-http-get-map&gt; a dcterms:Standard ;
+            &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; a dcterms:Standard ;
                 dcterms:identifier &quot;OGC:WMS-1.3.0-http-get-map&quot; .
             
             &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
@@ -4849,7 +4851,8 @@
           <tr>
             <td>dcterms:conformsTo</td>
             <td><a href="#Resource">Resource</a></td>
-            <td><a href="TBD">Protocol list</a></td>
+            <td><a href="http://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for service
+                protocols</a></td>
             <td></td>
           </tr>
           <tr>

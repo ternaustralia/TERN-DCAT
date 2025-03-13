@@ -4,19 +4,19 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <urn:resource:ex_resource_1> a rdfs:Resource ;
-    dcterms:conformsTo <http://linked.data.gov.au/def/tern/FTP> ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/tern-cv/FTP> ;
     dcterms:title "FTP distribution resource example" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
     rdf:value "https://ftp.tern.org.au"^^xsd:anyURI .
 
 <urn:resource:ex_resource_2> a rdfs:Resource ;
-    dcterms:conformsTo <http://linked.data.gov.au/def/tern/WWW:LINK-1.0-http--link> ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link> ;
     dcterms:title "Method documentation" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
     rdf:value "https://method.tern.org.au"^^xsd:anyURI .
 
 <urn:resource:ex_resource_3> a rdfs:Resource ;
-    dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/OGC:WMS-1.3.0-http-get-map> ;
+    dcterms:conformsTo <http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map> ;
     dcterms:description "WMS service" ;
     dcterms:title "WMS layer_name" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;

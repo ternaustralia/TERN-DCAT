@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/tern/OGC:WMS-1.3.0-http-get-map> a dcterms:Standard ;
+<http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map> a dcterms:Standard ;
     dcterms:identifier "OGC:WMS-1.3.0-http-get-map" .
 
 <https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0> a dcterms:Standard ;
