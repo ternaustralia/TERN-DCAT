@@ -5867,12 +5867,15 @@
       <section id="resource-parent">
         <h4>Parent metadata</h4>
         <p>Identification of the parent metadata record.</p>
-        <p>The content of the element 'parent metadata' can be represented in RDF as a plain
-          literals, and by using properties <code>dcterms:identifier</code> and <code>dcterms:title</code></p>
-
-        <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code>
-          [[?XML]]. The language to be specified is the one indicated by element metadata language, mapped to the
-          language identifiers defined by IETF BCP 47 [[?BCP47]].</p>
+        <p>The content of the element 'parent metadata' can be represented in RDF as plain
+          literals, and by using the properties <code>dcterms:identifier</code> and <code>dcterms:title</code> of a new
+          <a href="#DatasetSeries">Dataset Series</a> entity. The metadata record is linked with its parent record using
+          the property <code>dcat:inSeries</code>.
+        </p>
+        <p>
+          In TERN-DCAT, metadata relationships (exclusively parent-child) are represented via Dataset (child) and
+          Dataset Series (parent).
+        </p>
 
         <aside class="example" id="ex-mapping-resource-parent" title="Parent Metadata">
           <p>Resource metadata in TERN-DCAT:</p>
@@ -5880,6 +5883,10 @@
             &lt;ex_dataset-series_9da7ad97-de99-47b0-b131-9d2fa7f0aabb&gt; a dcat:DatasetSeries ;
               dcterms:identifier "9da7ad97-de99-47b0-b131-9d2fa7f0aabb" ;
               dcterms:title "Daly Pasture Flux Data Collection" ;
+              ...
+            
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcat:inSeries &lt;ex_dataset-series_9da7ad97-de99-47b0-b131-9d2fa7f0aabb&gt; ;
               ...
           </pre>
 
@@ -5914,7 +5921,7 @@
 
       <section id="resource-catalogue-record-dates">
         <h4>Metadata dates</h4>
-        <p>Date(s) associated with the metadata. NOTE Creation” date should always be provided, others can also be
+        <p>Date(s) associated with the metadata. NOTE 'creation' date should always be provided, others can also be
           provided.</p>
         <p>The content of the element 'metadata dateInfo' can be represented in RDF as plain
           literals, and by using properties <code>dcterms:created</code> and <code>dcterms:modified</code>.</p>
@@ -7333,7 +7340,7 @@
           <h4>Data quality info</h4>
 
           <p>Provides overall assessment of quality of a resource(s).</p>
-          <aside class="example" id="ex-mapping-dataset-dataquality" title="Dataset data quality">
+          <aside class="example" id="ex-mapping-dataset-dataquality" title="Data quality info">
             <p>Resource metadata in TERN-DCAT:</p>
             <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
@@ -7413,7 +7420,7 @@
           <h4>Resource lineage</h4>
 
           <p>Information about the provenance, source(s), and/or the production process(es) applied to the resource.</p>
-          <aside class="example" id="ex-mapping-dataset-lineage" title="Dataset lineage">
+          <aside class="example" id="ex-mapping-dataset-lineage" title="Resource lineage">
             <p>Resource metadata in TERN-DCAT:</p>
             <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
