@@ -7,6 +7,6 @@
 
 <https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0> a dcterms:Standard ;
     dcterms:identifier "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0"^^xsd:anyURI ;
-    dcterms:issued "2025-03-01"^^xsd:date ;
-    dcterms:title "TERN DCAT metadata profile" ;
+    dcterms:issued "2025-04-09"^^xsd:date ;
+    dcterms:title "TERN-DCAT metadata profile" ;
     owl:versionInfo "1.0" .

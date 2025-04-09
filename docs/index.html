@@ -171,15 +171,16 @@
     </p>
     <p>
       The objective of this work is to produce an application profile of DCAT which can represent the totallity of the
-      metadata holded and/or mantained by [[TERN]] and described following the ISO standard [[ISO-19115-3]] profiled in
-      [[TERN-ISO]]. Based on the necessity of covering the completeness of the metadata records with real-world
-      examples, the specification is extended with improved definitions, usage notes and usages constraints such as
-      cardinalities for properties and the usage of controlled vocabularies. Additional classes and properties from both
-      [[TERN]] and other well-known vocabularies are re-used where necessary.
+      metadata holded and/or mantained by [[TERN]] and mostly described following the ISO standard [[ISO-19115-3]] and
+      [[ISO-19157-2]] profiled in [[TERN-ISO]]. Based on the necessity of covering the completeness of the metadata
+      records with real-world examples, the specification is extended with improved definitions, usage notes and usages
+      constraints such as cardinalities for properties and the usage of controlled vocabularies. Additional classes and
+      properties from both [[TERN]] and other well-known vocabularies are re-used where necessary.
     </p>
 
     <p>
-      The Application Profile is intended to facilitate data exchange between [[TERN]] systems and therefore the classes
+      The Application Profile is intended to facilitate data exchange between [[TERN]] systems and therefore the
+      classes
       and properties defined in this document are only relevant for the data to be exchanged; there are no requirements
       for communicating systems to implement specific technical environments. The only requirement is that the systems
       can export and import data in RDF in conformance with this Application Profile.
@@ -206,10 +207,10 @@
 
     <h2>Namespaces</h2>
 
-    <p>TERN-DCAT makes extensive use of terms from other vocabularies, in particular DCAT [[?vocab-dcat-3]], on which is
-      based, and Dublin Core [[?DCTERMS]]. TERN-DCAT defines some classes and properties of its own in order to cover
-      some metadata sections from [[ISO-19115-3]] not already addressed by DCAT [[?vocab-dcat-3]] or DCAT-AP
-      [[?DCAT-AP]].</p>
+    <p>TERN-DCAT makes extensive use of terms from other vocabularies, in particular DCAT [[vocab-dcat-3]], on which is
+      based, and Dublin Core [[DCTERMS]]. TERN-DCAT defines some classes and properties of its own in order to cover
+      some metadata sections from [[ISO-19115-3]] and [[ISO-19157-2]] not already addressed by DCAT [[vocab-dcat-3]] or
+      DCAT-AP [[DCAT-AP]].</p>
 
     <table id="table-namespaces" class="simple">
       <thead>
@@ -308,7 +309,7 @@
         <tr>
           <td><code>tern</code></td>
           <td><code>https://w3id.org/tern/ontologies/tern/</code></td>
-          <td>[[?TERN]]</td>
+          <td>[[TERN]]</td>
         </tr>
         <tr>
           <td><code>xsd</code></td>
@@ -1238,6 +1239,7 @@
           For this entity the following properties are defined:
           <ul class="prop-list">
             <li><a href="#ConceptScheme.title">title</a></li>
+            <li><a href="#ConceptScheme.source">source</a></li>
           </ul>
         </dd>
       </dl>
@@ -1278,12 +1280,28 @@
               <td>
                 <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
                   data-content="http://purl.org/dc/terms/title" data-placement="right">
-                  label</a>
+                  title</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> A name of the concept scheme. </td>
               <td property="skos:scopeNote"> May be repeated for different versions of the name. </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="ConceptScheme.source" typeof="rdfs:Property" resource="http://purl.org/dc/terms/source"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/source" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/source" data-placement="right">
+                  source</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Description and/or link to an external resource from which this Scheme is
+                based on. </td>
+              <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1298,7 +1316,7 @@
             
             &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; a skos:ConceptScheme ;
                 dcterms:source &quot;TERN (2020). TERN Parameter Vocabulary. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&quot; ;
-                skos:prefLabel &quot;parameter&quot; .
+                dcterms:title &quot;parameter&quot; .
           </pre>
         </aside>
 
@@ -1317,7 +1335,8 @@
         <dd> Represents information relative to the quality of the data listed in the Dataset. </dd>
         <dt> Note </dt>
         <dd> This new class has been created to faithfully represent the information contained in the [[TERN-ISO]]
-          profile of [[ISO-19115-3]]. See <a href="#ex-mapping-dataset-dataquality">ISO Example</a>. </dd>
+          profile of [[ISO-19115-3]] and [[ISO-19157-2]]. See <a href="#ex-mapping-dataset-dataquality">ISO Example</a>.
+        </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
@@ -2062,7 +2081,7 @@
               <td property="rdfs:comment"> The performed quality measurements describing the spatial resolution of the
                 Dataset. </td>
               <td property="skos:scopeNote"> In GeoDCAT-AP, this property is used to specify "spatial resolution", as
-                defined in [[?INSPIRE-MD-REG]], [[?ISO-19115]], and [[?ISO-19115-1]]. Describes the spatial resolution
+                defined in [[?INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]]. Describes the spatial resolution
                 of the original data in the dataset, i.e. regardless of how it is distributed using distributions. </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">Link</a>
@@ -2442,11 +2461,11 @@
               <td> P </td>
             </tr>
 
-            <tr id="Dataset.rightsHolder" typeof="rdfs:Property"
-              resource="https://w3id.org/tern/ontologies/tern/rightsHolder" class="class mandatory">
+            <tr id="Dataset.rightsHolder" typeof="rdfs:Property" resource="http://purl.org/dc/terms/rightsHolder"
+              class="class mandatory">
               <td>
-                <a href="https://w3id.org/tern/ontologies/tern/rightsHolder" data-toggle="tooltip"
-                  data-content="https://w3id.org/tern/ontologies/tern/rightsHolder" data-placement="right">
+                <a href="http://purl.org/dc/terms/rightsHolder" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/rightsHolder" data-placement="right">
                   rights holder</a>
               </td>
               <td>
@@ -2613,7 +2632,7 @@
             <li>Dataset Series without a dataset in the collection should be avoided.</li>
             <li>Complex nesting should be avoided.</li>
           </ul>
-          Please refer to the [[?DCAT-AP]] <a
+          Please refer to the [[DCAT-AP]] <a
             href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#UsageGuidelines">General usage guidelines</a>.
         </dd>
         <dt> Subclass of </dt>
@@ -2980,7 +2999,7 @@
                   wkt geometry</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
+              <td> 1 </td>
               <td property="rdfs:comment"> A geographic region that is covered by the Dataset as a Well-known Text
                 serialisation. </td>
               <td property="skos:scopeNote"> The geometry should be represented as a <a
@@ -4280,7 +4299,7 @@
               <td property="skos:scopeNote"> This property is used to specify the type of spatial resolution being
                 described, by taking as object one of the instances of dqv:Metric documented in <a
                   href="https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0/#instances-of-metric">Instances
-                  of Metric</a> by [[?GeoDCAT-AP]].
+                  of Metric</a> by [[GeoDCAT-AP]].
               </td>
               <td> </td>
               <td> P </td>
@@ -4445,7 +4464,7 @@
                   title</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment"> A name given to the Standard. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
@@ -4460,7 +4479,7 @@
                   version</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment"> The version indicator (name or identifier) of the standard. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
@@ -5000,7 +5019,7 @@
 
     <p>Validation of a catalogue according to TERN-DCAT specification should be consider as a standalone specification
       and validate all constraints at once. Take into account that TERN-DCAT is an extension of [[vocab-dcat-3]], very
-      highly influence by [[DCAT-AP]] and [[GeoDCAT-AP]], but with some considerable differences to fit the specific
+      highly influenced by [[DCAT-AP]] and [[GeoDCAT-AP]], but with some considerable differences to fit the specific
       [[TERN]]'s use case and [[TERN-ISO]] metadata profile.</p>
     <ul>
       <li><a
@@ -5020,7 +5039,8 @@
       <h3> Overview </h3>
       The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of spatial
       datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of
-      [[ISO-19115]], [[ISO-19115-3]] and [[TERN-ISO]] and the TERN-DCAT application profile is documented in this page.
+      [[TERN-ISO]] ([[ISO-19115-3]] and [[ISO-19157-2]]) and the TERN-DCAT application profile is documented in this
+      page.
     </section>
 
     <section id='iso19115-mapping-mappings'>
@@ -7343,22 +7363,22 @@
           <aside class="example" id="ex-mapping-dataset-dataquality" title="Data quality info">
             <p>Resource metadata in TERN-DCAT:</p>
             <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                tern:dataQuality &lt;ex_dataquality_1&gt; ;
-            
-            &lt;ex_dataquality_1&gt; a tern:DataQuality ;
-                tern:DQ_descriptionResult &quot;DQ outcome&quot; ;
-                tern:DQ_scopeDescription &quot;data Quality assesment scope&quot; ;
-                tern:DQ_standaloneQualityReport &lt;urn:resource:dataquality_report_1&gt; .
-            
-            &lt;urn:resource:dataquality_report_1&gt; a rdfs:Resource ;
-                dcterms:title &quot;data quality report&quot; ;
-                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
-          </pre>
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:dataQuality &lt;ex_dataquality_1&gt; ;
+              
+              &lt;ex_dataquality_1&gt; a tern:DataQuality ;
+                  tern:DQ_descriptionResult &quot;DQ outcome&quot; ;
+                  tern:DQ_scopeDescription &quot;data Quality assesment scope&quot; ;
+                  tern:DQ_standaloneQualityReport &lt;urn:resource:dataquality_report_1&gt; .
+              
+              &lt;urn:resource:dataquality_report_1&gt; a rdfs:Resource ;
+                  dcterms:title &quot;data quality report&quot; ;
+                  rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+            </pre>
 
-            <p>Resource metadata in ISO 19115-3:</p>
+            <p>Resource metadata in ISO 19157-2:</p>
             <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
+              &lt;gmd:MD_Metadata&gt;
                 ...
                 &lt;mdb:dataQualityInfo&gt;
                     &lt;mdq:DQ_DataQuality&gt;
@@ -7411,7 +7431,7 @@
                     &lt;/mdq:DQ_DataQuality&gt;
                 &lt;/mdb:dataQualityInfo&gt;
                 ...
-            &lt;/gmd:MD_Metadata&gt;
+              &lt;/gmd:MD_Metadata&gt;
           </pre>
           </aside>
         </section>

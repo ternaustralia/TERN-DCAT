@@ -3,4 +3,4 @@
 
 <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> a skos:ConceptScheme ;
     dcterms:source "TERN (2020). TERN Parameter Vocabulary. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e" ;
-    skos:prefLabel "parameter" .
+    dcterms:title "parameter" .
