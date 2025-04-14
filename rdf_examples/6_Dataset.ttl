@@ -22,7 +22,7 @@
     dcterms:subject "OzFlux" ;
     dcterms:title "Tumbarumba Flux Data 2025_v1" ;
     schema:abstract "This dataset consists of measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer in wet sclerophyll forest using eddy covariance techniques." ;
-    schema:creditText "We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment" ;
+    schema:creditText "We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging." ;
     dcat:contactPoint <ex_contact_point_1> ;
     dcat:distribution <urn:distribution:ex_distribution_1>;
     dcat:inSeries <ex_dataset_series_1> ;
@@ -52,6 +52,7 @@
     tern:environmentDescription "Data was processed using the UQ HPC..." ;
     tern:funder <ex_funder_1> ;
     tern:hasExtent <ex_extent_1> ;
+    tern:otherCitationDetails "This dataset is part of the OzFlux network and is available from the OzFlux data portal at https://data.ozflux.org.au/ozflux-data-portal/" ;
     tern:otherConstraints [ a dcterms:RightsStatement ;
             dcterms:title "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ],
         [ a dcterms:RightsStatement ;

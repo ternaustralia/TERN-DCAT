@@ -359,7 +359,8 @@
       <figcaption>
         <span class="fig-title">
           Overview of TERN-DCAT application profile model, showing the classes of resources that can be members of a
-          Catalogue, and the relationships between them. Open the image in a new tab to see a higher resolution image.
+          Catalogue, and the relationships between them. <a href="images/TERN-DCAT-Class-diagram.png"
+            target="_blank">Click</a> to open the high resolution image in a new tab.
         </span>
       </figcaption>
     </figure>
@@ -1512,6 +1513,7 @@
             <li><a href="#Dataset.language">language</a></li>
             <li><a href="#Dataset.license">licence</a></li>
             <li><a href="#Dataset.modificationDate">modified</a></li>
+            <li><a href="#Dataset.otherCitationDetails">other citation details</a></li>
             <li><a href="#Dataset.otherConstraints">other constraints</a></li>
             <li><a href="#Dataset.publicationDate">publication date</a></li>
             <li><a href="#Dataset.publisher">publisher</a></li>
@@ -1527,7 +1529,7 @@
             <li><a href="#Dataset.version">has version</a></li>
           </ul>
         </dd>
-        <dt> Roles </dt>
+        <dt id="Dataset.roles"> Roles </dt>
         <dd>
           Additional properties can used to express role-responsabilities between the Dataset and any entity:
           <ul class="prop-list">
@@ -1709,11 +1711,12 @@
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment"> Other citation details. </td>
-              <td property="skos:scopeNote"> Notice that all the information needed for generating a data citation
-                following the [[?DataCite]] Metadata Schema are already recorded as part of the model (e.g., creator,
-                publication year, title, publisher, identifier, etc.). Further information can be specified here if
-                needed. </td>
+              <td property="rdfs:comment"> Acknowledgement details. </td>
+              <td property="skos:scopeNote"> This field acknowledges individuals or organisations (other than those
+                already included using the <a href="#Dataset.roles">role</a> properties) that contributed to creating
+                the dataset, e.g., acknowledgments to traditional owners. Notice that all the information needed for
+                generating a data citation following the [[?DataCite]] Metadata Schema are already recorded as part of
+                the model (e.g., creator, publication year, title, publisher, identifier, etc.). </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1942,6 +1945,24 @@
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date">E</a>
               </td>
+            </tr>
+
+            <tr id="Dataset.otherCitationDetails" typeof="rdfs:Property"
+              resource="https://w3id.org/tern/ontologies/tern/otherCitationDetails" class="class mandatory">
+              <td>
+                <a href="https://w3id.org/tern/ontologies/tern/otherCitationDetails" data-toggle="tooltip"
+                  data-content="https://w3id.org/tern/ontologies/tern/otherCitationDetails" data-placement="right">
+                  other citation details</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Additional citation statements. </td>
+              <td property="skos:scopeNote"> Notice that all the information needed for generating a data
+                citation following the [[?DataCite]] Metadata Schema are already recorded as part of the model (e.g.,
+                creator, publication year, title, publisher, identifier, etc.). Further information can be specified
+                here if needed. </td>
+              <td> </td>
+              <td> P </td>
             </tr>
 
             <tr id="Dataset.otherConstraints" typeof="rdfs:Property"
@@ -2562,7 +2583,7 @@
                 dcterms:subject &quot;OzFlux&quot; ;
                 dcterms:title &quot;Tumbarumba Flux Data 2025_v1&quot; ;
                 schema:abstract &quot;This dataset consists of measurements of the exchange of energy and mass between the surface and the atmospheric boundary-layer in wet sclerophyll forest using eddy covariance techniques.&quot; ;
-                schema:creditText &quot;We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging. acknowledment&quot; ;
+                schema:creditText &quot;We at TERN acknowledge the Traditional Owners and Custodians throughout Australia, New Zealand and all nations. We honour their profound connections to land, water, biodiversity and culture and pay our respects to their Elders past, present and emerging.&quot; ;
                 dcat:contactPoint &lt;ex_contact_point_1&gt; ;
                 dcat:distribution &lt;urn:distribution:ex_distribution_1&gt;;
                 dcat:inSeries &lt;ex_dataset_series_1&gt; ;
@@ -2592,6 +2613,7 @@
                 tern:environmentDescription &quot;Data was processed using the UQ HPC...&quot; ;
                 tern:funder &lt;ex_funder_1&gt; ;
                 tern:hasExtent &lt;ex_extent_1&gt; ;
+                tern:otherCitationDetails &quot;This dataset is part of the OzFlux network and is available from the OzFlux data portal at https://data.ozflux.org.au/ozflux-data-portal/&quot; ;
                 tern:otherConstraints [ a dcterms:RightsStatement ;
                         dcterms:title &quot;Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}.&quot; ],
                     [ a dcterms:RightsStatement ;
