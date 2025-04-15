@@ -328,27 +328,31 @@
       [[TERN]]. The core classes of the Application Profile are <a href="#Catalogue">Catalogue</a>, <a
         href="#Dataset">Dataset</a> and <a href="#Distribution">Distribution</a>. TERN-DCAT exclusively defines
       Catalogues of only Datasets (and Dataset Series), leaving the use of Data Services open to the user following
-      other implementations defined by DCAT or DCAT-AP.
+      other implementations defined by [[vocab-dcat-3]] or [[DCAT-AP]].
     </p>
     <p>
       TERN-DCAT uses most of the core properties of the main classes from the [[vocab-dcat-3]] specification including
-      some additional ones (defined by [[TERN]] or by other specifications as [[DCAT-AP]]). This additional properties
+      some additional ones (defined by [[TERN]] or by other specifications as [[DCAT-AP]]). These additional properties
       or classes have been added or created in order to best fit the usage of the TERN-DCAT profile, which is the
       faithful representation of the TERN Metadata Catalogue which follows the [[ISO-19115-3]] standard profiled as
       [[TERN-ISO]].
     </p>
     <aside class="note">
       <p>
-        These are some of the main differences of TERN-DCAT compared to [[vocab-dcat-3]] or [[DCAT-AP]]:
+        These are some of the main differences of TERN-DCAT compared to [[vocab-dcat-3]], [[DCAT-AP]] and
+        [[GeoDCAT-AP]]:
       <ul>
         <li>Usage of <a href="#Organisation">schema:Organization</a> or <a href="#Person">schema:Person</a> instead of
           <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person">foaf:Agent</a>.
         </li>
         <li>Spatial and temporal extent is grouped under a new class <a href="#Extent">Extent</a>, which also includes a
-          location definition and the vertical extent.</li>
+          location textual description and the <a href="#VerticalExtent">vertical extent</a>.</li>
         <li>Spatial representation uses [[GeoSPARQL]] instead of [[LOCN]].</li>
         <li><a href="#Distribution">Distribution</a> has been redesigned using <a href="#Resource">rdfs:Resource</a> to
           express all the relevant information.</li>
+        <li>New classes <a href="#Lineage">Method</a>, <a href="#DataQuality">DataQuality</a> and <a
+            href="#VerticalExtent">VerticalExtent</a> to cover that sections from [[ISO-19115-3]] and [[ISO-19157-2]].
+        </li>
       </ul>
       </p>
     </aside>

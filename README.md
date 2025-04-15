@@ -1,15 +1,16 @@
-# Terrestrial Ecosystem Research Network (TERN) application profile
+# Terrestrial Ecosystem Research Network (TERN) DCAT application profile
 
-[TERN DCAT](https://ternaustralia.github.io/TERN-DCAT/) is the profile "TERN Data Catalogue Application Profile" (TERN DCAT) developed by [TERN](https://www.tern.org.au/) 
+[TERN-DCAT](https://ternaustralia.github.io/TERN-DCAT/) is a [DCAT](https://www.w3.org/TR/vocab-dcat-3/) profile "TERN Data Catalogue Application Profile" (TERN-DCAT) developed by [TERN](https://www.tern.org.au/) 
 for use in TERN's metadata catalogues and Data Discovery portal.
 
-- [TERN DCAT documentation](https://ternaustralia.github.io/TERN-DCAT/)
+This specification also includes the **mapping** between the [Terrestrial Ecosystem Research Network (TERN) Metadata Profile of ISO 19115-3:2016 and ISO 19157-2:2016](https://github.com/ternaustralia/TERN-ISO19115/releases/tag/v1.0) and TERN-DCAT elements.
 
-It also contains a **mapping** between the [Terrestrial Ecosystem Research Network (TERN) Metadata Profile of ISO 19115-3:2016 and ISO 19157-2:2016](https://github.com/ternaustralia/TERN-ISO19115/releases/tag/v1.0) and TERN DCAT elements.
+The latest version of TERN-DCAT can be downloaded from the [releases](https://github.com/ternaustralia/TERN-DCAT/releases) page. The HTML documentation of this specification can be found [here](https://ternaustralia.github.io/TERN-DCAT/).
+
 
 ## Releases
 
-TBA
+- Pre release [TERN-DCAT v1.0.0](https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0) - [Documentation](https://ternaustralia.github.io/TERN-DCAT/)
 
 ## Source files
 
@@ -23,7 +24,7 @@ TBA
 
 ## License
 
-This work is licensed under a
+Copyright © 2025 Terrestrial Ecosystem Research Network (TERN). All material is published under the licence
 [Creative Commons Attribution 4.0 International License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
