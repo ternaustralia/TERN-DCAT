@@ -9,8 +9,10 @@
     tern:DQ_scopeDescription "data quality assesment scope" ;
     tern:DQ_standaloneQualityReport <urn:resource:ex_data_quality> .
 
-<urn:resource:ex_data_quality> a rdfs:Resource ;
+<urn:resource:ex_data_quality> a tern:OnlineResource ;
+    dcterms:conformsTo <https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link> ;
     dcterms:title "data quality report" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
     rdf:value "https://report-example-url.tern.org.au"^^xsd:anyURI .
 
 <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> a skos:Concept ;

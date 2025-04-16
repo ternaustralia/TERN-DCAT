@@ -17,18 +17,18 @@ var respecConfig = {
     },],
     editors: [
         {
-            name: "Javier Sanchez Gonzalez",
+            name: "Javier Sánchez González",
+            company: "Terrestrial Ecosystem Research Network",
+            companyURL: "https://www.tern.org.au/",
+        },
+        {
+            name: "Junrong Yu",
             company: "Terrestrial Ecosystem Research Network",
             companyURL: "https://www.tern.org.au/",
         },
         {
             name: "Siddeswara Guru",
             orcid: "0000-0002-3903-254X",
-            company: "Terrestrial Ecosystem Research Network",
-            companyURL: "https://www.tern.org.au/",
-        },
-        {
-            name: "Junrong Yu",
             company: "Terrestrial Ecosystem Research Network",
             companyURL: "https://www.tern.org.au/",
         },

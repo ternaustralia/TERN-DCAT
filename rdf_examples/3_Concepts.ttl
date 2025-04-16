@@ -6,7 +6,7 @@
 <http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a> a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:prefLabel "abundance of coarse fragments" ;
-    tern:unit <http://qudt.org/vocab/unit/AttoJ-SEC> .
+    tern:unit <https://qudt.org/vocab/unit/AttoJ-SEC> .
 
 <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret> a skos:Concept ;
     dcterms:source "https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode"^^xsd:anyURI ;

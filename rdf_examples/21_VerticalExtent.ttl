@@ -5,4 +5,4 @@
     dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/5712> ;
     tern:maxAltitude 1000.0 ;
     tern:minAltitude 100.0 ;
-    tern:unit <http://qudt.org/vocab/unit/M> .
+    tern:unit <https://qudt.org/vocab/unit/M> .

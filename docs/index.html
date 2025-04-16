@@ -348,8 +348,9 @@
         <li>Spatial and temporal extent is grouped under a new class <a href="#Extent">Extent</a>, which also includes a
           location textual description and the <a href="#VerticalExtent">vertical extent</a>.</li>
         <li>Spatial representation uses [[GeoSPARQL]] instead of [[LOCN]].</li>
-        <li><a href="#Distribution">Distribution</a> has been redesigned using <a href="#Resource">rdfs:Resource</a> to
-          express all the relevant information.</li>
+        <li><a href="#Distribution">Distribution</a> has been redesigned to use <a
+            href="#Resource">tern:OnlineResource</a> to
+          express all the relevant information from the [[ISO-19115-3]] OnlineResource.</li>
         <li>New classes <a href="#Lineage">Method</a>, <a href="#DataQuality">DataQuality</a> and <a
             href="#VerticalExtent">VerticalExtent</a> to cover that sections from [[ISO-19115-3]] and [[ISO-19157-2]].
         </li>
@@ -531,7 +532,7 @@
                   is part of</a>
               </td>
               <td> <a href="#Catalogue" data-placement="right">Catalogue</a> </td>
-              <td> 0..1 </td>
+              <td> 0..* </td>
               <td property="rdfs:comment">
                 A related Catalogue in which the described Catalogue is physically or logically included.
               </td>
@@ -836,7 +837,7 @@
               <td>
                 <a href="#Literal" data-placement="right">Literal</a>
               </td>
-              <td> 0..1 </td>
+              <td> 0..* </td>
               <td property="rdfs:comment">
                 A free-text account of the record.
               </td>
@@ -1013,7 +1014,7 @@
                   data-content="http://purl.org/dc/terms/source" data-placement="right">
                   source metadata</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Resource" data-placement="right">Online Resource</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
                 The original metadata that was used in creating metadata for the Dataset or Dataset Series.
@@ -1031,7 +1032,7 @@
                   title</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
+              <td> 0..* </td>
               <td property="rdfs:comment"> A name given to the Catalogue Record. </td>
               <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the name.
               </td>
@@ -1055,7 +1056,7 @@
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
             &lt;ex_record_1&gt; a dcat:CatalogRecord ;
-                dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; ;
+                dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; ;
                 dcterms:created &quot;2024-08-02T00:00:00&quot;^^xsd:dateTime ;
                 dcterms:description &quot;Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/&quot; ;
                 dcterms:identifier &quot;9210c331-ba96-4e0c-9554-f029d61534be&quot; ;
@@ -1207,7 +1208,7 @@
             &lt;http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a&gt; a skos:Concept ;
                 skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; ;
                 skos:prefLabel &quot;abundance of coarse fragments&quot; ;
-                tern:unit &lt;http://qudt.org/vocab/unit/AttoJ-SEC&gt; .
+                tern:unit &lt;https://qudt.org/vocab/unit/AttoJ-SEC&gt; .
           </pre>
         </aside>
 
@@ -1445,7 +1446,7 @@
                   data-placement="right">
                   standalone quality report</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Resource" data-placement="right">Online Resource</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment"> Online data quality report. </td>
               <td property="skos:scopeNote"> Links to the data quality reports available online. </td>
@@ -1469,8 +1470,10 @@
                 tern:DQ_scopeDescription &quot;data quality assesment scope&quot; ;
                 tern:DQ_standaloneQualityReport &lt;urn:resource:ex_data_quality&gt; .
             
-            &lt;urn:resource:ex_data_quality&gt; a rdfs:Resource ;
+            &lt;urn:resource:ex_data_quality&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
                 dcterms:title &quot;data quality report&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
                 rdf:value &quot;https://report-example-url.tern.org.au&quot;^^xsd:anyURI .
             
             &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; a skos:Concept ;
@@ -1597,7 +1600,7 @@
                   abstract</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 1..* </td>
               <td property="rdfs:comment">
                 Describes the content of the resource (Dataset or Dataset Series).
               </td>
@@ -1616,7 +1619,7 @@
                   data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
                   additional documentation</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Resource" data-placement="right">Online Resource</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment">
                 Citation of other documentation associated with the resource, e.g., related articles, publications, user
@@ -1718,7 +1721,7 @@
               <td property="rdfs:comment"> Acknowledgement details. </td>
               <td property="skos:scopeNote"> This field acknowledges individuals or organisations (other than those
                 already included using the <a href="#Dataset.roles">role</a> properties) that contributed to creating
-                the dataset, e.g., acknowledgments to traditional owners. Notice that all the information needed for
+                the dataset, e.g., acknowledgements to traditional owners. Notice that all the information needed for
                 generating a data citation following the [[?DataCite]] Metadata Schema are already recorded as part of
                 the model (e.g., creator, publication year, title, publisher, identifier, etc.). </td>
               <td> </td>
@@ -1768,9 +1771,9 @@
                   dataset distribution</a>
               </td>
               <td> <a href="#Distribution" data-placement="right">Distribution</a> </td>
-              <td> 1..* </td>
+              <td> 0..* </td>
               <td property="rdfs:comment"> An available Distribution for the Dataset. </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="skos:scopeNote"> A dataset SHOULD always have at least one Distribution. </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution">Link</a>
               </td>
@@ -2035,7 +2038,7 @@
                   purpose</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
+              <td> 0..* </td>
               <td property="rdfs:comment"> Describes why the data from the Dataset were collected. </td>
               <td property="skos:scopeNote"> E.g., Brief summary of the purpose of collecting the data including the
                 potential usage. </td>
@@ -2180,7 +2183,7 @@
                   title</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 1..* </td>
               <td property="rdfs:comment"> A name given to the Dataset. </td>
               <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the name.
               </td>
@@ -2601,7 +2604,7 @@
                 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
                         dqv:isMeasurementOf &lt;http://data.europa.eu/930/spatialResolutionAsAngularDistance&gt; ;
                         dqv:value 20.0 ;
-                        tern:unit &lt;http://qudt.org/vocab/unit/DEG&gt; ] ;
+                        tern:unit &lt;https://qudt.org/vocab/unit/DEG&gt; ] ;
                 sosa:usedProcedure [ a tern:Method ;
                         dcterms:description &quot;procedure details&quot; ;
                         tern:additionalDocumentation &lt;urn:resource:ex_additional_documentation_1&gt; ;
@@ -2755,7 +2758,7 @@
                   data-content="http://www.w3.org/ns/dcat#accessURL" data-placement="right">
                   access URL</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Resource" data-placement="right">Online Resource</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> Resource describing the Distribution. </td>
               <td property="skos:scopeNote"> The Resource must describe all relevant fields from ISO metadata. </td>
@@ -2801,8 +2804,8 @@
                 dcat:accessURL &lt;urn:resource:ex_distribution_resource_1&gt; ;
                 tern:distributor &lt;https://w3id.org/tern/resources/3b2bad6d-c361-416c-893b-64f3d2800812&gt; .
             
-            &lt;urn:resource:ex_distribution_resource_1&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
+            &lt;urn:resource:ex_distribution_resource_1&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
                 dcterms:description &quot;Distribution desciption / title&quot; ;
                 dcterms:title &quot;Additional information&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
@@ -2956,7 +2959,7 @@
                         dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
                         tern:maxAltitude 1000.0 ;
                         tern:minAltitude 100.0 ;
-                        tern:unit &lt;http://qudt.org/vocab/unit/M&gt; ] .
+                        tern:unit &lt;https://qudt.org/vocab/unit/M&gt; ] .
           </pre>
         </aside>
 
@@ -3111,7 +3114,7 @@
                   description</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment"> Description of the licence. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
@@ -3294,7 +3297,7 @@
                   data-content="https://w3id.org/tern/ontologies/tern/additionalDocumentation" data-placement="right">
                   lineage documentation</a>
               </td>
-              <td> <a href="#Resource" data-placement="right">Resource</a> </td>
+              <td> <a href="#Resource" data-placement="right">Online Resource</a> </td>
               <td> 0..* </td>
               <td property="rdfs:comment"> Online documentation describing how the data was collected and/or processed.
               </td>
@@ -3341,6 +3344,203 @@
         </aside>
 
       </div>
+    </section>
+
+    <section id="entity-resource">
+      <h3 id="Resource">
+        <a href="https://w3id.org/tern/ontologies/tern/OnlineResource" data-toggle="tooltip"
+          data-content="https://w3id.org/tern/ontologies/tern/OnlineResource" data-placement="right">Online Resource</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> An online resource described in RDF. </dd>
+        <dt> Usage Notes </dt>
+        <dd> This new class has been created to faithfully represent the information contained in the [[TERN-ISO]]
+          profile of [[ISO-19115-3]] referent to the OnlineResource. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Resource.description">description</a></li>
+            <li><a href="#Resource.conformsTo">conforms to</a></li>
+            <li><a href="#Resource.format">format</a></li>
+            <li><a href="#Resource.title">title</a></li>
+            <li><a href="#Resource.type">type</a></li>
+            <li><a href="#Resource.value">value</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Resource.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/description" data-placement="right">
+                  description</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Description of the resource. </td>
+              <td property="skos:scopeNote"> Provides additional information about the resource. E.g., 'layer name' of a
+                WMS resource. </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.conformsTo" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
+                  conforms to</a>
+              </td>
+              <td> <a href="#Standard" data-placement="right">Standard</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Service protocol of the resource. </td>
+              <td property="skos:scopeNote"> When the resource represents a Distribution, this property should indicate
+                the data transfer protocol. E.g., 'web address' or 'OGC Web Map Service'. <a
+                  href="https://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for service
+                  protocols</a>.</td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.format" typeof="rdfs:Property" resource="http://purl.org/dc/terms/format"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/format" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/format" data-placement="right">
+                  format</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Format of the resource. </td>
+              <td property="skos:scopeNote"> Free-text indicating the format of the data distribution, e.g., Microsoft
+                Excel </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/title" data-placement="right">
+                  title</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> A name given to the resource. </td>
+              <td property="skos:scopeNote"> This property can be repeated for parallel language versions of the name.
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/type" data-placement="right">
+                  type</a>
+              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Function performed by the resource. </td>
+              <td property="skos:scopeNote"> Recommended function codes are
+                available on <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">
+                  ISO 19115 Online Function code list </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Resource.value" typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-toggle="tooltip"
+                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-placement="right">
+                  value</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> Link to the online resource. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-resource-1" title="Resource">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;urn:resource:ex_resource_1&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/db:postgis&gt; ;
+                dcterms:title &quot;PostGIS distribution resource example&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
+                rdf:value &quot;https://ftp.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_2&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
+                dcterms:title &quot;Method documentation&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_3&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
+                dcterms:description &quot;WMS service&quot; ;
+                dcterms:title &quot;WMS layer_name&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
+                rdf:value &quot;https://wms.tern.org.au&quot;^^xsd:anyURI .
+            
+            &lt;urn:resource:ex_resource_4&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
+                dcterms:title &quot;data quality report&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+          </pre>
+        </aside>
+
+      </div>
+
     </section>
 
     <section id="entity-organisation">
@@ -3974,203 +4174,6 @@
 
     </section>
 
-    <section id="entity-resource">
-      <h3 id="Resource">
-        <a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip"
-          data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Resource</a>
-      </h3>
-
-      <dl>
-        <dt> Definition </dt>
-        <dd> Anything described by RDF. </dd>
-        <dt> Usage Notes </dt>
-        <dd> TERN-DCAT leverages the usage of rdfs:Resource class in order to discribe more complex types
-          of resources widely used across the profile. See the examples to see how to describe each type of resource.
-        </dd>
-        <dt> Properties </dt>
-        <dd>
-          For this entity the following properties are defined:
-          <ul class="prop-list">
-            <li><a href="#Resource.description">description</a></li>
-            <li><a href="#Resource.conformsTo">conforms to</a></li>
-            <li><a href="#Resource.format">format</a></li>
-            <li><a href="#Resource.title">title</a></li>
-            <li><a href="#Resource.type">type</a></li>
-            <li><a href="#Resource.value">value</a></li>
-          </ul>
-        </dd>
-      </dl>
-
-      <div class="u-table-overflow">
-        <table class="data-table simple" id="table-mandatory-classes">
-          <thead>
-            <tr class="data-table__header">
-              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
-                style="width:14%">
-                Property
-              </th>
-              <th class="data-table__header-title--sortable" style="width:13%">
-                Range
-              </th>
-              <th class="data-table__header-title--sortable" style="width:6%">
-                Card
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Definition
-              </th>
-              <th class="data-table__header-title--sortable" style="width:30%">
-                Usage
-              </th>
-              <th class="data-table__header-title--sortable" style="width:5%">
-                DCAT
-              </th>
-              <th class="data-table__header-title--sortable" style="width:4%">
-                Reuse
-              </th>
-            </tr>
-          </thead>
-
-          <tbody class="supertype">
-
-            <tr id="Resource.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/description" data-placement="right">
-                  description</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> Description of the resource. </td>
-              <td property="skos:scopeNote"> Provides additional information about the resource. E.g., 'layer name' of a
-                WMS resource. </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Resource.conformsTo" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
-                  conforms to</a>
-              </td>
-              <td> <a href="#Standard" data-placement="right">Standard</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> Service protocol of the resource. </td>
-              <td property="skos:scopeNote"> When the resource represents a Distribution, this property should indicate
-                the data transfer protocol. E.g., 'web address' or 'OGC Web Map Service'. <a
-                  href="http://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for service
-                  protocols</a>.</td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Resource.format" typeof="rdfs:Property" resource="http://purl.org/dc/terms/format"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/format" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/format" data-placement="right">
-                  format</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> Format of the resource. </td>
-              <td property="skos:scopeNote"> Free-text indicating the format of the data distribution, e.g., Microsoft
-                Excel </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Resource.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/title" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/title" data-placement="right">
-                  title</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
-              <td property="rdfs:comment"> A name given to the resource. </td>
-              <td property="skos:scopeNote">
-                This property can be repeated for parallel language versions of the name.
-              </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Resource.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
-              class="class mandatory">
-              <td>
-                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/type" data-placement="right">
-                  type</a>
-              </td>
-              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> Function performed by the resource. </td>
-              <td property="skos:scopeNote"> Recommended function codes are
-                available on <a
-                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">
-                  ISO 19115 Online Function code list </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Resource.value" typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
-              class="class mandatory">
-              <td>
-                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-toggle="tooltip"
-                  data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-placement="right">
-                  value</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
-              <td property="rdfs:comment"> Link to the resource. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-          </tbody>
-        </table>
-
-        <aside class="example" id="ex-resource-1" title="Resource">
-          <pre class="turtle">
-            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
-            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-            @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-            
-            &lt;urn:resource:ex_resource_1&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/FTP&gt; ;
-                dcterms:title &quot;FTP distribution resource example&quot; ;
-                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
-                rdf:value &quot;https://ftp.tern.org.au&quot;^^xsd:anyURI .
-            
-            &lt;urn:resource:ex_resource_2&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
-                dcterms:title &quot;Method documentation&quot; ;
-                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
-                rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
-            
-            &lt;urn:resource:ex_resource_3&gt; a rdfs:Resource ;
-                dcterms:conformsTo &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; ;
-                dcterms:description &quot;WMS service&quot; ;
-                dcterms:title &quot;WMS layer_name&quot; ;
-                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
-                rdf:value &quot;https://wms.tern.org.au&quot;^^xsd:anyURI .
-            
-            &lt;urn:resource:ex_resource_4&gt; a rdfs:Resource ;
-                dcterms:title &quot;data quality report&quot; ;
-                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
-          </pre>
-        </aside>
-
-      </div>
-
-    </section>
-
     <section id="entity-rights-statement">
       <h3 id="RightsStatement">
         <a href="http://purl.org/dc/terms/RightsStatement" data-toggle="tooltip"
@@ -4339,7 +4342,7 @@
                   unit of measurement</a>
               </td>
               <td> <a href="#Unit" data-placement="right">Unit</a> </td>
-              <td> 0..1 </td>
+              <td> 1 </td>
               <td property="rdfs:comment"> The unit in which the data values are measured. </td>
               <td property="skos:scopeNote"> This property is used to specify, when relevant, the unit of measure of the
                 spatial resolution being described, by taking as object the relevant term from the QUDT Units Vocabulary
@@ -4375,21 +4378,22 @@
             @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
             
             &lt;ex_quality_measurement_scale&gt; a dqv:QualityMeasurement ;
+                tern:unit &lt;https://qudt.org/vocab/unit/UNITLESS&gt; ;
                 dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
                 dqv:value 0.000001 .
             
             &lt;ex_quality_measurement_distance&gt; a dqv:QualityMeasurement ;
-                tern:unit &lt;http://www.qudt.org/vocab/unit/M&gt; ;
+                tern:unit &lt;https://qudt.org/vocab/unit/M&gt; ;
                 dqv:isMeasurementOf geodcatap:spatialResolutionAsDistance ;
                 dqv:value 100.0 .
             
             &lt;ex_quality_measurement_angular&gt; a dqv:QualityMeasurement ;
-                tern:unit &lt;http://www.qudt.org/vocab/unit/DEG&gt; ;
+                tern:unit &lt;https://qudt.org/vocab/unit/DEG&gt; ;
                 dqv:isMeasurementOf geodcatap:spatialResolutionAsAngularDistance ;
                 dqv:value 20.0 .
             
             &lt;ex_quality_measurement_vertical&gt; a dqv:QualityMeasurement ;
-                tern:unit &lt;http://www.qudt.org/vocab/unit/M&gt; ;
+                tern:unit &lt;https://qudt.org/vocab/unit/M&gt; ;
                 dqv:isMeasurementOf geodcatap:spatialResolutionAsVerticalDistance ;
                 dqv:value 10.0 .
           </pre>
@@ -4521,14 +4525,14 @@
             @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
             
-            &lt;http://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; a dcterms:Standard ;
+            &lt;https://linked.data.gov.au/def/tern-cv/ogc:wms-1.3.0-http-get-map&gt; a dcterms:Standard ;
                 dcterms:identifier &quot;OGC:WMS-1.3.0-http-get-map&quot; .
             
-            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
-                dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
-                dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
+            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&quot;^^xsd:anyURI ;
+                dcterms:issued &quot;2025-04-16&quot;^^xsd:date ;
                 dcterms:title &quot;TERN-DCAT application profile&quot; ;
-                owl:versionInfo &quot;1.0&quot; .
+                owl:versionInfo &quot;1.0.0&quot; .
           </pre>
         </aside>
 
@@ -4596,7 +4600,7 @@
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> Vocabulary defining the unit of measurement. </td>
-              <td property="skos:scopeNote"> Defined by <a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a>.
+              <td property="skos:scopeNote"> Defined by <a href="https://qudt.org/vocab/unit">QUDT Units vocabulary</a>.
               </td>
               <td> </td>
               <td> P </td>
@@ -4625,13 +4629,13 @@
             @prefix qudt: &lt;http://qudt.org/schema/qudt#&gt; .
             @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
             
-            &lt;http://qudt.org/vocab/unit/DEG&gt; a qudt:Unit ;
+            &lt;https://qudt.org/vocab/unit/DEG&gt; a qudt:Unit ;
                 rdfs:label &quot;Degree&quot; ;
-                rdfs:isDefinedBy &lt;http://qudt.org/vocab/unit&gt; .
+                rdfs:isDefinedBy &lt;https://qudt.org/vocab/unit&gt; .
             
-            &lt;http://qudt.org/vocab/unit/M&gt; a qudt:Unit ;
-                rdfs:label &quot;Meter&quot; ;
-                rdfs:isDefinedBy &lt;http://qudt.org/vocab/unit&gt; .
+            &lt;https://qudt.org/vocab/unit/M&gt; a qudt:Unit ;
+                rdfs:label &quot;Metre&quot; ;
+                rdfs:isDefinedBy &lt;https://qudt.org/vocab/unit&gt; .
           </pre>
         </aside>
 
@@ -4748,8 +4752,8 @@
               <td> <a href="#Unit" data-placement="right">Unit</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> The unit of measurement of the vertical extent. </td>
-              <td property="skos:scopeNote"> <a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a> to be used.
-                Preferably represented in <a href="http://qudt.org/vocab/unit/M">Metres</a>. </td>
+              <td property="skos:scopeNote"> <a href="https://qudt.org/vocab/unit">QUDT Units vocabulary</a> to be used.
+                Preferably represented in <a href="https://qudt.org/vocab/unit/M">Metres</a>. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4766,7 +4770,7 @@
                 dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
                 tern:maxAltitude 1000.0 ;
                 tern:minAltitude 100.0 ;
-                tern:unit &lt;http://qudt.org/vocab/unit/M&gt; .
+                tern:unit &lt;https://qudt.org/vocab/unit/M&gt; .
           </pre>
         </aside>
 
@@ -4913,7 +4917,7 @@
           </tr>
           <tr>
             <td>dcterms:type</td>
-            <td><a href="#Resource">Resource</a></td>
+            <td><a href="#Resource">Online Resource</a></td>
             <td><a
                 href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode">ISO
                 19115-3 Online Function Code List</a></td>
@@ -4921,8 +4925,9 @@
           </tr>
           <tr>
             <td>dcterms:conformsTo</td>
-            <td><a href="#Resource">Resource</a></td>
-            <td><a href="http://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for service
+            <td><a href="#Resource">Online Resource</a></td>
+            <td><a href="https://linked.data.gov.au/def/tern-cv/9801dc94-13ab-4f60-a7d0-51818254562e">TERN CV for
+                service
                 protocols</a></td>
             <td></td>
           </tr>
@@ -4953,7 +4958,7 @@
                 <li><a href="#VerticalExtent">Vertical Extent</a></li>
               </ul>
             </td>
-            <td><a href="http://qudt.org/vocab/unit">QUDT Units vocabulary</a></td>
+            <td><a href="https://qudt.org/vocab/unit">QUDT Units vocabulary</a></td>
             <td> </td>
           </tr>
           <tr>
@@ -5043,13 +5048,13 @@
       that can be used to build a validation check for a data exchange between two systems. A typical use case is the
       harvesting of one catalogue into another.</p>
 
-    <p>Validation of a catalogue according to TERN-DCAT specification should be consider as a standalone specification
+    <p>Validation of a catalogue according to TERN-DCAT specification should be considered as a standalone specification
       and validate all constraints at once. Take into account that TERN-DCAT is an extension of [[vocab-dcat-3]], very
       highly influenced by [[DCAT-AP]] and [[GeoDCAT-AP]], but with some considerable differences to fit the specific
-      [[TERN]]'s use case and [[TERN-ISO]] metadata profile.</p>
+      [[TERN]]'s use case and [[TERN-ISO]] metadata profile. Using additional properties from [[vocab-dcat-3]] (or any
+      other extension) is valid and should not break this validation. </p>
     <ul>
-      <li><a
-          href="https://github.com/ternaustralia/ontology_tern/blob/master/docs/dcat-shapes.ttl">shapes_recommended.ttl</a>:
+      <li><a href="https://github.com/ternaustralia/ontology_tern/blob/master/docs/dcat-shapes.ttl">dcat-shapes.ttl</a>:
         constraints concerning existence of recommended properties.</li>
     </ul>
   </section>
@@ -6058,14 +6063,14 @@
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
             &lt;ex_catalog-record_1&gt; a dcat:CatalogRecord ;
-              dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; ;
+              dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; ;
               ...
 
-            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&gt; a dcterms:Standard ;
-              dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0&quot;^^xsd:anyURI ;
-              dcterms:issued &quot;2025-03-01&quot;^^xsd:date ;
+            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; a dcterms:Standard ;
+              dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&quot;^^xsd:anyURI ;
+              dcterms:issued &quot;2025-04-16&quot;^^xsd:date ;
               dcterms:title &quot;TERN-DCAT application profile&quot; ;
-              owl:versionInfo &quot;1.0&quot; .
+              owl:versionInfo &quot;1.0.0&quot; .
           </pre>
         </aside>
 
@@ -6241,7 +6246,7 @@
             <tr>
               <td>Rights holder</td>
               <td>Party owning or managing rights over the resource.</td>
-              <td><code>tern:rightsHolder</code></td>
+              <td><code>dcterms:rightsHolder</code></td>
             </tr>
 
             <tr>
@@ -7066,7 +7071,7 @@
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
                 tern:additionalDocumentation &lt;urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au&gt;;
             
-            &lt;urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au&gt; a rdfs:Resource ;
+            &lt;urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au&gt; a tern:OnlineResource ;
                 dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; ;
                 dcterms:title &quot;online publication&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
@@ -7397,7 +7402,7 @@
                   tern:DQ_scopeDescription &quot;data Quality assesment scope&quot; ;
                   tern:DQ_standaloneQualityReport &lt;urn:resource:dataquality_report_1&gt; .
               
-              &lt;urn:resource:dataquality_report_1&gt; a rdfs:Resource ;
+              &lt;urn:resource:dataquality_report_1&gt; a tern:OnlineResource ;
                   dcterms:title &quot;data quality report&quot; ;
                   rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
             </pre>
@@ -7480,7 +7485,7 @@
                         rdf:_2 &quot;step2&quot; ] ;
                 tern:scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; ;
 
-            &lt;urn:resource:method_documentation_1&gt; a rdfs:Resource ;
+            &lt;urn:resource:method_documentation_1&gt; a tern:OnlineResource ;
                 dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; ;
                 dcterms:title &quot;Method documentation&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
@@ -7694,7 +7699,7 @@
                           dcterms:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/5712&gt; ;
                           tern:maxAltitude 1000.0 ;
                           tern:minAltitude 100.0 ;
-                          tern:unit &lt;http://qudt.org/vocab/unit/M&gt; ] .
+                          tern:unit &lt;https://qudt.org/vocab/unit/M&gt; ] .
             </pre>
 
             <p>Resource metadata in ISO 19115-3:</p>
@@ -7765,7 +7770,7 @@
                 dcat:accessURL &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; ;
                 tern:distributor &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; .
             
-            &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; a rdfs:Resource ;
+            &lt;urn:resource:92073887-28cb-4591-ab45-1f85224a1e5d:https%3A%2F%2Fdap.tern.org.au%2Fthredds%2Fcatalog%2Fecosystem_process%2Fozflux%2FDalyPasture%2F2022_v1%2Fcatalog.html&gt; a tern:OnlineResource ;
                 dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:DOWNLOAD-1.0-http--download&gt; ;
                 dcterms:title &quot;NetCDF files (2022_v1)&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess&gt; ;
@@ -7824,7 +7829,7 @@
 
   <section id='acknowledgments' class="appendix">
     <h2>
-      Acknowledgments
+      Acknowledgements
     </h2>
     <p> The Editors recognise the major contribution of the members of the original [[?DXWG]],
       [[?VOCAB-DCAT]], [[?DCAT-AP]] and [[GeoDCAT-AP]] on which this Aplication Profile and its documentation is based.

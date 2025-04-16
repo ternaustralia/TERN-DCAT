@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <ex_record_1> a dcat:CatalogRecord ;
-    dcterms:conformsTo <https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0> ;
+    dcterms:conformsTo <https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0> ;
     dcterms:created "2024-08-02T00:00:00"^^xsd:dateTime ;
     dcterms:description "Data was submitted via the TERN SHaRED Data Submission Tool https://shared.tern.org.au/" ;
     dcterms:identifier "9210c331-ba96-4e0c-9554-f029d61534be" ;

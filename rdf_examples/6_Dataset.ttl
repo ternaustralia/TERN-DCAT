@@ -36,7 +36,7 @@
     dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
             dqv:isMeasurementOf <http://data.europa.eu/930/spatialResolutionAsAngularDistance> ;
             dqv:value 20.0 ;
-            tern:unit <http://qudt.org/vocab/unit/DEG> ] ;
+            tern:unit <https://qudt.org/vocab/unit/DEG> ] ;
     sosa:usedProcedure [ a tern:Method ;
             dcterms:description "procedure details" ;
             tern:additionalDocumentation <urn:resource:ex_additional_documentation_1> ;

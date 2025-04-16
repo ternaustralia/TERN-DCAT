@@ -9,7 +9,7 @@
             rdf:_2 "step2" ] ;
     tern:scope <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset> ;
 
-<urn:resource:method_documentation_1> a rdfs:Resource ;
+<urn:resource:method_documentation_1> a tern:OnlineResource ;
     dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
     dcterms:title "Method documentation" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;

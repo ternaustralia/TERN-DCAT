@@ -35,7 +35,7 @@
 <ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
     tern:additionalDocumentation <urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au>;
 
-<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au> a rdfs:Resource ;
+<urn:resource:81f6c556-fef7-42fe-a675-7938b8417f5d:https%3A%2F%2Fpublication1.tern.org.au> a tern:OnlineResource ;
     dcterms:conformsTo <http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link> ;
     dcterms:title "online publication" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information> ;
