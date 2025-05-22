@@ -1,6 +1,6 @@
 # Terrestrial Ecosystem Research Network (TERN) DCAT application profile
 
-[TERN-DCAT](https://ternaustralia.github.io/TERN-DCAT/) is a [DCAT](https://www.w3.org/TR/vocab-dcat-3/) profile "TERN Data Catalogue Application Profile" (TERN-DCAT) developed by [TERN](https://www.tern.org.au/) 
+[TERN-DCAT](https://ternaustralia.github.io/TERN-DCAT/) is a [DCAT](https://www.w3.org/TR/vocab-dcat-3/) profile "TERN Data Catalogue Application Profile" (TERN-DCAT) developed by [TERN](https://www.tern.org.au/) Data Services and Analytics Platform team
 for use in TERN's metadata catalogues and Data Discovery portal.
 
 This specification also includes the **mapping** between the [Terrestrial Ecosystem Research Network (TERN) Metadata Profile of ISO 19115-3:2016 and ISO 19157-2:2016](https://github.com/ternaustralia/TERN-ISO19115/releases/tag/v1.0) and TERN-DCAT elements.
