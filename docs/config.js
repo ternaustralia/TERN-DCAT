@@ -61,6 +61,11 @@ var respecConfig = {
             "title": "TERN Organisations Ontology",
             "publisher": "Terrestrial Ecosystem Research Network"
         },
+        "TDDP": {
+            "href": "www.portal.tern.org.au",
+            "title": "TERN Data Discovery Portal",
+            "publisher": "Terrestrial Ecosystem Research Network"
+        },
         "OWL2-SYNTAX": {
             "href": "https://www.w3.org/TR/owl2-overview/",
             "title": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
