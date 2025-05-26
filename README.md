@@ -1,4 +1,4 @@
-# Terrestrial Ecosystem Research Network (TERN) DCAT application profile
+# Terrestrial Ecosystem Research Network (TERN) DCAT application profile <img align="right" src="https://w3id.org/tern/static/tern-web/img/logo@2x.png" alt="SEMIC Core Vocabulary" />  
 
 [TERN-DCAT](https://ternaustralia.github.io/TERN-DCAT/) is a [DCAT](https://www.w3.org/TR/vocab-dcat-3/) profile "TERN Data Catalogue Application Profile" (TERN-DCAT) developed by [TERN](https://www.tern.org.au/) Data Services and Analytics Platform team
 for use in TERN's metadata catalogues and Data Discovery portal.
