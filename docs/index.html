@@ -4860,7 +4860,7 @@
       Datatypes
     </h2>
 
-    The following datatypes are used within this specification.
+    The following datatypes, among others, are used within this specification.
 
     <table class="data-table simple" id="table-mandatory-classes">
       <thead>
@@ -4900,6 +4900,30 @@
         </tr>
         <tr>
           <td>
+            <div id="xsd%3AanyURI">
+              <a href="http://www.w3.org/2001/XMLSchema#anyURI" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#anyURI" data-placement="right">xsd:anyURI</a>
+            </div>
+          </td>
+          <td>
+            A string that conforms to the syntax of a Uniform Resource Identifier (URI) as defined by [[?RFC3986]].
+            This datatype is used for URIs, URLs, and IRIs.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="xsd%3Adate">
+              <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip"
+                data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+            </div>
+          </td>
+          <td>
+            Object with integer-valued year, month and day properties. The date is represented in the Gregorian
+            calendar.
+          </td>
+        </tr>
+        <tr>
+          <td>
             <div id="xsd%3AdateTime">
               <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip"
                 data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
@@ -4907,20 +4931,7 @@
           </td>
           <td>
             Object with integer-valued year, month, day, hour and minute properties, a decimal-valued second property,
-            and a boolean timezoned property.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div id="xsd%3Adecimal">
-              <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip"
-                data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">xsd:decimal</a>
-            </div>
-          </td>
-          <td>
-            Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value
-            space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive
-            power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
+            and a boolean timezoned property. The date and time are represented in the Gregorian calendar.
           </td>
         </tr>
       </tbody>
@@ -5023,7 +5034,7 @@
             <td>dct:type</td>
             <td><a href="#LicenceDocument">Licence Document</a></td>
             <td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td>
-            <td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification</td>
+            <td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification. </td>
           </tr>
           <tr>
             <td>tern:unit</td>
@@ -5894,7 +5905,7 @@
 
       <section id="resource-id-desc">
         <h4>Resource identifier and description</h4>
-        <p>Unique identifier for this metadata file.</p>
+        <p>Unique identifier for the metadata file.</p>
         <p>The content of the element 'resource identifier' and 'resource description' can be represented in RDF as a
           plain literal, and by using properties <code>dcterms:identifier</code> and <code>dcterms:description</code>,
           respectively.</p>
