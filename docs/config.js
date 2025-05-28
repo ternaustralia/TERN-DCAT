@@ -18,6 +18,7 @@ var respecConfig = {
     editors: [
         {
             name: "Javier Sánchez González",
+            orcid: "0009-0007-1472-1596",
             company: "Terrestrial Ecosystem Research Network",
             companyURL: "https://www.tern.org.au/",
         },
