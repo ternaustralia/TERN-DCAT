@@ -1057,7 +1057,6 @@
             <li><a href="#Concept.inScheme">concept scheme</a></li>
             <li><a href="#Concept.prefLabel">label</a></li>
             <li><a href="#Concept.source">source</a></li>
-            <li><a href="#Concept.unit">unit of measurement</a></li>
           </ul>
         </dd>
       </dl>
@@ -1143,7 +1142,116 @@
               <td> P </td>
             </tr>
 
-            <tr id="Concept.unit" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/unit"
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-concept-1" title="Concept (normative)">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; ;
+                skos:prefLabel &quot;abundance of coarse fragments&quot; .
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-concept-2"
+          title="Concept (non-normative). Created ad-hoc to represent codes from ISO 19115 codelists.">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;topSecret&quot; .
+          </pre>
+        </aside>
+
+      </div>
+
+    </section>
+
+    <section id="entity-context-of-concept">
+      <h3 id="ContextOfConcept">
+        <a href="#ContextOfConcept" data-toggle="tooltip" data-content="#ContextOfConcept"
+          data-placement="right">Context of Concept</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> This is a supportive custom-defined RDF class that can be used to capture domain-specific nuances not
+          covered by standard vocabularies, or to model intermediate or contextual entities. </dd>
+        <dt> Usage </dt>
+        <dd>
+          <p>This class allows to combine a Concept with a domain-specific nueace.</p>
+          <p> E.g., combine an Ecological Parameter concept (vegetation height) with its Unit of Measurement (metres,
+            centimetres, etc.). In the mentioned example, the same Ecological Parameter may have several distinct UoM
+            depending on the dataset, type of survey, instrument used, etc. i.e., depending on the context. Hence, we
+            can use this class to define a Dataset specific usage of the general concept.</p>
+          <p>This example serves a very specific use case for TERN; any property that gives any context to the Concept
+            could be used. </p>
+        </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#ContextOfConcept.concept">concept</a></li>
+            <li><a href="#ContextOfConcept.unit">unit of measurement</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="ContextOfConcept.concept" typeof="rdfs:Property" resource="urnp:property:concept"
+              class="class mandatory">
+              <td>
+                <a href="#ContextOfConcept.concept" data-toggle="tooltip" data-content="#ContextOfConcept.concept"
+                  data-placement="right"> concept</a>
+              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment">
+                Concept that is being contextualised. This can be any Concept.
+              </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="ContextOfConcept.unit" typeof="rdfs:Property" resource="https://w3id.org/tern/ontologies/tern/unit"
               class="class mandatory">
               <td>
                 <a href="https://w3id.org/tern/ontologies/tern/unit" data-toggle="tooltip"
@@ -1153,9 +1261,10 @@
               <td> <a href="#Unit" data-placement="right">Unit</a> </td>
               <td> 0..1 </td>
               <td property="rdfs:comment">
-                The unit of measurement of the Concept, when the Concept relates to any measurable property.
+                The unit of measurement associated to the Concept, when the Concept relates to any measurable property,
+                in the context of the Dataset.
               </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="skos:scopeNote"> Notice that this property serves a very specific use case for TERN. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -1163,31 +1272,32 @@
           </tbody>
         </table>
 
-        <aside class="example" id="ex-concept-1" title="Concept (normative)">
+        <aside class="example" id="ex-context-of-concept-1" title="Context of Concept">
           <pre class="turtle">
             @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
             @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
             @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
+            @prefix urnc: &lt;urn:class:&gt; .
+            @prefix urnp: &lt;urn:property:&gt; .
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-            
-            &lt;http://linked.data.gov.au/def/tern-cv/2d99f42e-9773-43aa-945a-bb1fe0c47a1a&gt; a skos:Concept ;
-                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; ;
-                skos:prefLabel &quot;abundance of coarse fragments&quot; ;
-                tern:unit &lt;https://qudt.org/vocab/unit/AttoJ-SEC&gt; .
-          </pre>
-        </aside>
 
-        <aside class="example" id="ex-concept-2"
-          title="Concept (non-normative). Created ad-hoc to represent codes from ISO 19115 codelists.">
-          <pre class="turtle">
-            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
-            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
-            @prefix tern: &lt;https://w3id.org/tern/ontologies/tern/&gt; .
-            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-            
-            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_topSecret&gt; a skos:Concept ;
-                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot;^^xsd:anyURI ;
-                skos:prefLabel &quot;topSecret&quot; .
+            # Standard, unique Concept
+            &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e&gt; ;
+                skos:prefLabel &quot;plant height&quot; .
+
+            # Contexts of the Concept
+            &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_1&gt; a urnc:ContextOfConcept ;
+                tern:unit &lt;http://qudt.org/vocab/unit/M&gt; ;
+                urnp:concept &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_2&gt; a urnc:ContextOfConcept ;
+                tern:unit &lt;http://qudt.org/vocab/unit/MilliM&gt; ;
+                urnp:concept &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_3&gt; a urnc:ContextOfConcept ;
+                tern:unit &lt;http://qudt.org/vocab/unit/CentiM&gt; ;
+                urnp:concept &lt;http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140&gt; .
           </pre>
         </aside>
 
@@ -2125,10 +2235,11 @@
                   data-content="https://www.w3.org/ns/dcat#theme" data-placement="right">
                   theme</a>
               </td>
-              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> | <a href="#ContextOfConcept"
+                  data-placement="right">ContextOfConcept</a> </td>
               <td> 0..* </td>
-              <td property="rdfs:comment"> Vocabulary terms the describe the Dataset. </td>
-              <td property="skos:scopeNote"> These terms refers to a knowledge organisation system used to describe the
+              <td property="rdfs:comment"> Vocabulary terms that describe the Dataset. </td>
+              <td property="skos:scopeNote"> These terms refer to a knowledge organisation system used to describe the
                 Dataset. E.g., Science categories, Field of research, Instruments, Resolutions or Species information.
                 <a href="#table-cv2">CV used by TERN</a>.
               </td>

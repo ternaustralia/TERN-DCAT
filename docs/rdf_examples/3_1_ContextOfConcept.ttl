@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tern: <https://w3id.org/tern/ontologies/tern/> .
+@prefix urnc: <urn:class:> .
+@prefix urnp: <urn:property:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Standard, unique Concept
+<http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
+    skos:prefLabel "plant height" .
+
+# Contexts of the Concept
+<http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_1> a urnc:ContextOfConcept ;
+    tern:unit <http://qudt.org/vocab/unit/M> ;
+    urnp:concept <http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140> .
+
+<http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_2> a urnc:ContextOfConcept ;
+    tern:unit <http://qudt.org/vocab/unit/MilliM> ;
+    urnp:concept <http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140> .
+
+<http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140/dataset_3> a urnc:ContextOfConcept ;
+    tern:unit <http://qudt.org/vocab/unit/CentiM> ;
+    urnp:concept <http://linked.data.gov.au/def/tern-cv/09296da0-c645-4165-950c-780c21b3c140> .
