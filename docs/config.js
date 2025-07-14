@@ -24,6 +24,7 @@ var respecConfig = {
         },
         {
             name: "Junrong Yu",
+            orcid: "0000-0002-7091-6538",
             company: "Terrestrial Ecosystem Research Network",
             companyURL: "https://www.tern.org.au/",
         },
