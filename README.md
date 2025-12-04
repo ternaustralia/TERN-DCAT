@@ -10,17 +10,13 @@ The latest version of TERN-DCAT can be downloaded from the [releases](https://gi
 
 ## Releases
 
-- Pre release [TERN-DCAT v1.0.0](https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0) - [Documentation](https://ternaustralia.github.io/TERN-DCAT/)
+- Release [TERN-DCAT v1.0.1](https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.1) - [Documentation](https://ternaustralia.github.io/TERN-DCAT/)
+
 
 ## Source files
 
-TBA
+[TERN-DCAT SHACL shapes](https://raw.githubusercontent.com/ternaustralia/ontology_tern/refs/heads/master/docs/dcat-shapes.ttl)
 
-<!-- - [docs/tern.profile.ttl](docs/tern.profile.ttl) TERN Ontology Profiles declaration
-- [docs/tern.ttl](docs/tern.ttl) TERN Ontology in OWL
-- [docs/tern.shacl.ttl](docs/tern.shapes.ttl) TERN Ontology's SHACL shapes
-- [docs/tern.ecoplots.shacl.ttl](docs/tern.ecoplots.shapes.ttl) TERN Ontology's EcoPlots' SHACL shapes
-- [docs/meta.shapes.ttl](docs/meta.shapes.ttl) TERN Ontology's meta SHACL shapes -->
 
 ## License
 

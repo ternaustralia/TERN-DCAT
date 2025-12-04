@@ -3635,15 +3635,9 @@
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Organisation.country">country</a></li>
-            <li><a href="#Organisation.email">email</a></li>
             <li><a href="#Organisation.identifier">identifier</a></li>
-            <li><a href="#Organisation.locality">locality</a></li>
+            <li><a href="#Organisation.hasSite">has site</a></li>
             <li><a href="#Organisation.name">name</a></li>
-            <li><a href="#Organisation.postalCode">postal code</a></li>
-            <li><a href="#Organisation.region">region</a></li>
-            <li><a href="#Organisation.streetAddress">street address</a></li>
-            <li><a href="#Organisation.telephone">telephone</a></li>
           </ul>
         </dd>
       </dl>
@@ -3679,37 +3673,6 @@
 
           <tbody class="supertype">
 
-            <tr id="Organisation.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/addressCountry" data-toggle="tooltip"
-                  data-content="https://schema.org/addressCountry" data-placement="right">
-                  country</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The country of the entity. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Organisation.email" typeof="rdfs:Property" resource="https://schema.org/email"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
-                  data-placement="right">
-                  email</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
-                scheme [[?RFC6068]]. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
             <tr id="Organisation.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
               <td>
@@ -3726,16 +3689,16 @@
               <td> P </td>
             </tr>
 
-            <tr id="Organisation.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
+            <tr id="Organisation.hasSite" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasSite"
               class="class mandatory">
               <td>
-                <a href="https://schema.org/addressLocality" data-toggle="tooltip"
-                  data-content="https://schema.org/addressLocality" data-placement="right">
-                  locality</a>
+                <a href="http://www.w3.org/ns/org#hasSite" data-toggle="tooltip"
+                  data-content="http://www.w3.org/ns/org#hasSite" data-placement="right">
+                  has site</a>
               </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The locality of the entity. </td>
+              <td> <a href="#Site" data-placement="right">Site</a> </td>
+              <td> 1..* </td>
+              <td property="rdfs:comment"> The locality of the entity, represented as a Site. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3756,67 +3719,6 @@
               <td> P </td>
             </tr>
 
-            <tr id="Organisation.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/postalCode" data-toggle="tooltip"
-                  data-content="https://schema.org/postalCode" data-placement="right">
-                  postal code</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The postal code of the entity. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Organisation.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/addressRegion" data-toggle="tooltip"
-                  data-content="https://schema.org/addressRegion" data-placement="right">
-                  region</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The region of the entity. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Organisation.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/streetAddress" data-toggle="tooltip"
-                  data-content="https://schema.org/streetAddress" data-placement="right">
-                  street address</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The postal address of the entity. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
-            <tr id="Organisation.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
-                  data-placement="right">
-                  telephone</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
-                scheme [[?RFC3966]]. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
           </tbody>
         </table>
 
@@ -3825,14 +3727,20 @@
             @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
             @prefix schema: &lt;http://schema.org/&gt; .
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+            @prefix org: &lt;http://www.w3.org/ns/org#&gt; .
             
             &lt;ex_organisation_1&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                
+            &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
                 schema:email &quot;esupport@tern.org.au&quot; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
                 schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
                 schema:telephone &quot;+61 7 3365 9097&quot; .
@@ -4330,6 +4238,231 @@
                     They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
                     &lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
                     &lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&quot;&quot;&quot; .
+          </pre>
+        </aside>
+
+      </div>
+
+    </section>
+
+    <section id="entity-site-organisation">
+      <h3 id="Site">
+        <a href="https://w3id.org/tern/ontologies/org/Site" data-toggle="tooltip"
+          data-content="https://w3id.org/tern/ontologies/org/Site" data-placement="right">Site</a>
+      </h3>
+
+      <dl>
+        <dt> Definition </dt>
+        <dd> This entity represents the location of an Organisation. </dd>
+        <dt> Properties </dt>
+        <dd>
+          For this entity the following properties are defined:
+          <ul class="prop-list">
+            <li><a href="#Site.country">country</a></li>
+            <li><a href="#Site.email">email</a></li>
+            <li><a href="#Site.identifier">identifier</a></li>
+            <li><a href="#Site.locality">locality</a></li>
+            <li><a href="#Site.name">name</a></li>
+            <li><a href="#Site.postalCode">postal code</a></li>
+            <li><a href="#Site.region">region</a></li>
+            <li><a href="#Site.streetAddress">street address</a></li>
+            <li><a href="#Site.telephone">telephone</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <div class="u-table-overflow">
+        <table class="data-table simple" id="table-mandatory-classes">
+          <thead>
+            <tr class="data-table__header">
+              <th class="data-table__header-title--sortable data-table__header-title--sortable-active"
+                style="width:14%">
+                Property
+              </th>
+              <th class="data-table__header-title--sortable" style="width:13%">
+                Range
+              </th>
+              <th class="data-table__header-title--sortable" style="width:6%">
+                Card
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Definition
+              </th>
+              <th class="data-table__header-title--sortable" style="width:30%">
+                Usage
+              </th>
+              <th class="data-table__header-title--sortable" style="width:5%">
+                DCAT
+              </th>
+              <th class="data-table__header-title--sortable" style="width:4%">
+                Reuse
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="supertype">
+
+            <tr id="Site.country" typeof="rdfs:Property" resource="https://schema.org/addressCountry"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressCountry" data-toggle="tooltip"
+                  data-content="https://schema.org/addressCountry" data-placement="right">
+                  country</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The country of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.email" typeof="rdfs:Property" resource="https://schema.org/email" class="class mandatory">
+              <td>
+                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
+                  data-placement="right">
+                  email</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
+                scheme [[?RFC6068]]. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                  identifier</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Organisation. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.locality" typeof="rdfs:Property" resource="https://schema.org/addressLocality"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressLocality" data-toggle="tooltip"
+                  data-content="https://schema.org/addressLocality" data-placement="right">
+                  locality</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The locality of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.name" typeof="rdfs:Property" resource="https://schema.org/name" class="class mandatory">
+              <td>
+                <a href="https://schema.org/name" data-toggle="tooltip" data-content="https://schema.org/name"
+                  data-placement="right">
+                  name</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> A name of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.postalCode" typeof="rdfs:Property" resource="https://schema.org/postalCode"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/postalCode" data-toggle="tooltip"
+                  data-content="https://schema.org/postalCode" data-placement="right">
+                  postal code</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The postal code of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.region" typeof="rdfs:Property" resource="https://schema.org/addressRegion"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/addressRegion" data-toggle="tooltip"
+                  data-content="https://schema.org/addressRegion" data-placement="right">
+                  region</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The region of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.streetAddress" typeof="rdfs:Property" resource="https://schema.org/streetAddress"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/streetAddress" data-toggle="tooltip"
+                  data-content="https://schema.org/streetAddress" data-placement="right">
+                  street address</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The postal address of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Site.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
+                  data-placement="right">
+                  telephone</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
+                scheme [[?RFC3966]]. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-site-organisation" title="Site">
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix org: &lt;https://w3id.org/tern/ontologies/org/&gt; .
+            @prefix schema: &lt;http://schema.org/&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+            &lt;ex_organisation_1&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+
+            &lt;ex_org_site_1&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; .
           </pre>
         </aside>
 
@@ -6365,11 +6498,16 @@
             
             &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                
+            &lt;ex_org_site_1&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
                 schema:email &quot;esupport@tern.org.au&quot; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
                 schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
                 schema:telephone &quot;+61 7 3365 9097&quot; .
@@ -6452,21 +6590,21 @@
               dcat:contactPoint &lt;ex_person_2&gt; ;
               ...
         
-            &lt;ex_person_2&gt; a schema:Person ;
-                dcterms:identifier &quot;http://ex_person_2&quot;^^xsd:anyURI ;
-                schema:affiliation &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; ;
-                schema:email &quot;email@uq.edu.au&quot; ;
-                schema:name &quot;Doe, John&quot; .
-
-            &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; a schema:Organization ;
-                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                
+            &lt;ex_org_site_1&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
-                schema:addressLocality &quot;Casuarina&quot; ;
-                schema:addressRegion &quot;Northern Territory&quot; ;
-                schema:email &quot;study@cdu.edu.au&quot; ;
-                schema:name &quot;Charles Darwin University&quot; ;
-                schema:postalCode &quot;0810&quot; ;
-                schema:streetAddress &quot;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&quot; .
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -6574,16 +6712,20 @@
               dcterms:publisher &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; ;
               ...
             
-            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
-              dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
-              schema:addressCountry &quot;Australia&quot; ;
-              schema:addressLocality &quot;Indooroopilly&quot; ;
-              schema:addressRegion &quot;QLD&quot; ;
-              schema:email &quot;esupport@tern.org.au&quot; ;
-              schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
-              schema:postalCode &quot;4068&quot; ;
-              schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-              schema:telephone &quot;+61 7 3365 9097&quot; .
+            &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_2&gt; ;
+                schema:name &quot;Charles Darwin University&quot; .
+
+            &lt;ex_org_site_2&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Casuarina&quot; ;
+                schema:addressRegion &quot;Northern Territory&quot; ;
+                schema:email &quot;study@cdu.edu.au&quot; ;
+                schema:name &quot;Charles Darwin University&quot; ;
+                schema:postalCode &quot;0810&quot; ;
+                schema:streetAddress &quot;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -6677,15 +6819,20 @@
                 tern:distributor &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; .
             
             &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
-              dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
-              schema:addressCountry &quot;Australia&quot; ;
-              schema:addressLocality &quot;Indooroopilly&quot; ;
-              schema:addressRegion &quot;QLD&quot; ;
-              schema:email &quot;esupport@tern.org.au&quot; ;
-              schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
-              schema:postalCode &quot;4068&quot; ;
-              schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-              schema:telephone &quot;+61 7 3365 9097&quot; .
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                
+            &lt;ex_org_site_1&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
