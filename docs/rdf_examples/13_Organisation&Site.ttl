@@ -6,15 +6,15 @@
 <ex_organisation_1> a schema:Organization ;
     dcterms:identifier "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"^^xsd:anyURI ;
     org:hasSite <ex_org_site_1> ;
-    schema:name "Terrestrial Ecosystem Research Network" .
+    schema:name "Terrestrial Ecosystem Research Network" ;
+    schema:telephone "+61 7 3365 9097" ;
+    schema:email "esupport@tern.org.au" .
     
 <ex_org_site_1> a org:Site ;
     dcterms:identifier "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"^^xsd:anyURI ;
     schema:addressCountry "Australia" ;
     schema:addressLocality "Indooroopilly" ;
     schema:addressRegion "QLD" ;
-    schema:email "esupport@tern.org.au" ;
     schema:name "UQ Long Pocket campus" ;
     schema:postalCode "4068" ;
-    schema:streetAddress "Building 1019, 80 Meiers Rd" ;
-    schema:telephone "+61 7 3365 9097" .
+    schema:streetAddress "Building 1019, 80 Meiers Rd" .

@@ -3635,9 +3635,11 @@
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
-            <li><a href="#Organisation.identifier">identifier</a></li>
+            <li><a href="#Organisation.email">email</a></li>
             <li><a href="#Organisation.hasSite">has site</a></li>
+            <li><a href="#Organisation.identifier">identifier</a></li>
             <li><a href="#Organisation.name">name</a></li>
+            <li><a href="#Organisation.telephone">telephone</a></li>
           </ul>
         </dd>
       </dl>
@@ -3673,17 +3675,17 @@
 
           <tbody class="supertype">
 
-            <tr id="Organisation.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+            <tr id="Organisation.email" typeof="rdfs:Property" resource="https://schema.org/email"
               class="class mandatory">
               <td>
-                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
-                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
-                  identifier</a>
+                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
+                  data-placement="right">
+                  email</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 1 </td>
-              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
-                Organisation. </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
+                scheme [[?RFC6068]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3704,6 +3706,22 @@
               <td> P </td>
             </tr>
 
+            <tr id="Organisation.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                  identifier</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 1 </td>
+              <td property="rdfs:comment"> An unambiguous reference to the resource within the given context of
+                Organisation. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
             <tr id="Organisation.name" typeof="rdfs:Property" resource="https://schema.org/name"
               class="class mandatory">
               <td>
@@ -3714,6 +3732,22 @@
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
               <td property="rdfs:comment"> A name of the entity. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
+            <tr id="Organisation.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
+              class="class mandatory">
+              <td>
+                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
+                  data-placement="right">
+                  telephone</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
+                scheme [[?RFC3966]]. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3732,18 +3766,18 @@
             &lt;ex_organisation_1&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_1&gt; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
                 
             &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
-                schema:email &quot;esupport@tern.org.au&quot; ;
                 schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
-                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-                schema:telephone &quot;+61 7 3365 9097&quot; .
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
           </pre>
         </aside>
 
@@ -4259,14 +4293,12 @@
           For this entity the following properties are defined:
           <ul class="prop-list">
             <li><a href="#Site.country">country</a></li>
-            <li><a href="#Site.email">email</a></li>
             <li><a href="#Site.identifier">identifier</a></li>
             <li><a href="#Site.locality">locality</a></li>
             <li><a href="#Site.name">name</a></li>
             <li><a href="#Site.postalCode">postal code</a></li>
             <li><a href="#Site.region">region</a></li>
             <li><a href="#Site.streetAddress">street address</a></li>
-            <li><a href="#Site.telephone">telephone</a></li>
           </ul>
         </dd>
       </dl>
@@ -4317,20 +4349,7 @@
               <td> P </td>
             </tr>
 
-            <tr id="Site.email" typeof="rdfs:Property" resource="https://schema.org/email" class="class mandatory">
-              <td>
-                <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email"
-                  data-placement="right">
-                  email</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The email address of the entity, specified using fully qualified mailto: URI
-                scheme [[?RFC6068]]. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
+
 
             <tr id="Site.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier"
               class="class mandatory">
@@ -4422,22 +4441,6 @@
               <td> P </td>
             </tr>
 
-            <tr id="Site.telephone" typeof="rdfs:Property" resource="https://schema.org/telephone"
-              class="class mandatory">
-              <td>
-                <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone"
-                  data-placement="right">
-                  telephone</a>
-              </td>
-              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment"> The phone number of the entity, specified using fully qualified tel: URI
-                scheme [[?RFC3966]]. </td>
-              <td property="skos:scopeNote"> </td>
-              <td> </td>
-              <td> P </td>
-            </tr>
-
           </tbody>
         </table>
 
@@ -4451,18 +4454,18 @@
             &lt;ex_organisation_1&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_1&gt; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
 
             &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
-                schema:addressRegion &quot;QLD&quot; ;
-                schema:email &quot;esupport@tern.org.au&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;                
                 schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
-                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-                schema:telephone &quot;+61 7 3365 9097&quot; .
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
           </pre>
         </aside>
 
@@ -6499,18 +6502,18 @@
             &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_1&gt; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
                 
             &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
-                schema:email &quot;esupport@tern.org.au&quot; ;
                 schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
-                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-                schema:telephone &quot;+61 7 3365 9097&quot; .
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -6593,18 +6596,18 @@
             &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_1&gt; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
                 
             &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
-                schema:email &quot;esupport@tern.org.au&quot; ;
                 schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
-                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-                schema:telephone &quot;+61 7 3365 9097&quot; .
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -6715,14 +6718,14 @@
             &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_2&gt; ;
-                schema:name &quot;Charles Darwin University&quot; .
+                schema:name &quot;Charles Darwin University&quot; ;
+                schema:email &quot;study@cdu.edu.au&quot; .
 
             &lt;ex_org_site_2&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Casuarina&quot; ;
                 schema:addressRegion &quot;Northern Territory&quot; ;
-                schema:email &quot;study@cdu.edu.au&quot; ;
                 schema:name &quot;Charles Darwin University&quot; ;
                 schema:postalCode &quot;0810&quot; ;
                 schema:streetAddress &quot;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&quot; .
@@ -6821,18 +6824,18 @@
             &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 org:hasSite &lt;ex_org_site_1&gt; ;
-                schema:name &quot;Terrestrial Ecosystem Research Network&quot; .
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
                 
             &lt;ex_org_site_1&gt; a org:Site ;
                 dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
                 schema:addressCountry &quot;Australia&quot; ;
                 schema:addressLocality &quot;Indooroopilly&quot; ;
                 schema:addressRegion &quot;QLD&quot; ;
-                schema:email &quot;esupport@tern.org.au&quot; ;
                 schema:name &quot;UQ Long Pocket campus&quot; ;
                 schema:postalCode &quot;4068&quot; ;
-                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; ;
-                schema:telephone &quot;+61 7 3365 9097&quot; .
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
