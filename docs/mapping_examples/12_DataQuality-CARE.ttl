@@ -1,0 +1,11 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    tern:dataQuality <ex_dataquality_1> ;
+
+<ex_dataquality_1> a tern:DataQuality ;
+    tern:DQ_descriptionResult "Data has been assessed for quality and meets the standards set by the land owners and data custodians, ensuring that it is reliable and trustworthy for use and it will benefit both the data users and Indigenous Communities." ;
+    tern:DQ_scopeDescription "Data quality level meets the needs and expectations of Indigenous Communities." ;
+    tern:DQ_standaloneQualityReport <urn:resource:dataquality_report_1> .
+
+<urn:resource:dataquality_report_1> a tern:OnlineResource ;
+    dcterms:title "data quality report" ;
+    rdf:value "https://report.tern.org.au"^^xsd:anyURI .

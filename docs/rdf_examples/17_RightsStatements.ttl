@@ -1,10 +1,57 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <ex_rights_statement_1> a dcterms:RightsStatement ;
-    dcterms:title "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." .
+    dcterms:description "other" ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
+<ex_rights_statement_2>  a dcterms:RightsStatement ;
+    dcterms:subject <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_license> ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/1b04c8e5-fc1f-41a5-a2af-d7d31982b768> .
+<ex_rights_statement_3>  a dcterms:RightsStatement ;
+    dcterms:description "TERN services are provided on an \"as-is\" and \"as available\" basis. Users use any TERN services at their discretion and risk. They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure. <br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN. <br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting" ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
+<ex_rights_statement_4> a dcterms:RightsStatement ;
+    dcterms:subject <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions> ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715> .
+<ex_rights_statement_5>  a dcterms:RightsStatement ;
+    dcterms:subject <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified> ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/4177df86-a03d-4bba-a602-d94baa48341b> .
+ <ex_rights_statement_6> a dcterms:RightsStatement ;
+    dcterms:description "nothgin" ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
+<ex_rights_statement_7> a dcterms:RightsStatement ;
+    dcterms:description "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
+<ex_rights_statement_8> a dcterms:RightsStatement ;
+    dcterms:subject <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_SBU> ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715> .
+<ex_rights_statement_9> a dcterms:RightsStatement ;
+    dcterms:subject <http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872> ;
+    dcterms:title "Public access limited according to CARE Principles" ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
 
-<ex_rights_statement_2> a dcterms:RightsStatement ;
-    dcterms:title """TERN services are provided on an "as-is" and "as available" basis. Users use any TERN services at their discretion and risk.
-        They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
-        <br />Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
-        <br /><br />Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting""" .
+<http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd> a skos:ConceptScheme ;
+    dcterms:title "Dataset limitations" .
+
+<http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd> ;
+    skos:prefLabel "Public access limited according to CARE Principles" .
+
+<http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107> a skos:ConceptScheme ;
+    dcterms:title "Resource constraints (ISO 19115-1 aligned)" .
+
+<http://linked.data.gov.au/def/tern-cv/1b04c8e5-fc1f-41a5-a2af-d7d31982b768> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107> ;
+    skos:prefLabel "Access constraints" .
+
+<http://linked.data.gov.au/def/tern-cv/4177df86-a03d-4bba-a602-d94baa48341b> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107> ;
+    skos:prefLabel "Security constraints" .
+
+<http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107> ;
+    skos:prefLabel "Use constraints" .
+
+<http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107> ;
+    skos:prefLabel "Other constraints" .

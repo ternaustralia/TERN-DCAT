@@ -5286,12 +5286,1310 @@
     <!-- This section is filled automatically by ReSpec. -->
   </section>
 
+  <section id='care-principles' class="appendix">
+    <h2> The CARE Principles </h2>
+
+    <section id='care-principles-intro'>
+      <h3> Overview </h3>
+      <p>The CARE Principles for Indigenous Data Governance [[CARE-PRINCIPLES]] are a set of guidelines that complement
+        the FAIR principles [[FAIR-PRINCIPLES]] (Findable, Accessible, Interoperable, and Reusable) by focusing on
+        people and purpose in data management, particularly for Indigenous data. The CARE Principles (Collective
+        Benefit, Authority to Control, Responsibility, and Ethics) were developed by the Global Indigenous Data Alliance
+        [[GIDA]] to ensure that data practices support Indigenous communities' self-determination and promote equitable
+        outcomes for Indigenous peoples.</p>
+      <p>
+        While originally developed for Indigenous data, the CARE principles have broader applicability to research
+        involving any communities or populations, particularly those that have been historically marginalised or
+        disadvantaged. They emphasise community engagement, ethical responsibility, and the importance of ensuring that
+        data use benefits the communities from which data originate.</p>
+    </section>
+
+    <section id='care-principles-tern-commitment'>
+      <h3> TERN's commitment </h3>
+      <p>As part of TERN's [[TERN]] commitment to ethical data management, TERN-DCAT integrates the CARE Principles by
+        providing mechanisms to document and respect Indigenous data sovereignty. This includes the ability to specify
+        data ownership, access restrictions, and ethical considerations related to Indigenous knowledge and cultural
+        heritage.</p>
+
+      <p>Embedding the CARE Principles into TERN-DCAT, [[TERN]] aims to ensure that Indigenous communities have greater
+        control over their data, and that data management practices align with ethical standards that respect Indigenous
+        rights and interests.</p>
+    </section>
+
+    <section id='care-principles-desc'>
+      <h3> The CARE principles </h3>
+      <p>The CARE principles encompass four key areas:</p>
+      <ul>
+        <li><strong>Collective Benefit (C):</strong> Data ecosystems shall be designed and function in ways that enable
+          Indigenous Peoples to derive benefit from the data.</li>
+        <li><strong>Authority to Control (A):</strong> Indigenous Peoples' rights and interests in Indigenous data must
+          be recognised and their authority to control such data be empowered.</li>
+        <li><strong>Responsibility (R):</strong> Those working with Indigenous data have a responsibility to share how
+          those data are used to support Indigenous Peoples' self-determination and collective benefit.</li>
+        <li><strong>Ethics (E):</strong> Indigenous Peoples' rights and wellbeing should be the primary concern at all
+          stages of the data life cycle and across the data ecosystem.</li>
+      </ul>
+
+      <section id="collective-benefit-desc">
+        <h4>Collective Benefit</h4>
+
+        <dl>
+          <dt> Principle definition </dt>
+          <dd> Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit
+            from the data. </dd>
+          <p>This principle emphasises that data should be used to benefit Indigenous communities.</p>
+          <!-- <p> TERN-DCAT allows for the inclusion of metadata that describes how data contributes to the well-being and
+            development of Indigenous peoples.</p> -->
+        </dl>
+
+        <table id="table-collective-benefit" class="simple">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Sub-principle</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>C1</code></td>
+              <td>For inclusive development and innovation</td>
+              <td>Governments and institutions must actively support the use and reuse of data by Indigenous nations
+                and communities by facilitating the establishment of the foundations for Indigenous innovation, value
+                generation, and the promotion of local self-determined development processes.</td>
+            </tr>
+            <tr>
+              <td><code>C2</code></td>
+              <td>For improved governance and citizen engagement</td>
+              <td>Data enrich the planning, implementation, and evaluation processes that support the service and
+                policy needs of Indigenous communities. Data also enable better engagement between citizens,
+                institutions, and governments to improve decision-making. Ethical use of open data has the capacity to
+                improve transparency and decision-making by providing Indigenous nations and communities with a better
+                understanding of their peoples, territories, and resources. It similarly can provide greater insight
+                into third-party policies and programs affecting Indigenous Peoples. </td>
+            </tr>
+            <tr>
+              <td><code>C3</code></td>
+              <td>For equitable outcomes</td>
+              <td>Indigenous data are grounded in community values, which extend to society at large. Any value
+                created from Indigenous data should benefit Indigenous communities in an equitable manner and
+                contribute to Indigenous aspirations for wellbeing.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <!-- <dl>
+          <dt> TERN-DCAT implementation </dt>
+
+          <dd> TERN-DCAT allows for the inclusion of metadata that describes how data contributes to the well-being and
+            development of Indigenous peoples.</dd>
+        </dl> -->
+
+        <p>To support the collective benefit principle, TERN-DCAT provides mechanisms to document and enforce data usage
+          that benefits Indigenous communities. </p>
+        <table id="table-collective-benefit-implementation" class="simple">
+          <thead>
+            <tr>
+              <!-- <th>Principle</th> -->
+              <th>Objective</th>
+              <th>ISO 19115-3 element</th>
+              <th>DCAT</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <td><code>C</code></td> -->
+              <td>Purpose and intended use of the dataset</td>
+              <td>
+                <ul>
+                  <li><code>MD_Metadata.identificationInfo > purpose</code></li>
+                  <li><code>MD_Metadata.identificationInfo > descriptiveKeywords</code></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><code>dcat:Dataset > tern:purpose</code></li>
+                  <li><code>dcat:Dataset > dcat:theme / dcat:keyword</code></li>
+                </ul>
+              </td>
+              <td>Documents the intended collective benefit of the dataset for Indigenous communities.</td>
+            </tr>
+            <tr>
+              <!-- <td><code>C</code></td> -->
+              <td>Ensure the collective benefit using constraints</td>
+              <td><code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > </code>
+                <ul>
+                  <li><code>useLimitations</code></li>
+                  <li><code>useConstraints</code></li>
+                  <li><code>otherConstraints</code></li>
+                </ul>
+              </td>
+              <td><code>dcat:Dataset > dcat:accessRights</code></td>
+              <td>Captures conditions of use aligned with Indigenous benefit, including use limitations and licences
+                that ensure data are used in ways that benefit Indigenous communities.</td>
+              </td>
+            </tr>
+            <tr>
+              <!-- <td><code>C</code></td> -->
+              <td>Extent of community involvement</td>
+              <td>
+                <ul>
+                  <li><code>MD_Metadata.identificationInfo.citation.extent > description</code></li>
+                  <li><code>MD_Metadata.identificationInfo.citation.extent > geographicElement</code></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><code>tern:Extent > tern:locationDescription</code></li>
+                  <li><code>tern:Extent > geo:hasGeometry > geo:asWKT</code></li>
+                </ul>
+              </td>
+              <td>Documentation of communities or geographic areas that benefit or are represented.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-care-c-1" title="Purpose and intended use">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              tern:purpose &quot;CARE purpose TBD&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:purpose&gt;
+                            &lt;gco:CharacterString&gt;CARE purpose TBD&lt;/gco:CharacterString&gt;
+                        &lt;/mri:purpose&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-c-2" title="Ensure the collective benefit using constraints">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+                
+            &lt;ex_rights_statement_4&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; .
+                
+            &lt;ex_rights_statement_7&gt; a dcterms:RightsStatement ;
+                dcterms:description &quot;TBD CARE other constraints&quot; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+                    
+            &lt;ex_rights_statement_9&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; ;
+                dcterms:title &quot;Public access limited according to CARE Principles&quot; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; a skos:ConceptScheme ;
+                dcterms:title &quot;Dataset limitations&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; ;
+                skos:prefLabel &quot;Public access limited according to CARE Principles&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; a skos:ConceptScheme ;
+                dcterms:title &quot;Resource constraints (ISO 19115-1 aligned)&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Use constraints&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Other constraints&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;                    
+                                &lt;mco:useConstraints&gt;
+                                    &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;otherRestrictions&quot;/&gt;
+                                &lt;/mco:useConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&quot; xlink:title=&quot;Public access limited according to CARE Principles&quot; xlink:show=&quot;new&quot;&gt;Public access limited according to CARE Principles&lt;/gcx:Anchor&gt;
+                                &lt;/mco:otherConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                    &lt;gco:CharacterString&gt;TBD CARE other constraints&lt;/gco:CharacterString&gt;
+                                &lt;/mco:otherConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-c-3" title="Extent of community involvement">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+              &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                  tern:hasExtent &lt;ex_extent_1&gt; ;
+              
+              &lt;ex_extent_1&gt; a tern:Extent ;
+                  tern:locationDescription &quot;CARE TBD&quot; ;
+            </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+              &lt;gmd:MD_Metadata&gt;
+                  ...
+                  &lt;mdb:identificationInfo&gt;
+                      &lt;mri:MD_DataIdentification&gt;
+                          ...       
+                          &lt;mri:extent&gt;
+                              &lt;gex:EX_Extent&gt;
+                                  &lt;gex:description&gt;
+                                      &lt;gco:CharacterString&gt;CARE TBD&lt;/gco:CharacterString&gt;
+                                  &lt;/gex:description&gt;                    
+                              &lt;/gex:EX_Extent&gt;
+                          &lt;/mri:extent&gt;
+                          ...
+                      &lt;/mri:MD_DataIdentification&gt;
+                  &lt;/mdb:identificationInfo&gt;
+                  ...
+              &lt;/gmd:MD_Metadata&gt;
+            </pre>
+        </aside>
+
+      </section>
+
+      <section id="authority-to-control-desc">
+        <h4>Authority to Control</h4>
+
+        <dl>
+          <dt> Principle definition </dt>
+          <dd> Indigenous Peoples' rights and interests in Indigenous data must be recognised and their authority to
+            control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies
+            to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and
+            geographical indicators, are represented and identified within data. </dd>
+          <p>This principle emphasises the importance of recognising and respecting Indigenous authority over
+            their data. </p>
+        </dl>
+
+        <table id="table-authority-to-control" class="simple">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Sub-principle</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>A1</code></td>
+              <td>Recognizing rights and interests</td>
+              <td>Indigenous Peoples have rights and interests in both Indigenous Knowledge and Indigenous data.
+                Indigenous Peoples have collective and individual rights to free, prior, and informed consent in the
+                collection and use of such data, including the development of data policies and protocols for
+                collection.</td>
+            </tr>
+            <tr>
+              <td><code>A2</code></td>
+              <td>Data for governance</td>
+              <td>Indigenous Peoples have the right to data that are relevant to their world views and empower
+                self-determination and effective self-governance. Indigenous data must be made available and
+                accessible to Indigenous nations and communities in order to support Indigenous governance.</td>
+            </tr>
+            <tr>
+              <td><code>A3</code></td>
+              <td>Governance of data</td>
+              <td>Indigenous Peoples have the right to develop cultural governance protocols for Indigenous data and
+                be active leaders in the stewardship of, and access to, Indigenous data especially in the context of
+                Indigenous Knowledge.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+
+        <p>TERN-DCAT includes mechanisms to document data ownership, access rights, and permissions,
+          ensuring that Indigenous communities have control over how their data is used and shared.</p>
+        <table id="table-authority-implementation" class="simple">
+          <thead>
+            <tr>
+              <!-- <th>Principle</th> -->
+              <th>Objective</th>
+              <th>ISO 19115-3 element</th>
+              <th>DCAT</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <td><code>A</code></td> -->
+              <td>Data stewardship & rights holders</td>
+              <td><code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility[role=custodian]</code>
+              </td>
+              <td><code>dcat:Dataset > tern:custodian</code></td>
+              <td>Captures Indigenous authorities as responsible parties (e.g., custodians, owners, stewards). See <a
+                  href="#ex-care-a-2-2">Custodian</a>. </td>
+            </tr>
+            <tr>
+              <!-- <td><code>A</code></td> -->
+              <td>Rights statements</td>
+              <td>
+                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints ></code>
+                <ul>
+                  <li><code>accessConstraints</code></li>
+                  <li><code>useConstraints</code></li>
+                  <li><code>otherConstraints</code></li>
+                </ul>
+              </td>
+              <td><code>dcat:Dataset > dcat:accessRights</code></td>
+              <td>Allows documenting Indigenous data sovereignty rights, cultural IP, Traditional Knowledge labels, etc.
+                See <a href="#ex-care-a-1">Access Rights</a>.
+              </td>
+            </tr>
+            <tr>
+              <!-- <td><code>A</code></td> -->
+              <td>Custom governance protocols</td>
+              <td>
+                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > otherConstraints</code>
+              </td>
+              <td><code>dcat:Dataset > dcat:accessRights</code></td>
+              <td>Can describe constraints specific to Indigenous governance (e.g., approvals, protocols). See <a
+                  href="#ex-care-a-1">Access Rights</a>.</td>
+            </tr>
+            <tr>
+              <!-- <td><code>A</code></td> -->
+              <td>Contact mechanisms for approvals</td>
+              <td>
+                <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility [role=contactPoint, custodian]</code>
+              </td>
+              <td><code>dcat:Dataset > dcat:contactPoint / tern:custodian</code></td>
+              <td>Identifies Indigenous governing bodies or authorised representatives. See <a
+                  href="#ex-care-a-2-1">Point of Contact</a> / <a href="#ex-care-a-2-2">Custodian</a>. </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-care-a-1" title="Rights statements and custom governance protocols">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+                
+            &lt;ex_rights_statement_4&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; .
+                
+            &lt;ex_rights_statement_7&gt; a dcterms:RightsStatement ;
+                dcterms:description &quot;TBD CARE other constraints&quot; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+                    
+            &lt;ex_rights_statement_9&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; ;
+                dcterms:title &quot;Public access limited according to CARE Principles&quot; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; a skos:ConceptScheme ;
+                dcterms:title &quot;Dataset limitations&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; ;
+                skos:prefLabel &quot;Public access limited according to CARE Principles&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; a skos:ConceptScheme ;
+                dcterms:title &quot;Resource constraints (ISO 19115-1 aligned)&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Use constraints&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Other constraints&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;                    
+                                &lt;mco:useConstraints&gt;
+                                    &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;otherRestrictions&quot;/&gt;
+                                &lt;/mco:useConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&quot; xlink:title=&quot;Public access limited according to CARE Principles&quot; xlink:show=&quot;new&quot;&gt;Public access limited according to CARE Principles&lt;/gcx:Anchor&gt;
+                                &lt;/mco:otherConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                    &lt;gco:CharacterString&gt;TBD CARE other constraints&lt;/gco:CharacterString&gt;
+                                &lt;/mco:otherConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-a-2-1" title="Metadata point of contact">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcat:contactPoint &lt;ex_person_2&gt; ;
+              ...
+
+            &lt;ex_person_2&gt; a schema:Person ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/person_uuid&quot;^^xsd:anyURI ;
+                schema:affiliation &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; ;
+                schema:email &quot;email@uq.edu..au&quot; ;
+                schema:name &quot;Javier Sanchez Gonzalez&quot; ;
+                schema:telephone &quot;+61 042x 000 000&quot; ;
+                org:orcID &lt;https://orcid.org/0000-0000-0000-0000&gt; .
+        
+            &lt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_2&gt; ;
+                schema:name &quot;Charles Darwin University&quot; ;
+                schema:email &quot;study@cdu.edu.au&quot; .
+
+            &lt;ex_org_site_2&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Casuarina&quot; ;
+                schema:addressRegion &quot;Northern Territory&quot; ;
+                schema:name &quot;Charles Darwin University&quot; ;
+                schema:postalCode &quot;0810&quot; ;
+                schema:streetAddress &quot;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;!-- Metadata contact point in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        &lt;mri:pointOfContact&gt;
+                            &lt;cit:CI_Responsibility&gt;
+                                &lt;cit:role&gt;
+                                    &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;pointOfContact&quot;/&gt;
+                                &lt;/cit:role&gt;
+                                &lt;cit:party&gt;
+                                    &lt;cit:CI_Organisation&gt;
+                                        &lt;cit:name&gt;
+                                            &lt;gco:CharacterString&gt;Charles Darwin University&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:name&gt;
+                                        &lt;cit:contactInfo&gt;
+                                            &lt;cit:CI_Contact&gt;
+                                                &lt;cit:address&gt;
+                                                    &lt;cit:CI_Address&gt;
+                                                        &lt;cit:deliveryPoint&gt;
+                                                            &lt;gco:CharacterString&gt;Ellengowan Drive, Casuarina, Northern Territory, 0810, Australia&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:deliveryPoint&gt;
+                                                        &lt;cit:deliveryPoint&gt;
+                                                            &lt;gco:CharacterString&gt;Ellengowan Drive&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:deliveryPoint&gt;
+                                                        &lt;cit:city&gt;
+                                                            &lt;gco:CharacterString&gt;Casuarina&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:city&gt;
+                                                        &lt;cit:administrativeArea&gt;
+                                                            &lt;gco:CharacterString&gt;Northern Territory&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:administrativeArea&gt;
+                                                        &lt;cit:postalCode&gt;
+                                                            &lt;gco:CharacterString&gt;0810&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:postalCode&gt;
+                                                        &lt;cit:country&gt;
+                                                            &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:country&gt;
+                                                        &lt;cit:electronicMailAddress&gt;
+                                                            &lt;gco:CharacterString&gt;study@cdu.edu.au&lt;/gco:CharacterString&gt;
+                                                        &lt;/cit:electronicMailAddress&gt;
+                                                    &lt;/cit:CI_Address&gt;
+                                                &lt;/cit:address&gt;
+                                            &lt;/cit:CI_Contact&gt;
+                                        &lt;/cit:contactInfo&gt;
+                                        &lt;cit:partyIdentifier&gt;
+                                            &lt;mcc:MD_Identifier&gt;
+                                                &lt;mcc:code&gt;
+                                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/0532d6cd-c791-41c3-a4gb-99ak6db8a571&lt;/gcx:Anchor&gt;
+                                                &lt;/mcc:code&gt;
+                                                &lt;mcc:codeSpace&gt;
+                                                    &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                &lt;/mcc:codeSpace&gt;
+                                            &lt;/mcc:MD_Identifier&gt;
+                                        &lt;/cit:partyIdentifier&gt;
+                                        &lt;cit:individual&gt;
+                                            &lt;cit:CI_Individual&gt;
+                                                &lt;cit:name&gt;
+                                                    &lt;gco:CharacterString&gt;Sanchez Gonzalez, Javier&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:name&gt;
+                                                &lt;cit:contactInfo&gt;
+                                                    &lt;cit:CI_Contact&gt;
+                                                        &lt;cit:address&gt;
+                                                            &lt;cit:CI_Address&gt;
+                                                                &lt;cit:electronicMailAddress&gt;
+                                                                    &lt;gco:CharacterString&gt;email@uq.edu.au&lt;/gco:CharacterString&gt;
+                                                                &lt;/cit:electronicMailAddress&gt;
+                                                            &lt;/cit:CI_Address&gt;
+                                                        &lt;/cit:address&gt;
+                                                    &lt;/cit:CI_Contact&gt;
+                                                &lt;/cit:contactInfo&gt;
+                                                &lt;cit:partyIdentifier&gt;
+                                                    &lt;mcc:MD_Identifier&gt;
+                                                        &lt;mcc:code&gt;
+                                                            &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/person_uuid&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/person_uuid&lt;/gcx:Anchor&gt;
+                                                        &lt;/mcc:code&gt;
+                                                        &lt;mcc:codeSpace&gt;
+                                                            &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                        &lt;/mcc:codeSpace&gt;
+                                                    &lt;/mcc:MD_Identifier&gt;
+                                                &lt;/cit:partyIdentifier&gt;
+                                                &lt;cit:positionName&gt;
+                                                    &lt;gco:CharacterString&gt;Senior Software Engineer&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:positionName&gt;
+                                            &lt;/cit:CI_Individual&gt;
+                                        &lt;/cit:individual&gt;
+                                    &lt;/cit:CI_Organisation&gt;
+                                &lt;/cit:party&gt;
+                            &lt;/cit:CI_Responsibility&gt;
+                        &lt;/mri:pointOfContact&gt;
+                        ...
+                    &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-a-2-2" title="Metadata Responsible party - Custodian">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              tern:custodian &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; ;
+              ...            
+
+            &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; a schema:Organization ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                org:hasSite &lt;ex_org_site_1&gt; ;
+                schema:name &quot;Terrestrial Ecosystem Research Network&quot; ;
+                schema:telephone &quot;+61 7 3365 9097&quot; ;
+                schema:email &quot;esupport@tern.org.au&quot; .
+                
+            &lt;ex_org_site_1&gt; a org:Site ;
+                dcterms:identifier &quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot;^^xsd:anyURI ;
+                schema:addressCountry &quot;Australia&quot; ;
+                schema:addressLocality &quot;Indooroopilly&quot; ;
+                schema:addressRegion &quot;QLD&quot; ;
+                schema:name &quot;UQ Long Pocket campus&quot; ;
+                schema:postalCode &quot;4068&quot; ;
+                schema:streetAddress &quot;Building 1019, 80 Meiers Rd&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;!-- ResponsibleParty in ISO 19115 --&gt;
+            &lt;gmd:MD_Metadata&gt;
+              ...
+              &lt;mdb:identificationInfo&gt;
+                  &lt;mri:MD_DataIdentification&gt;
+                      &lt;mri:citation&gt;
+                          &lt;cit:citedResponsibleParty&gt;
+                              &lt;cit:CI_Responsibility&gt;
+                                  &lt;cit:role&gt;
+                                      &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;custodian&quot;/&gt;
+                                  &lt;/cit:role&gt;
+                                  &lt;cit:party&gt;
+                                      &lt;cit:CI_Organisation&gt;
+                                          &lt;cit:name&gt;
+                                              &lt;gco:CharacterString&gt;Terrestrial Ecosystem Research Network&lt;/gco:CharacterString&gt;
+                                          &lt;/cit:name&gt;
+                                          &lt;cit:contactInfo&gt;
+                                              &lt;cit:CI_Contact&gt;
+                                                  &lt;cit:phone&gt;
+                                                      &lt;cit:CI_Telephone&gt;
+                                                          &lt;cit:number&gt;
+                                                              &lt;gco:CharacterString&gt;+61 7 3365 9097&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:number&gt;
+                                                          &lt;cit:numberType&gt;
+                                                              &lt;cit:CI_TelephoneTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_TelephoneTypeCode&quot; codeListValue=&quot;voice&quot;/&gt;
+                                                          &lt;/cit:numberType&gt;
+                                                      &lt;/cit:CI_Telephone&gt;
+                                                  &lt;/cit:phone&gt;
+                                                  &lt;cit:address&gt;
+                                                      &lt;cit:CI_Address&gt;
+                                                          &lt;cit:deliveryPoint&gt;
+                                                              &lt;gco:CharacterString&gt;Building 1019, 80 Meiers Rd&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:deliveryPoint&gt;
+                                                          &lt;cit:city&gt;
+                                                              &lt;gco:CharacterString&gt;Indooroopilly&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:city&gt;
+                                                          &lt;cit:administrativeArea&gt;
+                                                              &lt;gco:CharacterString&gt;QLD&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:administrativeArea&gt;
+                                                          &lt;cit:postalCode&gt;
+                                                              &lt;gco:CharacterString&gt;4068&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:postalCode&gt;
+                                                          &lt;cit:country&gt;
+                                                              &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:country&gt;
+                                                          &lt;cit:electronicMailAddress&gt;
+                                                              &lt;gco:CharacterString&gt;esupport@tern.org.au&lt;/gco:CharacterString&gt;
+                                                          &lt;/cit:electronicMailAddress&gt;
+                                                      &lt;/cit:CI_Address&gt;
+                                                  &lt;/cit:address&gt;
+                                              &lt;/cit:CI_Contact&gt;
+                                          &lt;/cit:contactInfo&gt;
+                                          &lt;cit:partyIdentifier&gt;
+                                              &lt;mcc:MD_Identifier&gt;
+                                                  &lt;mcc:code&gt;
+                                                      &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&lt;/gcx:Anchor&gt;
+                                                  &lt;/mcc:code&gt;
+                                                  &lt;mcc:codeSpace&gt;
+                                                      &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                  &lt;/mcc:codeSpace&gt;
+                                              &lt;/mcc:MD_Identifier&gt;
+                                          &lt;/cit:partyIdentifier&gt;
+                                      &lt;/cit:CI_Organisation&gt;
+                                  &lt;/cit:party&gt;
+                              &lt;/cit:CI_Responsibility&gt;
+                          &lt;/cit:citedResponsibleParty&gt;
+                          ...
+                      &lt;/mri:citation&gt;
+                      ...
+                  &lt;/mri:MD_DataIdentification&gt;
+                  ...
+              &lt;/mdb:identificationInfo&gt;
+            ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="responsibility-desc">
+        <h4>Responsibility</h4>
+
+        <dl>
+          <dt> Principle definition </dt>
+          <dd> Those working with Indigenous data have a responsibility to share how those data are used to support
+            Indigenous Peoples' self-determination and collective benefit. Accountability requires meaningful and
+            openly available evidence of these efforts and the benefits
+            accruing to Indigenous Peoples. </dd>
+          <p>This principle emphasises the need for accountability and transparency when working with Indigenous data.
+            Those entrusted with Indigenous data have a responsibility to demonstrate how they are using that data to
+            benefit Indigenous Peoples and to provide evidence of these efforts. This includes being open and honest
+            about data uses, maintaining relationships built on trust, and ensuring that Indigenous communities can
+            see the positive outcomes and benefits resulting from data stewardship. </p>
+        </dl>
+
+        <table id="table-responsibility" class="simple">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Sub-principle</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>R1</code></td>
+              <td>For positive relationships</td>
+              <td>Indigenous data use is unviable unless linked to relationships built on respect, reciprocity, trust,
+                and mutual understanding, as defined by the Indigenous Peoples to whom those data relate. Those
+                working with Indigenous data are responsible for ensuring that the creation, interpretation, and use
+                of those data uphold, or are respectful of, the dignity of Indigenous nations and communities.</td>
+            </tr>
+            <tr>
+              <td><code>R2</code></td>
+              <td>For expanding capability and capacity</td>
+              <td>Use of Indigenous data invokes a reciprocal responsibility to enhance data literacy within
+                Indigenous communities and to support the development of an Indigenous data workforce and digital
+                infrastructure to enable the creation, collection, management, security, governance, and application
+                of data.</td>
+            </tr>
+            <tr>
+              <td><code>R3</code></td>
+              <td>For Indigenous languages and worldviews</td>
+              <td>Resources must be provided to generate data grounded in the languages, worldviews, and lived
+                experiences (including values and principles) of Indigenous Peoples. </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+
+        <p>TERN-DCAT includes mechanisms to support these responsibilities ensuring transparency and accountability.
+        </p>
+        <table id="table-responsibility-implementation" class="simple">
+          <thead>
+            <tr>
+              <!-- <th>Principle</th> -->
+              <th>Objective</th>
+              <th>ISO 19115-3 element</th>
+              <th>DCAT</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <td><code>R</code></td> -->
+              <td>Accountability and transparency</td>
+              <td>
+                <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility [role=publisher, distributor, etc.]</code>
+              </td>
+              <td><code>dcat:Dataset > dcterms:publisher / tern:distributor</code></td>
+              <td>Captures responsible parties to ensure accountability and transparency in data stewardship.
+                <br><br>See <a href="#ex-care-r-1">Publisher</a>.
+              </td>
+            </tr>
+            <tr>
+              <!-- <td><code>R</code></td> -->
+              <td>Ethical obligations & usage notes</td>
+              <td><code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > useLimitations</code>
+              </td>
+              <td><code>dcat:Dataset > dcterms:license</code></td>
+              <td>Allows documentation of ethical obligations, usage limitations, and licences that govern data use.
+                <br><br>
+                Notice that [[CREATIVE-COMMONS]] licences may not always be appropriate for Indigenous data, and custom
+                statements may be needed to capture the unique ethical and cultural considerations associated with
+                the Indigenous Communities to which the data relate.
+                <br><br>
+                See <a href="#ex-care-r-2-1">Licence</a> and <a href="#ex-care-r-2-2">Other Constraints</a>.
+              </td>
+            </tr>
+            <tr>
+              <!-- <td><code>R</code></td> -->
+              <td>Lineage & provenance</td>
+              <td>
+                <ul>
+                  <li><code>MD_Metadata.resourceLineage</code></li>
+                  <li>
+                    <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility [role=contributor, etc.]</code>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><code>dcat:Dataset > sosa:usedProcedure</code></li>
+                  <li><code>dcat:Dataset > tern:contributor (and other roles)</code></li>
+                </ul>
+              </td>
+              <td>Provides full transparency about data creation, transformations, and contributors.
+                <br><br>
+                The information should be detailed and accessible to ensure that the data was collected in a way that
+                respects the rights and interests of Indigenous Communities.
+                <br><br>
+                This includes documenting the provenance of data in every step where a Indigenous Community was
+                involved. <br><br>See <a href="#ex-care-r-3">Lineage</a>.
+              </td>
+            </tr>
+            <tr>
+              <!-- <td><code>R</code></td> -->
+              <td>Quality and reliability</td>
+              <td><code>MD_Metadata.dataQualityInfo</code></td>
+              <td><code>tern:DataQuality</code></td>
+              <td>Allows documentation of data quality assessments to ensure reliability and trustworthiness of data.
+                Data quality is important for ensuring the value and usability of data, and for building trust with
+                Indigenous Communities. <br><br>See <a href="#ex-care-r-4">Data Quality and reliability</a>.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="example" id="ex-care-r-1" title="Accountability and transparency">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+                
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              dcterms:publisher &lt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&gt; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        &lt;mri:citation&gt;
+                            &lt;cit:citedResponsibleParty&gt;
+                                &lt;cit:CI_Responsibility&gt;
+                                    &lt;cit:role&gt;
+                                        &lt;cit:CI_RoleCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode&quot; codeListValue=&quot;publisher&quot;/&gt;
+                                    &lt;/cit:role&gt;
+                                    &lt;cit:party&gt;
+                                        &lt;cit:CI_Organisation&gt;
+                                            &lt;cit:name&gt;
+                                                &lt;gco:CharacterString&gt;Terrestrial Ecosystem Research Network&lt;/gco:CharacterString&gt;
+                                            &lt;/cit:name&gt;
+                                            &lt;cit:contactInfo&gt;
+                                                &lt;cit:CI_Contact&gt;
+                                                    &lt;cit:phone&gt;
+                                                        &lt;cit:CI_Telephone&gt;
+                                                            &lt;cit:number&gt;
+                                                                &lt;gco:CharacterString&gt;+61 7 3365 9097&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:number&gt;
+                                                            &lt;cit:numberType&gt;
+                                                                &lt;cit:CI_TelephoneTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_TelephoneTypeCode&quot; codeListValue=&quot;voice&quot;/&gt;
+                                                            &lt;/cit:numberType&gt;
+                                                        &lt;/cit:CI_Telephone&gt;
+                                                    &lt;/cit:phone&gt;
+                                                    &lt;cit:address&gt;
+                                                        &lt;cit:CI_Address&gt;
+                                                            &lt;cit:deliveryPoint&gt;
+                                                                &lt;gco:CharacterString&gt;Building 1019, 80 Meiers Rd&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:deliveryPoint&gt;
+                                                            &lt;cit:city&gt;
+                                                                &lt;gco:CharacterString&gt;Indooroopilly&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:city&gt;
+                                                            &lt;cit:administrativeArea&gt;
+                                                                &lt;gco:CharacterString&gt;QLD&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:administrativeArea&gt;
+                                                            &lt;cit:postalCode&gt;
+                                                                &lt;gco:CharacterString&gt;4068&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:postalCode&gt;
+                                                            &lt;cit:country&gt;
+                                                                &lt;gco:CharacterString&gt;Australia&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:country&gt;
+                                                            &lt;cit:electronicMailAddress&gt;
+                                                                &lt;gco:CharacterString&gt;esupport@tern.org.au&lt;/gco:CharacterString&gt;
+                                                            &lt;/cit:electronicMailAddress&gt;
+                                                        &lt;/cit:CI_Address&gt;
+                                                    &lt;/cit:address&gt;
+                                                &lt;/cit:CI_Contact&gt;
+                                            &lt;/cit:contactInfo&gt;
+                                            &lt;cit:partyIdentifier&gt;
+                                                &lt;mcc:MD_Identifier&gt;
+                                                    &lt;mcc:code&gt;
+                                                        &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&quot; xlink:show=&quot;new&quot;&gt;https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66&lt;/gcx:Anchor&gt;
+                                                    &lt;/mcc:code&gt;
+                                                    &lt;mcc:codeSpace&gt;
+                                                        &lt;gco:CharacterString&gt;https://w3id.org/tern/resources&lt;/gco:CharacterString&gt;
+                                                    &lt;/mcc:codeSpace&gt;
+                                                &lt;/mcc:MD_Identifier&gt;
+                                            &lt;/cit:partyIdentifier&gt;
+                                        &lt;/cit:CI_Organisation&gt;
+                                    &lt;/cit:party&gt;
+                                &lt;/cit:CI_Responsibility&gt;
+                            &lt;/cit:citedResponsibleParty&gt;
+                            ...
+                        &lt;/mri:citation&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                    ...
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-r-2-1" title="Ethical obligations & usage notes - Licence">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcterms:license &lt;https://care-policy.org/licenses/by/1.0/#CARE_1&gt; ;
+                dcterms:accessRights [ a dcterms:RightsStatement ;
+                    dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_license&gt; ;
+                    dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/1b04c8e5-fc1f-41a5-a2af-d7d31982b768&gt; ] .
+            
+            &lt;https://care-policy.org/licenses/by/1.0/#CARE_1&gt; a dcterms:LicenseDocument ;
+                dcterms:description &quot;Access to the data is subject to a Bespoke Licence, the terms of which must be individually negotiated with the data custodians due to specific legal, operational, ethical, and/or confidentiality considerations that cannot be addressed through a standard licensing framework.&quot; ;
+                dcterms:identifier &quot;https://care-policy.org/licenses/by/1.0/#CARE_1&quot;^^xsd:anyURI ;
+                dcterms:title &quot;This is CARE policy title / Bespoke licence title&quot; ;
+                dcterms:type &lt;http://purl.org/adms/licencetype/Attribution&gt; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;
+                                &lt;mco:useLimitation&gt;
+                                    &lt;gco:CharacterString&gt;Access to the data is subject to a Bespoke Licence, the terms of which must be individually negotiated with the data custodians due to specific legal, operational, ethical, and/or confidentiality considerations that cannot be addressed through a standard licensing framework.&lt;/gco:CharacterString&gt;
+                                &lt;/mco:useLimitation&gt;
+                                &lt;mco:reference&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;This is CARE policy title / Bespoke licence title&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:alternateTitle&gt;
+                                            &lt;gco:CharacterString&gt;CARE_1&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:alternateTitle&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;https://care-policy.org/licenses/by/1.0/#CARE_1&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                                &lt;cit:protocol&gt;
+                                                    &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:protocol&gt;
+                                                &lt;cit:function&gt;
+                                                    &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                                &lt;/cit:function&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mco:reference&gt;
+                                &lt;mco:accessConstraints&gt;
+                                    &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;license&quot;/&gt;
+                                &lt;/mco:accessConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-r-2-2" title="Ethical obligations & usage notes - Other Constraints">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcterms:accessRights [ a dcterms:RightsStatement ;
+                        dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions&gt; ;
+                        dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; ],
+                    [ a dcterms:RightsStatement ;
+                        dcterms:description &quot;This is a usage note regarding the use of this dataset in accordance with the CARE policy and stablished by the data custodians.&quot; ;
+                        dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; ] .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:resourceConstraints&gt;
+                            &lt;mco:MD_LegalConstraints&gt;
+                                &lt;mco:useConstraints&gt;
+                                  &lt;mco:MD_RestrictionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot; codeListValue=&quot;otherRestrictions&quot;/&gt;
+                                &lt;/mco:useConstraints&gt;
+                                &lt;mco:otherConstraints&gt;
+                                  &lt;gco:CharacterString&gt;This is a usage note regarding the use of this dataset in accordance with the CARE policy and stablished by the data custodians.&lt;/gco:CharacterString&gt;
+                                &lt;/mco:otherConstraints&gt;
+                            &lt;/mco:MD_LegalConstraints&gt;
+                        &lt;/mri:resourceConstraints&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-r-3" title="Lineage & provenance">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                sosa:usedProcedure  &lt;ex_lineage_1&gt; ;
+
+            &lt;ex_lineage_1&gt; a tern:Method ;
+                dcterms:description &quot;This method describes the procedure used to generate the dataset, including details of the steps involved and any additional documentation that may be relevant. Regarding to CARE principles, this method should provide full transparency about the data generation process, ensuring that the data was collected and processed in a way that respects the rights and interests of Indigenous Communities.&quot; ;
+                tern:additionalDocumentation &lt;urn:resource:method_documentation_1&gt; ;
+                tern:instructions [ a rdf:Seq ;
+                        rdf:_1 &quot;step1&quot; ;
+                        rdf:_2 &quot;step2&quot; ] ;
+                tern:scope &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; ;
+
+            &lt;urn:resource:method_documentation_1&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; ;
+                dcterms:title &quot;Method documentation&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://method.tern.org.au&quot;^^xsd:anyURI .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode_dataset&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;dataset&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;information&quot; .
+
+            &lt;http://linked.data.gov.au/def/dcat-metadata-cv/WWW:LINK-1.0-http--link&gt; a dcterms:Standard ;
+                dcterms:identifier &quot;WWW:LINK-1.0-http--link&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+              ...
+              &lt;mdb:resourceLineage&gt;
+                  &lt;mrl:LI_Lineage&gt;
+                      &lt;mrl:statement&gt;
+                          &lt;gco:CharacterString&gt;This method describes the procedure used to generate the dataset, including details of the steps involved and any additional documentation that may be relevant. Regarding to CARE principles, this method should provide full transparency about the data generation process, ensuring that the data was collected and processed in a way that respects the rights and interests of Indigenous Communities..&lt;/gco:CharacterString&gt;
+                      &lt;/mrl:statement&gt;
+                      &lt;mrl:scope&gt;
+                          &lt;mcc:MD_Scope&gt;
+                              &lt;mcc:level&gt;
+                                  &lt;mcc:MD_ScopeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot; codeListValue=&quot;dataset&quot;/&gt;
+                              &lt;/mcc:level&gt;
+                          &lt;/mcc:MD_Scope&gt;
+                      &lt;/mrl:scope&gt;
+                      &lt;mrl:additionalDocumentation&gt;
+                          &lt;cit:CI_Citation&gt;
+                              &lt;cit:title&gt;
+                                  &lt;gco:CharacterString&gt;procedure method&lt;/gco:CharacterString&gt;
+                              &lt;/cit:title&gt;
+                              &lt;cit:onlineResource&gt;
+                                  &lt;cit:CI_OnlineResource&gt;
+                                      &lt;cit:linkage&gt;
+                                          &lt;gco:CharacterString&gt;https://method.tern.org.au&lt;/gco:CharacterString&gt;
+                                      &lt;/cit:linkage&gt;
+                                      &lt;!--  default values apply  --&gt;
+                                      &lt;cit:protocol&gt;
+                                          &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                      &lt;/cit:protocol&gt;
+                                      &lt;cit:description&gt;
+                                          &lt;gco:CharacterString&gt;Method documentation&lt;/gco:CharacterString&gt;
+                                      &lt;/cit:description&gt;
+                                      &lt;cit:function&gt;
+                                          &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                      &lt;/cit:function&gt;
+                                  &lt;/cit:CI_OnlineResource&gt;
+                              &lt;/cit:onlineResource&gt;
+                          &lt;/cit:CI_Citation&gt;
+                      &lt;/mrl:additionalDocumentation&gt;
+                      &lt;mrl:processStep&gt;
+                          &lt;mrl:LI_ProcessStep&gt;
+                              &lt;mrl:description&gt;
+                                  &lt;gco:CharacterString&gt;step1&lt;/gco:CharacterString&gt;
+                              &lt;/mrl:description&gt;
+                          &lt;/mrl:LI_ProcessStep&gt;
+                      &lt;/mrl:processStep&gt;
+                      &lt;mrl:processStep&gt;
+                          &lt;mrl:LI_ProcessStep&gt;
+                              &lt;mrl:description&gt;
+                                  &lt;gco:CharacterString&gt;step2&lt;/gco:CharacterString&gt;
+                              &lt;/mrl:description&gt;
+                          &lt;/mrl:LI_ProcessStep&gt;
+                      &lt;/mrl:processStep&gt;
+                  &lt;/mrl:LI_Lineage&gt;
+              &lt;/mdb:resourceLineage&gt;
+              ...
+          &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-r-4" title="Quality and reliability">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                tern:dataQuality &lt;ex_dataquality_1&gt; ;
+
+            &lt;ex_dataquality_1&gt; a tern:DataQuality ;
+                tern:DQ_descriptionResult &quot;Data has been assessed for quality and meets the standards set by the land owners and data custodians, ensuring that it is reliable and trustworthy for use and it will benefit both the data users and Indigenous Communities.&quot; ;
+                tern:DQ_scopeDescription &quot;Data quality level meets the needs and expectations of Indigenous Communities.&quot; ;
+                tern:DQ_standaloneQualityReport &lt;urn:resource:dataquality_report_1&gt; .
+
+            &lt;urn:resource:dataquality_report_1&gt; a tern:OnlineResource ;
+                dcterms:title &quot;data quality report&quot; ;
+                rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:dataQualityInfo&gt;
+                    &lt;mdq:DQ_DataQuality&gt;
+                        &lt;mdq:scope&gt;
+                            &lt;mcc:MD_Scope&gt;
+                                &lt;mcc:level&gt;
+                                    &lt;mcc:MD_ScopeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ScopeCode&quot; codeListValue=&quot;dataset&quot;/&gt;
+                                &lt;/mcc:level&gt;
+                                &lt;mcc:levelDescription&gt;
+                                    &lt;mcc:MD_ScopeDescription&gt;
+                                        &lt;mcc:other&gt;
+                                            &lt;gco:CharacterString&gt;Data quality level meets the needs and expectations of Indigenous Communities.&lt;/gco:CharacterString&gt;
+                                        &lt;/mcc:other&gt;
+                                    &lt;/mcc:MD_ScopeDescription&gt;
+                                &lt;/mcc:levelDescription&gt;
+                            &lt;/mcc:MD_Scope&gt;
+                        &lt;/mdq:scope&gt;
+                        &lt;mdq:standaloneQualityReport&gt;
+                            &lt;mdq:DQ_StandaloneQualityReportInformation&gt;
+                                &lt;mdq:reportReference&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;data quality report&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;https://report.tern.org.au&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mdq:reportReference&gt;
+                                &lt;mdq:abstract&gt;
+                                    &lt;gco:CharacterString&gt;data quality report&lt;/gco:CharacterString&gt;
+                                &lt;/mdq:abstract&gt;
+                            &lt;/mdq:DQ_StandaloneQualityReportInformation&gt;
+                        &lt;/mdq:standaloneQualityReport&gt;
+                        &lt;mdq:report&gt;
+                            &lt;mdq:DQ_QuantitativeAttributeAccuracy&gt;
+                                &lt;mdq:result&gt;
+                                    &lt;mdq:DQ_DescriptiveResult&gt;
+                                        &lt;mdq:statement&gt;
+                                            &lt;gco:CharacterString&gt;Data has been assessed for quality and meets the standards set by the land owners and data custodians, ensuring that it is reliable and trustworthy for use and it will benefit both the data users and Indigenous Communities.&lt;/gco:CharacterString&gt;
+                                        &lt;/mdq:statement&gt;
+                                    &lt;/mdq:DQ_DescriptiveResult&gt;
+                                &lt;/mdq:result&gt;
+                            &lt;/mdq:DQ_QuantitativeAttributeAccuracy&gt;
+                        &lt;/mdq:report&gt;
+                    &lt;/mdq:DQ_DataQuality&gt;
+                &lt;/mdb:dataQualityInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+      </section>
+
+      <section id="ethics-desc">
+        <h4>Ethics</h4>
+
+        <dl>
+          <dt> Principle definition </dt>
+          <dd> Indigenous Peoples' rights and wellbeing should be the primary concern at all stages of the data life
+            cycle and across the data ecosystem. </dd>
+          <p>This principle emphasises the importance of ethical considerations in the management and use of
+            Indigenous data.</p>
+
+        </dl>
+
+        <table id="table-ethics" class="simple">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Sub-principle</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>E1</code></td>
+              <td>For minimizing harm and maximizing benefit</td>
+              <td>Ethical data are data that do not stigmatize or portray Indigenous Peoples, cultures, or knowledges
+                in terms of deficit. Ethical data are collected and used in ways that align with Indigenous ethical
+                frameworks and with rights affirmed in UNDRIP. Assessing ethical benefits and harms should be done
+                from the perspective of the Indigenous Peoples, nations, or communities to whom the data relate. </td>
+            </tr>
+            <tr>
+              <td><code>E2</code></td>
+              <td>For justice</td>
+              <td>Ethical processes address imbalances in power, resources, and how these affect the expression of
+                Indigenous rights and human rights. Ethical processes must include representation from relevant
+                Indigenous communities.
+              </td>
+            </tr>
+            <tr>
+              <td><code>E3</code></td>
+              <td>For future use</td>
+              <td>Data governance should take into account the potential future use and future harm based on ethical
+                frameworks grounded in the values and principles of the relevant Indigenous community. Metadata should
+                acknowledge the provenance and purpose and any limitations or obligations in secondary use inclusive
+                of issues of consent. </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+
+        <p>TERN-DCAT includes mechanisms to document ethical considerations and responsibilities associated
+          with data use, ensuring respect for Indigenous knowledge systems. </p>
+        <table id="table-ethics-implementation" class="simple">
+          <thead>
+            <tr>
+              <!-- <th>Principle</th> -->
+              <th>Objective</th>
+              <th>ISO 19115-3 element</th>
+              <th>DCAT</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <td><code>E</code></td> -->
+              <td>Sensitive or restricted content</td>
+              <td>
+                <ul>
+                  <li><code>MD_Metadata.identificationInfo > resourceConstraints.MD_SecurityConstraints</code></li>
+                  <li>
+                    <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.accessConstraints</code>
+                  </li>
+                  <li>
+                    <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.useConstraints</code>
+                  </li>
+                </ul>
+              </td>
+              <td><code>dcat:Dataset > dcat:accessRights</code></td>
+              <td>Enables specifying levels of sensitivity, confidentiality, and access restrictions. May apply to
+                security, access or use constraints.</td>
+            </tr>
+            <tr>
+              <!-- <td><code>E</code></td> -->
+              <td>Cultural context and description</td>
+              <td><code>MD_Metadata.identificationInfo > MD_DataIdentification.abstract</code></td>
+              <td><code>dcat:Dataset > schema:abstract</code></td>
+              <td>Records culturally‑based ethical protocols, sworn approvals, or restrictions tied to Indigenous
+                cultural norms.</td>
+            </tr>
+            <tr>
+              <!-- <td><code>E</code></td> -->
+              <td>Ethical protocols and approvals</td>
+              <td><code>MD_Metadata.identificationInfo > extent.description</code></td>
+              <td><code>tern:Extent > tern:locationDescription</code></td>
+              <td>Documentation of communities or geographic areas that benefit or are represented.</td>
+            </tr>
+            <tr>
+              <!-- <td><code>E</code></td> -->
+              <td>Responsible organisations</td>
+              <td><code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility</code></td>
+              <td><code>dcat:Dataset > dcterms:publisher (and any other role)</code></td>
+              <td>Identifies culturally competent organizations governing ethical use.</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </section>
+
+  </section>
+
+
   <section id='iso19115-mapping' class="appendix">
     <h2> ISO 19115 Mappings </h2>
 
     <section id='iso19115-mapping-objectives'>
       <h3> Overview </h3>
-      The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of spatial
+      The objective of this work is to define an RDF syntax that can be used for the exchange of descriptions of
+      spatial
       datasets among data portals. For that purpose, a mapping between all metadata elements of the core profile of
       [[TERN-ISO]] ([[ISO-19115-3]] and [[ISO-19157-2]]) and the TERN-DCAT application profile is documented in this
       page.
@@ -5699,7 +6997,7 @@
                 <code>MD_Metadata.identificationInfo > purpose</code>
               </p>
             </td>
-            <td> <code>dcat:version</code> </td>
+            <td> <code>tern:purpose</code> </td>
             <td>
               <p> <code>dcat:Dataset</code> </p>
               <p> <code>dcat:DatasetSeries</code> </p>
@@ -6142,8 +7440,10 @@
         <h4>Parent metadata</h4>
         <p>Identification of the parent metadata record.</p>
         <p>The content of the element 'parent metadata' can be represented in RDF as plain
-          literals, and by using the properties <code>dcterms:identifier</code> and <code>dcterms:title</code> of a new
-          <a href="#DatasetSeries">Dataset Series</a> entity. The metadata record is linked with its parent record using
+          literals, and by using the properties <code>dcterms:identifier</code> and <code>dcterms:title</code> of a
+          new
+          <a href="#DatasetSeries">Dataset Series</a> entity. The metadata record is linked with its parent record
+          using
           the property <code>dcat:inSeries</code>.
         </p>
         <p>
@@ -6245,8 +7545,8 @@
 
         <p>Citation for the standard to which the metadata conforms. NOTE Metadata standard citations should include an
           identifier.</p>
-        <p>TERN-DCAT uses <code>dcterms:conformsTo</code> to specify the metadata standard. This pattern is illustrated
-          in the following table:</p>
+        <p>TERN-DCAT uses <code>dcterms:conformsTo</code> to specify the metadata standard. This pattern is
+          illustrated in the following table:</p>
 
         <table id="table-mapping-metadata-standard" class="simple">
           <thead>
@@ -6286,14 +7586,14 @@
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
             &lt;ex_catalog-record_1&gt; a dcat:CatalogRecord ;
-              dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; ;
+              dcterms:conformsTo &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0&gt; ;
               ...
 
-            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&gt; a dcterms:Standard ;
-              dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0&quot;^^xsd:anyURI ;
-              dcterms:issued &quot;2025-04-16&quot;^^xsd:date ;
+            &lt;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0&gt; a dcterms:Standard ;
+              dcterms:identifier &quot;https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0&quot;^^xsd:anyURI ;
+              dcterms:issued &quot;2026-02-16&quot;^^xsd:date ;
               dcterms:title &quot;TERN-DCAT application profile&quot; ;
-              owl:versionInfo &quot;1.0.0&quot; .
+              owl:versionInfo &quot;1.1.0&quot; .
           </pre>
         </aside>
 
@@ -6348,14 +7648,16 @@
           dataset.</p>
 
         <p>By contrast, [[ISO-19115]] supports 20 possible relationships between a resource (a dataset, a dataset
-          series, a service) and an agent (organisation), plus one for metadata. However, for only some of them suitable
+          series, a service) and an agent (organisation), plus one for metadata. However, for only some of them
+          suitable
           candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]).
         </p>
 
         <p>In order to fill this gap, specific properties have been defined in the [[TERN]] namespace to complement
           those available in [[?vocab-dcat-3]] and [[DCTERMS]].</p>
 
-        <p>The following table lists the mappings between responsible party roles and the corresponding properties used
+        <p>The following table lists the mappings between responsible party roles and the corresponding properties
+          used
           in TERN-DCAT.</p>
 
         <table id="table-responsible-party-roles" class="simple">
@@ -7707,7 +9009,8 @@
         <section id="resource-dataset-resource-lineage">
           <h4>Resource lineage</h4>
 
-          <p>Information about the provenance, source(s), and/or the production process(es) applied to the resource.</p>
+          <p>Information about the provenance, source(s), and/or the production process(es) applied to the resource.
+          </p>
           <aside class="example" id="ex-mapping-dataset-lineage" title="Resource lineage">
             <p>Resource metadata in TERN-DCAT:</p>
             <pre class="turtle">
@@ -8069,7 +9372,8 @@
       Acknowledgements
     </h2>
     <p> The Editors recognise the major contribution of the members of the original [[?DXWG]],
-      [[?VOCAB-DCAT]], [[?DCAT-AP]] and [[GeoDCAT-AP]] on which this Aplication Profile and its documentation is based.
+      [[?VOCAB-DCAT]], [[?DCAT-AP]] and [[GeoDCAT-AP]] on which this Aplication Profile and its documentation is
+      based.
     </p>
   </section>
 

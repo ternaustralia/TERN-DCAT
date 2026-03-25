@@ -6,3 +6,9 @@
     dcterms:identifier "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
     dcterms:title "Creative Commons Attribution 4.0 International Licence" ;
     dcterms:type <http://purl.org/adms/licencetype/Attribution> .
+
+<https://care-policy.org/licenses/by/1.0/#CARE_1> a dcterms:LicenseDocument ;
+    dcterms:description "Access to the data is subject to a Bespoke Licence, the terms of which must be individually negotiated with the data custodians due to specific legal, operational, ethical, and/or confidentiality considerations that cannot be addressed through a standard licensing framework." ;
+    dcterms:identifier "https://care-policy.org/licenses/by/1.0/#CARE_1"^^xsd:anyURI ;
+    dcterms:title "This is CARE policy title / Bespoke licence title" ;
+    dcterms:type <http://purl.org/adms/licencetype/Attribution> .

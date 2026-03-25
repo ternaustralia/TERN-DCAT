@@ -1,12 +1,12 @@
 // All config options at https://respec.org/docs/
 var respecConfig = {
     github: "https://github.com/ternaustralia/TERN-DCAT",
-    shortName: "TERN-DCAT 1.0.1",
-    subtitle: "Version 1.0.1",
-    publishDate: "2025-12-04",
+    shortName: "TERN-DCAT 1.1.0",
+    subtitle: "Version 1.1.0",
+    publishDate: "2026-02-10",
     specStatus: "base",
     // noRecTrack: true,
-    latestVersion: "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.1",
+    latestVersion: "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0",
     logos: [{
         src: "https://w3id.org/tern/static/tern-web/img/logo@2x.png",
         url: "https://www.tern.org.au/",
@@ -47,7 +47,7 @@ var respecConfig = {
         },
         {
             key: "Previous version:",
-            data: [ { value : "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0", href : "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.0" } ]
+            data: [ { value : "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.1", href : "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.0.1" } ]
         },
     ],
     inlineCSS: "true",
@@ -129,5 +129,25 @@ var respecConfig = {
             "title": "Geographic information -- Data quality -- Part 2: XML schema implementation",
             "publisher": " ISO/TC 211. ISO. 2016. International Standard"
         },
+        "GIDA": {
+            "href": "https://www.gida-global.org/",
+            "title": "Global Indigenous Data Alliance",
+            "publisher": "Global Indigenous Data Alliance (GIDA)"
+        },
+        "CARE-PRINCIPLES": {
+            "href": "https://www.gida-global.org/care",
+            "title": "CARE Principles for Indigenous Data Governance",
+            "publisher": "Global Indigenous Data Alliance (GIDA)"
+        },
+        "FAIR-PRINCIPLES": {
+            "href": "https://www.go-fair.org/fair-principles/",
+            "title": "FAIR Principles",
+            "publisher": "GO FAIR"
+        },
+        "CREATIVE-COMMONS": {
+            "href": "https://creativecommons.org/share-your-work/",
+            "title": "Creative Commons Licences",
+            "publisher": "Creative Commons Corporation"
+        }
     }
 };

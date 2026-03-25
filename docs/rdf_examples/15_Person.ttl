@@ -13,5 +13,5 @@
     schema:name "John Doe" ;
     schema:postalCode "4000" ;
     schema:streetAddress "Adelaide Street, 1" ;
-    schema:telephone "+61 0426 300 250" .
+    schema:telephone "+61 0426 300 250" ;
     org:orcID <https://orcid.org/0000-0000-0000-0000> .
