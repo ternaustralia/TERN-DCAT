@@ -70,7 +70,7 @@
   </style>
 
   <p class="copyright">
-    Copyright © 2025
+    Copyright © 2026
   </p>
 
 </head>
@@ -160,7 +160,7 @@
 
   <section id="motivation">
     <h2>Licence</h2>
-    <p>Copyright © 2025 Terrestrial Ecosystem Research Network (TERN). All material is published under the licence <a
+    <p>Copyright © 2026 Terrestrial Ecosystem Research Network (TERN). All material is published under the licence <a
         href="https://creativecommons.org/licenses/by/4.0/">Creative Commons – Attribution 4.0 International (CC BY
         4.0)</a>
     </p>
@@ -4200,16 +4200,47 @@
 
       <dl>
         <dt> Definition </dt>
-        <dd> A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
-          giving official permission to do something with a resource, or a statement about access rights. </dd>
+        <dd> Rights statements define restrictions, licensing, and legal prerequisites for accessing or using resources
+          and metadata. Key components include access constraints (security, privacy), use constraints (licensing,
+          copyright), and other constraints (free-text terms) to protect intellectual property. </dd>
         <dt> Properties </dt>
         <dd>
           For this entity the following properties are defined:
           <ul class="prop-list">
+            <li><a href="#RightsStatement.description">description</a></li>
+            <li><a href="#RightsStatement.subject">subject</a></li>
             <li><a href="#RightsStatement.title">title</a></li>
+            <li><a href="#RightsStatement.type">type</a></li>
           </ul>
         </dd>
       </dl>
+
+      <aside class="note">
+        <p>
+          Latest version of TERN-DCAT (v1.1.0) redesigned the Rights Statement entity to allow the inclusion of
+          all types of constraints from ISO-19115 [[ISO-19115-3]], which has resulted in some significant changes to the
+          model. <br><br>
+          The previous version of TERN-DCAT (v1.0.1) only included a single property for the right statement
+          (free-text).
+          <br><br>
+          To model each type of constraint separately, each instance must populate the <a
+            href="#RightsStatement.type">type</a> property to define its type using the <a
+            href="http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107">Resource constraint</a>
+          TERN Controlled Vocabulary.
+        <ul>
+          <li>Security Constraints: must populate 'subject'. See <a
+              href="#ex-rights-statement-security-constraint">Security
+              Constraints</a> example. </li>
+          <li>Access Constraints: must populate 'subject'. See <a href="#ex-rights-statement-access-constraint">Access
+              Constraints</a> example. </li>
+          <li>Use Constraints: must populate 'subject'. See <a href="#ex-rights-statement-use-constraint">Use
+              Constraints</a> example. </li>
+          <li>Other Constraints: must populate a 'description', whereas 'subject' is optional (can be used to describe a
+            specific dataset limitation from the TERN CV). See <a href="#ex-rights-statement-other-constraint">Other
+              Constraints</a> examples. </li>
+        </ul>
+        </p>
+      </aside>
 
       <div class="u-table-overflow">
         <table class="data-table simple" id="table-mandatory-classes">
@@ -4242,6 +4273,44 @@
 
           <tbody class="supertype">
 
+            <tr id="RightsStatement.description" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/description" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/description" data-placement="right">
+                  description</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment"> Can be used to describe a licence statement, copyright notice, patent, or
+                other rights information. </td>
+              <td property="skos:scopeNote"> This property is used to provide any otherConstraints statements as
+                free-text.
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+            <tr id="RightsStatement.subject" typeof="rdfs:Property" resource="http://purl.org/dc/terms/subject"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/subject" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/subject" data-placement="right">
+                  subject</a>
+              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
+              <td> 0 ..1 </td>
+              <td property="rdfs:comment"> Defines a subclassification for each rights statement. </td>
+              <td property="skos:scopeNote"> This property is used to specify a subtype of restriction based on the
+                constraint type (e.g., types of security classification or types of restrictions). It is recommended to
+                use a
+                Controlled Vocabulary like <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">ISO
+                  19115-3 Classification Code List</a> or <a
+                  href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode">ISO
+                  19115-3 Restriction Code List</a>.</td>
+              <td> </td>
+              <td> P </td>
+            </tr>
             <tr id="RightsStatement.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
               class="class mandatory">
               <td>
@@ -4250,9 +4319,28 @@
                   title</a>
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> A short title for the rights statement or dataset limitation. </td>
+              <td property="skos:scopeNote"> When the constraint is otherConstraints, this property can be used to
+                provide the name of the specific dataset limitation applied in the Subject. </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+            <tr id="RightsStatement.type" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
+              class="class mandatory">
+              <td>
+                <a href="http://purl.org/dc/terms/type" data-toggle="tooltip"
+                  data-content="http://purl.org/dc/terms/type" data-placement="right">
+                  type</a>
+              </td>
+              <td> <a href="#Concept" data-placement="right">Concept</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> A name given to the RightsStatement. TDB </td>
-              <td property="skos:scopeNote"> </td>
+              <td property="rdfs:comment"> Defines the type of the rights statement </td>
+              <td property="skos:scopeNote"> This property is used to specify the type of constraint (e.g., security,
+                access, use or otherConstraints) from [[ISO-19115-3]] constraints. It is recommended to use a
+                Controlled Vocabulary like <a
+                  href="http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107">Resource constraints
+                  (ISO 19115-1 aligned)</a>. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -4260,22 +4348,97 @@
           </tbody>
         </table>
 
-        <aside class="example" id="ex-rights-statement" title="Rights Statement">
-          <pre class="turtle">
+      </div>
+
+      <aside class="example" id="ex-rights-statement-security-constraint"
+        title="Rights Statement - Security Constraints">
+        <pre class="turtle">
             @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 
             &lt;ex_rights_statement_1&gt; a dcterms:RightsStatement ;
-                dcterms:title &quot;Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}.&quot; .
-            
-            &lt;ex_rights_statement_2&gt; a dcterms:RightsStatement ;
-                dcterms:title &quot;&quot;&quot;TERN services are provided on an &quot;as-is&quot; and &quot;as available&quot; basis. Users use any TERN services at their discretion and risk.
-                    They will be solely responsible for any damage or loss whatsoever that results from such use including use of any data obtained through TERN and any analysis performed using the TERN infrastructure.
-                    &lt;br /&gt;Web links to and from external, third party websites should not be construed as implying any relationships with and/or endorsement of the external site or its content by TERN.
-                    &lt;br /&gt;&lt;br /&gt;Please advise any work or publications that use this data via the online form at https://www.tern.org.au/research-publications/#reporting&quot;&quot;&quot; .
-          </pre>
-        </aside>
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/4177df86-a03d-4bba-a602-d94baa48341b&gt; .
 
-      </div>
+            &lt;http://linked.data.gov.au/def/tern-cv/4177df86-a03d-4bba-a602-d94baa48341b&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Security constraints&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;unclassified&quot; .
+          </pre>
+      </aside>
+
+      <aside class="example" id="ex-rights-statement-access-constraint" title="Rights Statement - Access Constraints">
+        <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+
+            &lt;ex_rights_statement_1&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_license&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/1b04c8e5-fc1f-41a5-a2af-d7d31982b768&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/1b04c8e5-fc1f-41a5-a2af-d7d31982b768&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Access constraints&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_license&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;license&quot; .
+          </pre>
+      </aside>
+
+      <aside class="example" id="ex-rights-statement-use-constraint" title="Rights Statement - Use Constraints">
+        <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+
+            &lt;ex_rights_statement_1&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_SBU&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; .
+
+            &lt;ex_rights_statement_2&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions&gt; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Use constraints&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_SBU&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;SBU&quot; .
+
+            &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode_otherRestrictions&gt; a skos:Concept ;
+                dcterms:source &quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode&quot;^^xsd:anyURI ;
+                skos:prefLabel &quot;otherRestrictions&quot; .
+          </pre>
+      </aside>
+
+      <aside class="example" id="ex-rights-statement-other-constraint" title="Rights Statement - Other Constraints">
+        <pre class="turtle">
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+
+            &lt;ex_rights_statement_1&gt; a dcterms:RightsStatement ;
+                dcterms:subject &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; ;
+                dcterms:title "Public access limited under CARE Principles" ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+
+            &lt;ex_rights_statement_2&gt; a dcterms:RightsStatement ;
+                dcterms:description "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107&gt; ;
+                skos:prefLabel &quot;Other constraints / limitations&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; ;
+                skos:prefLabel &quot;Public access limited under CARE Principles&quot; .
+          </pre>
+      </aside>
 
     </section>
 
@@ -5120,6 +5283,24 @@
             <td></td>
           </tr>
           <tr>
+            <td>dcterms:subject</td>
+            <td><a href="#RightsStatement">Rights Statement</a></li>
+            </td>
+            <td>
+              <ul>
+                <li><a
+                    href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode">ISO
+                    19115-3 Classification Code List</a></li>
+                <li> <a
+                    href="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_RestrictionCode">ISO
+                    19115-3 Restriction Code List</a></li>
+                <li><a href="http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd">TERN CV for
+                    Dataset Limitations</a></li>
+              </ul>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
             <td>adms:status</td>
             <td>
               <ul>
@@ -5168,9 +5349,28 @@
           </tr>
           <tr>
             <td>dct:type</td>
-            <td><a href="#LicenceDocument">Licence Document</a></td>
-            <td><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></td>
-            <td> The list of terms in the ADMS licence type vocabulary is included in the ADMS specification. </td>
+            <td>
+              <ul>
+                <li><a href="#LicenceDocument">Licence Document</a></li>
+                <li><a href="#RightsStatement">Rights Statement</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li><a href="http://purl.org/adms/licencetype/1.0">ADMS licence type vocabulary</a></li>
+                <li><a href="http://linked.data.gov.au/def/tern-cv/a99ced10-efaa-4cac-8f04-0874cf020107">TERN CV for
+                    Resource
+                    constraints (ISO 19115-1 aligned)</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>The list of terms in the ADMS licence type vocabulary is included in the ADMS specification to be
+                  used in Licence Documents.</li>
+                <li>The list of resource constraints included in the ISO 19115-1 specification to be used in Rights
+                  Statements.</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>tern:unit</td>
@@ -5243,6 +5443,9 @@
                     parameters</a></li>
                 <li><a href="https://biodiversity.org.au/afd/home">Australian Faunal Directory</a></li>
                 <li><a href="http://www.cpbr.gov.au/cgi-bin/apni">Australian Plant Name Index - APNI</a></li>
+                <li><a href="http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe">CARE Collective
+                    Benefit</a></li>
+                <li><a href="https://data.idnau.org/pid/vocab/tk-labels">Traditional Knowledge (TK) Labels</a></li>
               </ul>
             </td>
             <td>The values to be used for this property are the URIs of the concepts in the vocabulary. Any other CV can
@@ -5337,9 +5540,8 @@
           <dt> Principle definition </dt>
           <dd> Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit
             from the data. </dd>
-          <p>This principle emphasises that data should be used to benefit Indigenous communities.</p>
-          <!-- <p> TERN-DCAT allows for the inclusion of metadata that describes how data contributes to the well-being and
-            development of Indigenous peoples.</p> -->
+          <p>This principle emphasises that data should be collected and used to benefit Indigenous communities as a
+            collective, not only for the benefit of individuals, institutions or external actors.</p>
         </dl>
 
         <table id="table-collective-benefit" class="simple">
@@ -5378,15 +5580,10 @@
           </tbody>
         </table>
         <br>
-        <!-- <dl>
-          <dt> TERN-DCAT implementation </dt>
-
-          <dd> TERN-DCAT allows for the inclusion of metadata that describes how data contributes to the well-being and
-            development of Indigenous peoples.</dd>
-        </dl> -->
 
         <p>To support the collective benefit principle, TERN-DCAT provides mechanisms to document and enforce data usage
           that benefits Indigenous communities. </p>
+
         <table id="table-collective-benefit-implementation" class="simple">
           <thead>
             <tr>
@@ -5413,10 +5610,16 @@
                   <li><code>dcat:Dataset > dcat:theme / dcat:keyword</code></li>
                 </ul>
               </td>
-              <td>Documents the intended collective benefit of the dataset for Indigenous communities.</td>
+              <td>Documents the intended collective benefit of the dataset for Indigenous communities. <br>
+                Data use should contribute to the social, cultural, environmental, and economic development of
+                Indigenous communities in ways they define. <br><br> See <a href="#ex-care-c-1-1">Purpose</a> and <a
+                  href="#ex-care-c-1-2">Keywords.</a>
+                <br><br>It is recommended to use a Controlled Vocabulary like <a
+                  href="http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe">CARE Collective
+                  Benefit</a> or <a href="https://data.idnau.org/pid/vocab/tk-labels/">TK Labels</a>.
+              </td>
             </tr>
             <tr>
-              <!-- <td><code>C</code></td> -->
               <td>Ensure the collective benefit using constraints</td>
               <td><code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > </code>
                 <ul>
@@ -5427,11 +5630,11 @@
               </td>
               <td><code>dcat:Dataset > dcat:accessRights</code></td>
               <td>Captures conditions of use aligned with Indigenous benefit, including use limitations and licences
-                that ensure data are used in ways that benefit Indigenous communities.</td>
+                that ensure data are used in ways that benefit Indigenous communities.<br><br> See <a
+                  href="#ex-care-c-2">Constraints</a></td>
               </td>
             </tr>
             <tr>
-              <!-- <td><code>C</code></td> -->
               <td>Extent of community involvement</td>
               <td>
                 <ul>
@@ -5445,16 +5648,18 @@
                   <li><code>tern:Extent > geo:hasGeometry > geo:asWKT</code></li>
                 </ul>
               </td>
-              <td>Documentation of communities or geographic areas that benefit or are represented.</td>
+              <td>Documentation of communities or geographic areas that benefit or are represented by the dataset.
+                <br><br> See <a href="#ex-care-c-3">Extent</a>
+              </td>
             </tr>
           </tbody>
         </table>
 
-        <aside class="example" id="ex-care-c-1" title="Purpose and intended use">
+        <aside class="example" id="ex-care-c-1-1" title="Purpose and intended use">
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-              tern:purpose &quot;CARE purpose TBD&quot; ;
+              tern:purpose &quot;The collection and analysis of this data benefits Indigenous communities in several ways, from improving health outcomes to supporting cultural preservation.&quot; ;
           </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -5464,8 +5669,86 @@
                 &lt;mdb:identificationInfo&gt;
                     &lt;mri:MD_DataIdentification&gt;          
                         &lt;mri:purpose&gt;
-                            &lt;gco:CharacterString&gt;CARE purpose TBD&lt;/gco:CharacterString&gt;
+                            &lt;gco:CharacterString&gt;The collection and analysis of this data benefits Indigenous communities in several ways, from improving health outcomes to supporting cultural preservation.&lt;/gco:CharacterString&gt;
                         &lt;/mri:purpose&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-c-1-2" title="Keywords">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcat:keyword &quot;Community resilience&quot;,
+                    &quot;Cultural continuity&quot; ;
+                dcat:theme &lt;http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1&gt; ;
+
+            &lt;http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1&gt; a skos:Concept ;
+                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&gt; ;
+                skos:prefLabel &quot;Cultural heritage&quot; .
+
+            &lt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&gt; a skos:ConceptScheme ;
+                dcterms:source &quot;TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&quot; ;
+                dcterms:title &quot;care_collective_benefit&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:descriptiveKeywords&gt;
+                            &lt;mri:MD_Keywords id=&quot;care_collective_benefit&quot;&gt;
+                                &lt;mri:keyword&gt;
+                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;http://linked.data.gov.au/def/tern-cv/e9c24c5b-fee4-40c5-8c64-a3f4902f8cab&quot; xlink:show=&quot;new&quot;&gt;Community capacity&lt;/gcx:Anchor&gt;
+                                &lt;/mri:keyword&gt;
+                                &lt;mri:type&gt;
+                                    &lt;mri:MD_KeywordTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode&quot; codeListValue=&quot;theme&quot;/&gt;
+                                &lt;/mri:type&gt;
+                                &lt;mri:thesaurusName&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;CARE Collective Benefit&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:otherCitationDetails&gt;
+                                            &lt;gco:CharacterString&gt;TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:otherCitationDetails&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                                &lt;cit:protocol&gt;
+                                                    &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:protocol&gt;
+                                                &lt;cit:function&gt;
+                                                    &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                                &lt;/cit:function&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mri:thesaurusName&gt;
+                            &lt;/mri:MD_Keywords&gt;
+                        &lt;/mri:descriptiveKeywords&gt;
+                        &lt;mri:descriptiveKeywords&gt;
+                            &lt;mri:MD_Keywords id=&quot;local&quot;&gt;
+                                &lt;mri:keyword&gt;
+                                    &lt;gco:CharacterString&gt;Community resilience&lt;/gco:CharacterString&gt;
+                                &lt;/mri:keyword&gt;
+                                &lt;mri:keyword&gt;
+                                    &lt;gco:CharacterString&gt;Cultural continuity&lt;/gco:CharacterString&gt;
+                                &lt;/mri:keyword&gt;
+                                &lt;mri:type&gt;
+                                    &lt;mri:MD_KeywordTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode&quot; codeListValue=&quot;discipline&quot;/&gt;
+                                &lt;/mri:type&gt;
+                            &lt;/mri:MD_Keywords&gt;
+                        &lt;/mri:descriptiveKeywords&gt;
+                        ...
                     &lt;/mri:MD_DataIdentification&gt;
                 &lt;/mdb:identificationInfo&gt;
                 ...
@@ -5546,7 +5829,7 @@
                   tern:hasExtent &lt;ex_extent_1&gt; ;
               
               &lt;ex_extent_1&gt; a tern:Extent ;
-                  tern:locationDescription &quot;CARE TBD&quot; ;
+                  tern:locationDescription &quot;From Balginjirr to Marlaloo in Western Australia and covers a significant part of the Martuwarra (Fitzroy River).&quot; ;
             </pre>
 
           <p>Resource metadata in ISO 19115-3:</p>
@@ -5559,7 +5842,7 @@
                           &lt;mri:extent&gt;
                               &lt;gex:EX_Extent&gt;
                                   &lt;gex:description&gt;
-                                      &lt;gco:CharacterString&gt;CARE TBD&lt;/gco:CharacterString&gt;
+                                      &lt;gco:CharacterString&gt;From Balginjirr to Marlaloo in Western Australia and covers a significant part of the Martuwarra (Fitzroy River).&lt;/gco:CharacterString&gt;
                                   &lt;/gex:description&gt;                    
                               &lt;/gex:EX_Extent&gt;
                           &lt;/mri:extent&gt;
@@ -5638,52 +5921,134 @@
             <tr>
               <!-- <td><code>A</code></td> -->
               <td>Data stewardship & rights holders</td>
-              <td><code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility[role=custodian]</code>
+              <td>
+                <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility[role=custodian, owner, etc.]</code>
               </td>
-              <td><code>dcat:Dataset > tern:custodian</code></td>
-              <td>Captures Indigenous authorities as responsible parties (e.g., custodians, owners, stewards). See <a
-                  href="#ex-care-a-2-2">Custodian</a>. </td>
+              <td><code>dcat:Dataset > tern:custodian / tern:owner (and other relevant roles)</code></td>
+              <td>Captures Indigenous authorities as responsible parties (e.g., custodians, owners, stewards).
+                <br><br>See <a href="#ex-care-a-2-2">Custodian</a>.
+              </td>
             </tr>
             <tr>
               <!-- <td><code>A</code></td> -->
               <td>Rights statements</td>
               <td>
-                <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints ></code>
+                <uL>
+                  <li><code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints ></code>
+                    <ul>
+                      <li><code>useLimitations</code></li>
+                      <li><code>accessConstraints</code></li>
+                      <li><code>useConstraints</code></li>
+                      <li><code>otherConstraints</code></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <code>MD_Metadata.identificationInfo > descriptiveKeywords</code>
+                  </li>
+                </uL>
+              </td>
+              <td>
                 <ul>
-                  <li><code>accessConstraints</code></li>
-                  <li><code>useConstraints</code></li>
-                  <li><code>otherConstraints</code></li>
+                  <li><code>dcat:Dataset > dcterms:license</code></li>
+                  <li><code>dcat:Dataset > dcat:accessRights</code></li>
+                  <li><code>dcat:Dataset > dcat:theme</code></li>
                 </ul>
               </td>
-              <td><code>dcat:Dataset > dcat:accessRights</code></td>
-              <td>Allows documenting Indigenous data sovereignty rights, cultural IP, Traditional Knowledge labels, etc.
-                See <a href="#ex-care-a-1">Access Rights</a>.
+              <td>Allows documenting Indigenous data sovereignty rights, cultural Intellectual Property, Traditional
+                Knowledge labels, etc.<br><br> See <a href="#ex-care-r-2-1">Licence</a>, <a href="#ex-care-a-1-1">Access
+                  Rights</a> and <a href="#ex-care-a-1-2">TK labels</a>.
               </td>
             </tr>
             <tr>
-              <!-- <td><code>A</code></td> -->
               <td>Custom governance protocols</td>
               <td>
                 <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > otherConstraints</code>
               </td>
               <td><code>dcat:Dataset > dcat:accessRights</code></td>
-              <td>Can describe constraints specific to Indigenous governance (e.g., approvals, protocols). See <a
-                  href="#ex-care-a-1">Access Rights</a>.</td>
+              <td>Can describe constraints specific to Indigenous governance (e.g., approvals, protocols). <br><br>See
+                <a href="#ex-care-a-1-1">Access Rights</a>.
+              </td>
             </tr>
             <tr>
-              <!-- <td><code>A</code></td> -->
               <td>Contact mechanisms for approvals</td>
               <td>
                 <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility [role=contactPoint, custodian]</code>
               </td>
               <td><code>dcat:Dataset > dcat:contactPoint / tern:custodian</code></td>
-              <td>Identifies Indigenous governing bodies or authorised representatives. See <a
-                  href="#ex-care-a-2-1">Point of Contact</a> / <a href="#ex-care-a-2-2">Custodian</a>. </td>
+              <td>Identifies Indigenous governing bodies or authorised representatives.
+                In case the dataset requires specific approvals for access or use, custodians are usually the point of
+                contact for access requests and can facilitate communication between data users and Indigenous
+                authorities.
+                <br><br>See <a href="#ex-care-a-2-1">Point of Contact</a> / <a href="#ex-care-a-2-2">Custodian</a>.
+              </td>
             </tr>
           </tbody>
         </table>
 
-        <aside class="example" id="ex-care-a-1" title="Rights statements and custom governance protocols">
+        <aside class="example" id="ex-care-a-1-2" title="Keywords - TK Labels">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+                dcat:theme &lt;https://data.idnau.org/pid/vocab/tk-labels/attribution&gt; ;
+
+            &lt;https://data.idnau.org/pid/vocab/tk-labels/attribution&gt; a skos:Concept ;
+                skos:inScheme &lt;https://data.idnau.org/pid/vocab/tk-labels&gt; ;
+                skos:prefLabel &quot;Attribution (TK A)&quot; .
+
+            &lt;https://data.idnau.org/pid/vocab/tk-labels&gt; a skos:ConceptScheme ;
+                dcterms:source &quot;IDN (2026). Traditional Knowledge (TK) Vocabularies. Indigenous Data Network (IDN). https://data.idnau.org/pid/vocab/tk-labels&quot; ;
+                dcterms:title &quot;tk_labels&quot; .
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;
+                        ...       
+                        &lt;mri:descriptiveKeywords&gt;
+                            &lt;mri:MD_Keywords id=&quot;tk_labels&quot;&gt;
+                                &lt;mri:keyword&gt;
+                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;https://data.idnau.org/pid/vocab/tk-labels/attribution&quot; xlink:show=&quot;new&quot;&gt;Community capacity&lt;/gcx:Anchor&gt;
+                                &lt;/mri:keyword&gt;
+                                &lt;mri:type&gt;
+                                    &lt;mri:MD_KeywordTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode&quot; codeListValue=&quot;theme&quot;/&gt;
+                                &lt;/mri:type&gt;
+                                &lt;mri:thesaurusName&gt;
+                                    &lt;cit:CI_Citation&gt;
+                                        &lt;cit:title&gt;
+                                            &lt;gco:CharacterString&gt;TK Labels&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:title&gt;
+                                        &lt;cit:otherCitationDetails&gt;
+                                            &lt;gco:CharacterString&gt;IDN (2026). Traditional Knowledge (TK) Vocabularies. Indigenous Data Network (IDN). https://data.idnau.org/pid/vocab/tk-labels&lt;/gco:CharacterString&gt;
+                                        &lt;/cit:otherCitationDetails&gt;
+                                        &lt;cit:onlineResource&gt;
+                                            &lt;cit:CI_OnlineResource&gt;
+                                                &lt;cit:linkage&gt;
+                                                    &lt;gco:CharacterString&gt;https://data.idnau.org/pid/vocab/tk-labels&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:linkage&gt;
+                                                &lt;cit:protocol&gt;
+                                                    &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
+                                                &lt;/cit:protocol&gt;
+                                                &lt;cit:function&gt;
+                                                    &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
+                                                &lt;/cit:function&gt;
+                                            &lt;/cit:CI_OnlineResource&gt;
+                                        &lt;/cit:onlineResource&gt;
+                                    &lt;/cit:CI_Citation&gt;
+                                &lt;/mri:thesaurusName&gt;
+                            &lt;/mri:MD_Keywords&gt;
+                        &lt;/mri:descriptiveKeywords&gt;
+                        ...
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
+
+        <aside class="example" id="ex-care-a-1-1" title="Rights statements and custom governance protocols">
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
             @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
@@ -5694,7 +6059,7 @@
                 dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/7aa51e5f-8799-4eb4-99d0-0a0bef2b1715&gt; .
                 
             &lt;ex_rights_statement_7&gt; a dcterms:RightsStatement ;
-                dcterms:description &quot;TBD CARE other constraints&quot; ;
+                dcterms:description &quot;CARE other constraints&quot; ;
                 dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
                     
             &lt;ex_rights_statement_9&gt; a dcterms:RightsStatement ;
@@ -6039,7 +6404,6 @@
         <table id="table-responsibility-implementation" class="simple">
           <thead>
             <tr>
-              <!-- <th>Principle</th> -->
               <th>Objective</th>
               <th>ISO 19115-3 element</th>
               <th>DCAT</th>
@@ -6048,7 +6412,6 @@
           </thead>
           <tbody>
             <tr>
-              <!-- <td><code>R</code></td> -->
               <td>Accountability and transparency</td>
               <td>
                 <code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility [role=publisher, distributor, etc.]</code>
@@ -6059,7 +6422,6 @@
               </td>
             </tr>
             <tr>
-              <!-- <td><code>R</code></td> -->
               <td>Ethical obligations & usage notes</td>
               <td><code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints > useLimitations</code>
               </td>
@@ -6074,7 +6436,6 @@
               </td>
             </tr>
             <tr>
-              <!-- <td><code>R</code></td> -->
               <td>Lineage & provenance</td>
               <td>
                 <ul>
@@ -6100,7 +6461,6 @@
               </td>
             </tr>
             <tr>
-              <!-- <td><code>R</code></td> -->
               <td>Quality and reliability</td>
               <td><code>MD_Metadata.dataQualityInfo</code></td>
               <td><code>tern:DataQuality</code></td>
@@ -6200,7 +6560,7 @@
           </pre>
         </aside>
 
-        <aside class="example" id="ex-care-r-2-1" title="Ethical obligations & usage notes - Licence">
+        <aside class="example" id="ex-care-r-2-1" title="Licence">
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
             &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
@@ -6521,11 +6881,11 @@
         </br>
 
         <p>TERN-DCAT includes mechanisms to document ethical considerations and responsibilities associated
-          with data use, ensuring respect for Indigenous knowledge systems. </p>
+          with data use, ensuring respect for Indigenous knowledge systems.</p>
+
         <table id="table-ethics-implementation" class="simple">
           <thead>
             <tr>
-              <!-- <th>Principle</th> -->
               <th>Objective</th>
               <th>ISO 19115-3 element</th>
               <th>DCAT</th>
@@ -6534,47 +6894,73 @@
           </thead>
           <tbody>
             <tr>
-              <!-- <td><code>E</code></td> -->
               <td>Sensitive or restricted content</td>
               <td>
                 <ul>
                   <li><code>MD_Metadata.identificationInfo > resourceConstraints.MD_SecurityConstraints</code></li>
                   <li>
-                    <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.accessConstraints</code>
-                  </li>
-                  <li>
-                    <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints.useConstraints</code>
+                    <code>MD_Metadata.identificationInfo > resourceConstraints.MD_LegalConstraints</code>
+                    <ul>
+                      <li>
+                        <code>accessConstraints</code>
+                      </li>
+                      <li>
+                        <code>useConstraints</code>
+                      </li>
+                      <li>
+                        <code>otherConstraints</code>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </td>
               <td><code>dcat:Dataset > dcat:accessRights</code></td>
               <td>Enables specifying levels of sensitivity, confidentiality, and access restrictions. May apply to
-                security, access or use constraints.</td>
+                security, access or use constraints.<br><br>The documentation of ethical considerations and
+                responsibilities associated with data use allows to minimise potential harm to Indigenous Peoples due
+                to misinterpretation and/or misuse of the data.<br><br> See <a href="ex-care-a-1-1">Access Rights</a>
+              </td>
             </tr>
             <tr>
-              <!-- <td><code>E</code></td> -->
               <td>Cultural context and description</td>
               <td><code>MD_Metadata.identificationInfo > MD_DataIdentification.abstract</code></td>
               <td><code>dcat:Dataset > schema:abstract</code></td>
               <td>Records culturally‑based ethical protocols, sworn approvals, or restrictions tied to Indigenous
-                cultural norms.</td>
+                cultural norms. Can include how the data relates to the cultural context, Indigenous rights and human
+                dignity.<br><br> See <a href="ex-care-e-2">Abstract</a></td>
             </tr>
             <tr>
-              <!-- <td><code>E</code></td> -->
-              <td>Ethical protocols and approvals</td>
-              <td><code>MD_Metadata.identificationInfo > extent.description</code></td>
-              <td><code>tern:Extent > tern:locationDescription</code></td>
-              <td>Documentation of communities or geographic areas that benefit or are represented.</td>
-            </tr>
-            <tr>
-              <!-- <td><code>E</code></td> -->
               <td>Responsible organisations</td>
               <td><code>MD_DataIdentification.citation > citedResponsibleParty.CI_Responsibility</code></td>
               <td><code>dcat:Dataset > dcterms:publisher (and any other role)</code></td>
-              <td>Identifies culturally competent organizations governing ethical use.</td>
+              <td>Identifies culturally competent organizations governing ethical use. <br><br> See <a
+                  href="ex-care-r-1">Publisher</a></td>
             </tr>
           </tbody>
         </table>
+
+        <aside class="example" id="ex-care-e-2" title="Cultural context and description">
+          <p>Resource metadata in TERN-DCAT:</p>
+          <pre class="turtle">
+            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
+              schema:abstract &quot;This data release consists of vegetation collection data from various sites across the Indigenous country of Balginjirr...&quot; ;
+          </pre>
+
+          <p>Resource metadata in ISO 19115-3:</p>
+          <pre class="xml">
+            &lt;gmd:MD_Metadata&gt;
+                ...
+                &lt;mdb:identificationInfo&gt;
+                    &lt;mri:MD_DataIdentification&gt;          
+                        &lt;mri:abstract&gt;
+                            &lt;gco:CharacterString&gt;This data release consists of vegetation collection data from various sites across the Indigenous country of Balginjirr...&lt;/gco:CharacterString&gt;
+                        &lt;/mri:abstract&gt;
+                    &lt;/mri:MD_DataIdentification&gt;
+                &lt;/mdb:identificationInfo&gt;
+                ...
+            &lt;/gmd:MD_Metadata&gt;
+          </pre>
+        </aside>
 
       </section>
 

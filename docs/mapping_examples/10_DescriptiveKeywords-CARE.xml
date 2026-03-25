@@ -1,0 +1,56 @@
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+            ...       
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords id="care_collective_benefit">
+                    <mri:keyword>
+                        <gcx:Anchor xlink:role="uri" xlink:href="http://linked.data.gov.au/def/tern-cv/e9c24c5b-fee4-40c5-8c64-a3f4902f8cab" xlink:show="new">Community capacity</gcx:Anchor>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                    <mri:thesaurusName>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>CARE Collective Benefit</gco:CharacterString>
+                            </cit:title>
+                            <cit:otherCitationDetails>
+                                <gco:CharacterString>TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe</gco:CharacterString>
+                            </cit:otherCitationDetails>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:function>
+                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                                    </cit:function>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mri:thesaurusName>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords id="local">
+                    <mri:keyword>
+                        <gco:CharacterString>Community resilience</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:keyword>
+                        <gco:CharacterString>Cultural continuity</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="discipline"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            ...
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>

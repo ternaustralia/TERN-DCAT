@@ -1,0 +1,12 @@
+<ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d> a dcat:Dataset ;
+    dcat:keyword "Community resilience",
+        "Cultural continuity" ;
+    dcat:theme <http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1> ;
+
+<http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1> a skos:Concept ;
+    skos:inScheme <http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe> ;
+    skos:prefLabel "Cultural heritage" .
+
+<http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe> a skos:ConceptScheme ;
+    dcterms:source "TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe" ;
+    dcterms:title "care_collective_benefit" .

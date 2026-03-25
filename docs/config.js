@@ -3,7 +3,7 @@ var respecConfig = {
     github: "https://github.com/ternaustralia/TERN-DCAT",
     shortName: "TERN-DCAT 1.1.0",
     subtitle: "Version 1.1.0",
-    publishDate: "2026-02-10",
+    publishDate: "2026-03-25",
     specStatus: "base",
     // noRecTrack: true,
     latestVersion: "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0",
@@ -148,6 +148,11 @@ var respecConfig = {
             "href": "https://creativecommons.org/share-your-work/",
             "title": "Creative Commons Licences",
             "publisher": "Creative Commons Corporation"
-        }
+        },
+        "TK-LABELS": {
+            "href": "https://localcontexts.org/labels/traditional-knowledge-labels/",
+            "title": "Traditional Knowledge (TK) Labels",
+            "publisher": "Local Contexts"
+        },
     }
 };
