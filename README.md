@@ -10,7 +10,7 @@ The latest version of TERN-DCAT can be downloaded from the [releases](https://gi
 
 ## Releases
 
-- Release [TERN-DCAT v1.1.0](https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0) - [Documentation](https://ternaustralia.github.io/TERN-DCAT/)
+- Release [TERN-DCAT v1.1.1](https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.1) - [Documentation](https://ternaustralia.github.io/TERN-DCAT/)
 
 
 ## Source files
