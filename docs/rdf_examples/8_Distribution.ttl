@@ -14,3 +14,15 @@
     dcterms:title "Additional information" ;
     dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_fileAccess> ;
     rdf:value "https://example-wms.tern.org.au"^^xsd:anyURI .
+
+<ex_dataset_1> a dcat:Dataset ;
+    adms:sample <urn:distribution:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG> .
+
+<urn:distribution:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG> a dcat:Distribution ;
+    dcat:accessURL <urn:resource:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG> .
+
+<urn:resource:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG> a tern:OnlineResource ;
+    dcterms:conformsTo <https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link> ;
+    dcterms:title "Soil Coarse Fragments" ;
+    dcterms:type <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_browseGraphic> ;
+    rdf:value "https://shared.tern.org.au/thumbnail/4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0/cf.PNG"^^xsd:anyURI .

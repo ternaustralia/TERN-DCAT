@@ -17,7 +17,7 @@
     dcterms:subject <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_ClassificationCode_unclassified> ;
     dcterms:type <http://linked.data.gov.au/def/tern-cv/4177df86-a03d-4bba-a602-d94baa48341b> .
  <ex_rights_statement_6> a dcterms:RightsStatement ;
-    dcterms:description "nothgin" ;
+    dcterms:description "nothing" ;
     dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
 <ex_rights_statement_7> a dcterms:RightsStatement ;
     dcterms:description "Please cite this dataset as {Author} ({PublicationYear}). {Title}. {Version, as appropriate}. Terrestrial Ecosystem Research Network. Dataset. {Identifier}." ;
@@ -29,6 +29,20 @@
     dcterms:subject <http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872> ;
     dcterms:title "Public access limited according to CARE Principles" ;
     dcterms:type <http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645> .
+
+<ex_rights_statement_10> a dcterms:RightsStatement ;
+    dcterms:description "This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material." ;
+    dcterms:subject <https://data.idnau.org/pid/vocab/lc-notices/tk-notice> ;
+    dcterms:title "TK Notice" ;
+    dcterms:type <http://linked.data.gov.au/def/tern-cv/df41cb6c-6517-4f42-a97b-2e085ab6217b> ;
+    foaf:logo "https://w3id.org/tern/static/lc-notices/tk-notice.png"
+
+<https://data.idnau.org/pid/vocab/lc-notices> a skos:ConceptScheme ;
+    dcterms:title "Local Context Notices" .
+
+<https://data.idnau.org/pid/vocab/lc-notices/tk-notice> a skos:Concept ;
+    skos:inScheme <https://data.idnau.org/pid/vocab/lc-notices> ;
+    skos:prefLabel "TK Notice" .
 
 <http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd> a skos:ConceptScheme ;
     dcterms:title "Dataset limitations" .

@@ -1605,8 +1605,9 @@
             <li><a href="#Dataset.securityConstraints">security constraints</a></li>
             <li><a href="#Dataset.spatialResolution">spatial resolution</a></li>
             <li><a href="#Dataset.subject">subject</a></li>
-            <li><a href="#Dataset.supplementalInformation">suplemental information</a></li>
+            <li><a href="#Dataset.supplementalInformation">supplemental information</a></li>
             <li><a href="#Dataset.theme">theme</a></li>
+            <li><a href="#Dataset.thumbnail">thumbnail</a></li>
             <li><a href="#Dataset.title">title</a></li>
             <li><a href="#Dataset.version">has version</a></li>
           </ul>
@@ -2251,6 +2252,22 @@
               </td>
             </tr>
 
+            <tr id="Dataset.thumbnail" typeof="rdfs:Property" resource="https://www.w3.org/TR/vocab-adms"
+              class="class mandatory">
+              <td>
+                <a href="https://www.w3.org/TR/vocab-adms" data-toggle="tooltip"
+                  data-content="https://www.w3.org/TR/vocab-adms" data-placement="right">
+                  thumbnail</a>
+              </td>
+              <td> <a href="#Distribution" data-placement="right">Distribution</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Links to a small preview graphic that provides a quick visual snapshot of a
+                map, dataset, or photo without loading the full source file. </td>
+              <td property="skos:scopeNote"> </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
             <tr id="Dataset.title" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title"
               class="class mandatory">
               <td>
@@ -2857,10 +2874,12 @@
                 <a href="#Person" data-placement="right">Person</a> | <a href="#Organisation"
                   data-placement="right">Organisation</a>
               </td>
-              <td> 1 </td>
+              <td> 0..1 </td>
               <td property="rdfs:comment"> An entity (person or organisation) who distributes the resource (data
-                distribution). </td>
-              <td property="skos:scopeNote"> </td>
+                distribution).
+              </td>
+              <td property="skos:scopeNote"> If the Distribution represents the Dataset thumbnail, this property is not
+                required. </td>
               <td> </td>
               <td> P </td>
             </tr>
@@ -2888,6 +2907,29 @@
                 rdf:value &quot;https://example-wms.tern.org.au&quot;^^xsd:anyURI .
           </pre>
         </aside>
+
+        <aside class="example" id="ex-distribution-thumbnail" title="Thumbnail">
+          <pre class="turtle">
+            @prefix adms: &lt;https://www.w3.org/TR/vocab-adms&gt; .
+            @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+            @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+            @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+            @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+            &lt;ex_dataset_1&gt; a dcat:Dataset ;
+                adms:sample &lt;urn:distribution:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG&gt; .
+
+            &lt;urn:distribution:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG&gt; a dcat:Distribution ;
+                dcat:accessURL &lt;urn:resource:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG&gt; .
+
+            &lt;urn:resource:thumbnail:4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0:https%3A%2F%2Fshared.tern.org.au%2Fthumbnail%2F4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0%2Fcf.PNG&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
+                dcterms:title &quot;Soil Coarse Fragments&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_browseGraphic&gt; ;
+                rdf:value &quot;https://shared.tern.org.au/thumbnail/4dd5ced8-4116-45ad-bfb1-ec4b8ad375a0/cf.PNG&quot;^^xsd:anyURI .
+          </pre>
+        </aside>
+
       </div>
 
     </section>
@@ -3145,6 +3187,7 @@
           <ul class="prop-list">
             <li><a href="#LicenceDocument.description">description</a></li>
             <li><a href="#LicenceDocument.identifier">identifier</a></li>
+            <li><a href="#LicenceDocument.logo">logo</a></li>
             <li><a href="#LicenceDocument.title">title</a></li>
             <li><a href="#LicenceDocument.type">type</a></li>
           </ul>
@@ -3197,6 +3240,25 @@
               <td> P </td>
             </tr>
 
+            <tr id="LicenceDocument.logo" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/logo"
+              class="class mandatory">
+              <td>
+                <a href="http://xmlns.com/foaf/0.1/logo" data-toggle="tooltip"
+                  data-content="http://xmlns.com/foaf/0.1/logo" data-placement="right">
+                  logo</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Links to a logo / icon representing the licence. </td>
+              <td property="skos:scopeNote"> This property can be used to provide a logo or icon that can be used in a
+                user interface. It is recommended to provide a link to a static asset (e.g., <a
+                  href="https://w3id.org/tern/static/cc-by/88x31.png">Creative Commons Attribution 4.0
+                  International</a>)
+                that is hosted on a reliable server. </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+
             <tr id="LicenceDocument.identifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type"
               class="class mandatory">
               <td>
@@ -3221,7 +3283,7 @@
               </td>
               <td> <a href="#Literal" data-placement="right">Literal</a> </td>
               <td> 1 </td>
-              <td property="rdfs:comment"> A given name to the Licence. </td>
+              <td property="rdfs:comment"> A given name to the licence. </td>
               <td property="skos:scopeNote"> </td>
               <td> </td>
               <td> P </td>
@@ -3251,12 +3313,14 @@
           <pre class="turtle">
             @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-            
+            @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
             &lt;https://creativecommons.org/licenses/by/4.0/&gt; a dcterms:LicenseDocument ;
                 dcterms:description &quot;The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/&quot; ;
                 dcterms:identifier &quot;https://creativecommons.org/licenses/by/4.0/&quot;^^xsd:anyURI ;
-                dcterms:title &quot;Creative Commons Attribution 4.0 International Licence&quot; ;
-                dcterms:type &lt;http://purl.org/adms/licencetype/Attribution&gt; .
+                dcterms:title &quot;Creative Commons Attribution 4.0 International&quot; ;
+                dcterms:type &lt;http://purl.org/adms/licencetype/Attribution&gt; ;
+                foaf:logo "https://w3id.org/tern/static/cc-by/88x31.png" .
           </pre>
         </aside>
 
@@ -4208,6 +4272,7 @@
           For this entity the following properties are defined:
           <ul class="prop-list">
             <li><a href="#RightsStatement.description">description</a></li>
+            <li><a href="#RightsStatement.logo">logo</a></li>
             <li><a href="#RightsStatement.subject">subject</a></li>
             <li><a href="#RightsStatement.title">title</a></li>
             <li><a href="#RightsStatement.type">type</a></li>
@@ -4217,7 +4282,7 @@
 
       <aside class="note">
         <p>
-          Latest version of TERN-DCAT (v1.1.0) redesigned the Rights Statement entity to allow the inclusion of
+          v1.1.0 version of TERN-DCAT redesigned the Rights Statement entity to allow the inclusion of
           all types of constraints from ISO-19115 [[ISO-19115-3]], which has resulted in some significant changes to the
           model. <br><br>
           The previous version of TERN-DCAT (v1.0.1) only included a single property for the right statement
@@ -4286,6 +4351,25 @@
                 other rights information. </td>
               <td property="skos:scopeNote"> This property is used to provide any otherConstraints statements as
                 free-text.
+              </td>
+              <td> </td>
+              <td> P </td>
+            </tr>
+            <tr id="RightsStatement.logo" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/logo"
+              class="class mandatory">
+              <td>
+                <a href="http://xmlns.com/foaf/0.1/logo" data-toggle="tooltip"
+                  data-content="http://xmlns.com/foaf/0.1/logo" data-placement="right">
+                  logo</a>
+              </td>
+              <td> <a href="#Literal" data-placement="right">Literal</a> </td>
+              <td> 0..1 </td>
+              <td property="rdfs:comment"> Links to a logo / icon representing the rights statement. </td>
+              <td property="skos:scopeNote"> This property can be used to provide a logo or icon that can be used in a
+                user interface. It is recommended to provide a link to a static asset (e.g.,
+                <a href="https://w3id.org/tern/static/lc-notices/tk-notice.png" target="_blank">TK Notice Logo</a>) that
+                is hosted on a reliable server.
+              </td>
               </td>
               <td> </td>
               <td> P </td>
@@ -5443,8 +5527,6 @@
                     parameters</a></li>
                 <li><a href="https://biodiversity.org.au/afd/home">Australian Faunal Directory</a></li>
                 <li><a href="http://www.cpbr.gov.au/cgi-bin/apni">Australian Plant Name Index - APNI</a></li>
-                <li><a href="http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe">CARE Collective
-                    Benefit</a></li>
                 <li><a href="https://data.idnau.org/pid/vocab/tk-labels">Traditional Knowledge (TK) Labels</a></li>
               </ul>
             </td>
@@ -5612,11 +5694,9 @@
               </td>
               <td>Documents the intended collective benefit of the dataset for Indigenous communities. <br>
                 Data use should contribute to the social, cultural, environmental, and economic development of
-                Indigenous communities in ways they define. <br><br> See <a href="#ex-care-c-1-1">Purpose</a> and <a
-                  href="#ex-care-c-1-2">Keywords.</a>
+                Indigenous communities in ways they define. <br><br> See <a href="#ex-care-c-1-1">Purpose</a>.</a>
                 <br><br>It is recommended to use a Controlled Vocabulary like <a
-                  href="http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe">CARE Collective
-                  Benefit</a> or <a href="https://data.idnau.org/pid/vocab/tk-labels/">TK Labels</a>.
+                  href="https://data.idnau.org/pid/vocab/tk-labels/">TK Labels</a>.
               </td>
             </tr>
             <tr>
@@ -5678,84 +5758,6 @@
           </pre>
         </aside>
 
-        <aside class="example" id="ex-care-c-1-2" title="Keywords">
-          <p>Resource metadata in TERN-DCAT:</p>
-          <pre class="turtle">
-            &lt;ex_dataset_92073887-28cb-4591-ab45-1f85224a1e5d&gt; a dcat:Dataset ;
-                dcat:keyword &quot;Community resilience&quot;,
-                    &quot;Cultural continuity&quot; ;
-                dcat:theme &lt;http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1&gt; ;
-
-            &lt;http://linked.data.gov.au/def/tern-cv/e2d402c5-b6ec-42f7-bcd6-52afb4511fe1&gt; a skos:Concept ;
-                skos:inScheme &lt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&gt; ;
-                skos:prefLabel &quot;Cultural heritage&quot; .
-
-            &lt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&gt; a skos:ConceptScheme ;
-                dcterms:source &quot;TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&quot; ;
-                dcterms:title &quot;care_collective_benefit&quot; .
-          </pre>
-
-          <p>Resource metadata in ISO 19115-3:</p>
-          <pre class="xml">
-            &lt;gmd:MD_Metadata&gt;
-                ...
-                &lt;mdb:identificationInfo&gt;
-                    &lt;mri:MD_DataIdentification&gt;
-                        ...       
-                        &lt;mri:descriptiveKeywords&gt;
-                            &lt;mri:MD_Keywords id=&quot;care_collective_benefit&quot;&gt;
-                                &lt;mri:keyword&gt;
-                                    &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;http://linked.data.gov.au/def/tern-cv/e9c24c5b-fee4-40c5-8c64-a3f4902f8cab&quot; xlink:show=&quot;new&quot;&gt;Community capacity&lt;/gcx:Anchor&gt;
-                                &lt;/mri:keyword&gt;
-                                &lt;mri:type&gt;
-                                    &lt;mri:MD_KeywordTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode&quot; codeListValue=&quot;theme&quot;/&gt;
-                                &lt;/mri:type&gt;
-                                &lt;mri:thesaurusName&gt;
-                                    &lt;cit:CI_Citation&gt;
-                                        &lt;cit:title&gt;
-                                            &lt;gco:CharacterString&gt;CARE Collective Benefit&lt;/gco:CharacterString&gt;
-                                        &lt;/cit:title&gt;
-                                        &lt;cit:otherCitationDetails&gt;
-                                            &lt;gco:CharacterString&gt;TERN (2026). TERN Collective Benefit (CARE) Vocabularies. Terrestrial Ecosystem Research Network (TERN). http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&lt;/gco:CharacterString&gt;
-                                        &lt;/cit:otherCitationDetails&gt;
-                                        &lt;cit:onlineResource&gt;
-                                            &lt;cit:CI_OnlineResource&gt;
-                                                &lt;cit:linkage&gt;
-                                                    &lt;gco:CharacterString&gt;http://linked.data.gov.au/def/tern-cv/ffbf763f-c44a-4e5e-b78d-4f8d4bcc73fe&lt;/gco:CharacterString&gt;
-                                                &lt;/cit:linkage&gt;
-                                                &lt;cit:protocol&gt;
-                                                    &lt;gco:CharacterString&gt;WWW:LINK-1.0-http--link&lt;/gco:CharacterString&gt;
-                                                &lt;/cit:protocol&gt;
-                                                &lt;cit:function&gt;
-                                                    &lt;cit:CI_OnLineFunctionCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode&quot; codeListValue=&quot;information&quot;/&gt;
-                                                &lt;/cit:function&gt;
-                                            &lt;/cit:CI_OnlineResource&gt;
-                                        &lt;/cit:onlineResource&gt;
-                                    &lt;/cit:CI_Citation&gt;
-                                &lt;/mri:thesaurusName&gt;
-                            &lt;/mri:MD_Keywords&gt;
-                        &lt;/mri:descriptiveKeywords&gt;
-                        &lt;mri:descriptiveKeywords&gt;
-                            &lt;mri:MD_Keywords id=&quot;local&quot;&gt;
-                                &lt;mri:keyword&gt;
-                                    &lt;gco:CharacterString&gt;Community resilience&lt;/gco:CharacterString&gt;
-                                &lt;/mri:keyword&gt;
-                                &lt;mri:keyword&gt;
-                                    &lt;gco:CharacterString&gt;Cultural continuity&lt;/gco:CharacterString&gt;
-                                &lt;/mri:keyword&gt;
-                                &lt;mri:type&gt;
-                                    &lt;mri:MD_KeywordTypeCode codeList=&quot;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_KeywordTypeCode&quot; codeListValue=&quot;discipline&quot;/&gt;
-                                &lt;/mri:type&gt;
-                            &lt;/mri:MD_Keywords&gt;
-                        &lt;/mri:descriptiveKeywords&gt;
-                        ...
-                    &lt;/mri:MD_DataIdentification&gt;
-                &lt;/mdb:identificationInfo&gt;
-                ...
-            &lt;/gmd:MD_Metadata&gt;
-          </pre>
-        </aside>
-
         <aside class="example" id="ex-care-c-2" title="Ensure the collective benefit using constraints">
           <p>Resource metadata in TERN-DCAT:</p>
           <pre class="turtle">
@@ -5774,6 +5776,20 @@
                 dcterms:subject &lt;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&gt; ;
                 dcterms:title &quot;Public access limited according to CARE Principles&quot; ;
                 dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/6b9d1fec-7342-4547-9b3c-aff4054e6645&gt; .
+
+            &lt;ex_rights_statement_10&gt; a dcterms:RightsStatement ;
+                dcterms:description &quot;This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material.&quot; ;
+                dcterms:subject &lt;https://data.idnau.org/pid/vocab/lc-notices/tk-notice&gt; ;
+                dcterms:title &quot;TK Notice&quot; ;
+                dcterms:type &lt;http://linked.data.gov.au/def/tern-cv/df41cb6c-6517-4f42-a97b-2e085ab6217b&gt; ;
+                foaf:logo &quot;https://w3id.org/tern/static/lc-notices/tk-notice.png&quot;
+
+            &lt;https://data.idnau.org/pid/vocab/lc-notices&gt; a skos:ConceptScheme ;
+                dcterms:title &quot;Local Context Notices&quot; .
+
+            &lt;https://data.idnau.org/pid/vocab/lc-notices/tk-notice&gt; a skos:Concept ;
+                skos:inScheme &lt;https://data.idnau.org/pid/vocab/lc-notices&gt; ;
+                skos:prefLabel &quot;TK Notice&quot; .
 
             &lt;http://linked.data.gov.au/def/tern-cv/76276ed8-5513-4406-a739-d18da14204dd&gt; a skos:ConceptScheme ;
                 dcterms:title &quot;Dataset limitations&quot; .
@@ -5810,7 +5826,7 @@
                                     &lt;gcx:Anchor xlink:role=&quot;uri&quot; xlink:href=&quot;http://linked.data.gov.au/def/tern-cv/54fff4c7-ca48-4342-9f7f-ccc582b6e872&quot; xlink:title=&quot;Public access limited according to CARE Principles&quot; xlink:show=&quot;new&quot;&gt;Public access limited according to CARE Principles&lt;/gcx:Anchor&gt;
                                 &lt;/mco:otherConstraints&gt;
                                 &lt;mco:otherConstraints&gt;
-                                    &lt;gco:CharacterString&gt;TBD CARE other constraints&lt;/gco:CharacterString&gt;
+                                    &lt;gco:CharacterString&gt;CARE other constraints&lt;/gco:CharacterString&gt;
                                 &lt;/mco:otherConstraints&gt;
                             &lt;/mco:MD_LegalConstraints&gt;
                         &lt;/mri:resourceConstraints&gt;
@@ -9190,7 +9206,7 @@
             &lt;https://creativecommons.org/licenses/by/4.0/&gt; a dcterms:LicenseDocument ;
                 dcterms:description &quot;The Creative Commons Attribution 4.0 International (CC BY 4.0) license allows others to copy, distribute, display, and create derivative works provided that they credit the original source and any other nominated parties. Details are provided at https://creativecommons.org/licenses/by/4.0/&quot; ;
                 dcterms:identifier &quot;https://creativecommons.org/licenses/by/4.0/&quot;^^xsd:anyURI ;
-                dcterms:title &quot;Creative Commons Attribution 4.0 International Licence&quot; ;
+                dcterms:title &quot;Creative Commons Attribution 4.0 International&quot; ;
                 dcterms:type &lt;http://purl.org/adms/licencetype/Attribution&gt; .
           </pre>
 
@@ -9209,7 +9225,7 @@
                                 &lt;mco:reference&gt;
                                     &lt;cit:CI_Citation&gt;
                                         &lt;cit:title&gt;
-                                            &lt;gco:CharacterString&gt;Creative Commons Attribution 4.0 International Licence&lt;/gco:CharacterString&gt;
+                                            &lt;gco:CharacterString&gt;Creative Commons Attribution 4.0 International&lt;/gco:CharacterString&gt;
                                         &lt;/cit:title&gt;
                                         &lt;cit:alternateTitle&gt;
                                             &lt;gco:CharacterString&gt;CC-BY&lt;/gco:CharacterString&gt;
