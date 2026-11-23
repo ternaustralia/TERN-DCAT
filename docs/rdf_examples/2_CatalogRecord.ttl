@@ -11,9 +11,8 @@
     dcterms:identifier "9210c331-ba96-4e0c-9554-f029d61534be" ;
     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     dcterms:modified "2024-12-11T00:00:00"^^xsd:dateTime ;
-    dcterms:source "https://geonetwork.tern.org.au/geonetwork/srv/api/records/9210c331-ba96-4e0c-9554-f029d61534be/formatters/xml"^^xsd:anyURI ;
     skos:notation "TERN" ;
     cnt:characterEncoding "utf8" ;
     dcat:contactPoint <ex_contact_point> ;
-    dcat:landingPage "https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/9210c331-ba96-4e0c-9554-f029d61534be"^^xsd:anyURI ;
+    dcterms:source "https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/9210c331-ba96-4e0c-9554-f029d61534be"^^xsd:anyURI ;
     foaf:primaryTopic <ex_dataset_1> .

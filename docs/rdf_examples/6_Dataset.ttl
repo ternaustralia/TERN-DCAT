@@ -9,6 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <ex_dataset_1> a dcat:Dataset ;
+    dcat:landingPage <urn:resource:citation:ex_dataset_1:https%3A%2F%2Fportal.tern.org.au%2Fmetadata%2Fexample> ;    
     dcterms:accrualPeriodicity <https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly> ;
     dcterms:created "2024-08-01"^^xsd:date ;
     dcterms:creator [ a rdf:Seq ;

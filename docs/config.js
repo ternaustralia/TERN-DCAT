@@ -1,13 +1,13 @@
 // All config options at https://respec.org/docs/
 var respecConfig = {
   github: "https://github.com/ternaustralia/TERN-DCAT",
-  shortName: "TERN-DCAT 1.1.1",
-  subtitle: "Version 1.1.1",
-  publishDate: "2026-08-06",
+  shortName: "TERN-DCAT 1.1.2",
+  subtitle: "Version 1.1.2",
+  publishDate: "2026-11-23",
   specStatus: "base",
   // noRecTrack: true,
   latestVersion:
-    "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.1",
+    "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.2",
   logos: [
     {
       src: "https://w3id.org/tern/static/tern-web/img/logo@2x.png",
@@ -53,8 +53,8 @@ var respecConfig = {
       data: [
         {
           value:
-            "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0",
-          href: "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.0",
+            "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.1",
+          href: "https://github.com/ternaustralia/TERN-DCAT/releases/tag/v1.1.1",
         },
       ],
     },

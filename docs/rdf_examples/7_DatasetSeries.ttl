@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <ex_dataset_series_1> a dcat:DatasetSeries ;
+    dcat:landingPage <urn:resource:citation:ex_dataset_1:https%3A%2F%2Fportal.tern.org.au%2Fmetadata%2Fexample> ;   
     dcterms:created "2024-08-01"^^xsd:date ;
     dcterms:creator [ a rdf:Seq ;
             rdf:_1 <ex_creator_1> ] ;

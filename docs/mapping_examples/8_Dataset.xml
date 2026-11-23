@@ -174,6 +174,32 @@
     ...
 </gmd:MD_Metadata>
 
+<gmd:MD_Metadata>
+    ...
+    <mdb:identificationInfo>
+        <mri:citation>
+            <cit:CI_Citation>
+                </cit:onlineResource>
+                <cit:CI_OnlineResource>
+                    <cit:linkage>
+                        <gco:CharacterString>https://portal.tern.org.au/metadata/3bff7965-dc57-4f0f-b9ad-8e2ef2c7199c</gco:CharacterString>
+                    </cit:linkage>
+                    <cit:protocol>
+                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                    </cit:protocol>
+                    <cit:description>
+                        <gco:CharacterString>Dataset Metadata Page</gco:CharacterString>
+                    </cit:description>
+                    <cit:function>
+                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="information"/>
+                    </cit:function>
+                </cit:CI_OnlineResource>
+                </cit:onlineResource>
+            </cit:CI_Citation>
+        </mri:citation>
+    </mdb:identificationInfo>
+    ...
+</gmd:MD_Metadata>
 
 <gmd:MD_Metadata>
     ...

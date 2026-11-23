@@ -672,7 +672,6 @@
             <li><a href="#CatalogueRecord.creationDate">creation date</a></li>
             <li><a href="#CatalogueRecord.description">description</a></li>
             <li><a href="#CatalogueRecord.identifier">identifier</a></li>
-            <li><a href="#CatalogueRecord.landingPage">landing page</a></li>
             <li><a href="#CatalogueRecord.language">language</a></li>
             <li><a href="#CatalogueRecord.modificationDate">modification date</a></li>
             <li><a href="#CatalogueRecord.notation">notation</a></li>
@@ -833,30 +832,6 @@
                 (e.g., Geonetwork). </td>
               <td> </td>
               <td> P </td>
-            </tr>
-
-            <tr id="CatalogueRecord.landingPage" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#landingPage"
-              class="class mandatory">
-              <td>
-                <a href="http://www.w3.org/ns/dcat#landingPage" data-toggle="tooltip"
-                  data-content="http://www.w3.org/ns/dcat#landingPage" data-placement="right">
-                  landing page</a>
-              </td>
-              <td>
-                <a href="#Literal" data-placement="right">Literal</a>
-              </td>
-              <td> 0..1 </td>
-              <td property="rdfs:comment">
-                A web page that provides access to the Data Catalogue Record and/or additional information.
-              </td>
-              <td property="skos:scopeNote">It is intended to point to a landing page at the original data provider, not
-                to a page on a site of a third party, such as an aggregator.</td>
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">Link</a>
-              </td>
-              <td>
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">A</a>
-              </td>
             </tr>
 
             <tr id="CatalogueRecord.language" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language"
@@ -1027,11 +1002,10 @@
                 dcterms:identifier &quot;9210c331-ba96-4e0c-9554-f029d61534be&quot; ;
                 dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-2/eng&gt; ;
                 dcterms:modified &quot;2024-12-11T00:00:00&quot;^^xsd:dateTime ;
-                dcterms:source &quot;https://geonetwork.tern.org.au/geonetwork/srv/api/records/9210c331-ba96-4e0c-9554-f029d61534be/formatters/xml&quot;^^xsd:anyURI ;
                 skos:notation &quot;TERN&quot; ;
                 cnt:characterEncoding &quot;utf8&quot; ;
                 dcat:contactPoint &lt;ex_contact_point&gt; ;
-                dcat:landingPage &quot;https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/9210c331-ba96-4e0c-9554-f029d61534be&quot;^^xsd:anyURI ;
+                dcterms:source &quot;https://geonetwork.tern.org.au/geonetwork/srv/eng/catalog.search#/metadata/9210c331-ba96-4e0c-9554-f029d61534be&quot;^^xsd:anyURI ;
                 foaf:primaryTopic &lt;ex_dataset_1&gt; .
           </pre>
         </aside>
@@ -1592,6 +1566,7 @@
             <li><a href="#Dataset.identifier">identifier</a></li>
             <li><a href="#Dataset.inSeries">in series</a></li>
             <li><a href="#Dataset.keyword">keyword</a></li>
+            <li><a href="#Dataset.landingPage">landing page</a></li>
             <li><a href="#Dataset.language">language</a></li>
             <li><a href="#Dataset.license">licence</a></li>
             <li><a href="#Dataset.modificationDate">modified</a></li>
@@ -1968,6 +1943,30 @@
               </td>
               <td>
                 <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword">A</a>
+              </td>
+            </tr>
+
+            <tr id="Dataset.landingPage" typeof="rdfs:Property" resource="http://www.w3.org/ns/dcat#landingPage"
+              class="class mandatory">
+              <td>
+                <a href="http://www.w3.org/ns/dcat#landingPage" data-toggle="tooltip"
+                  data-content="http://www.w3.org/ns/dcat#landingPage" data-placement="right">
+                  landing page</a>
+              </td>
+              <td>
+                <a href="#Resource" data-placement="right">Online Resource</a>
+              </td>
+              <td> 0..* </td>
+              <td property="rdfs:comment">
+                A web page that provides access to the Dataset, its Distributions and/or additional information.
+              </td>
+              <td property="skos:scopeNote">It is intended to point to a landing page at the original data
+                provider/publisher.</td>
+              <td>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">Link</a>
+              </td>
+              <td>
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">A</a>
               </td>
             </tr>
 
@@ -2670,6 +2669,7 @@
             @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
             
             &lt;ex_dataset_1&gt; a dcat:Dataset ;
+                dcat:landingPage &lt;urn:resource:citation:ex_dataset_1:https%3A%2F%2Fportal.tern.org.au%2Fmetadata%2Fexample&gt; ;
                 dcterms:accrualPeriodicity &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_MaintenanceFrequencyCode_semimonthly&gt; ;
                 dcterms:created &quot;2024-08-01&quot;^^xsd:date ;
                 dcterms:creator [ a rdf:Seq ;
@@ -3676,6 +3676,12 @@
                 dcterms:title &quot;data quality report&quot; ;
                 dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
                 rdf:value &quot;https://report.tern.org.au&quot;^^xsd:anyURI .
+
+            &lt;urn:resource:ex_resource_5&gt; a tern:OnlineResource ;
+                dcterms:conformsTo &lt;https://linked.data.gov.au/def/tern-cv/www:link-1.0-http--link&gt; ;
+                dcterms:title &quot;Dataset Metadata Page&quot; ;
+                dcterms:type &lt;https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_OnLineFunctionCode_information&gt; ;
+                rdf:value &quot;https://portal.tern.org.au/metadata/30d94622-52aa-57f6-977f-24235b0faada&quot;^^xsd:anyURI .
           </pre>
         </aside>
 
